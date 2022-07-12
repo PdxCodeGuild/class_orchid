@@ -119,7 +119,7 @@ token.txt
 uploaded_files/
 node_modules
 
-1\ Python
+# 1\ Python
 2\ Flask
 3\ HTML\ +\ CSS
 4\ Django

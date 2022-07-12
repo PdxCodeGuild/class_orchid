@@ -1,0 +1,39 @@
+# Lab 4: Number to Phrase
+
+### Git Setup:
+```sh
+> git checkout main
+> git pull
+> git checkout -b your-name/python/lab04
+```
+
+Convert a given number into its english representation. For example: 67 becomes 'sixty-seven'. Handle numbers from 0-99.
+
+Hint: you can use modulus to extract the ones and tens digit.
+
+```python
+x = 67
+tens_digit = x//10
+ones_digit = x%10
+```
+Hint 2: use the digit as an index for a list of strings OR as a key for a dict of digit:phrase pairs.
+
+## Version 2
+
+Handle numbers from 0-999.
+
+## Version 3 (optional)
+
+Convert a number to roman numerals.
+
+## Version 4 (optional)
+
+Convert a time given in hours and minutes to a phrase.
+
+### Git Add, Commit & Push:
+```sh
+> git add files-to-be-added
+> git commit -m "your commit message goes here"
+> git push -u origin your-name/python/lab04
+```
+Then go to the repository to create a PR.
