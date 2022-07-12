@@ -95,9 +95,9 @@ print("This is a Unit to Unit converter." + unit_select_print)
 
 while loop == 'y':
 
-    unit_select_1 = str(input("Please make an abbreviated selection: "))
+    unit_select_1 = str(input("Please make an abbreviated selection: ")).lower()
 
-    unit_select_2 = str(input("Please make another Selection: "))
+    unit_select_2 = str(input("Please make another Selection: ")).lower()
 
     unit_count = float(input(f'{str(unit_select_1)}' + " Count: "))
 
@@ -205,6 +205,9 @@ while loop == 'y':
             print(str(unit_2_convert) + "yd")
         elif unit_select_2 == 'in':
             print("Why are you doing this to me")
+    
+    else:
+        print("Please make sure to use the abbreviations provided.")
     
     loop = str(input("Would you like to convert again? (y/n)".lower()))
     if loop == 'y':
