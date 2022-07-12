@@ -4,7 +4,7 @@ Repo for the PDX Code Guild Python Full Stack day course starting 7/11/2022
 Class is held from **July 11th, 2022 to October 21st, 2022**
 M-F 9:30 am – 4:30 pm
 
-![Ocelot (by Ahmed Galal)](ocelot-ahmed-galal.jpg)
+![Milada Vigerova Orchid Image From Unsplash](milada-vigerova-orchid.jpg)
 
 ### Holidays / Days Off
 
