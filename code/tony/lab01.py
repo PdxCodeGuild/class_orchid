@@ -1,7 +1,7 @@
 #  Lab 1: Unit Converter
 
 # accept distance and perform a unit conversion
-def convert(distance = None, unit_input = '', unit_output = ''):
+def convert(distance = None, unit_input = '', unit_output = 'm'):
 
     # dict to reference unit conversions to meters by name
     unit_conversions = {
