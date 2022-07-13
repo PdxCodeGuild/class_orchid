@@ -1,8 +1,8 @@
 apples = 27
 
-# apples = input('How many apples does Lisa have to sell? ')
+apples = input('How many apples does Lisa have to sell? ')
 
-# apples = int(apples)
+apples = int(apples)
 
 print(f"""
 
@@ -19,16 +19,17 @@ And how many apples are left over?
 # floor division: //
 # after division, rounded down to an integer
 
-# dozens_sold = ??
+dozens_sold = apples // 12
+# print(dozens_sold)
 
 # modulus: %
 # how many are left over after floor division (like the remainder in long division)
 
-# leftover_apples = ??
+leftover_apples = apples % 12
 
-# print(f"""
-# Lisa sold {dozens_sold} dozen apples.
+print(f"""
+Lisa sold {dozens_sold} dozen apples.
 
-# Lisa has {leftover_apples} apples remaining.
+Lisa has {leftover_apples} apples remaining.
 
-# """)
+""")
