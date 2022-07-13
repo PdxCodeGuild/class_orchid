@@ -6,6 +6,8 @@ def convert(distance = None, unit_input = '', unit_output = ''):
     # dict to reference unit conversions to meters by name
     unit_conversions = {
         'ft': 0.3048,
+        'mi': 1609.34,
+        'km': 1000,
     }
 
     # loop until all user input is validated
@@ -40,4 +42,4 @@ def convert(distance = None, unit_input = '', unit_output = ''):
     # print the result
     print(f'{output_result} {unit_output} in {distance} {unit_input}')
 
-convert(unit_input = 'ft')
+convert()
