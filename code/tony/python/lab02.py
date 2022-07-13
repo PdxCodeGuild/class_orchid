@@ -1,3 +1,15 @@
-nums = list([5, 0, 8, 3, 4, 1, 6,])
-avg = sum(nums) / len(nums)
-print(int(avg))
+nums = list()
+
+while True:
+    user_input = input('Enter a number, or type "done": ')
+    if user_input == 'done': break
+    else:
+        try:
+            user_input = int(user_input)
+        except ValueError:
+            continue
+        nums.append(user_input)
+
+if len(nums):
+    avg = sum(nums) / len(nums)
+    print(int(avg))
