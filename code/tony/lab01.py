@@ -8,6 +8,8 @@ def convert(distance = None, unit_input = '', unit_output = 'm'):
         'ft': 0.3048,
         'mi': 1609.34,
         'km': 1000,
+        'yd': 0.9144,
+        'in': 0.0254,
     }
 
     # loop until all user input is validated
