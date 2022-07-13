@@ -1,9 +1,9 @@
-meter = 1
-foot = 0.3048
-mile = 1609.34
-kilometer = 1000
-yard = 0.9144
-inch = 0.0254
+# meter = 1
+# foot = 0.3048
+# mile = 1609.34
+# kilometer = 1000
+# yard = 0.9144
+# inch = 0.0254
 
 loop = 'y'
 
@@ -89,127 +89,41 @@ loop = 'y'
 
 #Multi-Unit Conversion with Unit To Unit Selection
 
+selections = {
+    'ft': 0.3048,
+    'mi': 1609.34,
+    'm': 1,
+    'km': 1000,
+    'yd': 0.9144,
+    'in': 0.0254
+}
+
+loop = 'y'
+
+# selection_select = input() #Testing if plugging in an input can choose a dictionary entry.
+# print(selections[selection_select]) 
+
 unit_select_print = "\nAvailable conversions are:\n> ft\n> mi\n> km\n> yd\n> in"
 
 print("This is a Unit to Unit converter." + unit_select_print)
 
 while loop == 'y':
 
-    unit_select_1 = str(input("Please make an abbreviated selection: ")).lower()
+    unit_select_1 = str(input("Please make an abbreviated selection: ")).lower() #Known measurement type
 
-    unit_select_2 = str(input("Please make another Selection: ")).lower()
+    unit_select_2 = str(input("Please make another Selection: ")).lower() #Desired meansurement type
 
-    unit_count = float(input(f'{str(unit_select_1)}' + " Count: "))
+    unit_count = float(input(f'{str(unit_select_1)}' + " Count: ")) #Known measurement value
 
-    if unit_select_1 == 'ft':
-        unit_1_convert = unit_count * foot
-        if unit_select_2 == 'ft':
-            print("Why are you doing this to me")
-        elif unit_select_2 == 'mi':
-            unit_2_convert = unit_1_convert / mile
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "mi")
-        elif unit_select_2 == 'km':
-            unit_2_convert = unit_1_convert / kilometer
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "km")
-        elif unit_select_2 == 'yd':
-            unit_2_convert = unit_1_convert / yard
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "yd")
-        elif unit_select_2 == 'in':
-            unit_2_convert = unit_1_convert / inch
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "in")
-    
-    elif unit_select_1 == 'mi':
-        unit_1_convert = unit_count * mile
-        if unit_select_2 == 'ft':
-            unit_2_convert = unit_1_convert / foot
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "ft")
-        elif unit_select_2 == 'mi':
-            print("Why are you doing this to me")
-        elif unit_select_2 == 'km':
-            unit_2_convert = unit_1_convert / kilometer
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "km")
-        elif unit_select_2 == 'yd':
-            unit_2_convert = unit_1_convert / yard
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "yd")
-        elif unit_select_2 == 'in':
-            unit_2_convert = unit_1_convert / inch
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "in")
-        
-    elif unit_select_1 == 'km':
-        unit_1_convert = unit_count * kilometer
-        if unit_select_2 == 'ft':
-            unit_2_convert = unit_1_convert / foot
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "ft")
-        elif unit_select_2 == 'mi':
-            unit_2_convert = unit_1_convert / mile
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "mi")
-        elif unit_select_2 == 'km':
-            print("Why are you doing this to me")
-        elif unit_select_2 == 'yd':
-            unit_2_convert = unit_1_convert / yard
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "yd")
-        elif unit_select_2 == 'in':
-            unit_2_convert = unit_1_convert / inch
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "in")
+    unit_1_meters = unit_count * selections.get(unit_select_1)
+    # print(str(unit_1_meters) + 'm') #testing meter conversion math
+    unit_2_meters = unit_1_meters / selections.get(unit_select_2)
+    unit_2_meters = "{:.3f}".format(unit_2_meters)
+    # print(str(unit_2_meters) + str(unit_select_2)) #testing
 
-    elif unit_select_1 == 'yd':
-        unit_1_convert = unit_count * yard
-        if unit_select_2 == 'ft':
-            unit_2_convert = unit_1_convert / foot
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "ft")
-        elif unit_select_2 == 'mi':
-            unit_2_convert = unit_1_convert / mile
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "mi")
-        elif unit_select_2 == 'km':
-            unit_2_convert = unit_1_convert / kilometer
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "km")
-        elif unit_select_2 == 'yd':
-            print("Why are you doing this to me")
-        elif unit_select_2 == 'in':
-            unit_2_convert = unit_1_convert / inch
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "in")
+    print(f'{unit_count}{unit_select_1} converts to {unit_2_meters}{unit_select_2}')
 
-    elif unit_select_1 == 'in':
-        unit_1_convert = unit_count * inch
-        if unit_select_2 == 'ft':
-            unit_2_convert = unit_1_convert / foot
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "ft")
-        elif unit_select_2 == 'mi':
-            unit_2_convert = unit_1_convert / mile
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "mi")
-        elif unit_select_2 == 'km':
-            unit_2_convert = unit_1_convert / kilometer
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "km")
-        elif unit_select_2 == 'yd':
-            unit_2_convert = unit_1_convert / yard
-            unit_2_convert = "{:.3f}".format(unit_2_convert)
-            print(str(unit_2_convert) + "yd")
-        elif unit_select_2 == 'in':
-            print("Why are you doing this to me")
-    
-    else:
-        print("Please make sure to use the abbreviations provided.")
-    
-    loop = str(input("Would you like to convert again? (y/n)".lower()))
+    loop = str(input("Would you like to convert again? (y/n)").lower())
     if loop == 'y':
         print(unit_select_print)
     elif loop != 'y':
