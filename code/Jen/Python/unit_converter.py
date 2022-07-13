@@ -7,7 +7,7 @@ Revision 1'''
 
 
 distance = input("What is the distance? ")
-unitin = input("What are the input units? Choose mi for miles, ft for feet, or m for meters. ")
+unitin = input("What are the input units? Choose mi for miles, ft for feet, km for kilometers or m for meters. ")
 unitout = input("What would you like to convert to? Choose mi for miles, ft for feet, m for meter or km for kilometer. ")
 distance = int(distance)
 
