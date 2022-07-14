@@ -1,8 +1,10 @@
 converter ={
     'ft': 0.3048,
     'mi': 1609.34,
-    'm':1,
-    'km':1000
+    'm': 1,
+    'km': 1000,
+    'yrd': 0.9144,
+    'in': 0.0254
 }
 #i changed the variable for this version and added in a line specifically for units
 distance = input('what is the distance?: ')

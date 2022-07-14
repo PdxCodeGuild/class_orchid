@@ -1,7 +1,7 @@
 import random
 #created a dictionary in order to store the cconversions
 converter = {
-    'ft' : 3.6576,
+    'ft' : 0.3048,
     }
 
 #i labeled the input info which is the place where user will type in the number
