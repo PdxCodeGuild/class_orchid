@@ -1,8 +1,5 @@
-nums = []
+nums = [5, 0, 8, 3, 4, 1, 6]
 
-while True:
-    choice = input('Enter a number or done to quit: ')
+average = sum(nums) / len(nums)
 
-    if choice == 'done':
-        print(f"Your number average is: {sum(nums) / len(nums)}")
-        break
+print(f'Your average is {average}')
