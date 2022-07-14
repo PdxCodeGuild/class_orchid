@@ -29,45 +29,17 @@ distance = int(distance)
 #naming the units of measure from and to to identify conversion formula
 from_units = input("What are the input units? ")
 to_units = input("What are the output units? ")
-#A bunch of if/elif statements to perform conversions
-if from_units == 'mi' and to_units == 'km':
-    total = conversion_table[from_units]*distance/conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'ft' and to_units == 'km':
-    total = conversion_table[from_units]*distance/conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'm' and to_units == 'km':
-    total = conversion_table[from_units]*distance/conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'mi' and to_units == 'ft':
-    total = conversion_table[from_units]*distance*conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'mi' and to_units == 'm':
-    total = conversion_table[from_units]*distance
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'ft' and to_units == 'mi':
-    total = conversion_table[from_units]*distance*conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'ft' and to_units == 'm':
-    total = conversion_table[from_units]*distance
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'm' and to_units == 'mi':
-    total = conversion_table[from_units]*distance*conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'm' and to_units == 'ft':
-    total = conversion_table[from_units]*distance*conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'km' and to_units == 'm':
-    total = conversion_table[from_units]*distance/conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'km' and to_units == 'mi':
-    total = conversion_table[from_units]*distance/conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')
-elif from_units == 'km' and to_units == 'ft':
-    total = conversion_table[from_units]*distance/conversion_table[to_units]
-    message = (f'{distance} {from_units} are {total} {to_units}')    
-elif from_units == to_units: 
-    message = (f'{distance} {from_units} is {distance} {to_units}')
+meter_d = conversion_table[from_units]*distance #convert the input distance to meters
+#print(meter_d)
+
+to_meters = meter_d*conversion_table[to_units]   #convert to meters
+from_meters = meter_d/conversion_table[to_units]  #convert from meters to desired output
+#Conditionals, only two are needed. Either to meters or anything else.
+if from_units == 'm':
+    from_meters = meter_d/conversion_table[to_units]
+    message = (f"{distance} {from_units} are {from_meters}{to_units}")
+else:
+    to_meters = meter_d*conversion_table[to_units]
+    message = (f"{distance}{from_units} are {to_meters}{to_units}")
 
 print(message)
-
