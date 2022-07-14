@@ -10,5 +10,7 @@ user_distance = input('\nWhat is the distance?: ')
 user_input_units = input('\nWhat are the input units?: ')
 user_output_units  = input('\nWhat are the output units?: ')
 user_distance = float(user_distance)
-print(f"{user_distance} {user_input_units} is {units_dict[user_input_units] / units_dict['m']} {user_output_units}")
+
+print(f"{user_distance} {user_input_units} is {round(units_dict[user_input_units] / units_dict[user_output_units] * user_distance, 2)} {user_output_units}")
 # I did use my 102 lab as a reference, I did not complete my conversion chart in 102 though so this is new.
+
