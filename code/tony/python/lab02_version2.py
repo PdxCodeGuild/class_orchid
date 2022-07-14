@@ -12,4 +12,4 @@ while True:
 
 if len(nums):
     avg = sum(nums) / len(nums)
-    print(int(avg))
+    print(avg)
