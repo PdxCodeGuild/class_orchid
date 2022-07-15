@@ -1,25 +1,25 @@
 numbers_in_english_ones = {
-    'zero': 0,
-    'one':1,
-    'two':2,
-    'three':3,
-    'four':4,
-    'five':5,
-    'six':6,
-    'seven':7,
-    'eight':8,
-    'nine':9,
+    '0':'Zero',
+    '1':'One',
+    '2':'Two',
+    '3':'three',
+    '4':'four',
+    '5':'five',
+    '6':'six',
+    '7':'seven',
+    '8':'eight',
+    '9':'nine',
 }
 numbers_in_english_tens ={
-    "ten": 10,
-    "twenty": 20,
-    "Thirty": 30,
-    "forty": 40,
-    "fifty": 50,
-    "sixty": 60,
-    "seventy": 70,
-    "eighty":80,
-    "ninety": 90,
+    '10': "ten",
+    '20': "twenty",
+    "30": "Thirty",
+    "40": "forty",
+    "50": "fifty",
+    "60": "sixty",
+    "70": "seventy",
+    "80": "eighty",
+    "90": "ninety"
 
 
 }
@@ -46,7 +46,7 @@ elif tens_digit == 0 and ones_digit == 6:
     print("Six")
 elif tens_digit == 0 and ones_digit == 7:
     print("Seven")
-elif tens_digit == 0 and ones_digit== 8:
+elif tens_digit == 0 and ones_digit == 8:
     print("Eight")
 elif tens_digit == 0 and ones_digit == 9:
     print("Nine")
@@ -71,9 +71,164 @@ elif tens_digit == 1 and ones_digit == 8:
 elif tens_digit == 1 and ones_digit == 9:
     print("Nineteen")
 elif tens_digit == 2 and ones_digit == 0:
-    print(numbers_in_english_tens(20))
-
+    print(numbers_in_english_tens["20"])
+elif tens_digit == 2 and ones_digit == 1:
+    print(numbers_in_english_tens["20"],"-",numbers_in_english_ones['1'])
+elif tens_digit == 2 and ones_digit == 2:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 2 and ones_digit == 3:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 2 and ones_digit == 4:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 2 and ones_digit == 5:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 2 and ones_digit == 6:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 2 and ones_digit == 7:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 2 and ones_digit == 8:
+    print(numbers_in_english_tens["20"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 2 and ones_digit == 9:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["9"])
+elif tens_digit == 3 and ones_digit == 10:
+    print(numbers_in_english_tens["30"],)
+elif tens_digit == 3 and ones_digit == 1:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 3 and ones_digit == 2:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 3 and ones_digit == 3:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 3 and ones_digit == 4:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 3 and ones_digit == 5:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 3 and ones_digit == 6:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 3 and ones_digit == 7:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 3 and ones_digit == 8:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 3 and ones_digit == 9:
+    print(numbers_in_english_tens["30"],'-',numbers_in_english_ones["9"])
 elif tens_digit == 4 and ones_digit == 0:
-    print("Forty")
+    print(numbers_in_english_tens["40"])
+elif tens_digit == 4 and ones_digit == 1:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 4 and ones_digit == 2:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 4 and ones_digit == 3:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 4 and ones_digit == 4:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 4 and ones_digit == 5:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 4 and ones_digit == 6:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 4 and ones_digit == 7:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 4 and ones_digit == 8:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 4 and ones_digit == 9:
+    print(numbers_in_english_tens["40"],'-',numbers_in_english_ones["9"])
+elif tens_digit == 5 and ones_digit == 0:
+    print(numbers_in_english_tens["50"])
+elif tens_digit == 5 and ones_digit == 1:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 5 and ones_digit == 2:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 5 and ones_digit == 3:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 5 and ones_digit == 4:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 5 and ones_digit == 5:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 5 and ones_digit == 6:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 5 and ones_digit == 7:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 5 and ones_digit == 8:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 5 and ones_digit == 9:
+    print(numbers_in_english_tens["50"],'-',numbers_in_english_ones["9"])
+elif tens_digit == 6 and ones_digit == 0:
+    print(numbers_in_english_tens["60"])
+elif tens_digit == 6 and ones_digit == 1:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 6 and ones_digit == 2:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 6 and ones_digit == 3:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 6 and ones_digit == 4:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 6 and ones_digit == 5:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 6 and ones_digit == 6:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 6 and ones_digit == 7:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 6 and ones_digit == 8:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 6 and ones_digit == 9:
+    print(numbers_in_english_tens["60"],'-',numbers_in_english_ones["9"])
+elif tens_digit == 7 and ones_digit == 0:
+    print(numbers_in_english_tens["70"])
+elif tens_digit == 7 and ones_digit == 1:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 7 and ones_digit == 2:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 7 and ones_digit == 3:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 7 and ones_digit == 4:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 7 and ones_digit == 5:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 7 and ones_digit == 6:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 7 and ones_digit == 7:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 7 and ones_digit == 8:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 7 and ones_digit == 9:
+    print(numbers_in_english_tens["70"],'-',numbers_in_english_ones["9"])
+elif tens_digit == 8 and ones_digit == 0:
+    print(numbers_in_english_tens["80"])
+elif tens_digit == 8 and ones_digit == 1:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 8 and ones_digit == 2:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 8 and ones_digit == 3:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 8 and ones_digit == 4:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 8 and ones_digit == 5:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 8 and ones_digit == 6:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 8 and ones_digit == 7:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 8 and ones_digit == 8:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 8 and ones_digit == 9:
+    print(numbers_in_english_tens["80"],'-',numbers_in_english_ones["9"])
+elif tens_digit == 9 and ones_digit == 0:
+    print(numbers_in_english_tens["90"])
+elif tens_digit == 9 and ones_digit == 1:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["1"])
+elif tens_digit == 9 and ones_digit == 2:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["2"])
+elif tens_digit == 9 and ones_digit == 3:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["3"])
+elif tens_digit == 9 and ones_digit == 4:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["4"])
+elif tens_digit == 9 and ones_digit == 5:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["5"])
+elif tens_digit == 9 and ones_digit == 6:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["6"])
+elif tens_digit == 9 and ones_digit == 7:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["7"])
+elif tens_digit == 9 and ones_digit == 8:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["8"])
+elif tens_digit == 9 and ones_digit == 9:
+    print(numbers_in_english_tens["90"],'-',numbers_in_english_ones["9"])
 
 print(x)
