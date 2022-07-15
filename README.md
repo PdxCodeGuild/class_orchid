@@ -77,15 +77,15 @@ Presentation Day: October 21st, 2022
 * [Lab 02 Programming 102 Redux](2%20Flask/labs/02%20Programming%20102%20Labs%20Redux.md)
 * [Lab 03 Contacts List Redux](2%20Flask/labs/03%20Contacts%20List%20Redux.md) -->
 
-<!-- ## Python Labs Assigned:
+## Python Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
-| 01    | [Unit Converter](1%20Python/labs/01%20Unit%20Converter.md)                   | Mar 15th      | Mar 18th    | Mar 29th      |
-| 02    | [Average Numbers](1%20Python/labs/02%20Average%20Numbers.md)                 | Mar 15th      | Mar 18th    | Mar 29th      |
-| 03    | [Make Change](1%20Python/labs/03%20Make%20Change.md)                         | Mar 16th      | Mar 18th    | Mar 30th      |
-| 04    | [Number To Phrase](1%20Python/labs/04%20Number%20To%20Phrase.md)             | Mar 16th      | Mar 18th    | Mar 30th      |
-| 05    | [Blackjack Advice](1%20Python/labs/05%20Blackjack%20Advice.md)               | Mar 16th      | Mar 18th    | Mar 30th      |
-| 06    | [Pick 6](1%20Python/labs/06%20Pick%206.md)                                   | Mar 21st      | Mar 25th    | Apr  4th      |
+| 01    | [Unit Converter](1%20Python/labs/01%20Unit%20Converter.md)                   | Jul 12th      | Jul 15th    | Jul 26th      |
+| 02    | [Average Numbers](1%20Python/labs/02%20Average%20Numbers.md)                 | Jul 12th      | Jul 15th    | Jul 26th      |
+| 03    | [Make Change](1%20Python/labs/03%20Make%20Change.md)                         | Jul 13th      | Jul 15th    | Jul 27th      |
+| 04    | [Number To Phrase](1%20Python/labs/04%20Number%20To%20Phrase.md)             | Jul 13th      | Jul 15th    | Jul 27th      |
+| 05    | [Blackjack Advice](1%20Python/labs/05%20Blackjack%20Advice.md)               | Jul 13th      | Jul 15th    | Jul 27th      |
+<!-- | 06    | [Pick 6](1%20Python/labs/06%20Pick%206.md)                                   | Mar 21st      | Mar 25th    | Apr  4th      |
 | 07    | [Mob Jackalope](1%20Python/labs/07%20Mob%20Jackalope.md)                     | Mar 21st      | NA          | NA            |
 | 08    | [Credit Card Validation](1%20Python/labs/08%20Credit%20Card%20Validation.md) | Mar 22nd      | Mar 25th    | Apr  5th      |
 | 09    | [Peaks And Valleys](1%20Python/labs/09%20Peaks%20And%20Valleys.md)           | Mar 22nd      | Mar 25th    | Apr  5th      |
@@ -102,26 +102,26 @@ Presentation Day: October 21st, 2022
 
 
 
-<!-- #### Optional Python Labs
+ #### Optional Python Labs
 
-[Connect Four](1%20Python/labs/connect_four.md),
+<!-- [Connect Four](1%20Python/labs/connect_four.md),
 [Count Words](1%20Python/labs/count_words.md),
-[Currency Converter](1%20Python/labs/currency_converter.md),
+[Currency Converter](1%20Python/labs/currency_converter.md), -->
 [Grading](1%20Python/labs/grading.md),
 [Guess The Number](1%20Python/labs/guess_the_number.md),
-[Image Manipulation](1%20Python/labs/image_manipulation.md),
+<!-- [Image Manipulation](1%20Python/labs/image_manipulation.md), -->
 [LCR](1%20Python/labs/LCR.md),
 [Mad Libs](1%20Python/labs/madlib.md),
 [Magic 8 Ball](1%20Python/labs/magic_8_ball.md),
-[Rain Data](1%20Python/labs/rain_data.md),
+<!-- [Rain Data](1%20Python/labs/rain_data.md), -->
 [Random Emoticon Generator](1%20Python/labs/random_emoticon_generator.md),
 [Random Password Generator](1%20Python/labs/random_password.md),
-[Road Trip](1%20Python/labs/road_trip.md),
+<!-- [Road Trip](1%20Python/labs/road_trip.md), -->
 [Rock, Paper, Scissors](1%20Python/labs/rock_paper_scissors.md),
-[Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md),
+<!-- [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md), -->
 [Simple Calculator](1%20Python/labs/simple_calculator.md),
 [Sock Sorter](1%20Python/labs/sock_sorter.md),
-[Stack And Linked List](1%20Python/labs/stack_and_linked_list.md),
+<!-- [Stack And Linked List](1%20Python/labs/stack_and_linked_list.md),
 [Quotes API](1%20Python/labs/17%20Quotes%20API.md) -->
 
 
