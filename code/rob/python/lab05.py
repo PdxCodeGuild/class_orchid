@@ -58,7 +58,6 @@ def get_cards(card_one, card_two, card_three):
 
 def handle_ace(cards):
     total = []
-    print(cards)
     if len(cards) == 3:
         total.append(True)
         total.append(options[cards[1]] + options[cards[2]])
