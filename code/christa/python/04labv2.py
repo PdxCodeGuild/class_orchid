@@ -38,7 +38,7 @@ digits = {'one':
 #create a dictionary for "big" digits ascending by 10's
 #big_digits = {20: 'twenty', 30: 'thrity', 40: 'forty', 50: 'fifty', 60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety',}
 #Ask the user for number
-number = input("Please enter a number ranging from 0 to 99: ")
+number = input("Please enter a number ranging from 0 to 999: ")
 #identify the value as an integer
 number = int(number)
 #break the number down into 10's and 1's to define 
@@ -59,6 +59,8 @@ if hundreds_digit >= 1:
     hundreds_answer = digits['hundred'][hundreds_digit] + " " + "-" + " "
 elif hundreds_digit < 1:
     hundreds_answer = ""
+elif hundreds_digit >= 1 and ones_digit == 0:
+    ones_answer = ""
 
 #if tens_digit == 1:                                    #pull tens digit from tens dictionary -- NOT NEEDED FROM V1
 #    tens_answer = digits['one'][tens_digit] 
@@ -73,10 +75,13 @@ elif tens_digit == 0:
 if ones_digit >= 1 and tens_digit != 1:                #pull ones digit from ones dictionary 
     ones_answer = " " + digits['one'][ones_digit]
 elif ones_digit == 0 and tens_digit == 0:
-    ones_answer = digits['one'][ones_digit]
+    ones_answer = ""   #digits['one'][ones_digit]
     tens_answer = ""
 else:
     ones_answer = ""
+
+if number == 0:
+   ones_answer = digits['one'][number]
    
 #print message 
 print(f"{hundreds_answer}{tens_answer}{ones_answer}")
