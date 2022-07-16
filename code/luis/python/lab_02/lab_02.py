@@ -4,8 +4,4 @@ total2 = 0
 # loop over the elements
 for num in nums:
     total2 = total / len(nums)
-print(total2)
-
-# loop over the indices
-# for i in range(len(nums)):
-#     print(nums[i])
+print(round(total2))
