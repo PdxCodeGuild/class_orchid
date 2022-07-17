@@ -45,9 +45,9 @@ number_in_english_hundreds = {
 
 
 x = int(input("Enter a two digit number, from 0-99: "))
-ones_digit = x%10
-tens_digit = x//10
-hundred_digit = x*1
+ones = x%10
+tens = x//10
+hundred = x*1
 # prints three digits to english
 if x == 100:
     print(number_in_english_hundreds["1"])

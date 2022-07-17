@@ -1,3 +1,5 @@
+## Author:Andrew Jaquez
+## Fixed update from previous commit
 numbers_in_english_ones = {
     0 : '',
     1 :'One',
@@ -53,14 +55,13 @@ number_in_english_hundreds ={
     9 : "Nine Hundred"
 }
 x = int(input("Enter a three digit number, from 0-999: "))
-if x <= 99:
+if x <= 99 and x >= 20:
     ones = x%10
     tens = x//10
     print(x, 'is',numbers_in_english_tens[tens],numbers_in_english_ones[ones])
 hundred = 0
 tens1 = 0
 ones1 = 0
-teens = x//10
 hunteen = 0
 if x >= 100 and x <= 999:
     ones1 = x%10
@@ -68,8 +69,8 @@ if x >= 100 and x <= 999:
     hunteen = x%100
     if x >= 120:
         tens1 += x//10%10
-if hunteen <= 119 and hunteen >=110: 
-    print(hunteen)
+if x >= 10 and x <= 19:
+    print(x,'is',numbers_in_english_tens[x])
 if x == 200:
     print(x,'is ',number_in_english_hundreds[hundred])
 if x == 300:
@@ -102,8 +103,8 @@ if x >= 820 and x <=899:
     print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
 if x >= 920 and x <=999:
     print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 111 and x <=119:
-    print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
+if x >= 110 and x <=119:
+        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
 if x >= 210 and x <= 219:
         print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
 if x >= 310 and x <= 319:
