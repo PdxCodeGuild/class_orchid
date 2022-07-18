@@ -1,3 +1,7 @@
+## Author: Andrew L Jaquez
+## Date: 7/15/2022
+## coins 
+
 number_of_quarte = 0
 number_of_dimes = 0
 number_of_nickles = 0
