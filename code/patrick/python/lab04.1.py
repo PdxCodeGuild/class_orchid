@@ -1,10 +1,11 @@
-user_input = input("\nEnter a number between 0-99 ")
+user_input = input("\nEnter a number between 0-999 ")
 
 
 
 
 
 phrase = {
+    0 : "zero",
     1 : "one",
     2 : "two",
     3 : "three",
@@ -54,7 +55,6 @@ phrase_3 = {
 }
 
 
-
 x = int(user_input)
 #huns_digit = x//100
 if x <= 99:
@@ -70,6 +70,33 @@ if x >= 100:
     print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
 
 
+
+
+
+
+
+
+
+#x = int(user_input)
+#huns_digit = x//100
+#while x >0 -1:
+    #if x <= 19:
+        #print(phrase[x])
+        #if x <= 19 :
+            #break
+            #if x <= 99:
+                #tens_digit = x//10
+                #ones_digit = x%10
+                #print(tens_digit, ones_digit)
+                #print(phrase_2[tens_digit] + phrase[ones_digit])
+                #if x <= 99 :
+                    #break
+                    #if x >= 100:
+                        #huns_digit = x//100 
+                        #tens_digit = x//100
+                        #ones_digit = x%10
+                        #print(huns_digit, tens_digit, ones_digit)
+                        #print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
 
 
 
