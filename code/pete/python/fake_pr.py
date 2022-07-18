@@ -12,7 +12,7 @@ Write a function called multiply that takes in 2 numbers and returns their produ
 """
 
 def multiply(x, y):
-    ...
+    return x * y
 
 """
 Task 3:
@@ -20,4 +20,4 @@ Write a function called append_to_list that takes in a list and a value and appe
 """
 
 def append_to_list(list, value):
-    list = list.append(value)
+    list.append(value)
