@@ -11,7 +11,6 @@ options = {
     'J' : 10,
     'Q' : 10,
     'K' : 10,
-    '*' : 0,
 }
 
 check_options = list(options.keys())
