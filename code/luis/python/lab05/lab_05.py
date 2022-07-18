@@ -2,19 +2,19 @@
 # Date created: 7/15/2022 2:36pm
 # Lab 5: Blackjack Advice
 cards_Deck = {
-    'A': 1,
-    '2': 2,
-    '3': 3,
-    '4': 4,
-    '5': 5,
-    '6': 6,
-    '7': 7,
-    '8': 8,
-    '9': 9,
-   '10': 10,
-    'J': 10,
-    'Q': 10,
-    'K': 10,
+  'A': 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+   10: 10,
+    J: 10,
+    Q: 10,
+    K: 10,
 }
 # stores users input
 user_card = input("What's your first card? ")
