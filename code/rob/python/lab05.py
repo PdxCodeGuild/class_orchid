@@ -11,6 +11,7 @@ options = {
     'J' : 10,
     'Q' : 10,
     'K' : 10,
+    '*' : 0,
 }
 
 check_options = list(options.keys())
@@ -43,21 +44,32 @@ total = options[first_card] + options[second_card] + options[third_card]
 
 def get_cards(card_one, card_two, card_three):
     not_ace = []
+    ace_count = 0
     if card_one != 'A':
         not_ace.append(True)
         not_ace.append(card_one)
+    else:
+        ace_count += 1
+
     if card_two != 'A':
         if len(not_ace) == 0:
             not_ace.append(True)
         not_ace.append(card_two)
+    else:
+        ace_count += 1
+        
     if card_three != 'A':
         if len(not_ace) == 0:
             not_ace.append(True)
         not_ace.append(card_three)
+    else:
+        ace_count += 1
+
     return not_ace
 
 def handle_ace(cards):
     total = []
+    
     if len(cards) == 3:
         total.append(True)
         total.append(options[cards[1]] + options[cards[2]])
@@ -65,15 +77,20 @@ def handle_ace(cards):
         total.append(options[cards[1]])
     else:
         total.append(False)
-        
     return total
+
+
 count = 0
 if first_card == 'A' or second_card == 'A' or third_card == 'A':
     check = handle_ace(get_cards(first_card, second_card, third_card))
+
     if check[0] == True and check[1] < 11:
         total += 10
-
-print(f'Total: {total}')
+#if two aces one will be worth 1 and the second will be worth 11
+two_ace = get_cards(first_card, second_card, third_card)
+if len(two_ace) == 2:
+    total += 10
+print(f'Total: {total}', two_ace, two_ace[1])
 
 if total < 17:
     print('Move: Hit\n')
