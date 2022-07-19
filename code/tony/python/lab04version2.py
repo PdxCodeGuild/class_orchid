@@ -4,7 +4,7 @@ translate_teens = [ 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'
 translate_tens = [ '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety', ]
 
 # receive the input
-num = input('Enter a number between 0 and 99: ')
+num = input('Enter a number from 0 to 999: ')
 
 # validate the input is an integer
 try:
@@ -27,17 +27,19 @@ ones_digit = num%10
 mystr = ''
 
 # handle numbers >= 100 first
-if num > 99:
-    mystr += f'{translate_ones[hundreds_digit]} hundred and '
+if num >= 100:
+    mystr += f'{translate_ones[hundreds_digit]} hundred'
 
-# update the value (I know this is lazy)
-num = num - hundreds_digit * 100
+if num >= 100 and num % 100:
+    mystr += ' and '
 
 # apply appropriate translations for respective ranges
-if num < 10:
+if num % 100 < 10 and (num % 100 or num < 100):
     mystr += f'{translate_ones[ones_digit]}'
-elif num < 20:
+elif num % 100 < 20 and num % 100 >= 10:
     mystr += f'{translate_teens[ones_digit]}'
+elif ones_digit == 0:
+    mystr += f'{translate_tens[tens_digit]}'
 else:
     mystr += f'{translate_tens[tens_digit]}-{translate_ones[ones_digit]}'
 

@@ -27,6 +27,8 @@ if num < 10:
     mystr = f'{translate_ones[ones_digit]}'
 elif num < 20:
     mystr = f'{translate_teens[ones_digit]}'
+elif ones_digit == 0:
+    mystr = f'{translate_tens[tens_digit]}'
 else:
     mystr = f'{translate_tens[tens_digit]}-{translate_ones[ones_digit]}'
 
