@@ -17,7 +17,6 @@ def pick6():
     for x in range(0,6):
         winner[x] = random.randint(1,99)
         purchased[x] = random.randint(1,99)
-        # print('index: ', x, 'winner: ', winner, 'purchased: ', purchased)
 
     return winner, purchased
 
@@ -53,7 +52,6 @@ while ticket_counter != 100000:
         match_counter['6'] += 1
         prize_money += 25000000
 
-    # print(winning_ticket, purchased_ticket, matches)
     ticket_counter += 1
     cost += 2
 
