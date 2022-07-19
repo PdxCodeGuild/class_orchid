@@ -85,8 +85,8 @@ Presentation Day: October 21st, 2022
 | 03    | [Make Change](1%20Python/labs/03%20Make%20Change.md)                         | Jul 13th      | Jul 15th    | Jul 27th      |
 | 04    | [Number To Phrase](1%20Python/labs/04%20Number%20To%20Phrase.md)             | Jul 13th      | Jul 15th    | Jul 27th      |
 | 05    | [Blackjack Advice](1%20Python/labs/05%20Blackjack%20Advice.md)               | Jul 13th      | Jul 15th    | Jul 27th      |
-<!-- | 06    | [Pick 6](1%20Python/labs/06%20Pick%206.md)                                   | Mar 21st      | Mar 25th    | Apr  4th      |
-| 07    | [Mob Jackalope](1%20Python/labs/07%20Mob%20Jackalope.md)                     | Mar 21st      | NA          | NA            |
+| 06    | [Pick 6](1%20Python/labs/06%20Pick%206.md)                                   | Jul 18th      | Jul 21st    | Aug  1st      |
+<!-- | 07    | [Mob Jackalope](1%20Python/labs/07%20Mob%20Jackalope.md)                     | Mar 21st      | NA          | NA            |
 | 08    | [Credit Card Validation](1%20Python/labs/08%20Credit%20Card%20Validation.md) | Mar 22nd      | Mar 25th    | Apr  5th      |
 | 09    | [Peaks And Valleys](1%20Python/labs/09%20Peaks%20And%20Valleys.md)           | Mar 22nd      | Mar 25th    | Apr  5th      |
 | 10    | [ROT13](1%20Python/labs/10%20ROT13.md)                                       | Mar 24th      | Mar 30th    | Apr  7th      |
