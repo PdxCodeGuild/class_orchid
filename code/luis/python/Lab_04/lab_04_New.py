@@ -2,7 +2,7 @@
 ## Fixed update from previous commit
 numbers_in_english_ones = {
     0 : '',
-    1 :'One',
+    1: 'One',
     2 :'Two',
     3 :'Three',
     4 :'Four',
@@ -24,7 +24,7 @@ numbers_in_english_ones = {
 }
 numbers_in_english_tens ={
      0 : '',
-     1 : "TenWrong",
+    10 : "Ten",
     11 : 'Eleven',
     12 : 'Twelve',
     13 : 'Thirteen',
@@ -55,10 +55,14 @@ number_in_english_hundreds ={
     9 : "Nine Hundred"
 }
 x = int(input("Enter a three digit number, from 0-999: "))
+
 if x <= 99 and x >= 20:
     ones = x%10
     tens = x//10
     print(x, 'is',numbers_in_english_tens[tens],numbers_in_english_ones[ones])
+ones = x
+if x <= 9 and x >= 1:
+    print(x,'is',numbers_in_english_ones[ones])
 hundred = 0
 tens1 = 0
 ones1 = 0
@@ -73,6 +77,8 @@ if x >= 10 and x <= 19:
     print(x,'is',numbers_in_english_tens[x])
 if x == 200:
     print(x,'is ',number_in_english_hundreds[hundred])
+if x >= 201 or x <= 209:
+    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_ones[ones])
 if x == 300:
     print(x,'is ',number_in_english_hundreds[hundred])
 if x == 400:
