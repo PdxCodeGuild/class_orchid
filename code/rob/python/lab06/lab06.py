@@ -60,5 +60,4 @@ while ticket_counter != 100000:
     cost += 2
 
 ROI = (prize_money - cost)/cost
-print(f'\ncost: ${cost}\nprize money: ${prize_money} \nmatches: {match_counter}\n')
-print(ROI)
+print(f'\ncost: ${cost}\nprize money: ${prize_money} \nmatches: {match_counter}\nROI: {ROI}')
