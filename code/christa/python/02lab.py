@@ -1,13 +1,17 @@
 # Version1 lab02
 #list of numbers
-"""num = [5, 0, 8, 3, 4, 1, 7]
-x = 0
+num = [5, 0, 8, 3, 4, 1, 6]
+total_num = 0
 # adding each value in the list to the one before it
 for val in num:
-    x = x + val
-#print(x)
-#print(len(num))"""
+    total_num = total_num + val
 
+average = total_num/len(num)
+
+print(average)
+
+
+"""
 #Version2
 num = []
 x = 0
@@ -29,3 +33,4 @@ avg = x/len(num) #formula for average is the total of num divided by the 'len' (
 
 print(avg)
 
+"""
