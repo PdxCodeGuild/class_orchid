@@ -8,9 +8,10 @@ cards = {
      "7" : 7,
      "8" : 8,
      "9" : 9,
+     "10" : 10,
      "jack" : 10,
      "queen" : 10,
-     "king" : 10
+     "king" : 10,
   }
   
   
@@ -26,4 +27,8 @@ cards_played = cards[users_card1] + cards[users_card2] + cards[users_card3]
 if cards_played <= 17:
      print("Hit")
 if cards_played >= 18:
-        print("stay")
+     print("stay")
+if cards_played == 21:
+     print("Blackjack!!")
+if cards_played >= 22:
+     print("Already Busted!")             
