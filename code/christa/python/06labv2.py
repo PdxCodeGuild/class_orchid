@@ -42,43 +42,35 @@ num_matches = 0
 #2. Start your balance at 0
 winnings = 0
 dollars_expended = 0
-earnings = 0
+
 
 
 #3. Loop 100,000 times, for each loop:
 for x in range(100000):
     winnings -= 2
-    dollars_expended -= 2
-    earnings = 0                                #5. Subtract 2 from your blance(you bought a ticket)
+    dollars_expended -= 2                              #5. Subtract 2 from your blance(you bought a ticket)
     num_matches = ticket_checker(winning_pick6) 
     #print('matches', num_matches)
     #print('dollars_expended', winnings)
     if num_matches == 1:
-        winnings += 4 
-        earnings += 4         #7. Add to your balance the winnings from your matches
-    elif num_matches ==2:
-        winnings += 7
-        earnings += 7
+        winnings += 4            
+    elif num_matches ==2:     #7. Add to your balance the winnings from your matches
+        winnings += 7  
     elif num_matches == 3:
-        winnings += 100
-        earnings += 100
+        winnings += 100   
     elif num_matches == 4:
-        winnings +=50000
-        earnings += 50000
+        winnings +=50000   
     elif num_matches == 5:
-        winnings += 1000000
-        earnings += 1000000
+        winnings += 1000000 
     elif num_matches == 6:
         winnings += 25000000
-        earnings += 25000000
+        
 
 #Return on Investment
-
-
 #roi = (earnings - dollars_expended)/dollars_expended
+roi = winnings/dollars_expended  #should dollars_expended be the absolute value for calculations?
 
-
-print(winnings)       #8. After the loop, print the final balance
-print(dollars_expended)
-print(earnings)
+print(f'For 100,000 lottery tickets purchased, you won {winnings} dollars and your return on investment is {roi}')       #8. After the loop, print the final balance
+#print(dollars_expended)
+#print(roi)
 #print(roi)
