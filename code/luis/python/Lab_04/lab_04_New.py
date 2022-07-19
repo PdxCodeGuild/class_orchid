@@ -71,59 +71,13 @@ if x >= 100 and x <= 999:
     ones1 = x%10
     hundred = x//100
     hunteen = x%100
-    if x >= 120:
-        tens1 += x//10%10
-if x >= 10 and x <= 19:
-    print(x,'is',numbers_in_english_tens[x])
-if x == 200:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x >= 201 or x <= 209:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_ones[ones])
-if x == 300:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x == 400:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x == 500:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x == 600:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x == 700:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x == 800:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x == 900:
-    print(x,'is ',number_in_english_hundreds[hundred])
-if x >= 220 and x <=299:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 320 and x <= 399:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 420 and x <= 499:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 520 and x <= 599:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 620 and x <=699:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 720 and x <=799:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 820 and x <=899:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 920 and x <=999:
-    print(x,'is',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[tens1],numbers_in_english_ones[ones1])
-if x >= 110 and x <=119:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 210 and x <= 219:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 310 and x <= 319:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 410 and x <= 419:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 510 and x <= 519:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 610 and x <= 619:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 710 and x <= 719:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 810 and x <= 819:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
-if x >= 910 and x <= 919:
-        print(x,'is ',number_in_english_hundreds[hundred],'and',numbers_in_english_tens[hunteen])
+    tens1 += x//10%10
+    output = number_in_english_hundreds[hundred]
+    if hunteen >= 10 and hunteen <= 19:
+        output += f' and {numbers_in_english_tens[hunteen]}'
+    else:
+        if tens1 > 1:
+            output += f' and {numbers_in_english_tens[tens1]}'
+        if ones1 > 0:
+            output += numbers_in_english_ones[ones1]
+    print(output)
