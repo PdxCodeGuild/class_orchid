@@ -41,19 +41,18 @@ while ticket_counter != 100000:
         match_counter['2'] += 1
         prize_money += 7
     elif matches == 3:
-        print(f'winner: {winning_ticket}, purchased: {purchased_ticket},\nmatches: {see_matches}')
         match_counter['3'] += 1
         prize_money += 100
     elif matches == 4:
-        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}, matches: {see_matches}')
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}\nmatches: {matches}: {see_matches}')
         match_counter['4'] += 1
         prize_money += 50000
     elif matches == 5:
-        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}, matches: {see_matches}')
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}\,matches: {matches}: {see_matches}')
         match_counter['5'] += 1
         prize_money += 1000000
     elif matches == 6:
-        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}, matches: {see_matches}')
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}\nmatches: {matches}: {see_matches}')
         match_counter['6'] += 1
         prize_money += 25000000
 
