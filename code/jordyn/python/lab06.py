@@ -71,7 +71,7 @@ values = 0
 loop = 0
 winning_ticket = pick6()
 
-while loop != -1:
+while loop != 100000:
 
     ticket = pick6()
 
@@ -81,12 +81,12 @@ while loop != -1:
 
     loop += 1
 
-    if matching == 6:
-        print(f'Jackpot after {loop} tickets.')
-        break
+    # if matching == 6:
+    #     print(f'Jackpot after {loop} tickets.')
+    #     break
     
-    if loop % 1000000 == 0:
-        print(f'Ticket #{int(loop) / 1000000} million.')
+    # if loop % 1000000 == 0:
+    #     print(f'Ticket #{int(loop) / 1000000} million.')
 
 print(values)
     
