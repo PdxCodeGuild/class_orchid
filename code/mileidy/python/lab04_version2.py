@@ -60,16 +60,6 @@ hundreds = {
     9 : 'nine hundred'
 }
 
-# print(hundreds_digit)
-
-# print(tens_digit)
-
-# print(ones_digit)
-
-
-# if tens_digit != 0:
-#     tens_string
-
 ones_string = ''
 tens_string = ''
 teens_string = ''
@@ -102,26 +92,26 @@ else:
     if tens_digit == 1 and ones_digit <= 9: #teens 11-19 conversion
         teens_string = teens[ones_digit]
 
-        hundreds_string = hundreds[hundreds_digit]+'-'
 
     else:
         hundreds_string = hundreds[hundreds_digit]
         tens_string = tens[tens_digit]
         ones_string = ones[ones_digit]
 
+        hundreds_string = hundreds[hundreds_digit]
+
         if ones_string == 'zero':
             ones_string = ''
             
             if tens_string != '':
-                hundreds_string += '-'
+                hundreds_string += ' '
 
         elif tens_string == '':
-            hundreds_string += '-'
-
+            hundreds_string += ' '
 
         else:
-            tens_string +=  '-'
+            tens_string +=  ' '
 
-nums_String = hundreds_string + teens_string+ tens_string + ones_string
+nums_String = hundreds_string + teens_string + " " +  tens_string + ones_string
 
 print(f"Your number is {nums_String}")
