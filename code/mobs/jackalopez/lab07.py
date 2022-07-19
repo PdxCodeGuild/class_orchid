@@ -21,6 +21,11 @@ for index,age in enumerate(jackalopes):
     prune(index,age)
     birthing_age = birth(birthing_age,age)
 
+'''
+birthing_age // 2 -------- Gets a whole number for the new population loop
+'''
+
+
 
 # print(birthing_age)
 
