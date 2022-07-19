@@ -91,7 +91,7 @@ add 4 on the end | how long these two will take to make 1000 babies
 
 
 """
-
+"""
 pop_by_age = [0,0,0,0,2] #don't forget the first 3 years
 total_pop = sum(pop_by_age)
  #still need to work deaths in
@@ -101,9 +101,40 @@ for age in pop_by_age:
     
     print(age)
     
-
+"""
 
 #nonbreeding_pop =
 #breeding_pop = 
 
 #.insert
+
+# The goal is to calculate how many years it will take for two age 0 jackalopes to create a population of 1000.
+
+# - Jackalopes are reproductive from ages 4-8 and die at age 10.
+# - Gestation is instantaneous. Each gestation produces two offspring.
+# - Jackalopes are hermaphrodites, it takes a pair to reproduce, but any pair will do
+
+# With these conditions in mind, we can represent our population as a list of ints.
+
+
+jackalopes = [0, 0]
+
+# population = len(jackalopes)
+
+# the jackalopes get older
+# enumerate is a helper function that you can use to run a for loop
+# and have access to the the index (i) of the element as well as the element itself (jackalope)
+
+years = 0
+while len(jackalopes) <= 1000:
+    years += 1
+    for i, jackalope in enumerate(jackalopes):
+        # print(i, jackalope)
+        # jackalopes[i] == jackalope # True
+        if jackalope >= 4 and jackalope <= 8:
+            jackalopes.append(0)
+        jackalopes[i] += 1
+    while 10 in jackalopes:
+        jackalopes.remove(10)
+    print(len(jackalopes))
+print(years)
