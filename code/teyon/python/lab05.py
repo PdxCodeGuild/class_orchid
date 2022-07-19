@@ -79,7 +79,7 @@ card_deck = {
     "2": 2,
     "1": 1
 }
-#ask the user for their first, second and third card choice
+#cards are randomly selected for the user instead of user picking them.
 first_card = random.choice(list(card_deck))
 second_card = random.choice(list(card_deck))
 third_card = random.choice(list(card_deck))
