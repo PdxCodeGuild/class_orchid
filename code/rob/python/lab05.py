@@ -8,6 +8,7 @@ options = {
     '7' : 7,
     '8' : 8,
     '9' : 9,
+    '10' : 10,
     'J' : 10,
     'Q' : 10,
     'K' : 10,
@@ -89,7 +90,7 @@ if first_card == 'A' or second_card == 'A' or third_card == 'A':
 two_ace = get_cards(first_card, second_card, third_card)
 if len(two_ace) == 2:
     total += 10
-print(f'Total: {total}', two_ace, two_ace[1])
+print(f'Total: {total}')
 
 if total < 17:
     print('Move: Hit\n')
