@@ -55,6 +55,13 @@ ones = {
 # prompt to enter a number. Assigning to variable and typecast to int
 number_to_convert = int(input(f'Hello, please enter a numeber from 0-999 to convert to words: '))
 
+
+# hundreds_digits = number_to_convert // 100
+# tens_digit = (number_to_convert % 100) 
+# ones_digit = number_to_convert % 10
+
+# print(hundreds_digits, tens_digit, ones_digit)
+
 # If loop to check for int value of variable.
 
 
@@ -76,15 +83,23 @@ elif number_to_convert >= 100:
     hundreds_digits = number_to_convert // 100
     tens_digit = (number_to_convert % 100) // 10
     ones_digit = number_to_convert % 10
+
     if tens_digit == 0:
             output = hundreds[hundreds_digits] + ' ' + ones[ones_digit]
+
+   
+            output = hundreds[hundreds_digits] + ' ' + teens[tens_digit]
+     output = hundreds[hundreds_digits] + ' ' + ones[ones_digit]
     elif ones_digit == 0:
             output = hundreds[hundreds_digits] + ' ' + tens[tens_digit]
     if ones_digit == ' ':
             output = hundreds[hundreds_digits]
+
+if number_to_convert >= 100 and tens_digit > 10 and tens_digit < 20:
+    output = hundreds[hundreds_digits] + ' ' + teens[tens_digit]
             
     
-    output = hundreds[hundreds_digits] + ' ' + tens[tens_digit] + ' ' + ones[ones_digit]
+output = hundreds[hundreds_digits] + ' ' + tens[tens_digit] + ' ' + ones[ones_digit]
 
 
 print(output)
