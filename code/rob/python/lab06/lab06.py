@@ -25,14 +25,15 @@ def num_matches(winner, purchased):
     for x in range(0,5):
         if winner[x] == purchased[x]:
             matches.append([winner[x], purchased[x]])
-    return len(matches)
+    return matches
 
 while ticket_counter != 100000:
     tickets = pick6()
     winning_ticket = tickets[0]
     purchased_ticket = tickets[1]
 
-    matches = num_matches(winning_ticket, purchased_ticket)
+    matches = len(num_matches(winning_ticket, purchased_ticket))
+    see_matches = num_matches(winning_ticket, purchased_ticket)
     if matches == 1:
         match_counter['1'] += 1
         prize_money += 4
@@ -40,19 +41,25 @@ while ticket_counter != 100000:
         match_counter['2'] += 1
         prize_money += 7
     elif matches == 3:
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket},\nmatches: {see_matches}')
         match_counter['3'] += 1
         prize_money += 100
-    elif matches == 3:
+    elif matches == 4:
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}, matches: {see_matches}')
         match_counter['4'] += 1
         prize_money += 50000
     elif matches == 5:
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}, matches: {see_matches}')
         match_counter['5'] += 1
         prize_money += 1000000
     elif matches == 6:
+        print(f'winner: {winning_ticket}, purchased: {purchased_ticket}, matches: {see_matches}')
         match_counter['6'] += 1
         prize_money += 25000000
 
     ticket_counter += 1
     cost += 2
 
+ROI = (prize_money - cost)/cost
 print(f'\ncost: ${cost}\nprize money: ${prize_money} \nmatches: {match_counter}\n')
+print(ROI)
