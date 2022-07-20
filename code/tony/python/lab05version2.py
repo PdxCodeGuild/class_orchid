@@ -24,14 +24,14 @@ while True:
         val = translate(val)
         total += val
         if total == 21 or total + aces * 10 == 21 or total + (aces - 1) * 10 == 21:
-            print(f'{total} Blackjack!')
+            print('Blackjack!')
             break
         if total < 7:
-            print(f'{total} Hit')
+            print('Hit')
         elif total >= 7 and total < 21:
-            print(f'{total} Stay')
+            print('Stay')
         elif total > 21 :
-            print(f'{total} Busted!')
+            print('Busted!')
             break
     else:
         print('Accepted values: a, j, q, k, [2-10]')
