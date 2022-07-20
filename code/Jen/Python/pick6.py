@@ -26,10 +26,14 @@ print(f"Your numbers are {ticket}")
 
 def num_matches(winning_ticket, ticket):
     ticket_wins = 0
-    for i, wins in enumerate(winning_ticket):
-        for i, ticks in enumerate(ticket):
-            if wins == ticks:
-                ticket_wins += 1
+    iterations = 5
+    while iterations in range(0,6):
+        count = iterations 
+        win_num = winning_ticket[count]
+        tick_num = ticket[count]
+        if win_num == tick_num:
+            ticket_wins += 1
+        iterations -= 1
     return ticket_wins
 
 def pick6():
@@ -48,6 +52,7 @@ while x > 0:
     running_total -= 2.00
     running_total = running_total + num_matches(pick6(), ticket)
     
+running_total = round(running_total)
 
 if running_total > 0:
     print(f"You have played these numbers 100,000 times. Your bank balance is now ${running_total}. Congratulations!")    
