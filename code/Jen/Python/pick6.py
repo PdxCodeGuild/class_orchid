@@ -15,30 +15,30 @@ win_amounts = {
     6 : 25_000_000.00,
 }
 
-ticket = [random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), random.randint(1, 100),]
+ticket = []
+
+var1 = 6
+while int(var1) > 0:
+    ticket.append(random.randint(1,99))
+    var1 -= 1
+
 print(f"Your numbers are {ticket}")
+
 def num_matches(winning_ticket, ticket):
     ticket_wins = 0
-    if winning_ticket[0] == ticket[0]:
-        ticket_wins = ticket_wins + 1
-    if winning_ticket[1] == ticket[1]:
-        ticket_wins = ticket_wins + 1
-    if winning_ticket[2] == ticket[2]:
-        ticket_wins = ticket_wins + 1
-    if winning_ticket[3] == ticket[3]:
-        ticket_wins = ticket_wins + 1
-    if winning_ticket[4] == ticket[4]:
-        ticket_wins = ticket_wins + 1    
-    if winning_ticket[5] == ticket[5]:
-        ticket_wins = ticket_wins + 1    
-    winnings = win_amounts.get(ticket_wins)
-    return (winnings)
+    for i, wins in enumerate(winning_ticket):
+        for i, ticks in enumerate(ticket):
+            if wins == ticks:
+                ticket_wins += 1
+    return ticket_wins
 
 def pick6():
     
-    #charge for a ticket
-    winning_ticket = [random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), random.randint(1, 100), random.randint(1, 100),]
-    # create a list of 6 random numbers
+    winning_ticket = []
+    var2 = 6
+    while int(var2) > 0:
+        winning_ticket.append(random.randint(1,99))
+        var2 -= 1
     return winning_ticket
 
 running_total = 0
@@ -48,12 +48,9 @@ while x > 0:
     running_total -= 2.00
     running_total = running_total + num_matches(pick6(), ticket)
     
-bank = running_total
-if bank > 0:
-    print(f"You have played these numbers 100,000 times. Your bank balance is now ${bank}. Congratulations!")    
-else: print(f"You have played these numbers 100,000 times. Your bank balance is now ${bank}. Please try again.")
 
-
-
+if running_total > 0:
+    print(f"You have played these numbers 100,000 times. Your bank balance is now ${running_total}. Congratulations!")    
+else: print(f"You have played these numbers 100,000 times. Your bank balance is now ${running_total}. Please try again.")
 
 
