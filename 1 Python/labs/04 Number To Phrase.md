@@ -37,3 +37,4 @@ Convert a time given in hours and minutes to a phrase.
 > git push -u origin your-name/python/lab04
 ```
 Then go to the repository to create a PR.
+https://github.com/PdxCodeGuild/class_orchid/blob/ac0e397917f5d50215a193939b8b796a999684d6/code/luis/python/Lab_04/lab_04.py
