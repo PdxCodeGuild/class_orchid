@@ -1,3 +1,6 @@
+from unittest import skipIf
+
+
 user_input = input("\nEnter a number between 0-999 ")
 
 
@@ -56,20 +59,27 @@ phrase_3 = {
 
 
 x = int(user_input)
-#huns_digit = x//100
-if x <= 99:
+if x <= 19:
+    print(phrase[x])
+if x in range(20, 100): #<= 99:
     tens_digit = x//10
     ones_digit = x%10
     print(tens_digit, ones_digit)
     print(phrase_2[tens_digit] + phrase[ones_digit])
-if x >= 100:
+if x in range(100, 1000): #>= 100:
     huns_digit = x//100 
-    tens_digit = x//100
+    tens_digit = (x%100)//10
     ones_digit = x%10
     print(huns_digit, tens_digit, ones_digit)
     print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
+    print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
+    print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
+    if tens_digit == 0:
+        print(phrase_3[huns_digit] + phrase_2[tens_digit])
 
 
+
+    #skipIf(tens_digit == 0)
 
 
 
