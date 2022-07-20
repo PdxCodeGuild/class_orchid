@@ -1,15 +1,8 @@
 #pick6
-"""
-to-do
--generate 6 random numbers saved in order as winning list
--generate ticket with 6 numbers
--compare ticket against winning order to determine winnings and costs
--loop 100,000 times
-"""
 
 import random
 
-def pick6():
+def pick6(): #Generates Ticket Numbers
     random_list = []
     loop = 1
     while loop <= 6:
@@ -19,13 +12,7 @@ def pick6():
     else:
         return random_list
 
-    # for index in range(-1,6):
-    #     if winning[index] == ticket[index]:
-    #         matches += 1
-    #     else:
-    #         return matches
-
-def num_matches(winning, ticket):
+def num_matches(winning, ticket): #Matches Tickets to the selected winning ticket
     matches = 0
     index = 0
     while True:
@@ -40,8 +27,8 @@ def num_matches(winning, ticket):
         else:
             return matches
 
-def matching_value(matched):
-    value = -2
+def matching_value(matched): #Returns the winning amount for a ticket minus the cost of the ticket itself
+    value = 0
     if matched == 0:
         return value
     elif matched == 1:
@@ -52,41 +39,34 @@ def matching_value(matched):
         return value
     elif matched == 3:
         value += 100
-        print('100')
         return value
     elif matched == 4:
         value += 50000
-        print('50,000')
         return value
     elif matched == 5:
         value += 1000000
-        print('1,000,000')
         return value
     elif matched == 6:
         value += 25000000
-        print('JACKPOT')
         return value
 
-values = 0
 loop = 0
 winning_ticket = pick6()
+expenses = 0
+earnings = 0
+ticket_count = 100000
 
-while loop != 100000:
+while loop != ticket_count:
 
     ticket = pick6()
 
     matching = num_matches(winning_ticket, ticket)
 
-    values += matching_value(matching)
+    earnings += matching_value(matching)
+
+    expenses -= 2
 
     loop += 1
 
-    # if matching == 6:
-    #     print(f'Jackpot after {loop} tickets.')
-    #     break
-    
-    # if loop % 1000000 == 0:
-    #     print(f'Ticket #{int(loop) / 1000000} million.')
-
-print(values)
-    
+print(f"After {ticket_count} tickets, you made a total earnings of ${int(earnings)}. However cost of the tickets was ${int(expenses)}.")
+print(f'This has an ROI of {"{:.2f}".format(((earnings - expenses) / expenses) * 100)}%')
