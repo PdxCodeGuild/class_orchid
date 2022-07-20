@@ -22,16 +22,18 @@ def pick6():
 
 def num_matches(winner, purchased):
     matches = []
-    for x in range(0,5):
+    for x in range(0,6):
         if winner[x] == purchased[x]:
             matches.append([winner[x], purchased[x]])
     return matches
 
+tickets = pick6()
+winning_ticket = tickets[0]
+
 while ticket_counter != 100000:
     tickets = pick6()
-    winning_ticket = tickets[0]
     purchased_ticket = tickets[1]
-
+    
     matches = len(num_matches(winning_ticket, purchased_ticket))
     see_matches = num_matches(winning_ticket, purchased_ticket)
     if matches == 1:
