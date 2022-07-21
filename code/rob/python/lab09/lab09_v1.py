@@ -1,4 +1,5 @@
-data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+#data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9,8,7,6,5,4,5,6]
 
 def peaks(values):
     peaks = []
@@ -35,15 +36,20 @@ def version_2():
 
 
 def version_3():
-    prev = 0
     max = data[peak_list[0]] if data[peak_list[0]] > data[peak_list[1]] else data[peak_list[1]]
-    print('')
+    prev = 0
     while max > 0:
+        max_numbers = data.count(max)
         for x in range(len(data)):
+            index = x + 1
+            check_second_max = data[x::] if x != len(data) - 1 else [0]
+            #print(check_second_max, max, check_second_max.count(max))
+            if check_second_max.count(max) >= 1:
+                check_second_max = True
             if data[x] >= max:
                 print('X', end=' ')
                 prev = data[x]
-            elif data[x] <= prev and prev != 0:
+            elif data[x] <= prev and prev != 0 and max_numbers >= 2 and check_second_max == True:
                 print('0', end=' ')
             else:
                 print(' ', end=' ')
