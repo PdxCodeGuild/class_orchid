@@ -39,7 +39,7 @@ def num_matches(winning_ticket, ticket):
             print(ticket_wins)
             print(win_amounts.get(ticket_wins))
         iterations -= 1
-    return ticket_wins
+    return win_amounts.get(ticket_wins)
         
 
 def pick6():
