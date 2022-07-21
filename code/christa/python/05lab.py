@@ -16,7 +16,7 @@ cards = {
     'K': 10,
 }
 #Ask user for three card inputs
-card_1= input("What's your first card? ")
+card_1 = input("What's your first card? ")
 card_2 = input("What is your second card? ")
 card_3 = input("What is your third card? ")
 #take the user input and pull integer from dictionary
@@ -27,9 +27,9 @@ value_3 = cards[card_3]
 total_v = value_1 + value_2 + value_3
 #provide conditions for advising
 if total_v < 17:
-    mesaage = (f'{total_v} "Hit"')
+    message = (f'{total_v} "Hit"')
 elif total_v >= 17 and total_v < 21:
-    message = (f'{total_v} "Stay')
+    message = (f'{total_v} "Stay"')
 elif total_v == 21:
     message = (f'{total_v} "Blackjack!"')
 else:
