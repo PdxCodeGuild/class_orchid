@@ -57,6 +57,22 @@ phrase_3 = {
     9 : " nine hundred",
 }
 
+phrase_4 = {
+    1 : "and eleven",
+    2 : "and twelve",
+    3 : "and thirteen",
+    4 : "and fourteen",
+    5 : "and fifteen",
+    6 : "and sixteen",
+    7 : "and seventeen",
+    8 : "and eighteen",
+    9 : "and ninteen",
+
+
+
+}
+
+
 
 x = int(user_input)
 if x <= 19:
@@ -70,13 +86,17 @@ if x in range(100, 1000): #>= 100:
     huns_digit = x//100 
     tens_digit = (x%100)//10
     ones_digit = x%10
-    print(huns_digit, tens_digit, ones_digit)
-    print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-    print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-    print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-    if tens_digit == 0:
+    if ones_digit == 0:
         print(phrase_3[huns_digit] + phrase_2[tens_digit])
-
+    print(huns_digit, tens_digit, ones_digit)
+    if tens_digit == 1:
+        print((phrase_3[huns_digit] + phrase_4[tens_digit]))
+    if ones_digit != 0 and tens_digit != 1:
+        print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
+    #print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
+    #print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
+#if tens_digit == 0:
+    #print(phrase_3[huns_digit] + phrase_2[tens_digit])
 
 
     #skipIf(tens_digit == 0)
