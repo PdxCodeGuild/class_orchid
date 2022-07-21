@@ -37,8 +37,8 @@ check_digit = credit_card.pop(-1)
 credit_card.reverse()
 
 for i, n in enumerate(credit_card): # 
-    if i % 2 == 0: # im checking for even numbers to double which is why i % 2 makes sense because there is no remainder so it == 0
-        credit_card[i] = credit_card[i] * 2
+    if i % 2 == 0: # im checking for even numbers to double which is why i % 2 makes sense because there is no remainder with even numbers so it == 0 always
+        credit_card[i] = credit_card[i] * 2 # then doubling it at the even indicies 
 
 
 for index in range(len(credit_card)):
