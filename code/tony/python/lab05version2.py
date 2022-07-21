@@ -13,24 +13,30 @@ def translate(val):
     return val
 
 # initialize total
-total = 0
-aces = 0
+score = 0 # running score
+aces = 0 # running total of aces dealt
+blackjack = False # running blackjack status
 
-# Input three cards
+# input each card
 while True:
     val = input(f'Enter which card you drew: ').lower()
     if val in accepted:
         if val == 'a': aces += 1
         val = translate(val)
-        total += val
-        if total == 21 or total + aces * 10 == 21 or total + (aces - 1) * 10 == 21:
+        score += val
+        for i in range(1,aces):
+            if blackjack: break
+            # consider each ace dealt, valued at both 1 and 11
+            blackjack = score + (aces - i) * 10 == 21
+        blackjack = blackjack or score == 21
+        if blackjack:
             print('Blackjack!')
             break
-        if total < 7:
+        if score < 17:
             print('Hit')
-        elif total >= 7 and total < 21:
+        elif score < 21:
             print('Stay')
-        elif total > 21 :
+        elif score > 21 :
             print('Busted!')
             break
     else:
