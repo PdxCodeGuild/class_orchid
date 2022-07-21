@@ -34,6 +34,10 @@ def num_matches(winning_ticket, ticket):
         tick_num = ticket[count]
         if win_num == tick_num:
             ticket_wins += 1
+            print(winning_ticket)
+            print(ticket)
+            print(ticket_wins)
+            print(win_amounts.get(ticket_wins))
         iterations -= 1
     return ticket_wins
         
