@@ -45,6 +45,7 @@ def peaks_and_valleys(shasta):
     peaks_and_valleys_list.sort()   
     
     return peaks_and_valleys_list                             #sorts the list so the peaks and valleys are in order 
+    
     #print(peaks_and_valleys)
 
 print(f'\nFor Mount Shasta, {shasta} the following locations in the data set are peaks and valleys.\n')
