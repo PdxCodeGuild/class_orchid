@@ -1,5 +1,5 @@
 #data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-data = [1,2,3,3,2,1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,3,4]
+data = [1,2,3,4,3,2,1,2,3,4,5,6,7,8,7,6,5,4,3,2,3,4,5]
 
 def peaks(values):
     peaks = []
@@ -62,7 +62,7 @@ def version_3():
                 prev = 0
         highest -= 1
     water = count_x / count_o
-    print(f'\nwater: {water}, x\'s: {count_x}, o\'s: {count_o}')
+    print(f'\nwater: {water}')
 
 user_input = 1
 options = [1,2,3,4]
