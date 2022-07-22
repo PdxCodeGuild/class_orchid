@@ -32,23 +32,29 @@ def num_matches(winning_ticket, ticket):
 
 winning_ticket = pick6(6, 1, 99)
 balance = 0
+earnings = 0
 
 for x in range(100000):
     ticket = pick6(6, 1, 99)
     balance -= 2
     matches = num_matches(winning_ticket, ticket)
-    balance += winning_amount[matches]
-
+    earnings+= winning_amount[matches]
+    
 print('We are currently "crunching" the numbers....')
-time.sleep(3)
+time.sleep(0)
 
 print('In 3')
-time.sleep(2)
+time.sleep(0)
 
 print('2')
-time.sleep(2)
+time.sleep(0)
 
 print("1")
-time.sleep(2)
+time.sleep(0)
 
-print(f'The results are in! \nYour final balance is:{balance}!')
+print(balance)
+print(earnings)
+
+print(f'The results are in! \nYour final balance is: {earnings + balance }!')
+
+print(f'Your ROI is {(earnings - balance)/ balance}%')
