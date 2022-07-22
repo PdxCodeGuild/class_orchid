@@ -116,7 +116,7 @@ Presentation Day: October 21st, 2022
 <!-- [Rain Data](1%20Python/labs/rain_data.md), -->
 [Random Emoticon Generator](1%20Python/labs/random_emoticon_generator.md),
 [Random Password Generator](1%20Python/labs/random_password.md),
-<!-- [Road Trip](1%20Python/labs/road_trip.md), -->
+[Road Trip](1%20Python/labs/road_trip.md),
 [Rock, Paper, Scissors](1%20Python/labs/rock_paper_scissors.md),
 <!-- [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md), -->
 [Simple Calculator](1%20Python/labs/simple_calculator.md),
