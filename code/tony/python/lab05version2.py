@@ -30,14 +30,14 @@ while True:
             blackjack = score + (aces - i) * 10 == 21
         blackjack = blackjack or score == 21
         if blackjack:
-            print(f'21 - Blackjack!')
+            print(f'21 - Blackjack! 💯')
             break
         if score < 17:
-            print(f'{score} - Hit!')
+            print(f'{score} - Hit! ✅')
         elif score < 21:
-            print(f'{score} - Stay!')
+            print(f'{score} - Stay! ❌')
         elif score > 21 :
-            print(f'{score} - Busted!')
+            print(f'{score} - Busted! 🃏')
             break
     else:
         print('Accepted values: a, j, q, k, [2-10]')
