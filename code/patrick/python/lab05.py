@@ -23,10 +23,10 @@ print(cards[users_card1])
 print(cards[users_card2])
 print(cards[users_card3])
 cards_played = cards[users_card1] + cards[users_card2] + cards[users_card3]
-
-if cards_played <= 17:
+print(cards_played)
+if cards_played <= 17 and cards_played < 21:
      print("Hit")
-if cards_played >= 18:
+if cards_played >= 18 and cards_played < 21:
      print("stay")
 if cards_played == 21:
      print("Blackjack!!")
