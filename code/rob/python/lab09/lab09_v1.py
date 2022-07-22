@@ -1,5 +1,5 @@
-data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-#data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9,8,7,6,5,4,5,6]
+#data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9,8,7,6,5,4,5,6]
 
 def peaks(values):
     peaks = []
@@ -38,6 +38,8 @@ def version_2():
 def version_3():
     max = data[peak_list[0]] if data[peak_list[0]] > data[peak_list[1]] else data[peak_list[1]]
     prev = 0
+    count_x = 0
+    count_o = 0
     while max > 0:
         max_numbers = data.count(max)
         for x in range(len(data)):
@@ -48,15 +50,19 @@ def version_3():
                 check_second_max = True
             if data[x] >= max:
                 print('X', end=' ')
+                count_x += 1
                 prev = data[x]
             elif data[x] <= prev and prev != 0 and max_numbers >= 2 and check_second_max == True:
                 print('0', end=' ')
+                count_o += 1
             else:
                 print(' ', end=' ')
             if x == len(data) -1:
                 print('')
                 prev = 0
         max -= 1
+    water = count_x / count_o
+    print(f'\nwater: {water}, x\'s: {count_x}, o\'s: {count_o}')
 
 user_input = 1
 options = [1,2,3,4]
@@ -68,10 +74,10 @@ while user_input in options:
     user_input = int(input(f'\nPick a number:'))
     if user_input == 1:
         print('')
-        print(peak_list)
+        print('Peaks: ', peak_list)
     elif user_input == 2:
         print('')
-        print(valley_list)
+        print('Valleys: ', valley_list)
     elif user_input == 3:
         print('')
         version_2()
