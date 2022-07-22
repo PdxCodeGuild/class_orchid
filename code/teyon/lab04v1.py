@@ -65,11 +65,11 @@ elif digit < 10:
     single_digit = worded_ones_digits[ones_digit]
     print(single_digit)
 # Prints teen values from the teen dictionary that are greater than 10 and less than 20.
-elif digit > 10 and digit < 20:
+elif digit >= 10 and digit < 20:
     teens = worded_teens[teens_digit]
     print(teens)
 # Prints all named values that are less than 100 but more than 20 that the user puts in.
 elif digit >= 20 or digit <= 99:
     tens_word = worded_tens_digits[ten_digit]
     ones_word = worded_ones_digits[ones_digit]
-    print(f"{tens_word}-{ones_word}")
+    print(f"{tens_word} {ones_word}")

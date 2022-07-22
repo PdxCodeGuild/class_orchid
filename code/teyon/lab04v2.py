@@ -53,7 +53,7 @@ worded_hundreds_digits = {
 }
 
 # Ask the user to input a number between 0 and 99
-digit = input("\nEnter a number between 0-99: ")
+digit = input("\nEnter a number between 0-999: ")
 
 # Converts the string input from the variable digit from a string into a integer
 digit = int(digit)
@@ -89,7 +89,7 @@ if digit >= 100 and hundreds_ten_digit == 0:
     #created a variable called ones_word to indicate which word in the ones dictionary is to be used
     ones_word = worded_ones_digits[ones_digit]
     #print the outcome
-    print(f"{hundreds_word} and {ones_word}")
+    print(f"{hundreds_word} {ones_word}")
 
 ## if statement that determines if a digit is over 100 and if the tens place is equal to one,
 #  this determines the teen number inside a 3 digit number from the teens dictionary.
@@ -99,7 +99,7 @@ elif digit >= 100 and hundreds_ten_digit == 1:
     #created a variable called teens_word to indicate which word in the teens dictionary is to be used
     teens_word = worded_teens[teens_modulo]
     #print outcome
-    print(f"{hundreds_word} and {teens_word}")
+    print(f"{hundreds_word} {teens_word}")
 ## if statement that determines if a digit is over 100 and the tens place is greater than zero
 #  this determines if the number is greater than 19 in the tens place inside a 3 digit number.
 elif digit >= 100 and hundreds_ten_digit > 1:
@@ -110,7 +110,7 @@ elif digit >= 100 and hundreds_ten_digit > 1:
      #created a variable called ones_word to indicate which word in the ones dictionary is to be used
     ones_word = worded_ones_digits[ones_digit]
     #print outcome
-    print(f"{hundreds_word} and {ten_word}-{ones_word}")
+    print(f"{hundreds_word} {ten_word} {ones_word}")
            
 # Elif statement that determines if a digit is under 10 
 elif digit < 10:
@@ -118,11 +118,11 @@ elif digit < 10:
     single_digit = worded_ones_digits[ones_digit]
     print(single_digit)
 # Prints teen values from the teen dictionary that are greater than 10 and less than 20.
-elif digit > 10 and digit < 20:
+elif digit >= 10 and digit < 20:
     teens = worded_teens[teens_digit]
     print(teens)
 # Prints all named values that are less than 100 but more than 20 that the user puts in.
 elif digit >= 20 or digit <= 99:
     tens_word = worded_tens_digits[ten_digit]
     ones_word = worded_ones_digits[ones_digit]
-    print(f"{tens_word}-{ones_word}")
+    print(f"{tens_word} {ones_word}")
