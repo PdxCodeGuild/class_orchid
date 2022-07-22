@@ -1,3 +1,7 @@
+
+
+####LAB 06 VERSION 2
+
 #import random module
 import random
 
@@ -74,8 +78,12 @@ while playing:
     matches = num_matches(ticket, winning_ticket)
     #takes the new total from each iteration and adds it to a running total
     total += winnings(matches)
-
+#added ROI formula for version 2    
+roi = total / (playing * 2)
 
 #printing the final amount    
 print(f"Total: {total}")
 
+print(f"ROI: {roi}")
+ #printing the final amount    
+print(total)
