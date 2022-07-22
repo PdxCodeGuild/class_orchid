@@ -76,7 +76,7 @@ phrase_5 = {
     13 : "thirteen",
     14 : "fourteen",
     15 : "fifteen",
-    16 : "sisteen",
+    16 : "sixteen",
     17 : "seventeen",
     18 : "eighteen",
     19 : "ninteen",
@@ -91,7 +91,7 @@ phrase_6 = {
     3 : "thirteen",
     4 : "fourteen",
     5 : "fifteen",
-    6 : "sisteen",
+    6 : "sixteen",
     7 : "seventeen",
     8 : "eighteen",
     9 : "ninteen",
@@ -101,16 +101,22 @@ phrase_7 = {
     1 : "eleven"
 }
 
-
+phrase_8 = {
+    1 : "ten",
+}
 x = int(user_input)
 if x <= 19:
     print(phrase[x])
 
-if x in range(20, 100):
+if x in range(20, 100): #<= 99:
+    huns_digit = x//100
     tens_digit = x//10
     ones_digit = x%10
-    print(tens_digit, ones_digit)
-    print(phrase_2[tens_digit] + phrase[ones_digit])
+    if ones_digit == 0:
+        print(phrase_2[tens_digit])
+    if ones_digit != 0:
+        print(tens_digit, ones_digit)
+        print(phrase_2[tens_digit] + phrase[ones_digit])
 
 
 if x in range(100, 110):
@@ -124,10 +130,14 @@ if x in range(100, 110):
         print(phrase_3[huns_digit] + phrase[ones_digit])
 
 
+if x in range(110, 111):
+    huns_digit = x//100
+    tens_digit = (x%100)//10
+    print(phrase_3[huns_digit] + phrase_8[tens_digit])
 
 
 
-if x in range(110, 112):
+if x in range(111, 112):
     huns_digit = x//100
     tens_digit = (x%100)//10
     print(huns_digit, tens_digit)
@@ -138,11 +148,14 @@ if x in range(112, 1000):
     huns_digit = x//100 
     tens_digit = (x%100)//10
     ones_digit = x%10
-   
+    huns_mod = x %100
+
     print(huns_digit, tens_digit, ones_digit)
     if tens_digit == 1 and tens_digit != 0:
         print((phrase_3[huns_digit] + phrase_6[ones_digit]))
-    if ones_digit == 0 and tens_digit != 1:
+    if tens_digit == 0 and ones_digit == 0:
+        print(phrase_3[huns_digit])
+    if ones_digit == 0 and tens_digit != 1 and huns_mod != 0:
         print(phrase_3[huns_digit] + phrase_2[tens_digit])
     if ones_digit !=0 and tens_digit > 1:
         print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
