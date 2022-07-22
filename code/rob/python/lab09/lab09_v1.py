@@ -1,5 +1,5 @@
-#data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-data = [1,2,3,4,3,2,1,2,3,4,5,6,7,8,7,6,5,4,3,2,3,4,5]
+data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+#data = [1,2,3,4,3,2,1,2,3,4,5,6,7,8,7,6,5,4,3,2,3,4,5]
 
 def peaks(values):
     peaks = []
@@ -20,7 +20,14 @@ def valleys(values):
 peak_list = peaks(data)
 valley_list = valleys(data)
 
-
+def peaks_and_valleys(peaks, valleys):
+    in_order = []
+    in_order.extend(peaks)
+    in_order.extend(valleys)
+    in_order.sort()
+    print(in_order)
+        
+    return in_order
 
 def version_2():
     highest = max(peak_list)
@@ -65,7 +72,8 @@ def version_3():
     print(f'\nwater: {water}')
 
 user_input = 1
-options = [1,2,3,4]
+options = [1,2,3,4,5]
+p_v = peaks_and_valleys(peak_list, valley_list)
 while user_input in options:
     print('\n1. To see peaks')
     print('2. To see valleys')
@@ -79,9 +87,11 @@ while user_input in options:
         print('')
         print('Valleys: ', valley_list)
     elif user_input == 3:
+        print('\nPeaks and Valleys: ', p_v)
+    elif user_input == 4:
         print('')
         version_2()
-    elif user_input == 4:
+    elif user_input == 5:
         print('')
         version_3()
     else:
