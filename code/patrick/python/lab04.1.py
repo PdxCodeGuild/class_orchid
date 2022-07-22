@@ -1,4 +1,4 @@
-from unittest import skipIf
+
 
 
 user_input = input("\nEnter a number between 0-999 ")
@@ -67,67 +67,91 @@ phrase_4 = {
     7 : "and seventeen",
     8 : "and eighteen",
     9 : "and ninteen",
+}
 
-
+phrase_5 = {
+    10 : "ten",
+    11 : "eleven",
+    12 : "twelve",
+    13 : "thirteen",
+    14 : "fourteen",
+    15 : "fifteen",
+    16 : "sisteen",
+    17 : "seventeen",
+    18 : "eighteen",
+    19 : "ninteen",
+    
 
 }
 
+phrase_6 = {
+    0 : "ten",
+    1 : "eleven",
+    2 : "twelve",
+    3 : "thirteen",
+    4 : "fourteen",
+    5 : "fifteen",
+    6 : "sisteen",
+    7 : "seventeen",
+    8 : "eighteen",
+    9 : "ninteen",
+}
+
+phrase_7 = {
+    1 : "eleven"
+}
 
 
 x = int(user_input)
 if x <= 19:
     print(phrase[x])
-if x in range(20, 100): #<= 99:
+
+if x in range(20, 100):
     tens_digit = x//10
     ones_digit = x%10
     print(tens_digit, ones_digit)
     print(phrase_2[tens_digit] + phrase[ones_digit])
-if x in range(100, 1000): #>= 100:
+
+
+if x in range(100, 110):
+    huns_digit = x//100
+    tens_digit = (x%100)//10
+    ones_digit = x%10
+    if ones_digit == 0 and tens_digit ==0:
+        print(phrase_3[huns_digit])
+    if ones_digit != 0 and tens_digit == 0:
+        print(huns_digit, tens_digit, ones_digit)
+        print(phrase_3[huns_digit] + phrase[ones_digit])
+
+
+
+
+
+if x in range(110, 112):
+    huns_digit = x//100
+    tens_digit = (x%100)//10
+    print(huns_digit, tens_digit)
+    print(phrase_3[huns_digit] + phrase_7[tens_digit])
+
+
+if x in range(112, 1000): 
     huns_digit = x//100 
     tens_digit = (x%100)//10
     ones_digit = x%10
-    if ones_digit == 0:
-        print(phrase_3[huns_digit] + phrase_2[tens_digit])
+   
     print(huns_digit, tens_digit, ones_digit)
-    if tens_digit == 1:
-        print((phrase_3[huns_digit] + phrase_4[tens_digit]))
-    if ones_digit != 0 and tens_digit != 1:
+    if tens_digit == 1 and tens_digit != 0:
+        print((phrase_3[huns_digit] + phrase_6[ones_digit]))
+    if ones_digit == 0 and tens_digit != 1:
+        print(phrase_3[huns_digit] + phrase_2[tens_digit])
+    if ones_digit !=0 and tens_digit > 1:
         print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-    #print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-    #print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-#if tens_digit == 0:
-    #print(phrase_3[huns_digit] + phrase_2[tens_digit])
-
-
-    #skipIf(tens_digit == 0)
-
-
-
-
-
-
-
-#x = int(user_input)
-#huns_digit = x//100
-#while x >0 -1:
-    #if x <= 19:
-        #print(phrase[x])
-        #if x <= 19 :
-            #break
-            #if x <= 99:
-                #tens_digit = x//10
-                #ones_digit = x%10
-                #print(tens_digit, ones_digit)
-                #print(phrase_2[tens_digit] + phrase[ones_digit])
-                #if x <= 99 :
-                    #break
-                    #if x >= 100:
-                        #huns_digit = x//100 
-                        #tens_digit = x//100
-                        #ones_digit = x%10
-                        #print(huns_digit, tens_digit, ones_digit)
-                        #print(phrase_3[huns_digit] + phrase_2[tens_digit] + phrase[ones_digit])
-
-
+    
+    
+    
+    
+    
+    
+   
 
 
