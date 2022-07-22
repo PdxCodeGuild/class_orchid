@@ -25,14 +25,14 @@ for i, digit in enumerate(cc_digits):              #referenced jackalopes lab wh
     else:    
         worked_digits.append(int(digit))               #for all other digit that didn't need worked, move to worked list
 #-----------------------------------------------------------------------------------------------------------#
-total = check_digits[0] + sum(worked_digits)    #6. Sum all values
+total = sum(worked_digits)    #6. Sum all values
 print(total)
 #-----------------------------------------------------------------------------------------------------------#
 check_var = total % 10                            #7 Take the second digit of that sum
 print(check_digits)
 print(check_var)
 #-----------------------------------------------------------------------------------------------------------#
-if check_digits == check_var:                      #8. If that matches the check digit, 
+if check_digits[0] == check_var:                      #8. If that matches the check digit, 
     print("Valid")                                    #the whole card number is valid
 else:
     print("Invalid")                                #If it does not match check digit, invalid
