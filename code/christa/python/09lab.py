@@ -39,11 +39,14 @@ def valley(shasta):       #define a funciton to find valleys of the Shasta list
                 valleys.append(i)    #append indices for valleys to the valleys list
     return valleys                    #return the valleys list when this function is called upon
 #print(valley(shasta))
-
-peaks_and_valleys = (peak(shasta)) + (valley(shasta))   #combines the peaks and valleys lists created by the functions into one comprehensive list
-peaks_and_valleys.sort()                                #sorts the list so the peaks and valleys are in order 
-#print(peaks_and_valleys)
+def peaks_and_valleys(shasta):
+    
+    peaks_and_valleys_list = (peak(shasta)) + (valley(shasta))   #combines the peaks and valleys lists created by the functions into one comprehensive list
+    peaks_and_valleys_list.sort()   
+    
+    return peaks_and_valleys_list                             #sorts the list so the peaks and valleys are in order 
+    #print(peaks_and_valleys)
 
 print(f'\nFor Mount Shasta, {shasta} the following locations in the data set are peaks and valleys.\n')
 print(f'The indices for peaks in Shasta are {peak(shasta)} and the valleys are {valley(shasta)}.\n')  #print using f statement to tell the user what data they are looking at
-print(f'The combined indices for peaks and valleys in Shasta are {peaks_and_valleys}.\n')
+print(f'The combined indices for peaks and valleys in Shasta are {peaks_and_valleys(shasta)}.\n')
