@@ -1,5 +1,5 @@
 #data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9,8,7,6,5,4,5,6]
+data = [1,2,3,3,2,1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,3,4]
 
 def peaks(values):
     peaks = []
@@ -23,32 +23,32 @@ valley_list = valleys(data)
 
 
 def version_2():
-    max = data[peak_list[0]] if data[peak_list[0]] > data[peak_list[1]] else data[peak_list[1]]
-    while max > 0:
+    highest = max(peak_list)
+    while highest > 0:
         for x in range(len(data)):
-            if data[x] >= max:
+            if data[x] >= highest:
                 print('X', end=' ')
             else:
                 print(' ', end=' ')
             if x == len(data) -1:
                 print('')
-        max -= 1
+        highest -= 1
 
 
 def version_3():
-    max = data[peak_list[0]] if data[peak_list[0]] > data[peak_list[1]] else data[peak_list[1]]
+    highest = max(peak_list)
     prev = 0
     count_x = 0
     count_o = 0
-    while max > 0:
-        max_numbers = data.count(max)
+    while highest > 0:
+        max_numbers = data.count(highest)
         for x in range(len(data)):
             index = x + 1
             check_second_max = data[x::] if x != len(data) - 1 else [0]
-            #print(check_second_max, max, check_second_max.count(max))
-            if check_second_max.count(max) >= 1:
+            
+            if check_second_max.count(highest) >= 1:
                 check_second_max = True
-            if data[x] >= max:
+            if data[x] >= highest:
                 print('X', end=' ')
                 count_x += 1
                 prev = data[x]
@@ -60,7 +60,7 @@ def version_3():
             if x == len(data) -1:
                 print('')
                 prev = 0
-        max -= 1
+        highest -= 1
     water = count_x / count_o
     print(f'\nwater: {water}, x\'s: {count_x}, o\'s: {count_o}')
 
