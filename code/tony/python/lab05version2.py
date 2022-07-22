@@ -24,20 +24,20 @@ while True:
         if val == 'a': aces += 1
         val = translate(val)
         score += val
-        for i in range(1,aces):
+        for i in range(0,aces):
             if blackjack: break
             # consider each ace dealt, valued at both 1 and 11
             blackjack = score + (aces - i) * 10 == 21
         blackjack = blackjack or score == 21
         if blackjack:
-            print('Blackjack!')
+            print(f'21 - Blackjack!')
             break
         if score < 17:
-            print('Hit')
+            print(f'{score} - Hit!')
         elif score < 21:
-            print('Stay')
+            print(f'{score} - Stay!')
         elif score > 21 :
-            print('Busted!')
+            print(f'{score} - Busted!')
             break
     else:
         print('Accepted values: a, j, q, k, [2-10]')
