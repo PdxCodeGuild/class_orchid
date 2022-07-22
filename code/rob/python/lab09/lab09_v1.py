@@ -77,8 +77,9 @@ p_v = peaks_and_valleys(peak_list, valley_list)
 while user_input in options:
     print('\n1. To see peaks')
     print('2. To see valleys')
-    print('3. To see version 2')
-    print('4. To see version 3')
+    print('3. To see peaks and valleys')
+    print('4. To see version 2')
+    print('5. To see version 3')
     user_input = int(input(f'\nPick a number:'))
     if user_input == 1:
         print('')
