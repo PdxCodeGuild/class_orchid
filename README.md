@@ -8,6 +8,7 @@ M-F 9:30 am – 4:30 pm
 
 ### Holidays / Days Off
 
+- July 29th (Day Off)
 - September 5th (Labor Day)
 
 ### Staff
