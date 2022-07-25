@@ -26,7 +26,6 @@ print(f"\nWelcome to pick six")
 
 def pick6():
     #winning_numbers = [random.randint(1, 9) for _ in range(6)]
-
     numbers = []
     for _ in range(6):
         numbers.append(random.randint(1, 9))
@@ -34,30 +33,82 @@ def pick6():
     return numbers
 
 
-winning_numbers = pick6()
+#winning_numbers = pick6()
+#print(winning_numbers)
+
+
+#def num_matches( winning_numbers, user_numbers:
+    #matches = 0
+    #match = x == y 
+    #for match in match
+        #matches += 1 
+        #return matches
+
+
+
+
 
 
 
 balance = 0
 
-for _ in range(10):
+for _ in range(0, 100000):
      user_numbers = pick6()
+     winning_numbers = pick6()
      user_numbers.sort()
      winning_numbers.sort()
+     matches = 0
+     if winning_numbers[0] == user_numbers[0]:
+        matches += 1
+     if winning_numbers[1] == user_numbers[1]:
+        matches += 1  
+     if winning_numbers[2] == user_numbers[2]:
+        matches += 1
+     if winning_numbers[3] == user_numbers[3]:
+        matches += 1
+     if winning_numbers[4] == user_numbers[4]:
+        matches += 1
+     if winning_numbers[5] == user_numbers[5]:
+        matches += 1
      if user_numbers <= winning_numbers:
         balance += -2
-        #print(_)
-        #print(cost_of_game)
-        print(balance)
-        if user_numbers == winning_numbers:
-            balance =+ 1000
-            print(balance)
+        #print(balance)
+        if matches == 1:
+            balance += paid_out["1"]
+        if matches == 2:
+            balance += paid_out["2"]
+        if matches == 3:
+            balance += paid_out["3"]
+        if matches == 4:
+            balance += paid_out["4"] 
+        if matches == 5:
+            balance += paid_out["5"]
+        if matches == 6:
+            balance += paid_out["6"]   
+            #print(balance)
+            print(matches)
 
- 
+
+
+#def num_matches():
+    #matches = 0
+    #if winning_numbers(0) == user_numbers(0):
+       # matches += 1
+    #if winning_numbers(1) == user_numbers(1):
+    #    matches += 1  
+    #if winning_numbers(2) == user_numbers(2):
+       # matches += 1
+    #if winning_numbers(3) == user_numbers(3):
+        #matches += 1
+    #if winning_numbers(4) == user_numbers(4):
+        #matches += 1
+    #if winning_numbers(5) == user_numbers(5):
+        #matches += 1
+#print(user_numbers) 
 #print("your balance is" [balance])
+print(balance)
 
-
-
+print(matches)
 
 
 
