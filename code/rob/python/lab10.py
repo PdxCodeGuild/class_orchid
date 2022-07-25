@@ -31,7 +31,29 @@ while user_input != '':
     print('Encryp: ', user_input_encryp)
     
     user_input = input('Enter a word to decryp: ')
+    if user_input == '': break
     user_input_decryp = decryp_word(user_input)
     print('Decryp: ', user_input_decryp)
 
+    #version 2####################################################
+    rotations = input('Choose number of times to encryp/decryp: ')
+    if rotations.isnumeric(): rotations = int(rotations)
+    else: 
+        print('Must be a number') 
+        break
+    if rotations == '': break
+    
+    rotated_num = rotations
+    user_input = input('Enter a word to rotate: ')
+    if user_input == '': break
+    rotated = ''
+    while rotations > 0:
+        if rotations > 0:
+            rotated = encryp_word(user_input)
+            rotations -= 1
+        if rotations > 0:
+            rotated = decryp_word(user_input)
+            rotations -= 1
+    print(f'Rotated {rotated_num} times: ', rotated)
+    ##############################################################
 print('bye\n')
