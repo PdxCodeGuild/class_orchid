@@ -1,4 +1,7 @@
-# Dictionary for hundreds, tens, teens and ones to convert to words. 
+"""
+Lab 4: Version 2
+Handle numbers from 0-999.
+"""
 hundreds = {
     0: '',
     1: 'one hundred',
@@ -60,8 +63,7 @@ hundreds_digits = numbers // 100
 tens_digit = (numbers // 10) % 10
 ones_digit = numbers % 10
 
-print(hundreds_digits, tens_digit, ones_digit)
-print(numbers)
+
 
 
 if numbers >= 100 and tens_digit == 1: # This will diplay the hundreds with only seen dict being called on. 
