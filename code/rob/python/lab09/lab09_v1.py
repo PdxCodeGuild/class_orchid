@@ -1,5 +1,5 @@
-data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-#data = [1,2,3,4,3,2,1,2,3,4,5,6,7,8,7,6,5,4,3,2,3,4,5]
+# data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+data = [1,2,3,4,3,2,1,2,3,4,5,6,7,8,7,6,5,4,3,2,3,4,5,6,7,6,5,4,5,6]
 
 def peaks(values):
     peaks = []
@@ -45,7 +45,6 @@ def version_2():
 def version_3():
     highest = max(peak_list)
     prev = 0
-    count_x = 0
     count_o = 0
     while highest > 0:
         max_numbers = data.count(highest)
@@ -57,7 +56,6 @@ def version_3():
                 check_second_max = True
             if data[x] >= highest:
                 print('X', end=' ')
-                count_x += 1
                 prev = data[x]
             elif data[x] <= prev and prev != 0 and max_numbers >= 2 and check_second_max == True:
                 print('0', end=' ')
@@ -68,8 +66,7 @@ def version_3():
                 print('')
                 prev = 0
         highest -= 1
-    water = count_x / count_o
-    print(f'\nwater: {water}')
+    print(f'\nwater: {count_o}')
 
 user_input = 1
 options = [1,2,3,4,5]
