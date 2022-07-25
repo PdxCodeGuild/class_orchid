@@ -86,7 +86,7 @@ for _ in range(0, 100000):
         if matches == 6:
             balance += paid_out["6"]   
             #print(balance)
-            print(matches)
+            
 
 
 
@@ -108,7 +108,7 @@ for _ in range(0, 100000):
 #print("your balance is" [balance])
 print(balance)
 
-print(matches)
+
 
 
 
