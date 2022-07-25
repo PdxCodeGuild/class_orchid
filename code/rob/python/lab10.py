@@ -6,8 +6,11 @@ user_input = input('Enter a word to ROT+13: ')
 def rotate_word(user_input):
     encryp =''
     for char in user_input:
-        index = english.index(char)
-        encryp += rot[index]
+        if char == ' ':
+            encryp += char
+        else:
+            index = english.index(char)
+            encryp += rot[index]
     return encryp
 
 user_input_encryp = rotate_word(user_input)
