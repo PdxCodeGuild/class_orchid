@@ -62,14 +62,14 @@ def winnings(matches):
 total = 0
 #playing is the amount of plays which we will have or the amount of tickets to be purchased
 playing = 100000
-
+spent = 0
 
 #while loop that iterates through 1 ticket pyrchased and matches it with a winning ticket
 while playing:
     #subtracts one play from the total of 100,000 each iteration until 0 which is false
     playing -= 1
     #subtracts 2 dollars for a ticket per iteration
-    total -= 2
+    spent -= 2
     #using the pick6 function to select a random list of 6 numbers
     ticket = pick6()
     #using the pick6 function again to select a random list of 6 numbers for the winning ticket
@@ -78,11 +78,12 @@ while playing:
     matches = num_matches(ticket, winning_ticket)
     #takes the new total from each iteration and adds it to a running total
     total += winnings(matches)
-#added ROI formula for version 2    
-roi = total / (playing * 2)
+    
+#added ROI formula for version 2  
+roi = (total - spent) / spent
 
 #printing the final amount    
-print(f"Total: {total}")
+print(f"Total Won: {total}")
 
 print(f"ROI: {roi}")
  #printing the final amount    
