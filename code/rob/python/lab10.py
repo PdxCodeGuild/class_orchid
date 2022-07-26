@@ -49,21 +49,21 @@ user_input = '0'
 
 while user_input != '':
     print('\nPress enter to exit')
-    user_input = input('Enter a word to encryp: ')
+    user_input = input('Enter a word to encryp: ').lower()
     if user_input == '': break
     user_input_encryp = encryp_word(user_input)
     print('Encryp: ', user_input_encryp)
     
-    user_input = input('Enter a word to decryp: ')
+    user_input = input('Enter a word to decryp: ').lower()
     if user_input == '': break
     user_input_decryp = decryp_word(user_input)
     print('Decryp: ', user_input_decryp)
 
     user_rotations = int(input('Enter a number of times to rotate a word: '))
-    user_input = input(f'Enter a word to encryp {user_rotations} rotations : ')
+    user_input = input(f'Enter a word to encryp {user_rotations} rotations : ').lower()
     print(encryp_choice_rotations(user_input, user_rotations))
     
     user_rotations = int(input('Enter a number of times to rotate a word: '))
-    user_input = input(f'Enter a word to decryp {user_rotations} rotations : ')
+    user_input = input(f'Enter a word to decryp {user_rotations} rotations : ').lower()
     print(decryp_choice_rotations(user_input, user_rotations))
 print('bye\n')
