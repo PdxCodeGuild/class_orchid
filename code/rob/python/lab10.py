@@ -21,6 +21,30 @@ def decryp_word(user_input):
             decryp += english[index]
     return decryp
 
+#version 2####################################################
+def encryp_choice_rotations(user_input, user_rotations):
+    rotated = ''
+    for l in user_input:
+        rotations = user_rotations
+        if english.index(l) + user_rotations > 25:
+            rotations = (english.index(l) + user_rotations) - 26
+        else:
+            rotations = english.index(l) + user_rotations
+        rotated += english[rotations]
+    return rotated
+
+def decryp_choice_rotations(user_input, user_rotations):
+    rotated = ''
+    for l in user_input:
+        rotations = user_rotations
+        if english.index(l) - user_rotations < 0:
+            rotations = (english.index(l) - user_rotations) + 26
+        else:
+            rotations = english.index(l) - user_rotations
+        rotated += english[rotations]
+    return rotated
+##############################################################
+
 user_input = '0'
 
 while user_input != '':
@@ -35,25 +59,11 @@ while user_input != '':
     user_input_decryp = decryp_word(user_input)
     print('Decryp: ', user_input_decryp)
 
-    #version 2####################################################
-    rotations = input('Choose number of times to encryp/decryp: ')
-    if rotations.isnumeric(): rotations = int(rotations)
-    else: 
-        print('Must be a number') 
-        break
-    if rotations == '': break
+    user_rotations = int(input('Enter a number of times to rotate a word: '))
+    user_input = input(f'Enter a word to encryp {user_rotations} rotations : ')
+    print(encryp_choice_rotations(user_input, user_rotations))
     
-    rotated_num = rotations
-    user_input = input('Enter a word to rotate: ')
-    if user_input == '': break
-    rotated = ''
-    while rotations > 0:
-        if rotations > 0:
-            rotated = encryp_word(user_input)
-            rotations -= 1
-        if rotations > 0:
-            rotated = decryp_word(user_input)
-            rotations -= 1
-    print(f'Rotated {rotated_num} times: ', rotated)
-    ##############################################################
+    user_rotations = int(input('Enter a number of times to rotate a word: '))
+    user_input = input(f'Enter a word to decryp {user_rotations} rotations : ')
+    print(decryp_choice_rotations(user_input, user_rotations))
 print('bye\n')
