@@ -1,4 +1,4 @@
-touc# Lab 3: Make Change
+# Lab 3: Make Change
 
 ### Git Setup:
 ```sh

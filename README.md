@@ -8,6 +8,7 @@ M-F 9:30 am – 4:30 pm
 
 ### Holidays / Days Off
 
+- July 29th (Day Off)
 - September 5th (Labor Day)
 
 ### Staff
@@ -86,11 +87,11 @@ Presentation Day: October 21st, 2022
 | 04    | [Number To Phrase](1%20Python/labs/04%20Number%20To%20Phrase.md)             | Jul 13th      | Jul 15th    | Jul 27th      |
 | 05    | [Blackjack Advice](1%20Python/labs/05%20Blackjack%20Advice.md)               | Jul 13th      | Jul 15th    | Jul 27th      |
 | 06    | [Pick 6](1%20Python/labs/06%20Pick%206.md)                                   | Jul 18th      | Jul 21st    | Aug  1st      |
-<!-- | 07    | [Mob Jackalope](1%20Python/labs/07%20Mob%20Jackalope.md)                     | Mar 21st      | NA          | NA            |
-| 08    | [Credit Card Validation](1%20Python/labs/08%20Credit%20Card%20Validation.md) | Mar 22nd      | Mar 25th    | Apr  5th      |
-| 09    | [Peaks And Valleys](1%20Python/labs/09%20Peaks%20And%20Valleys.md)           | Mar 22nd      | Mar 25th    | Apr  5th      |
-| 10    | [ROT13](1%20Python/labs/10%20ROT13.md)                                       | Mar 24th      | Mar 30th    | Apr  7th      |
-| 11    | [ARI](1%20Python/labs/11%20ARI.md)                                           | Mar 24th      | Mar 30th    | Apr  7th      |
+| 07    | [Mob Jackalope](1%20Python/labs/07%20Mob%20Jackalope.md)                     | Jul 20th      | NA          | NA            |
+| 08    | [Credit Card Validation](1%20Python/labs/08%20Credit%20Card%20Validation.md) | Jul 20th      | Jul 22nd    | Aug  3rd      |
+| 09    | [Peaks And Valleys](1%20Python/labs/09%20Peaks%20And%20Valleys.md)           | Jul 20th      | Jul 27th    | Aug  3rd      |
+| 10    | [ROT13](1%20Python/labs/10%20ROT13.md)                                       | Jul 25th      | Jul 27th    | Aug 10th      |
+<!-- | 11    | [ARI](1%20Python/labs/11%20ARI.md)                                           | Mar 24th      | Mar 30th    | Apr  7th      |
 | 12    | [Contact List](1%20Python/labs/12%20Contact%20List.md)                       | Mar 28th      | Apr  1st    | Apr 11th      |
 | 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Mar 30th      | Apr  5th    | Apr 13th      |
 | 14    | [Mob Tic Tac Toe](1%20Python/labs/14%20Mob%20Tic%20Tac%20Toe.md)             | Mar 30th      | NA          | NA            |
@@ -116,7 +117,7 @@ Presentation Day: October 21st, 2022
 <!-- [Rain Data](1%20Python/labs/rain_data.md), -->
 [Random Emoticon Generator](1%20Python/labs/random_emoticon_generator.md),
 [Random Password Generator](1%20Python/labs/random_password.md),
-<!-- [Road Trip](1%20Python/labs/road_trip.md), -->
+[Road Trip](1%20Python/labs/road_trip.md),
 [Rock, Paper, Scissors](1%20Python/labs/rock_paper_scissors.md),
 <!-- [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md), -->
 [Simple Calculator](1%20Python/labs/simple_calculator.md),
