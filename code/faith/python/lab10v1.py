@@ -30,10 +30,12 @@ rot13={
 
 userinput = input('Please enter a word: ')
 codedword = []
-userword = list(userinput)
 
-for x in userinput:
-    codedword.append(rot13[x])
 
+for character in userinput:
+    if character != ' ':
+        codedword.append(rot13[character])
+    else:
+        codedword.append(' ')
 print(''.join(codedword))
 
