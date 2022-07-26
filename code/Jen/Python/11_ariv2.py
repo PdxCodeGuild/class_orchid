@@ -3,23 +3,6 @@ PDX Code Guild Bootcamp - Orchid
 lab 11: ARI - Made up option'''
 
 
-'''
-document_inputs = ""
-
-print("Please enter the text that you would like to score. ")
-while True:
-    try:
-        document_input = raw_input()
-        document_inputs += document_input
-    except KeyboardInterrupt:
-        break
-
-
-   
-print(document_inputs)
-#document = document_inputs
-#document = (input("Please enter the text you would like to score. "))
-'''
 import string
 
 file = open('underground.txt') 
@@ -27,7 +10,7 @@ document = file.read()
 file.close()
 
 # used https://www.pythontutorial.net/python-basics/python-read-text-file/ to figure out how to use an external file. 
-#document_sentences = []
+
 #count the sentences
 document = document.replace('!', '.')
 document = document.replace('?', '.')
