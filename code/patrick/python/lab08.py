@@ -1,15 +1,11 @@
+from pyparsing import nums
+
+
 print(f"\nWelcome to credit card validation")
 
 card_number = input(f"\nPlease enter your card number for validation ")
 
-#print(type(card_number))
-#card_number = int(card_number)
 
-
-
-
-#print(card_number)
-#print(type(card_number))
 
 def convert_string(string):
     converted_card_number = list(string)
@@ -30,17 +26,14 @@ def convert_string(string):
 
 
 ##  4556737586899855
-#for num in nums:
-    #num * 2
 
+print(nums)
 
 converted_string = convert_string(card_number) 
 
 
-#print(type(converted_string))
-#converted_string = int(converted_string)
-#print(type(converted_string))
-print(converted_string)
+
+print(type(converted_string))
 print(converted_string)
 
 
