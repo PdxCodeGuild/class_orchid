@@ -1,15 +1,15 @@
 '''Jen Williams
 PDX Code Guild Bootcamp - Orchid
-lab 11: ARI - Made up option'''
+lab 11: ARI '''
 
 
 import string
+import math
 
 file = open('underground.txt') 
 document = file.read()
 file.close()
 
-# used https://www.pythontutorial.net/python-basics/python-read-text-file/ to figure out how to use an external file. 
 
 #count the sentences
 document = document.replace('!', '.')
@@ -42,7 +42,7 @@ words = len(document_words)
 
 #calculate the score
 score = 4.71 * (characters/words) + .5 * (words/sentences) - 21.43
-score = round(score)
+score = math.ceil(score)
 #print(score)
 
 #provide the scale
