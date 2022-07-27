@@ -34,23 +34,3 @@ def rot13(input):
     
 print(rot13(user_input))
 
-
-
-
-
-   
-    
-
-
-
-      
-
-
-    
-
-
-        
-
-
-
-
