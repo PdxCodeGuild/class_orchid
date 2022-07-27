@@ -6,7 +6,7 @@
 # Notice that there are 26 letters in the English language, 
 # so encryption is the same as decryption.
 
-# look at w3schools.com for string methods and try that  
+# used stackoverflow for info
 
 message = input("Please enter a few words or a sentence: ")
 
