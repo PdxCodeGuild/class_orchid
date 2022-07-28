@@ -1,6 +1,6 @@
 '''Jen Williams
 PDX Code Guild Bootcamp - Orchid
-lab 11: ARI '''
+lab 11: ARI - Made up option'''
 
 
 import string
@@ -20,10 +20,13 @@ sentences = len(document_sentences)
 #print(sentences)
 #print(document)
 
+#Strip the punctuation
+
+translator = str.maketrans('', '', string.punctuation)
+no_punct = document.translate(translator)
 
 
-#strip the punctuation
-no_punct = document.strip(string.punctuation)
+#print(no_punct)
 
 
 #count the characters
@@ -44,6 +47,7 @@ words = len(document_words)
 score = 4.71 * (characters/words) + .5 * (words/sentences) - 21.43
 score = math.ceil(score)
 #print(score)
+
 
 #provide the scale
 ari_scale = {
