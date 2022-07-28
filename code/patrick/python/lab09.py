@@ -11,7 +11,7 @@ def peaks(data):
             
 
 peaks(data)
-
+print("The Peaks are:", peaks(data))
 
 
 
@@ -26,6 +26,7 @@ def valleys(data):
             
             
 valleys(data)
+print("The Valleys are:", valleys(data) )
 
 
 def peaks_and_valleys(data):
@@ -39,7 +40,7 @@ def peaks_and_valleys(data):
 
 
 
-print(peaks_and_valleys(data))
+print("the peaks and valleysin the data set in order of occurrence are:", peaks_and_valleys(data))
 
 
 
