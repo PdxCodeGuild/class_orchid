@@ -43,7 +43,7 @@ def reverse_dict(d):
 # print(reverse_dict({'a': 1, 'b': 2})) # {1: 'a', 2: 'b'}
 
 # Merge ========================================================================
-# Write a function that mergest two lists of equal length into a dictionary, with the first list containing the keys, and the second containing the values.
+# Write a function that merges two lists of equal length into a dictionary, with the first list containing the keys, and the second containing the values.
 
 def merge(list1, list2):
     ...
@@ -75,7 +75,7 @@ def merge_dictionaries(d1, d2):
 # print(merge_dictionaries(d1, d2)) # {'a': 400, 'b': 400, 'c': 300, 'd': 400}
 
 # Count Votes ==================================================================
-# Write a function that takes a list of strings and counts of the number of occurances.
+# Write a function that takes a list of strings and counts of the number of occurrences.
 
 def count_votes(votes):
     ...
