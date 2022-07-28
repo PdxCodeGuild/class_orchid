@@ -1,16 +1,17 @@
 
 
 
-cipher1 = " abcdefghijklmnopqrstuvwxyz"
+cipher1 = "!\"#$%&'()*+, -./:;<=>?@[\]^_`{|}~ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
-cipher2 = " nopqrstuvwxyzabcdefghijklm"
+cipher2 = "!\"#$%&'()*+, -./:;<=>?@[\]^_`{|}~ nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
 
 
 
-user_string = input(f"/nPlease enter a one word phrase: ")
+user_string = input(f"/nPlease enter a phrase: ")
 
-
+from string import punctuation
+print(punctuation)
 
 
 final_output = ""
