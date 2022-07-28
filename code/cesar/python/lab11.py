@@ -1,7 +1,5 @@
 import math
 import string
-from unicodedata import name
-
 
 ari_scale = {
      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
@@ -20,28 +18,28 @@ ari_scale = {
     14: {'ages': '18-22', 'grade_level':      'College'}
 }
 
-with open('thinketh.txt', 'r') as f:
+
+filepath = 'thinketh.txt'
+
+with open(filepath, 'r') as f:
     contents = f.read()
     words = contents.split()
     
 
-sentence_counter = 0  
+sentence_counter = 0  #checks to see for know punct. 
 for sentence in contents:
     if sentence in ('.', '?', '!'):
         sentence_counter  += 1
-print (sentence_counter)
+
 
 word_counter = len(words)
 
-print(word_counter)
-
 char_counter = 0
 
-for char in contents:
+for char in contents: # counts the characters. 
     if char in string.ascii_letters:
         char_counter += 1
 
-print(char_counter)
 
 ari = float(4.71*(char_counter/word_counter)+0.5*(word_counter/sentence_counter)-21.43)
 
@@ -56,11 +54,13 @@ print (f'''
 
 {'*'*40}
 
-The ARI for ______.txt is {round_up}.
+The ARI for {filepath} is {round_up}.
 
-This correesponds to a {grade} level of diffifulty.
+This correesponds to {grade} level of diffifulty.
 
 This means that it is suitable for an "average" person who is {ages} years old.
 
 {'*'*40}
+
 ''')
+
