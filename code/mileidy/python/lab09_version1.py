@@ -5,6 +5,7 @@ def peaks(data_param):
     for i in range(1, len(data_param)-1):
         if data_param[i-1] < data_param[i] and data_param[i+1] < data_param[i]:
             peak.append(i)
+    print(f'This represents your highest points of data also known as peaks : {peak}')
     return peak
 
 peaks_list = peaks(data)
@@ -15,11 +16,14 @@ def valleys(data_param):
     for i in range(1, len(data_param)-1):
         if data_param[i-1] > data_param[i] and data_param[i+1] > data_param[i]:
             valleys.append(i)
+    print(f'This represents your lowest points of data also known as valleys : {valleys}')
     return valleys
+    
 
 valleys_list = valleys(data)
 #print(valleys_list)
 
 result = peaks_list + valleys_list
 result.sort()
-print(result)
+print(f'This is a combines list of your data results sorted : {result}')
+
