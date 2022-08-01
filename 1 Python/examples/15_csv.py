@@ -1,4 +1,4 @@
-filepath = 'code/pete/python/examples/data/cities.csv'
+filepath = '1 Python/examples/data/cities.csv'
 
 with open(filepath, 'r') as f:
     contents = f.read()
@@ -34,3 +34,8 @@ countries = [
     },
     # ... then the other dictionaries for each citiy
 ]
+
+# Writing to a path OVERWRITES whatever exists at that location!
+# Make sure you keep a backup copy of your data before you start writing to files you still need
+# with open(filepath, 'w') as f:
+#     f.write('some nonsense')

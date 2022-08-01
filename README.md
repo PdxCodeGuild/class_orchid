@@ -91,9 +91,9 @@ Presentation Day: October 21st, 2022
 | 08    | [Credit Card Validation](1%20Python/labs/08%20Credit%20Card%20Validation.md) | Jul 20th      | Jul 22nd    | Aug  3rd      |
 | 09    | [Peaks And Valleys](1%20Python/labs/09%20Peaks%20And%20Valleys.md)           | Jul 20th      | Jul 27th    | Aug  3rd      |
 | 10    | [ROT13](1%20Python/labs/10%20ROT13.md)                                       | Jul 25th      | Jul 27th    | Aug 10th      |
-<!-- | 11    | [ARI](1%20Python/labs/11%20ARI.md)                                           | Mar 24th      | Mar 30th    | Apr  7th      |
-| 12    | [Contact List](1%20Python/labs/12%20Contact%20List.md)                       | Mar 28th      | Apr  1st    | Apr 11th      |
-| 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Mar 30th      | Apr  5th    | Apr 13th      |
+| 11    | [ARI](1%20Python/labs/11%20ARI.md)                                           | Jul 26th      | Aug  1st    | Aug  9th      |
+| 12    | [Contact List](1%20Python/labs/12%20Contact%20List.md)                       | Jul 28th      | Aug  3rd    | Aug 11th      |
+<!-- | 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Mar 30th      | Apr  5th    | Apr 13th      |
 | 14    | [Mob Tic Tac Toe](1%20Python/labs/14%20Mob%20Tic%20Tac%20Toe.md)             | Mar 30th      | NA          | NA            |
 | 15    | [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md)     | NA            | NA          | NA            |
 | 16    | [Dad Joke API](1%20Python/labs/16%20Dad%20Joke%20API.md)                     | Apr  1st      | Apr  6th    | Apr 15th      |
