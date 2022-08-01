@@ -11,18 +11,36 @@
 filepath = 'code/christa/python/cities.csv'
 
 with open(filepath, 'r') as f:
-    contents = f.read()
+    contents = f.readlines()
 
-lines = contents.split('\n')
-columns = lines[0]
-columns = columns.split(',')
-
-rows = contents.splitlines('\n')
-print(rows)
-
+# Line 0 are the headers, or keys for each dictionary
+"""lines = contents.split('\n')
+headers = lines[0]
+key_s = headers.split(',')"""
+contents = [row_lines[:-1] for row_lines in contents]
+sheet = [row_lines.split(',') for row_lines in contents]
 cities = []
+#sheet = lines[:-1]
+
+for row_lines in sheet[1:]:
+    poker_run = {}
+    for i, place in enumerate(row_lines):
+        poker_run[sheet[0][i]]= place
+    cities.append(poker_run)
+
+print(cities)
+
+#Rows 1 through the end are the data. Each row will be a dictonary
+#Empty list to append dictionaries to
 
 
 
 
-#print(columns)
+    
+
+
+
+#print(rows)
+#dictionaries are each row 1:12
+#keys in the dictionaries are row 0 or columns...
+
