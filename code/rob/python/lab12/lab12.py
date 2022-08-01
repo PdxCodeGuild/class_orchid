@@ -56,7 +56,7 @@ exit = ''
 print('CSV info')
 while exit != 'y':
     print('\nOptions: see all(1), create(2), read(3), update(4), delete(5).')
-    option = input('Option: ')
+    option = input('Enter option (press enter to exit): ')
     if option == '':
         break
     if not option.isnumeric():
