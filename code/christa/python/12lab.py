@@ -30,17 +30,9 @@ for row_lines in sheet[1:]:
 
 print(cities)
 
+
+
+
 #Rows 1 through the end are the data. Each row will be a dictonary
 #Empty list to append dictionaries to
-
-
-
-
-    
-
-
-
-#print(rows)
-#dictionaries are each row 1:12
-#keys in the dictionaries are row 0 or columns...
 
