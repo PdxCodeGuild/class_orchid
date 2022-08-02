@@ -1,7 +1,7 @@
 '''Rot13'''
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-alpha_len = len(alphabet) - 1
+alpha_len = len(alphabet)
 
 def rot_start_index(reference, rot_value):
     '''Used to find the current Index in the alphabet'''
@@ -44,6 +44,6 @@ def main():
             rot_add = rot_start_index(reference, rot_value)
             reference_rot += alphabet[rot_add]
 
-    print(f"With a ROT of {rot_value}, '{encrypt}' becomes '{reference_rot}.")
+    print(f"With a ROT of {rot_value}, '{encrypt}' becomes '{reference_rot}'.")
 
 main()
