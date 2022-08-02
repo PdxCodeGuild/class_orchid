@@ -1,0 +1,4 @@
+contacts = [
+    {'name':'matthew', 'favorite fruit':'blackberries', 'favorite color':'orange'},
+    {'name':'sam', 'favorite fruit':'pineapple' ...}
+]
