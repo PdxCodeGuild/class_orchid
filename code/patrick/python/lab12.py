@@ -1,3 +1,6 @@
+from unicodedata import name
+
+
 with open('data/contacts.csv', 'r') as file:
     lines = file.read().split('\n')
     
@@ -205,7 +208,7 @@ while True:
     elif user_input == "3":
         contact_to_remove = input(f"what item do you want to remove? ")
         for ct in contacts:
-            if ct == contact_to_remove:
+            if ct["name"] == contact_to_remove:
                 contacts.remove(ct)
                    
     elif user_input == "4":
@@ -233,5 +236,5 @@ while True:
 
 
 
-
-print(contacts)
+contacts = str(contacts)
+print(type(contacts))
