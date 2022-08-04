@@ -77,9 +77,9 @@ while True:
             print('Goodbye')
             break
         
-w = open("contact.csv", "w")
-for value in contact_list:
-    contact_list.append(list(value.values()))
-w.close()
+with open('contact.csv', 'w') as w:
+    w.write(str(contact_list))
+
+
 
 

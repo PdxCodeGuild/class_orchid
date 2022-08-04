@@ -1,4 +1,1 @@
-name,favorite fruit,location,favorite food,favorite color
-name,favorite fruit,location,favorite food,favorite color
-name,favorite fruit,location,favorite food,favorite color
-name,favorite fruit,location,favortie food,favorite color
+[{'name': 'Bob', 'favorite fruit': 'apple', 'location': 'Connecticut', 'favorite food': 'mozzerella sticks', 'favorite color': 'blue'}, {'name': 'Samantha', 'favorite fruit': 'banana', 'location': 'Delaware', 'favorite food': 'pizza', 'favorite color': 'magenta'}, {'name': 'Lilly', 'favorite fruit': 'mango', 'location': 'New York', 'favorite food': 'meatloaf', 'favorite color': 'glitter'}, {'name': 'David', 'favorite fruit': 'kiwi', 'location': 'Texas', 'favorite food': 'ribs', 'favorite color': 'yellow'}, {'name': ''}]
