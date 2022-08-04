@@ -1,12 +1,12 @@
-position,name,number,nickname
-QB,Patrick Mahomes,15,Grim-Reaper
+Position,Name,Number,Nickname
+QB,Patrick Mahomes,15,Grim Reaper
 TE,Travis Kelce,87,Zeus
-TE,Tony Gonzalez,88,Tony-G
-OLB, Derrick Thomas,58,D.T.
-WR, Tyreek Hill,10,Cheetah
-S,Eric Berry,29,
+TE,Tony Gonzalez,88,Tony G
+OLB,Derrick Thomas,58,D.T.
+WR,Tyreek Hill,10,Cheetah
+S,Eric Berry,29,-
 DT,Chris Jones,95,Stone Cold
-RB,Jamaal Charles,25,
+RB,Jamaal Charles,25,-
 DE,Jared Allen,69,Rodeo
 OLB,Tambi Hali,91,Tambahawk
-OLB,Justin Houston,50,
+OLB,Justin Houston,50,-
