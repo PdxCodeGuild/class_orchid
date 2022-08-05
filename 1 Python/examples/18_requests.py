@@ -9,6 +9,7 @@ protocol://subdomain.domain.tld[extension]/path/to/wherever?query_parameter='ext
 # python3 -m pip install requests
 import requests
 import json
+from pprint import pprint
 
 # optional query parameters give extra information to the request
 params = {
@@ -28,11 +29,15 @@ print(response.status_code) # 200 (success)
 print(response.encoding) # utf-8 (the default encoding)
 
 
-# these all do more or less the same thing, read the response body
+# these do more or less the same thing, read the response body
 response = json.loads(response.text)
-# response = response.text)
 # response = response.json()
 
+# pprint, or pretty print, will make these easier to look at
+pprint(response)
+pprint(response, width=60, sort_dicts=False)
+print(type(response['info']))
 
-for result in response['results']:
-    print(result)
+# this loop is essentially doing the same thing that pretty print does
+# for result in response['results']:
+#     print(result)
