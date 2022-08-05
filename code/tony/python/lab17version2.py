@@ -18,17 +18,19 @@ class Quote:
 q = Quote()
 q.get_quotes(keyword=input('Search term: '))
 
-while not q.last_page:
+while True:
     for quote in q.quotes:
         author, body = quote.get('author'), quote.get('body')
         print(f'\n\n{body}\n\n  ~ {author}\n\n')
     user_input = None
     while not user_input in ['q','s','']:
-        user_input = input('Next page [Enter] - Quit [q] - New search [s]')
+        if q.last_page:
+            user_input = input(f'There were no more quotes matching "{q.search}." - Quit [q] - New search [s]: ')
+        else:
+            user_input = input('Next page [Enter] - Quit [q] - New search [s]: ')
     if user_input == 'q':
         break
     if user_input == 's':
         q.get_quotes(keyword=input('Search term: '))
     else:
         q.get_quotes(page=q.page+1)
-
