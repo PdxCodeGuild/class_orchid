@@ -1,22 +1,19 @@
 import sys
 
 class ATM:
-    def __init__(self, balance=0, interest_rate=0.1, name='admin'):
+    def __init__(self, balance=0, interest_rate=0.001, name='admin'):
         self.balance = balance
         self.interest_rate = interest_rate
         self.name = name
-        ...
 
     def check_balance(self):
         """return the account balance"""
         return self.balance
-        ...
 
     def deposit(self, amount):
         """deposit a given amount into account"""
         self.balance += amount
         return self.balance
-        ...
 
     def check_withdrawal(self, amount):
         """return True if account has enough funds to withdraw given amount"""
@@ -24,40 +21,33 @@ class ATM:
             return True
         else:
             return False
-        ...
 
     def withdraw(self, amount):
         """withdraw given amount from account and return that amount"""
         self.balance -= amount
         return self.balance
-        ...
 
     def calc_interest(self):
         """calculate and return interest gained on account"""
-        original_balance = self.balance
-        accumulated_interest = self.balance * self.interest_rate - original_balance
-        self.balance *= self.interest_rate
+        accumulated_interest = self.balance * self.interest_rate
+        self.balance += accumulated_interest
         return accumulated_interest
-        ...
     
     def transactions(self, transacts, current_user, action, amount):
         '''Makes a list of actions taken, by who, and how much'''
-        new_list = f'{current_user} {action} ${amount}.'
+        new_list = f'{current_user} {action} ${round(amount, 2)}.'
         transacts.append(new_list)
-        ...
-    
+
     def print_transactions(self, transacts):
         '''prints recorded user transactions line by line'''
         for trans in transacts:
             print(trans)
-            ...
-        ...
 
 def main():
     command = input("\nPlease enter a command, type help for available commands.\n> ").lower()
     if command == 'balance':
         balance = admin.check_balance()  # call the check_balance() method
-        print(f'Your balance is ${balance}')
+        print(f'Your balance is ${round(balance, 2)}')
         main()
     elif command == 'deposit':
         amount = float(input('How much would you like to deposit? '))
@@ -77,8 +67,7 @@ def main():
         main()
     elif command == 'interest':
         amount = admin.calc_interest()  # call the calc_interest() method
-        admin.deposit(amount)
-        print(f'Accumulated ${amount} in interest')
+        print(f'Accumulated ${round(amount, 2)} in interest')
         main()
     elif command == 'help':
         print('Available commands:')
