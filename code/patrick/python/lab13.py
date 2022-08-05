@@ -75,7 +75,7 @@ while True:
         atm.deposit(amount)
         print(f'Accumulated ${amount} in interest')
         interest_str = str(amount)
-        interest_log = f"account gained" + amount + "interest"
+        interest_log = f"account gained" + str(amount) + "interest"
         print_transactions.append(amount)
     elif command == 'help':
         print('Available commands:')
