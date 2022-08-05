@@ -50,11 +50,13 @@ while True:
         print(values)
     
     elif user_input == '3':
+        
         to_retrieve = input("What place would you like info about? ")
         #going to have to find matching index list-dictionary
         retrieve_index = cities_final.index(to_retrieve)
         print(retrieve_index)
         #print entire row for that match
+            
 
 
     elif user_input == '4':
@@ -77,9 +79,11 @@ while True:
 
 
        
-
-
-        
+#Example for inspiration
+"""cat_columns = ['name', 'weather', 'landmark', 'cuisine']
+for column in cat_columns:
+    print(cities_final[column].value.counts())
+    print('-' * 50)   """
         
 
 
