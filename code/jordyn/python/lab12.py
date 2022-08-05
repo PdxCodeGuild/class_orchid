@@ -42,6 +42,7 @@ def access_member(contacts):
     for x in range(len(contacts)):
         if contacts[x]['name'] == accessed:
             print(f"{accessed} found. Their favorite fruits are {contacts[x]['favorite fruit']}'s and their favorite color is {contacts[x]['favorite color']}.")
+            break
         elif x != len(contacts) - 1:
             continue
         else:
@@ -79,10 +80,13 @@ def update_member(contacts):
             update_what = int(input(update_options))
             if update_what == 1:
                 contacts[x]['name'] = input("What is their new name?\n")
+                break
             elif update_what == 2:
                 contacts[x]['favorite fruit'] = input("What is their new Favorite Fruit?\n")
+                break
             elif update_what == 3:
                 contacts[x]['favorite color'] = input("What is their new favorite color?\n")
+                break
             elif update_what == 4:
                 main(contacts)
             else:
