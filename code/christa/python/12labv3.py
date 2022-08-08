@@ -145,8 +145,10 @@ while True:
                 if confirm_delete == 'yes':
                     values.pop(i)
                     pprint(format_final_list())     
+                
                 else:
                     break
+                
 
         #find the index of the location to remove - list
         #remove all items associated with that index - list
@@ -159,34 +161,15 @@ while True:
         print("That is not a valid input. Please select from the list.")
 
 
-       
-#Example for inspiration
-"""cat_columns = ['name', 'weather', 'landmark', 'cuisine']
-for column in cat_columns:
-    print(cities_final[column].value.counts())
-    print('-' * 50)   """
+
+output_content = '\n'.join(values)
+output_filepath = '1 Python/code/christa/python/ciites_copy.csv'
+with open(output_filepath, 'w', encoding='utf-8') as f:
+    f.write(output_content)
+
         
 
 
-"""
-Create a record: ask the user for each attribute, add a 
-new contact to your contact list with the attributes that the user entered.
-
-Retrieve / Read: Retrieve a record: ask the user for the contact's name, 
-find the user with the given name, and display their information
-
-Update: Update a record: ask the user for the contact's name,
- then for which attribute of the user they'd like to update 
-and the value of the attribute they'd like to set.
-
-Delete / Destroy: Delete a record: ask the user for the contact's name, 
-remove the contact with the given name from the contact list.
-
-Read
-Evaluate
-Print
-Loop
-"""
 
 
 
