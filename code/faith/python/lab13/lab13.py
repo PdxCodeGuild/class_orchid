@@ -2,7 +2,7 @@ class ATM:
     def __init__(self, balance=0, interest_rate=0.1):
         self.balance = balance
         self.interest_rate = interest_rate
-        
+        self.transactions = []
 
     def check_balance(self):
         return self.balance
@@ -11,12 +11,15 @@ class ATM:
     def deposit(self, amount):
         self.amount = amount
         self.balance += amount
+        self.transactions.append(amount)
 
     def check_withdrawal(self, amount):
         return amount <= self.balance
+        
 
     def withdraw(self, amount):
         self.balance -= self.amount
+        self.transactions.append(amount)
         return amount
 
     def calc_interest(self):
