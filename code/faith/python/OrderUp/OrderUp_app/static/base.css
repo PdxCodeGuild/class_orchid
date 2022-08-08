@@ -1,0 +1,15 @@
+html{
+    color: rgb(61, 77, 34);
+    background-color: rgba(194, 243, 111, 0.397);
+}
+body{
+    text-align: center;
+}
+header{
+    text-shadow: 5px 3px 2px black;
+    font-family: Chalkduster, fantasy;
+    font-size: xx-large;
+}
+h3{
+    font-family: Marker Felt, fantasy;
+}
