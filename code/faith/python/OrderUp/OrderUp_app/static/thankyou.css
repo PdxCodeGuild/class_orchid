@@ -10,10 +10,12 @@ header{
     font-family: Chalkduster, fantasy;
     font-size: xx-large;
 }
-h3{
-    font-family: Marker Felt, fantasy;
-}
 input{
     color: rgb(29, 41, 10);
     background-color: rgba(102, 129, 54, 0.397);
+}
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
 }
