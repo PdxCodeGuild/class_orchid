@@ -48,7 +48,7 @@ while True:
             'name':contact_name,
             'favorite fruit':favorite_fruit,
             'location':location,
-            'favortie food':favorite_food,
+            'favorite food':favorite_food,
             'favorite color':favorite_color}
         contact_list.append(new_dict)
         print(f"Successfully added '{contact_name}' to the list")
@@ -78,7 +78,18 @@ while True:
             break
         
 with open('contact.csv', 'w') as w:
-    w.write(str(contact_list))
+    csv_str = ''
+    for key in keys:
+        csv_str += key + ','
+    csv_str += '\n'
+
+    for contact in contact_list:
+        print(contact)
+        if len(contact) > 1:
+
+            csv_str += contact['name'] + ',' + contact['favorite fruit']+ ','+ contact['location']+ ',' + contact['favorite food']+ ',' + contact['favorite color']+',' + '\n'
+        
+    w.write(csv_str)
 
 
 

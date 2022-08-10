@@ -1,1 +1,6 @@
-[{'name': 'Bob', 'favorite fruit': 'apple', 'location': 'Connecticut', 'favorite food': 'mozzerella sticks', 'favorite color': 'blue'}, {'name': 'Samantha', 'favorite fruit': 'banana', 'location': 'Delaware', 'favorite food': 'pizza', 'favorite color': 'magenta'}, {'name': 'Lilly', 'favorite fruit': 'mango', 'location': 'New York', 'favorite food': 'meatloaf', 'favorite color': 'glitter'}, {'name': 'David', 'favorite fruit': 'kiwi', 'location': 'Texas', 'favorite food': 'ribs', 'favorite color': 'yellow'}, {'name': ''}]
+name,favorite fruit,location,favorite food,favorite color,
+Bob,apple,Connecticut,mozzerella sticks,blue,
+Samantha,banana,Delaware,pizza,magenta,
+Lilly,mango,New York,meatloaf,glitter,
+David,kiwi,Texas,ribs,yellow,
+faith,mango,co,pasta,red,
