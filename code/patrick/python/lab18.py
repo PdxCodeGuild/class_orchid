@@ -2,7 +2,7 @@ from lab18ver2 import test
 from lab18ver2_2 import test_2
 import os
 import csv
-print(f"welcome to your recipe book")
+print(f"welcome to Cooking With Friends")
 
 recipe_book = []
 
@@ -20,8 +20,8 @@ options = '''
     1. Read the cookbook
     2. Add a new recipe to the cookbook
     3. Delete a recipe
-    5. Search for a recipe from the library of 30,000 recipes
-    6. Exit cookbook
+    4. Search for a recipe from the library of 30,000 recipes
+    5. Exit cookbook
      
 
 
