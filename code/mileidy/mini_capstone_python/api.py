@@ -2,11 +2,15 @@
 
 import requests
 import json
-response = requests.get('https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple')
-questions = response.json()
-# print(response.json())
 
-# def jprint(obj):
-#     # create a formatted string of the Python JSON object
-#     text = json.dumps(obj, sort_keys=True, indent=4)
-#     print(text)
+params = {
+    "current_question": 1,
+    "limit": 1,
+    "next_question": 2,
+    "previous_question": 1,
+}
+
+
+response = requests.get('https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple', params = params, headers ={'accept': 'application/json'} )
+questions = response.json()
+
