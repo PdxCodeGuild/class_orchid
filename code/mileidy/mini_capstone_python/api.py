@@ -14,3 +14,4 @@ params = {
 response = requests.get('https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple', params = params, headers ={'accept': 'application/json'} )
 questions = response.json()
 
+#external library i used was requests
