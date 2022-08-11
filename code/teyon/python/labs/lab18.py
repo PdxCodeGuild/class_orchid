@@ -2,6 +2,9 @@ import requests
 import json
 import pprint
 
+print("Welcome to Cheapest Flight Finder!")
+
+#csv info
 
 #created a variable called file path which is the data we want to read
 filepath = '../data/airports.csv'
@@ -28,13 +31,11 @@ list_of_dicts = []
 #took the lines in contents and removed the header line so it is only the names and attributes
 airports = lines[1:]
 
-#for loop that is saying for each lines in all the lines of airports, so it will iterate after every line
+#for loop to appened each airport and city to a list
 for airport in airports:
-    #we want to take the line we are iterating through and turn it into a list
     airport = airport.split(",")
-    #we want to append the blank list of airports with each new list created every iteration
     list_of_airports.append(airport)
-# print(list_of_airports[1])
+
 
 #for loop that iterates through every new list we created and appended to the list of airports   
 for list in list_of_airports:
@@ -47,7 +48,10 @@ for list in list_of_airports:
     #list of dicts appends with every newly created dictionary callec dict
     list_of_dicts.append(dict)
 
-date = input("What date are you looking to leave(Year-Month-Day): ")
+
+#flight code
+
+date = input("What date are you looking to leave(Year-Month-Day(2022-12-20)): ")
 outgoing_location = input("What is your outgoing city: ")
 
 
@@ -58,7 +62,7 @@ for dictionary in list_of_dicts:
         break
 
 
-fantasy_destination_1 = input("What is your fantasy destination: ")
+fantasy_destination_1 = input("What is your arrival destination: ")
 
 
 for iata in list_of_dicts:
