@@ -45,7 +45,3 @@ while True:
         for i, quote in enumerate(term_finder(keyword_search),1):
             print(f'{i} - {quote["body"]} \n quote by: {quote["author"]} \n')
             time.sleep(1)
-
-    
-
-
