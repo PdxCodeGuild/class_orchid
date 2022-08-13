@@ -9,6 +9,7 @@ response = requests.get('https://favqs.com/api/qotd', headers={'Content-Type': '
 response = response.json()
 #extracting the quote from the json
 quote = response['quote']['body']
+#extracting author from json
 author = response['quote']['author_permalink']
-
+#print out the final result
 print(f"QOTD by {author}: {quote}")

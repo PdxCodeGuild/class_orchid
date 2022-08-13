@@ -1,17 +1,29 @@
 import requests
+import pprint
+#welcome 
+print("Welcome to the Quote of The Day generator\n")
+#creat a function that calls on the api and converts it into a string
+def get_quotes(input):
+    #calling quotes API
+    response = requests.get(f'https://favqs.com/api/quotes?filter={input}', headers={'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'})
+    
+    #extracting the quote from the json
+    response = response.json()
+    return response
+#user input
+keyword = input("Type a keyword to help generate a quote type exit to end: ")
 
-print("Welcome to the Quote of The Day generator")
 
-user_keyword = input("Type a keyword to help generate a quote: ")
-#calling on API
-response = requests.get('https://favqs.com/api/quotes?filter=<keyword>', headers={'Authorization': 'Token token="855df50978dc9afd6bf86579913c9f8b"'})
+while True:
+    #if statement that breaks the loop 
+    if keyword == "exit":
+        break
+    #else call get_quotes function to print quotes
+    else:
+        response = get_quotes(keyword)
 
-#taking the results of the request and placing them in a json 
-response = response.json()
-print(response)
-
-#extracting the quote from the json
-# quote = response['quote']['body']
-# author = response['quote']['author_permalink']
-
-# print(f"QOTD by {author}: {quote}")
+        quotes = response['quotes']
+        for quote in quotes:
+            print(f'-{quote["body"]}\n')
+        #ask user for new keyword after printing
+        keyword = input("Type a keyword to help generate a quote type exit to end: ")
