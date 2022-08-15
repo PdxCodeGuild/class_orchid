@@ -8,16 +8,17 @@ p {
     
 }
 
-.logo {
-    border: solid;
 
-}
 
 .header {
     display: inline-flex;
     margin: auto;
-    width: 200px;
     
+     
+}
+
+.logo {
+    width: fit-content;
 }
 
 
