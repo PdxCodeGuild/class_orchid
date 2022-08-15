@@ -17,9 +17,12 @@ response = requests.get('https://icanhazdadjoke.com/search',params=params, heade
 joke_dict = response.json()
 joke = joke_dict['results']
 
-final_joke =joke[0]
-print(final_joke['joke'])
+for x in joke:
+    print(x['joke'])
 
+# final_joke =joke[0]
+# print(final_joke['joke'])
+# print(joke)
 
 
    
