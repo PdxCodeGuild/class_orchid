@@ -1,0 +1,44 @@
+html{
+    background-image: url("ichigobackground.jpeg");
+    background-position: center;
+    margin: 5mm;
+    padding: 4%;
+}
+body{
+    text-align: center;
+    padding: 3em;
+    margin: 10mm;
+}
+header{
+    padding:2mm;
+    margin: auto;
+    font-family: 'Rubik Distressed', cursive;
+    font: size 400px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: rgb(124, 29, 29);
+}
+p{
+    padding: 4mm;
+    margin: 10mm;
+    color: rgb(147, 15, 15);
+}
+a{
+    color: white;
+}
+img{
+    border-radius: 50%;
+}
+blockquote{
+    font-family: cursive;
+    color: white;
+}
+h3{
+    color: brown;
+}
+li{
+    list-style-image: url("blood-drop.png");
+    color: brown;
+    text-align: center;
+}
