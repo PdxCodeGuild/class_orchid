@@ -178,14 +178,14 @@ def find_path(): #finds path from green to red
                 x = a
                 y = z
 
-def find_start():
+def find_start(): #Finds your start point by searching the entire list
     for y, row in enumerate(world_data):
         for x, tile in enumerate(row):
             if tile == 16:
                 return x, y
     return 0, 0
 
-def direction(x,y):
+def direction(x,y): #Randomises the directions it will search in until one is availble, returning that coordinate value to direct the path finder
     directions = ['left', 'right', 'up', 'down']
     random.shuffle(directions)
     for direc in (directions):
