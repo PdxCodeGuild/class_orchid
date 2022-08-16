@@ -1,39 +1,76 @@
 body {
+    font-family: monospace;
+    font-size: large;
     background-color: #55ffff;
-    color: #2a2a2a;
-}
-
-p {
-    color: #2a2a2a;
+    background-image: url(TempleOS_logo.png);
+    background-position: right bottom, left top;
+    background-repeat: repeat;
+    
     
 }
-.terryimage {
-    border-radius: 15px 50px 30px 5px;
-    background: #73AD21;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-}
-.header {
-    display: inline-flex;
-    margin: auto;
-}
 
-.logo {
-    width: fit-content;
-}
+
+
 
 a:link {
-    color: #ddd05b
+    background-color: green;
+  
+    font-weight: normal;
+    font-style: bold;
+    color: #d0d0d0  
 }
 
 a:visited {
+    font-weight: bolder;
     color: #ddd05b
 }
 
 a:hover {
+    font-style: italic;
     color: #2a2a2a
 }
 
+div.main {
+    background-color: #54fcfc;
+    border-radius: 10px;
+    width: 600px;
+    border: 10px solid black;
+    padding: 50px;
+    margin: auto;
+    position: relative;
+    
+  }
+
+  p {
+    text-align: left;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  img {
+    border-radius: 25px;
+    border: 5px solid black;
+    width: auto;
+    height: auto;
+    
+    
+  }
+
+.terryimage {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    
+    
+   
+}
+h3 {
+    text-decoration: underline;
+    
+}
+
+div.list {
+    text-align: left;
+}
 
 
