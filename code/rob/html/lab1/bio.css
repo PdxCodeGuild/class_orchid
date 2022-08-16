@@ -5,10 +5,12 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(rgb(11, 11, 44), rgb(2, 17, 34));
-    background-attachment: fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc28d43095579c8b5/5d87c24e8d8a3163705e3070/summonersrift.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
 }
+
 header{
     background: rgb(19, 18, 18);
     display: flex;
@@ -21,6 +23,7 @@ header img{
     max-width: 8rem;
     max-height: 8rem;
     padding-left: 2rem;
+    filter: brightness(100%);
 }
 header div{
     position: absolute;
@@ -54,6 +57,7 @@ header div{
 #bio_img{
     max-width: 70%;
     min-width: 100%;
+    filter: brightness(100%);
     -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0) 98%);
 }
 @media only screen and (min-width: 1000px) {
