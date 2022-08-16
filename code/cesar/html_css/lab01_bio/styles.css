@@ -9,12 +9,8 @@ body {
     
 }
 
-
-
-
 a:link {
-    background-color: green;
-  
+    background-color: green;  
     font-weight: normal;
     font-style: bold;
     color: #d0d0d0  
@@ -60,17 +56,27 @@ div.main {
     display: block;
     width: fit-content;
     margin: auto;
-    
-    
    
 }
 h3 {
     text-decoration: underline;
-    
+
 }
 
 div.list {
     text-align: left;
 }
 
+ul {
+    list-style-image: url('elephant.png');
+}
+
+q {
+    
+    font-size: normal;
+    font-weight:300;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
 
