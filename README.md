@@ -13,9 +13,9 @@ M-F 9:30 am – 4:30 pm
 
 ### Staff
 
-- Pete Jones, Instructor
+- Danny Burrow, Instructor
   
-    - pete@pdxcodeguild.com
+    - danny@pdxcodeguild.com
  
 - Mitch Chapman, TA
  
@@ -93,13 +93,12 @@ Presentation Day: October 21st, 2022
 | 10    | [ROT13](1%20Python/labs/10%20ROT13.md)                                       | Jul 25th      | Jul 27th    | Aug 10th      |
 | 11    | [ARI](1%20Python/labs/11%20ARI.md)                                           | Jul 26th      | Aug  1st    | Aug  9th      |
 | 12    | [Contact List](1%20Python/labs/12%20Contact%20List.md)                       | Jul 28th      | Aug  3rd    | Aug 11th      |
-<!-- | 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Mar 30th      | Apr  5th    | Apr 13th      |
-| 14    | [Mob Tic Tac Toe](1%20Python/labs/14%20Mob%20Tic%20Tac%20Toe.md)             | Mar 30th      | NA          | NA            |
-| 15    | [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md)     | NA            | NA          | NA            |
-| 16    | [Dad Joke API](1%20Python/labs/16%20Dad%20Joke%20API.md)                     | Apr  1st      | Apr  6th    | Apr 15th      |
-| 17    | [Quotes API](1%20Python/labs/17%20Quotes%20API.md)                           | NA            | NA          | NA            |
-| 18    | [Mini-Capstone](1%20Python/labs/18%20Mini-Capstone.md)                       | Apr  6th      | Apr  8th    | Apr 19th      | -->
-
+| 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Aug 2nd       | Aug  5th    | Aug 16th      |
+| 16    | [Dad Joke API](1%20Python/labs/16%20Dad%20Joke%20API.md)                     | Aug  4th      | Aug  9th    | Aug 18th      |
+| 17    | [Quotes API](1%20Python/labs/17%20Quotes%20API.md)                           | Aug  4th      | Aug  9th    | Aug 18th      |
+<!-- | 18    | [Mini-Capstone](1%20Python/labs/18%20Mini-Capstone.md)                       | Apr  6th      | Apr  8th    | Apr 19th      | -->
+<!-- | 14    | [Mob Tic Tac Toe](1%20Python/labs/14%20Mob%20Tic%20Tac%20Toe.md)             | Mar 30th      | NA          | NA            |
+| 15    | [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md)     | NA            | NA          | NA            | -->
 
 
 
