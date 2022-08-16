@@ -3,28 +3,36 @@ class ATM:
         self.balance = balance
         self.interest_rate = interest_rate
         self.transactions = []
+        
+        
 
     def check_balance(self):
         return self.balance
         
 
     def deposit(self, amount):
-        self.amount = amount
         self.balance += amount
-        self.transactions.append(amount)
+        self.transactions.append(f'User has deposited ${amount}')
+        
 
     def check_withdrawal(self, amount):
         return amount <= self.balance
         
 
     def withdraw(self, amount):
-        self.balance -= self.amount
-        self.transactions.append(amount)
+        self.balance -= amount
+        self.transactions.append(f'User has withdrew ${amount}')
         return amount
 
     def calc_interest(self):
         return self.balance * self.interest_rate
 
+    def print_transactions(self):
+        for x in self.transactions:
+            print(x)
+        
+        
+        
 atm = ATM()  # create an instance of our class
 print('Welcome to the ATM')
 while True:
@@ -55,6 +63,10 @@ while True:
         print('withdraw - withdraw money')
         print('interest - accumulate interest')
         print('exit     - exit the program')
+        print('transactions - check transactions')
+    elif command == 'transactions':
+        atm.print_transactions()
+        
     elif command == 'exit':
         break
     else:
