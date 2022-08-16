@@ -7,18 +7,32 @@ p {
     color: #2a2a2a;
     
 }
-
-
-
+.terryimage {
+    border-radius: 15px 50px 30px 5px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
 .header {
     display: inline-flex;
     margin: auto;
-    
-     
 }
 
 .logo {
     width: fit-content;
+}
+
+a:link {
+    color: #ddd05b
+}
+
+a:visited {
+    color: #ddd05b
+}
+
+a:hover {
+    color: #2a2a2a
 }
 
 
