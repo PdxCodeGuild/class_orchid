@@ -1,8 +1,6 @@
 """
 Lab 16 version 2
 """
-
-from urllib import response
 import requests
 import json
 import time
@@ -18,7 +16,7 @@ params = {
 
 name = input("What is the name of what you're looking for?: ")
 
-response = requests.get(f'https://icanhazdadjoke.com/search?term={name}',params = params, headers={'accept': 'application/json'})
+response = requests.get(f'https://icanhazdadjoke.com/search?term={name}', params = params, headers = {'accept': 'application/json'})
 
 dict = response.json()
 

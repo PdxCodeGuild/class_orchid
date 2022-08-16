@@ -8,7 +8,7 @@ import time
 
 print("Welcome to dads stand up!")
 
-response = input("Are you ready for some dad jokes? yes or no?: ").lower
+response = input(f"Are you ready for some dad jokes? yes or no?: ").lower()
 
 while True:
     if response == 'yes':
@@ -18,6 +18,5 @@ while True:
         print(end_point['joke'])
         break
     else:
-        print('Maybe nest time hahaha! (Did you get the joke? "Nest time" hahaha')
-
-        
+        print('Maybe nest time hahaha! (Did you get the joke? "Nest time" hahaha)')
+        break
