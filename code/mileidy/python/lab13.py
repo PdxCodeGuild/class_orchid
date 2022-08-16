@@ -1,4 +1,5 @@
 # this lab has both versions included
+
 class ATM:
     def __init__(self):
         self.balance = 0
@@ -11,7 +12,7 @@ class ATM:
             self.log.append(amount)
         elif type_of_transaction == 'withdraw':
             self.log += type_of_transaction,amount
-        
+
     def check_balance(self):
         return round(self.balance, 2)
 
@@ -41,13 +42,13 @@ class ATM:
             else: 
                 trans += str(self.log[index]) + ' '
                 
-        return f'You have successfully {trans}'
+        return f'You have successfully \n{trans}'
         
             
 
 atm = ATM()  # create an instance of our class
 print('Hello and Welcome to the ATM! \n')
-print(f"-balance\n-deposit\n-withdraw\n-help\n-exit\n")
+print(f"-balance\n-deposit\n-withdraw\n-interest\n-help\n-exit\n")
 while True:
     command = input('Enter a command: ').lower()
     if command == 'balance':
