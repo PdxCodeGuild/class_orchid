@@ -1,0 +1,58 @@
+header{
+    /* font-family: fantasy;
+    text-align: center;
+    background-color: bisque;
+    margin: auto;
+    border:10px ridge;
+    border-color: rgba(227, 188, 105, 0.544); */
+    color: rgba(66, 8, 8, 0.785);
+    border:10px  solid;
+    border-color: rgba(227, 188, 105, 0.544);
+    background-color: bisque;
+    font-family: monospace;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(10vw 30vw 10vw);
+    grid-gap: 1em;
+    text-align: center;
+    background:rgba(227, 188, 105, 0.544);
+    
+}
+
+h1{
+    font-family: monospace;
+    font-size: 60px;
+    font-stretch: expanded;
+    margin-top: 10%;
+    padding: 20%;
+    color: rgba(66, 8, 8, 0.785);
+}
+q{
+    font-weight: 800;
+    font-family: cursive;
+}
+.main.img{
+    display: flex;
+
+    margin-right: auto;
+    padding: 20%;
+}
+img{
+    border: 10px groove rgba(227, 188, 105, 0.544);
+    margin: auto;
+}
+footer{
+    color: rgba(66, 8, 8, 0.785);
+    border:10px  solid;
+    border-color: rgba(227, 188, 105, 0.544);
+    background-color: bisque;
+    font-family: monospace;
+}
+@media screen and ( min-width: 700px){
+    img {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+    
