@@ -4,7 +4,7 @@
     display: flex;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
-    flex-flow: row wrap;
+    flex-flow: row wrap; /*shorthand for the above*/
     align-items: center;
 }
 
