@@ -1,7 +1,7 @@
 # url : https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple
 
 import requests
-import json
+
 
 params = {
     "current_question": 1,

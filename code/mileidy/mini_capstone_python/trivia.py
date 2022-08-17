@@ -2,7 +2,7 @@ import random
 from api import questions
 
 
-print('Hello and welcome to Quizzar!')
+print('Hello and welcome to Quizzar! ')
 
 user_name = input('Please enter your name below \n: ').title()
 
