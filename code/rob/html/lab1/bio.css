@@ -67,7 +67,7 @@ header div{
   }
 #bio_container{
     margin: -150px auto auto auto;
-    max-width: 40rem;
+    max-width: 50rem;
     padding: 10px;
     display: grid;
     place-items: center;
