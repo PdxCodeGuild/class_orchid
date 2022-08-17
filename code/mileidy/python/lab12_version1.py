@@ -8,7 +8,7 @@ with open('one_piece/one_piece.csv', 'r') as file:
 contact_list = []
 
 headers = lines[0].split(',')
-#changed from 0 to 1 made it  LUFFY
+
 
 for value in lines[1:]:
     item = value.split(',')
@@ -45,10 +45,10 @@ while True:
         # delete
         is_done = False
         remove_item = input(f"What would you like to remove? \n{contact_list} \n: ")
-        for contact in contact_list:
+        for index, contact in enumerate(contact_list):
             if remove_item == contact['name']:
                 is_done = True
-                extra_list = contact_list.pop()
+                contact_list.pop(index)
                 print(f"Successfully removed '{remove_item}' from the list")
         if not is_done: 
             print(f"'{remove_item}' is not an item in this list")
@@ -71,8 +71,9 @@ while True:
 
 
 with open('one_piece/one_piece.csv', 'w') as f:
+    f.write(','.join(headers))
     for i in range(len(contact_list)):
         f.write('\n')
-        f.write(f','.join(contact_list[i].values()))
+        f.write(','.join(contact_list[i].values()))
 
 
