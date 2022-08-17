@@ -1,7 +1,4 @@
 
-from re import L
-
-
 filepath = 'one_piece/one_piece.csv'
 
 with open('one_piece/one_piece.csv', 'r') as file:
@@ -11,6 +8,7 @@ with open('one_piece/one_piece.csv', 'r') as file:
 contact_list = []
 
 headers = lines[0].split(',')
+#changed from 0 to 1 made it  LUFFY
 
 for value in lines[1:]:
     item = value.split(',')
