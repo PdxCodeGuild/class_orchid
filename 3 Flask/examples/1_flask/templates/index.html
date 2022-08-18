@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name1 }}'s bio!</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <h1>{{ name1 }}'s bio!</h1>
+    <p>
+        Hi, my name is {{ name1 }}. I live in {{ location }}, and my favorite color is {{ fav_color }}.
+    </p>
+
+    {% if fav_num > 20 %}
+    <p>{{ fav_num }} is greater than 20</p>
+    {% elif fav_num > 10 %}
+    <p>{{ fav_num }} is greater than 10</p>
+    {% endif %}
+
+    <ul>
+        {% for num in nums|sort() %}
+        <li>{{ num }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
