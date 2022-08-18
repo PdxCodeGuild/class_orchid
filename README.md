@@ -60,7 +60,7 @@ Presentation Day: October 21st, 2022
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
 | 01    | [Bio](2%20HTML%20+%20CSS/labs/01%20Bio.md)                                   | Aug 11th      | Aug 17th    | Aug 25th      |
-| 02    | [Blog](2%20HTML%20+%20CSS/labs/02%20Company.md)                              | Aug 17th      | Aug 22nd    | Sep 2nd      |
+| 02    | [Blog](2%20HTML%20+%20CSS/labs/02%20Company.md)                              | Aug 17th      | Aug 22nd    | Sep 2nd       |
 <!-- | 03    | [Company](3%20HTML%20+%20CSS/labs/03%20Company.md)                           | Apr 18th      | Apr 22nd    | May  2nd      |
 | 04    | [Mob Class Mascot](3%20HTML%20+%20CSS/labs/04%20Mob%20Class%20Mascot.md)     | NA            | NA          | NA            |
 | 05    | [Personal Portfolio](3%20HTML%20+%20CSS/labs/05%20Personal%20Portfolio.md)   | Apr 20th      | Apr 20th    | Apr 22nd      | -->
