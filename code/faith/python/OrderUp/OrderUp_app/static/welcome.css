@@ -1,0 +1,23 @@
+html{
+    color: rgb(61, 77, 34);
+    background-color: rgba(194, 243, 111, 0.397);
+   
+}
+body{
+    text-align: center;
+}
+header{
+    
+    text-shadow: 5px 3px 2px black;
+    font-family: Chalkduster, fantasy;
+    font-size: xx-large;
+}
+input{
+    color: rgb(142, 186, 146);
+    background-color: rgb(1, 51, 0);
+}
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
