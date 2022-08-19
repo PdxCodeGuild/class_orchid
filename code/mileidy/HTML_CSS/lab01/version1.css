@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&display=swap');
+
+
+#photo {
+    width: 42vw;
+    height: 42vw;
+    border-radius: 8px
+}
+
+body{
+    background-image: url('luffy.jpg');
+    font-family: 'DynaPuff', cursive;
+    max-width: 800px;
+    margin: auto;
+    padding: 100px;
+    font-size: 32px;
+    color: white;
+}
+
+#p{
+    padding: 1px;
+    margin: auto;
+}
+#quote{
+    font-style: italic;
+    text-decoration-line: underline;
+
+}
+
+ul {
+    list-style-image: url(berries.jpg) ;
+    width: -3px;
+    height: -3px;
+    margin: -1px;
+    padding: -1px;
+}
