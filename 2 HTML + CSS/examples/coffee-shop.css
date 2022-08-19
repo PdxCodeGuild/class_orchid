@@ -1,51 +1,63 @@
 body {
-  height: 100vh;
+  /* grid settings */
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas: 'header' 'nav' 'content' 'footer';
   grid-template-columns: auto 1fr;
+  /* reset the default padding and margin for the page */
   padding: 0;
   margin: 0;
+  /* this helps the header and footer rows stay anchored to the top and bottom */
+  /* vh is % of view height, so 100vh is the height of the entire viewing area */
+  height: 100vh;
 }
 
 header {
+  /* flex settings, parent */
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* place-items: center; */
+  /* grid settings, child */
   grid-area: header;
   grid-column: 1 / 3;
 }
 
 footer {
+  /* flex settings, parent */
   display: flex;
-  font-size: 0.7em;
   flex-direction: row;
   justify-content: space-between;
+  /* grid settings, child */
   grid-area: footer;
   grid-column: 1 / 3;
+  /* style */
   padding-left: 2em;
   padding-right: 2em;
+  font-size: 0.7em;
 }
 
 #navbar {
+  /* flex settings, parent*/
   display: flex;
   justify-content: space-around;
+  /* grid settings, child */
   grid-area: nav;
   grid-column: 1 / 3;
 }
 
 #content {
+  /* grid settings, child */
   grid-area: content;
+  grid-column: 1 / 3;
+  /* style */
+  padding-left: 3em;
   overflow: scroll;
   overflow-x: hidden;
-  overflow-y: visible;
-  grid-column: 1 / 3;
-  padding-left: 3em;
 }
 
 #title {
+  /* flex settings, child */
   align-self: center;
+  /* style */
   margin-bottom: 0;
 }
 
@@ -57,26 +69,32 @@ footer {
   list-style: none;
 }
 
+/* tablet settings, viewport is at least 700px wide */
 @media screen and (min-width: 700px) {
   #navbar {
-    grid-column: 1/2;
-    grid-row: 3/4;
+    /* overwriting flex settings */
     flex-direction: column;
     justify-content: flex-start;
+    /* overwriting and adding grid settings */
+    grid-column: 1/2;
+    grid-row: 3/4;
+    /* style */
     padding: 3em;
-    
   }
   #content {
     grid-column: 2/3;
   }
 }
 
+/* desktop settings, viewport is at least 1000px wide */
 @media screen and (min-width: 1000px) {
   body {
     grid-template-columns: 3fr 4fr;
   }
   #navbar {
+    /* overwriting flex settings */
     align-items: flex-end;
+    /* style */
     margin-top: 2em;
   }
   header {
