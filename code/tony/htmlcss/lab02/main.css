@@ -1,0 +1,91 @@
+body {
+    background-color: #fff;
+    margin: 0;
+}
+
+.main > header {
+    background-color: #76aad8;
+    min-height: 140px;
+    background-image: url("glue.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    color: #fff;
+}
+
+.main > header, .phone {
+    font-family: 'Creepster', cursive;
+    font-size: 10em;
+}
+
+.phone {
+    color: #f60;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.photo {
+    background-color: #f60;
+    border-radius: 50px;
+}
+.photo img {
+    height: 300px;
+    display: block;
+    padding: 0 50px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.flex .blurb {
+    color: #76aad8;
+    font: 1em sans-serif;
+    margin: 5em 3em;
+}
+.flex .heading {
+    font: 2.5em 'Creepster', cursive;
+}
+.flex .photo {
+    width: 350px;
+    max-height: 300px;
+}
+article .flex:last-child {
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 800px) {
+    article .flex, header .flex {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .flex.reverse {
+        flex-direction: row-reverse;
+    }
+}
+@media screen and (max-width: 800px) {
+    article .flex {
+        display: block;
+        justify-content: space-between;
+    }
+    .main > header {
+        font-size: 20vw;
+    }
+    .flex .blurb {
+        margin: 1em 2em;
+    }
+    .flex .heading {
+        text-align: center;
+    }
+    .flex .photo {
+        margin: 2em;
+        width: auto;
+    }
+    .flex .photo img {
+        margin: 0 0 0 auto;
+    }
+    .flex.reverse .photo img {
+        margin: 0 auto 0 0;
+    }
+}
