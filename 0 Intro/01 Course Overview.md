@@ -289,7 +289,7 @@ PDX Code Guild doesn't hold class sessions on the following holidays. Holidays d
 
 ### Contact
 
-You are welcome to email me at any time: [pete@pdxcodeguild.com](mailto:pete@pdxcodeguild.com). We will also have a channel on the [PDX Code Guild Slack](https://portlandcodeguild.slack.com/).
+You are welcome to email me at any time: [danny@pdxcodeguild.com](mailto:danny@pdxcodeguild.com). We will also have a channel on the [PDX Code Guild Slack](https://portlandcodeguild.slack.com/).
 
 ### Zoom
 
@@ -297,7 +297,7 @@ We will be using Zoom for holding class. This is the closest we can get to an in
 
 ### Slack
 
-Slack is a chat application. THis is how I will send out quick updates and how you can ask other students and instructors questions. Keep in mind Slack is ephemeral, and messages will disappear after about two weeks.
+Slack is a chat application. This is how I will send out quick updates and how you can ask other students and instructors questions. Keep in mind Slack is ephemeral, and messages will disappear after about two weeks.
 
 ### Github
 
