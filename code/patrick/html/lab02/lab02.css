@@ -12,9 +12,13 @@ body{
 img{
     height: fit-content;
     width: fit-content;
-    align-items: center;
+    
+    
 }
-
+.responsive{
+    width: 100%;
+    height: auto;
+}
 .staffpics{
     height: 10%;
     background-color: black;
@@ -58,22 +62,7 @@ img{
 
 
 
-@media all and (min-width: 600px){
-    .header, .body2, .body, .staffpics, .piclink, .img{
-        display: flex;
-        border: 10px;
-        padding: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        font-size: 50px;
-        height: fit-content;
-        width: fit-content;
-        align-items: center;
-        
-    }
-    
-}
+
 
 @media all and (min-width: 768px){
     .header, .body2, .body, .staffpics, .piclink, .img{
@@ -102,6 +91,7 @@ img{
         height: fit-content;
         width: fit-content;
         align-items: center;
+        background-color: red;
         
     }
     
