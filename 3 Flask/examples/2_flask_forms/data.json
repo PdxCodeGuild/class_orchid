@@ -1,0 +1,16 @@
+{
+    "colors_list": [
+        {
+            "color": "red",
+            "brightness": "very very bright"
+        },
+        {
+            "color": "purple",
+            "brightness": "pretty medium"
+        },
+        {
+            "color": "blue",
+            "brightness": "light"
+        }
+    ]
+}
