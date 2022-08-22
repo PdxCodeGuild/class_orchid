@@ -44,8 +44,12 @@ display: block;
 
 
 .posts{
-    margin-left: 150px;
+    margin-left: 87px;
     font-size: 18px;
+    
+    background-color: black;
+    color:white
+    
     
    
    
@@ -113,6 +117,11 @@ display: block;
         text-align: center;
         justify-content: center;
         align-content: space-between;
+        background-image: url("images/Cheeseburger.jpg");
+        background-repeat: no-repeat;
+        color: black;
+        background-color: white;
+        
         
         
        
@@ -183,6 +192,8 @@ display: block;
         text-align: center;
         justify-content: center;
         align-content: space-between;
+        background-image: url("images/Cheeseburger.jpg");
+        background-repeat: no-repeat;
         
         
         
