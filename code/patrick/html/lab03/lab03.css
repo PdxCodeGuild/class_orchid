@@ -1,11 +1,16 @@
 
-
+body{
+    background-image: url("pictures/burgerlite.jpg");
+    background-size:90%;
+    background-position: center;
+    
+}
 
 .title{
     justify-content: center;
     text-align: center;
-    color: red;
-    background-color: black;
+    
+    
     display: flex;
     
 }
@@ -14,7 +19,7 @@
     justify-content: space-around;
     text-align: center;
     color: white;
-    background-color: black;
+    
     word-spacing: 3px;
     
 }
@@ -25,8 +30,9 @@
     position: absolute;
     left: 0;
     top: 10;
+    padding-left: 10px;
     padding-top: 40px;
-    background-color: aqua;
+    
     text-size-adjust: auto;
 }
     
@@ -34,6 +40,7 @@
     padding: 8px;
 font-size: 44px;
 display: block;
+
 
 }  
     
@@ -45,7 +52,7 @@ display: block;
 
 .posts{
     margin-left: 150px;
-    font-size: 18px;
+    font-size: 21px;
     
    
    
@@ -82,7 +89,7 @@ display: block;
         left: 0;
         top: 10;
         padding-top: 40px;
-        background-color: aqua;
+        
         text-size-adjust: auto;
         justify-content: left;
         align-items: center;
@@ -105,7 +112,7 @@ display: block;
     
     .posts{
         margin-left: 250px;
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         justify-content: center;
         align-content: space-between;
@@ -125,7 +132,7 @@ display: block;
         justify-content: center;
         text-align: center;
         color: red;
-        background-color: black;
+        
         display: flex;
         font-size: 50px;
         
@@ -135,9 +142,9 @@ display: block;
         justify-content: space-around;
         text-align: center;
         color: white;
-        background-color: black;
         word-spacing: 3px;
         font-size: 50px;
+        
         
     }
     
@@ -148,7 +155,7 @@ display: block;
         left: 0;
         top: 10;
         padding-top: 40px;
-        background-color: aqua;
+        
         text-size-adjust: auto;
         justify-content: left;
         align-items: center;
@@ -171,10 +178,11 @@ display: block;
     
     .posts{
         margin-left: 250px;
-        font-size: 30px;
+        font-size: 80px;
         text-align: center;
         justify-content: center;
         align-content: space-between;
+        color:
         
         
        
