@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@1,300;1,500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+
+#bigred {
+    color:red;
+    font-style: italic;
+    font-size: 100px;
+    text-decoration: underline; 
+    text-decoration-color: black;
+    text-decoration-thickness: 7px;
+}
+
+#photo {
+    display: inline-block;
+    width: 400px;
+    height: 350px;
+    border-radius: 2rem;
+    
+}
+#content {
+    display: flex;
+    padding: 30px;
+    justify-content: flex-start;
+}
+
+ul {
+    font-size: 25px;
+    line-height: 40px;
+    list-style-type:square;
+}
+
+h1 {
+    
+    margin-block-start: 0em;
+    
+    padding: 5px;
+    
+}
+
+#places {
+    padding-left: 5px;
+    
+}
+
+#places h1{
+    
+    margin-top: -13px;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("dave-adamson-rPUDwwLSohI-unsplash.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom, center;
+    
+}
+
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("dave-adamson-rPUDwwLSohI-unsplash.jpg");
+    font-weight: bold;
+    font-style: italic;
+}
+
+a {
+    color:red
+}
+
+/* body {
+
+} */
