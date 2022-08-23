@@ -1,0 +1,93 @@
+body{
+    background-color:cornsilk;
+    text-align: center;
+    margin: 0;
+    margin-top: -10%;
+    font-family: 'Rubik Maze', cursive;
+    color: black;
+}
+header{
+    background-color: #f6c27d ;
+    font-size: 250%;
+    position: sticky; top: 0;
+    color: #fff8dc;
+    margin: 0;
+    font-family: 'Rubik Burned', cursive;
+}
+.nav{
+    margin-top: -5%;
+    font-size: 80%;
+}
+a{
+    color: black;
+}
+.side-nav{
+    text-align: center;
+    font-size: 100%;
+    margin: -10%;
+    margin-bottom: 5%;
+    font-family: 'Rubik Burned', cursive;
+}
+
+.blog{
+    border: dotted 10px rgb(246, 194, 125) ;
+}
+div{
+    padding: 5%;
+    margin: 5%;
+}
+.welcome{
+    font-family: 'Rubik Burned', cursive;
+    font-size: 150%;
+    margin-top: -10%;
+}
+footer{
+    background-color: rgb(246, 194, 125) ;
+    margin-bottom: -10%;
+    color: cornsilk;
+}
+@media screen and (min-width :700px) {
+    header{
+        border-bottom: black 10px ridge;
+    }
+    
+    .blogs{
+        display: inline-grid;
+        grid-template-columns: auto auto ;
+        /* border: dotted 10px rgb(246, 194, 125) ; */
+    }
+    p{
+        padding: 0%;
+    }
+    .side-nav{
+        
+        height: 100%;
+        width: 100;
+        margin-left: -3%;
+        margin-top: -15%;
+        margin-right: 80%;
+        text-align: left; 
+        border: solid rgb(246, 194, 125) 10px;
+    }
+    .welcome{
+        margin-top: 5%;
+        padding-bottom: 5%;
+    }
+    footer{
+        border-top: 5px ridge #000000;
+    }
+   
+
+}
+@media screen and (min-width: 1100px){
+    .blog{
+        display: grid;
+        
+    }
+    .welcome{
+        text-align: center;
+        font-size: 200%;
+        padding: 10%;
+        padding-top: 5%;
+   }
+}
