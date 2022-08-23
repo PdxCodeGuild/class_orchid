@@ -1,0 +1,141 @@
+body {
+    animation: body 10s linear infinite;
+    margin: 20px;
+}
+
+h1 {
+    /* This top chunk of code is the verbose way of writing your animation settings. */
+
+    /* animation-name: welcome;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+
+
+    /* this bottom line of code is the shorthand way of writing your animation settings */
+
+    animation: welcome 2s ease-in-out 2s infinite alternate;
+
+
+    /* BOTH VERSIONS DO THE SAME EXACT THNG! */
+}
+
+#moveme {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    background-color: rebeccapurple;
+    animation: moveme 4s linear infinite;
+}
+
+p {
+    color: white;
+    animation: movep 1s linear infinite alternate;
+}
+
+#growme {
+    height: 50px;
+    width: 50px;
+    background-color: goldenrod;
+    animation: growme 3s infinite;
+    border: 2px solid black;
+}
+
+/* 
+@keyframes rules can use from and to, percentages, or a blend (e.g. from, 50%, and to)
+It is best practice to ALWAYS include from/0% and to/100%. Your browser will try to apply the animation if they are not included, but it may not work as expected.
+Each keyframe's CSS can be applied in the same line or expanded as you normally would write CSS:
+
+from {color: red;}
+
+OR
+
+from {
+    color: red;
+}
+
+*/
+
+/* @keyframes welcome {
+    from {color: red;}
+    to {color: blue;}
+} */
+
+/* @keyframes welcome {
+    0% {color: green;}
+    50% {color: purple;}
+    100% {color: yellow;}
+} */
+
+@keyframes welcome {
+    0% {color: pink; margin-left: 0px; text-shadow: 0px 0px 5px #000;}
+    100% {color: magenta; margin-left: 200px; text-shadow: 0px 0px 10px green;}
+}
+
+@keyframes moveme {
+    0% {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    25% {
+        margin-left: 250px;
+        margin-top: 0px;
+    }
+    50% {
+        margin-left: 250px;
+        margin-top: 250px;
+    }
+    75% {
+        margin-left: 0px;
+        margin-top: 250px;
+    }
+    100% {
+        margin-left: 0px;
+        margin-top: 0px
+    }
+}
+
+@keyframes movep {
+    from {font-size: x-small;}
+    to {font-size: x-large;}
+}
+
+/* When you don't include a from/0% or to/100%, your browser will do its best to figure out what they should be.
+In this case it works since the #growme selector has width, height, and border declared above */
+
+@keyframes growme {
+    25% {width: 200px;}
+    50% {width: 100px; height: 100px; border: 10px dashed red;}
+}
+
+@keyframes body {
+    0% {background-color: red;}
+    14.3% {background-color: orange;}
+    28.6% {background-color: yellow;}
+    42.9% {background-color: green;}
+    57.1% {background-color: blue;}
+    71.4% {background-color: indigo;}
+    85.7% {background-color: violet;}
+    100% {background-color: red;}
+}
+
+/* CSS transitions are animations as well, but are handled differently. They are used for transitions from one state to the next.
+The easiest example is with a link (or anchor tag), which often has a :hover state defined as well.
+Adding "transition: [time];" to the default state will tell your browser to animate between the two states, and to make that animation as long as you decide. */
+
+a {
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    padding: 10px;
+    transition: .4s;
+}
+
+a:hover {
+    color: hotpink;
+    background-color: blueviolet;
+}
