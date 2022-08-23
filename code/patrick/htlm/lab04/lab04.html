@@ -9,56 +9,83 @@
 </head>
 <body>
     <h1>Barry's burritos</h1>
-    <form action="/action_page.php">
+    <form action="https://webhook.site/882c8077-9ac7-4b6d-b43d-1d18dc2c4c78" method="post">
         <label for="name">Name: </label>
         <input type="text" id="name" name="name"><br>
-        <input type="submit" value="Submit">
-    </form>
-
-    <form action="/action_page.php">
+   
         <label for="passowrd">Password: </label>
-        <input type="text" id="password" name="username"> <br>
-        <input type="submit" value="submit">
-
-    </form>
+        <input type="password" id="password" name="passowrd"> <br>
+        <label for="telephone">Phone number </label>
+        <input type="tel" id="telephone" name="telephone">
+        
+        
+    
     <h2>Build your burrito</h2>
     <p>White, Wheat, Spinach, Siracha </p>
-    <form action="/action_page.php">
+    
         <label for="tortilla choice">Tortilla Choice</label>
         <input type="text" id="tortilla choice" name="tortilla choice"><br>
         <p>Choose your Meat(choose one) </p>
+        
         <label>Chicken</label>
-        <input type="checkbox" id="chicken" name="chicken">
+        <input type="checkbox" id="chicken" name="meat" value="chicken">
         <label>Steak</label>
-        <input type="checkbox" id="Steak" name="Steak">
+        <input type="checkbox" id="Steak" name="meat" value="steak">
         <label>House Smoked Pork</label>
-        <input type="checkbox" id="House Smoked Pork" name="House Smoked Pork">
-    </form>
+        <input type="checkbox" id="House Smoked Pork" name="meat" value="house smoked pork">
     
-    <h3>Additional Toppings</h3>
-    <form>
-        <label>Beans</label>
-        <input type="checkbox" id="Beans" name="Beans">
-        <label>Rice</label>
-        <input type="checkbox" id="Rice" name="Rice">
-        <label>Guac</label>
-        <input type="checkbox" id="guac" name="guac">
-        <label>Jalapeno</label>
-        <input type="checkbox" id="Jalapeno" name="Jalapeno">
-        <br>
-        <label>Onion</label>
-        <input type="checkbox" id="onions" name="onions">
-        <label>Slaw</label>
-        <input type="checkbox" id="Slaw" name="Slaw">
-        <label>Hots</label>
-        <input type="checkbox" id="hots" name="hots">
-        <label>Hot sauce</label>
-        <input type="checkbox" id="hot sauce" name="hot sauce"
+    <fieldset>
 
-    </form>
+        <legend>Choose your Toppings</legend>
+        <div>
+            
+            <label for="topping1">Beans</label>
+            <input type="checkbox" id="Beans" name="topping1" value="Beans">
+        </div>
+        <div>
+            
+            <label>Rice</label>
+            <input type="checkbox" id="Rice" name="Toppings" value="Rice">
+        </div>
+        <div>
+            
+            <label>Guac</label>
+            <input type="checkbox" id="guac" name="Toppings" value="guac">
+        </div>
+        <div>
+            
+            <label>Jalapeno</label>
+            <input type="checkbox" id="Jalapeno" name="Toppings" value="jalapeno">
+        </div>
+        
+        
+        <div>
+            
+            <label>Onion</label>
+            <input type="checkbox" id="onions" name="Toppings" value="onions">
+        </div>
+        <div>
+            
+            <label>Slaw</label>
+            <input type="checkbox" id="Slaw" name="Toppings" value="slaw">
+        </div>
+        <div>
+            
+            <label>Hots</label>
+            <input type="checkbox" id="hots" name="Toppings" value="hots">
+        </div>
+        <div>
+            
+            <label>Hot sauce</label>
+            <input type="checkbox" id="hot sauce" name="Toppings" value="hot sauce">
+        </div>
+    </div>
+</fieldset>
+    <input type="submit" value="Submit">
+</form>
 
 
 
-
+    
 </body>
 </html>
