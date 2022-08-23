@@ -3,3 +3,19 @@ body{
     text-align: center;
     color:brown;
 }
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+@media all and (min-width: 768px){
+    body{
+    background-image: url("images/rest.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    }
+
+
+}
