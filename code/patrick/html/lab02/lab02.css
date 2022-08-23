@@ -75,6 +75,12 @@ img{
         height: fit-content;
         width: fit-content;
         align-items: center;
+        background-color: transparent;
+        
+        
+    }
+    body{
+        background-image: url("pictures/BeforeAfter1.jpg");
         
     }
     
@@ -94,5 +100,9 @@ img{
         background-color: red;
         
     }
+    .header{
+        background-color: black;
+    }
+    
     
 }
