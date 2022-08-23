@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 'header' 'nav' 'content' 'footer';
+    grid-template-columns: auto 1fr;
+
+}
+
+.head h3 {
+    font-family: Georgia;
+    
+}
+
+div.head {
+    text-align: center;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
