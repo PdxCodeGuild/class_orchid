@@ -10,7 +10,7 @@ body{
 
 }
 img{
-    height: fit-content;
+    height:60%;
     width: fit-content;
     
     
@@ -79,23 +79,21 @@ img{
         
         
     }
-    body{
-        background-image: url("pictures/BeforeAfter1.jpg");
+   
         
     }
     
-}
+
 
 @media all and (min-width: 1080px){
-    .header, .body2, .body, .staffpics, .piclink, .img{
+    .header, .body2, .body,  .piclink{
         display: flex;
-        
+    
         
         justify-content: center;
         text-align: center;
         font-size: 50px;
-        height: fit-content;
-        width: fit-content;
+        
         align-items: center;
         background-color: red;
         
@@ -104,5 +102,13 @@ img{
         background-color: black;
     }
     
+        
+        
+        
+    }
+    img{
+        
+        max-width: 40%;
+        max-height: 100%;
+    }
     
-}
