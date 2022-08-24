@@ -16,6 +16,23 @@ A personal portfolio website helps market yourself to prospective employers and 
 - Skills
 - Work history
 
+## Tools you might use
+
+### Colors
+[Coolors](https://coolors.co/): Easy to use tools including a palette generator and contrast checker
+[Adobe Color](https://color.adobe.com/create/color-wheel): A more robust set of tools for creating palettes
+
+### CSS Libraries
+
+[Tachyons](https://tachyons.io/)
+
+[Materialize](https://materializecss.com/)
+
+[Bootstrap](https://getbootstrap.com/)
+
+### CSS Normalizer
+[CSS Modern Normalize](https://github.com/sindresorhus/modern-normalize): This removes the browser's default styling, giving you more control of the elements on your page
+
 
 ## Inspiration
 

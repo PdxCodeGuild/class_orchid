@@ -62,8 +62,8 @@ Presentation Day: October 21st, 2022
 | 01    | [Bio](2%20HTML%20+%20CSS/labs/01%20Bio.md)                                   | Aug 11th      | Aug 17th    | Aug 25th      |
 | 02    | [Company](2%20HTML%20+%20CSS/labs/02%20Company.md)                           | Aug 17th      | Aug 22nd    | Aug 31st      |
 | 03    | [Blog](2%20HTML%20+%20CSS/labs/03%20Blog.md)                                 | Aug 18th      | Aug 22nd    | Sep  1st      |
-| 04    | [Burrito Order Form](3%20HTML%20+%20CSS/labs/Optional%20Burrito%20Order%20Form.md)|Aug 22nd  | Aug 26th    | Sep  5th      |
-| 05    | [Personal Portfolio](3%20HTML%20+%20CSS/labs/05%20Personal%20Portfolio.md)   | Aug 23rd      | Aug 26th    | Sep  6th      |
+| 04    | [Burrito Order Form](2%20HTML%20+%20CSS/labs/04%20Burrito%20Order%20Form.md)|Aug 22nd  | Aug 26th    | Sep  5th      |
+| 05    | [Personal Portfolio](2%20HTML%20+%20CSS/labs/05%20Personal%20Portfolio.md)   | Aug 23rd      | Aug 26th    | Sep  6th      |
 
 
 ## Optional Flask Labs:
