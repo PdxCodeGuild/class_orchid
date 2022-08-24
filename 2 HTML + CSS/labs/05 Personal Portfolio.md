@@ -24,6 +24,7 @@ A personal portfolio website helps market yourself to prospective employers and 
 
 ### Colors
 [Coolors](https://coolors.co/): Easy to use tools including a palette generator and contrast checker
+
 [Adobe Color](https://color.adobe.com/create/color-wheel): A more robust set of tools for creating palettes
 
 ### CSS Libraries
