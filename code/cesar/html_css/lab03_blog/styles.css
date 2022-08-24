@@ -1,21 +1,133 @@
 body {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 'header' 'nav' 'content' 'footer';
-    grid-template-columns: auto 1fr;
-
+    font-family: Arial, Helvetica, sans-serif;
+    color:#112A46;
+    background-color: #f4a261;
+}
+a:link {
+    color: #112A46;
+}
+a:visited {
+    color: #C6DAF1;
+}
+div.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding:20px;
+    background-color: #e9c46a;
 }
 
-.head h3 {
-    font-family: Georgia;
-    
+div.content {
+    background-color: #e9c46a;;
 }
-
-div.head {
+div.header {
     text-align: center;
 }
 
-#logo {
-    display: flex;
+.menu-links {
+    /* display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: auto; */
+    list-style-type: none;
+    padding: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
+
+li  {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+}
+
+li a {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    color: #112A46;
+}
+
+li a:hover {
+    
+    color: #C6DAF1;
+    border: solid black;
+  }
+
+li a:visited {
+    color: #112A46;
+}
+
+footer {
+    text-align: center;
+}
+
+
+@media all and (min-width: 800px) {
+    div.container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto auto auto;
+
+    }
+
+    div.header {
+        display: grid;
+        grid-column: 1/-1;
+        text-align: center;
+        
+    }
+
+    div.menu {
+        display: grid;
+        grid-row: 2;
+
+     }
+
+    div.content {
+        grid-column: 2;
+        margin-left: 20px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    div.container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    div.header {
+        display: grid;
+        grid-column: 1/-1;
+        text-align: center;
+        
+    }
+
+    div.menu {
+        display: grid;
+        grid-row: 2;
+        
+     }
+
+    div.content {
+        grid-column: 2;
+    }
+
+    footer {
+        display: grid;
+        height: 100px;
+        grid-column: 1/-1;
+        text-align: center;
+        
+    }
+}
+
+  
+
+
