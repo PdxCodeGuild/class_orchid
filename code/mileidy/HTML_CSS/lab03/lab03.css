@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1,500&display=swap');
+
+body{
+    background-image: url("unsplash\ background.jpg");
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.top-nav{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    text-decoration: underline;
+    
+}
+
+.sub-headers{
+    text-align: center;
+}
+
+.stuff {
+    height: 100vh;
+    padding-bottom:3rem;
+}
+
+#header {
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width:95%;
+    height: 3rem;
+    margin-top: auto;
+    padding: 2rem;
+}
+
+
+
+@media (min-width: 350px){
+    p {
+        margin-left: 37px;
+        margin-right: 26px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .side-nav{
+        font-size: 10px;
+    }
+        #footer{
+        width: 65%; 
+        padding: 6rem;
+        font-weight: bold;
+    } 
+}
+
+
+@media (min-width: 700px){
+    p {
+        margin-bottom: 50px;
+        font-size: 19px;
+    }
+    #header{
+        font-size: 50px;
+    }
+    .top-nav{
+        font-size: 17px;
+    }
+    .side-nav{
+        padding: 2rem;
+    }
+    .sub-headers{
+        font-size: 30px;
+    }
+    .stuff{
+        margin-left: 35px;
+    }
+}
+
+@media (min-width: 950px){
+    body{
+        font-size: large;
+    }
+    .stuff {
+        margin-left: 60px;
+        position: relative;
+        padding-bottom: 6rem;
+    }
+    p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    header{
+        font-size: 87px;
+    }
+    .side-nav{
+        padding: 6rem;
+        font-weight: bold;
+    }
+}
