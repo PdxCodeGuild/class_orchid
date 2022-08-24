@@ -1,0 +1,18 @@
+{
+    "name": "Liz Lemon",
+    "age": 42,
+    "location": "NYC",
+    "quote": "I want to go to there.",
+    "places_lived": [
+        "NYC",
+        "Chicago",
+        "Italy"
+    ],
+    "occupation": "Head writer",
+    "photos": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+    ],
+    "bio": "Elizabeth Miervaldis Liz Lemon is the fictional protagonist of the American situation comedy 30 Rock. She is portrayed by Tina Fey, who is also the creator of the series and its show runner."
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name1 }}'s bio!</title>
+    <!-- external files like stylesheets use Flask's url_for method with 2 arguments: the folder than contains the file, and the name of the file itself -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <!-- variables passed from Flask are displayed with {{ variable }} syntax -->
+    <h1>{{ name1 }}'s bio!</h1>
+    <!-- if a dictionary was passed, the following line is an example of how it would be accessed instead -->
+    <!-- <h1>{{ contents.name }}</h1> -->
+    <p>
+        Hi, my name is {{ name1 }}. I live in {{ location }}, and my favorite color is {{ fav_color }}.
+    </p>
+
+    <!-- conditional statements use {% if condition %} syntax -->
+    {% if fav_num > 20 %}
+    <p>{{ fav_num }} is greater than 20</p>
+    <!-- conditional statements can include elif and else if necessary -->
+    {% elif fav_num > 10 %}
+    <p>{{ fav_num }} is greater than 10</p>
+    {% else %}
+    <p>{{ fav_num }} is smaller than 10</p>
+    <!-- conditional statements end with {% endif %} to tell Flask that you're done -->
+    {% endif %}
+
+    <ul>
+        <!-- for loops use {% for thing in things %} syntax -->
+        {% for num in nums|sort() %}
+        <li>{{ num }}</li>
+        <!-- for loops are closed with {% endfor %} to tell Flask that you're done -->
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -60,23 +60,18 @@ Presentation Day: October 21st, 2022
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
 | 01    | [Bio](2%20HTML%20+%20CSS/labs/01%20Bio.md)                                   | Aug 11th      | Aug 17th    | Aug 25th      |
-| 02    | [Blog](2%20HTML%20+%20CSS/labs/02%20Company.md)                              | Aug 17th      | Aug 22nd    | Sep 2nd       |
-<!-- | 03    | [Company](3%20HTML%20+%20CSS/labs/03%20Company.md)                           | Apr 18th      | Apr 22nd    | May  2nd      |
-| 04    | [Mob Class Mascot](3%20HTML%20+%20CSS/labs/04%20Mob%20Class%20Mascot.md)     | NA            | NA          | NA            |
-| 05    | [Personal Portfolio](3%20HTML%20+%20CSS/labs/05%20Personal%20Portfolio.md)   | Apr 20th      | Apr 20th    | Apr 22nd      | -->
+| 02    | [Company](2%20HTML%20+%20CSS/labs/02%20Company.md)                           | Aug 17th      | Aug 22nd    | Aug 31st      |
+| 03    | [Blog](2%20HTML%20+%20CSS/labs/03%20Blog.md)                                 | Aug 18th      | Aug 22nd    | Sep  1st      |
+| 04    | [Burrito Order Form](3%20HTML%20+%20CSS/labs/Optional%20Burrito%20Order%20Form.md)|Aug 22nd  | Aug 26th    | Sep  5th      |
+| 05    | [Personal Portfolio](3%20HTML%20+%20CSS/labs/05%20Personal%20Portfolio.md)   | Aug 23rd      | Aug 26th    | Sep  6th      |
 
 
-<!-- 
-#### Optional HTML/CSS/Flask Labs
+## Optional Flask Labs:
 
-[Flask Redo](3%20HTML%20+%20CSS/labs/Optional%20Flask%20Redo.md), [Burrito Order Form](3%20HTML%20+%20CSS/labs/Optional%20Burrito%20Order%20Form.md) -->
+* [Lab 01 Programming 101 Redux](3%20Flask/labs/01%20Programming%20101%20Labs%20Redux.md)
+* [Lab 02 Programming 102 Redux](3%20Flask/labs/02%20Programming%20102%20Labs%20Redux.md)
+* [Lab 03 Contacts List Redux](3%20Flask/labs/03%20Contacts%20List%20Redux.md)
 
-
-<!-- ## Optional Flask Labs:
-
-* [Lab 01 Programming 101 Redux](2%20Flask/labs/01%20Programming%20101%20Labs%20Redux.md)
-* [Lab 02 Programming 102 Redux](2%20Flask/labs/02%20Programming%20102%20Labs%20Redux.md)
-* [Lab 03 Contacts List Redux](2%20Flask/labs/03%20Contacts%20List%20Redux.md) -->
 
 ## Python Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
