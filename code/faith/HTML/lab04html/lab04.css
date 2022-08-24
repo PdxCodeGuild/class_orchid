@@ -1,0 +1,14 @@
+body{
+    background-color: #f4e8c3;
+    color: #112A46;
+}
+h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 350%;
+    animation: title 1s ease-in-out 0s infinite alternate;
+}
+
+@keyframes title{
+    0% {color: rgb(255, 213, 154); margin-left: 0px; text-shadow: 0px 0px 5px rgb(238, 225, 204);}
+    /* 100% {color: rgb(239, 186, 53); margin-left: 100px; text-shadow: 0px 0px 10px rgb(141, 115, 10);} */
+}
