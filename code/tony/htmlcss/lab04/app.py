@@ -1,6 +1,4 @@
-from crypt import methods
-import enum
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
