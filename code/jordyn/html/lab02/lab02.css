@@ -1,0 +1,133 @@
+
+body {
+    display: flex;
+    background-color: rgb(173, 187, 250);
+    margin: 0;
+    padding-top: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgb(101, 123, 221);
+}
+
+.header_item1 {
+    display: flex;
+    margin-left: 1vw;
+    justify-content: flex-start;
+    padding-right: 20%;
+    font-size: large;
+    font-style: italic;
+}
+
+.header_item2 {
+    align-self: center;
+}
+
+.header_item3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 1%;
+    width: 22vw;
+    flex-wrap: wrap;
+}
+
+.item3_spacing {
+    margin-left: 10px;
+    padding: 5px;
+    background-color: aqua;
+    background-size: 150px 110%;
+    border-radius: 25%;
+    border: 1px solid black;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    margin-top: 4vh;
+}
+
+.upper_banner {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 25vh;
+    background-image: url('https://nonprofitlawblog.com/assets/AdobeStock_189498933-scaled.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 25vh;
+}
+
+#banner_text {
+    font-size: 34px;
+    padding-left: 20px;
+    background-color: rgba(143, 143, 173, 0.589);
+}
+
+.cat_pics {
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 7%;
+    margin-left: 12px;
+    margin-right: 12px;
+    border: 2px solid rgb(95, 27, 221);
+}
+
+.adoption_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.cat_container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+@media screen and (max-width: 900px) {
+    .header_item3{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .header_right1 {
+        display: none;
+    }
+    .item3_spacing {
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+    #banner_text {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .header_item1 {
+        display: none;
+    }
+    .header_item2 {
+        width: 0;
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #banner_text {
+        font-size: 18px;
+    }
+}
