@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="04_dreamburrito.css"/>
+
+
+    
+
+<!-- Jen Williams
+PDX Code Guild Bootcamp
+Class Orchid
+Html lab 4: Burrito Order
+-->
+
+    <title>Dream Burrito - Order Form</title>
+    <meta name="description" content="Order form page for building the burrito of your dreams " >
+</head>
+
+<div class="grid">
+    <header>
+            <div class="header">
+
+        <p><h1 class = "header"> Dream Burrito</h1>
+        <h2>Where we make the burrito of your dreams come true.</h2></p>
+
+
+    
+            </div>
+    </header>
+  
+    <aside class="sidebar-left">
+        <div>
+            <figure>
+            <img src="04_dreamburrito.jpg" width = 700px height="auto" position="float-left">
+    
+ 
+    </figure>
+  
+
+        <form action="https://webhook.site/df2639ed-4d63-4323-8897-b93400cd82ca" method="get">
+          
+           
+    <h2> Please enter your username and password. </h2>
+    <p<label for="username" class="form-text-label" id="username">User Name</label >
+    <input type="text" id="username"class="form-control form-control-lg" name="username"></p>
+    <label for="password" class="form-text-label" id="password">Password</label>
+    <input type="password" id="password"class="form-control form-control-1g"name="password" required /><br><br>
+    <label for="delivery" class="form-textarea" id="delivery">Will that be for takeout or delivery?</label>
+    <input type="textarea" name="delivery" value="">
+
+
+
+   
+        </div>
+    </aside>
+  
+    <article>
+        <div class="form-floating mb-3">
+        <p><h2> 
+     Please select your ingredients</h2></p>
+<h3> Tortilla</h3>
+  
+      <div class="form-radio">
+        <input type="radio"  value="wheat" id="wheat" name="tortilla" />
+        <label for="wheat">Wheat </label><br>
+        <input type="radio" value="white" id="white" name="tortilla"  />
+        <label for="white_tortilla">White </label><br>
+        <input type="radio" value="corn"  id="corn" name="tortilla"  />
+        <label for="corn">Corn <br>
+        </div>
+        
+            <h3>Rice </h3>
+            <div class="form-radio">
+            <input type="radio" value="white_rice" id="white_rice" name="rice" />
+            <label for="white_rice" >White Rice</label><br>
+            <input type="radio"  value="brown_rice"id="brown_rice" name="rice"  />
+            <label for="brown_rice">Brown Rice</label><br>
+            <input type="radio"  value="cilantro_lime"id="cilantro_lime" name="rice"/>
+            <label for="cilantro_lime">Cilantro Lime Rice<br>
+            </div>
+            
+                <h4> Beans</h3>
+                <div class="form-radio">
+                <input type="radio" value="white_beans" id="white_beans" name="beans" />
+                <label for="white_beans">White Beans</label><br>
+                <input type="radio" value="black_beans" id="black_beans" name="beans"  />
+                <label for="black_beans">Black Beans</label><br>
+                <input type="radio" value="borracho_beans" id="borracho_beans" name="beans" />
+                <label for="borracho_beans">Borracho Beans</label><br>
+                </div>
+
+                    <h3> Protein</h3>
+                    <div class="form-radio">
+                    <input type="radio" value="carnitas" id="carnitas" name="protein" />
+                    <label for="carnitas" >Carnitas</label><br>
+                    <input type="radio" value="pollo" id="pollo" name="protein" />
+                    <label for="pollo">Pollo</label><br>
+                    <input type="radio" value="barbacoa" id="barbacoa" name="protein"/>
+                    <label for="barbacoa">Barbacoa<br>
+      </div>
+      <h3> Optional choices</h3>
+      <div class="form-checkbox">
+        <input type="checkbox" value="cheese" id="cheese" name="cheese" />
+        <label for="cheese">Cheese</label><br>
+        <input type="checkbox" value="sour_cream" id="sour_cream" name="sour_cream" />
+        <label for="sour_cream">Sour Cream</label><br>
+        <input type="checkbox" value="double_protein" id="double_protein" name="double_protein" />
+        <label for="double_protein">Double Protein<br>
+    
+
+        </div>
+
+    </article>
+  
+    <aside class="sidebar-right">
+        <p><h2>
+        
+            <div class = table>
+       <h2>Thank you for your selections. </h2>
+       <h3> Please enter your information:</h3>
+
+           <p<label for="Name" class="form-text-label" id="name">Name</label >
+    <input type="text" id="name"class="form-control form-control-lg" name="name" required></p>
+    <label for="street_address" class="form-text-label" id="street_address">Street Address</label>
+    <input type="textarea" id="street_address"class="form-control form-control-1g"name="street_address" required /><br><br>
+    <label for="phone_number" class="form-textarea" id="phone_number">Phone Number (xxx-xxx-xxx)</label>
+    <input type="tel" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    required><br><br>
+    <label for="delivery_instructions" class="form-textarea" id="delivery_instructions">Delivery Instructions: </label>
+    <textarea id="delivery_instructions"  name="delivery_instructions" rows="4" cols="50"></textarea>
+
+       
+
+       <div class="tile_div">
+        
+     
+        <br><button type="submit" class="btn btn-wide"> Submit </button>
+    </form>
+</div>
+       
+       <p>Thank you for your business. Dream big!</p>
+
+     </div>
+        </h2></p>
+       </aside>
+       
+    
+    <footer>
+        <div class="footer">
+            <figure>
+            <img src="04_dreamburrito.png" width = 300px height="auto" position="float-left" >
+    
+
+    </figure>
+    </footer>
+  </div>
+  
+  
