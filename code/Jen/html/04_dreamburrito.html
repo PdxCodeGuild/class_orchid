@@ -32,17 +32,20 @@ Html lab 4: Burrito Order
             </div>
     </header>
   
-    <aside class="sidebar-left">
+    <aside>
+
+        <form action="https://webhook.site/df2639ed-4d63-4323-8897-b93400cd82ca" method="post">
+        
         <div>
-            <figure>
+          
             <img src="04_dreamburrito.jpg" width = 700px height="auto" position="float-left">
     
  
-    </figure>
+ 
   
 
-        <form action="https://webhook.site/df2639ed-4d63-4323-8897-b93400cd82ca" method="get">
-          
+
+        
            
     <h2> Please enter your username and password. </h2>
     <p<label for="username" class="form-text-label" id="username">User Name</label >
@@ -59,11 +62,11 @@ Html lab 4: Burrito Order
     </aside>
   
     <article>
-        <div class="form-floating mb-3">
-        <p><h2> 
-     Please select your ingredients</h2></p>
-<h3> Tortilla</h3>
-  
+       
+            <div><br>
+        <p><h2> Please select your ingredients</h2></p>
+    <h3> Tortilla</h3>
+ 
       <div class="form-radio">
         <input type="radio"  value="wheat" id="wheat" name="tortilla" />
         <label for="wheat">Wheat </label><br>
@@ -101,35 +104,34 @@ Html lab 4: Burrito Order
                     <label for="pollo">Pollo</label><br>
                     <input type="radio" value="barbacoa" id="barbacoa" name="protein"/>
                     <label for="barbacoa">Barbacoa<br>
-      </div>
-      <h3> Optional choices</h3>
+                     </div>
+    
+     <p><h3> Optional choices</h3><br>
       <div class="form-checkbox">
         <input type="checkbox" value="cheese" id="cheese" name="cheese" />
         <label for="cheese">Cheese</label><br>
         <input type="checkbox" value="sour_cream" id="sour_cream" name="sour_cream" />
         <label for="sour_cream">Sour Cream</label><br>
         <input type="checkbox" value="double_protein" id="double_protein" name="double_protein" />
-        <label for="double_protein">Double Protein<br>
-    
-
+        <label for="double_protein">Double Protein<br></p>
         </div>
-
+    </div>
     </article>
   
-    <aside class="sidebar-right">
-        <p><h2>
+    <aside>
+        <p>
         
             <div class = table>
        <h2>Thank you for your selections. </h2>
        <h3> Please enter your information:</h3>
+            </p>
 
-           <p<label for="Name" class="form-text-label" id="name">Name</label >
+    <label for="Name" class="form-text-label" id="name">Name</label>
     <input type="text" id="name"class="form-control form-control-lg" name="name" required></p>
     <label for="street_address" class="form-text-label" id="street_address">Street Address</label>
     <input type="textarea" id="street_address"class="form-control form-control-1g"name="street_address" required /><br><br>
     <label for="phone_number" class="form-textarea" id="phone_number">Phone Number (xxx-xxx-xxx)</label>
-    <input type="tel" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-    required><br><br>
+    <input type="tel" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required><br><br>
     <label for="delivery_instructions" class="form-textarea" id="delivery_instructions">Delivery Instructions: </label>
     <textarea id="delivery_instructions"  name="delivery_instructions" rows="4" cols="50"></textarea>
 
@@ -139,24 +141,26 @@ Html lab 4: Burrito Order
         
      
         <br><button type="submit" class="btn btn-wide"> Submit </button>
+
+        <p>Thank you for your business. Dream big!</p>
     </form>
-</div>
+    </div>
        
-       <p>Thank you for your business. Dream big!</p>
+
 
      </div>
-        </h2></p>
-       </aside>
+      
+    </aside>
        
     
     <footer>
         <div class="footer">
             <figure>
-            <img src="04_dreamburrito.png" width = 300px height="auto" position="float-left" >
+            <img src="04_dreamburrito.png" width = 300vw height="auto" position="float-left" >
+            
     
 
-    </figure>
     </footer>
-  </div>
+</div>
   
   
