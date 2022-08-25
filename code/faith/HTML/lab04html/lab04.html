@@ -12,11 +12,12 @@
     <form action="https://webhook.site/845f9e90-c4af-4927-9324-7110074e5863" method="post">
         <div class="personal">   
             <h1>Burrito Locos!</h1>
-            <h3>Email</h3>
-            <input type="email" placeholder="Email" required><br>
-            <h3>Name for the order</h3>
-            <input type="text" placeholder="First Name" required><br>
-            <input type="text" placeholder="Last Name"><br>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <label for="email">Email</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="First Name">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+            <label for="lname">Last Name</label><br>
             <h3>Password</h3>
             <input type="password" placeholder="password">
         </div>
@@ -53,7 +54,7 @@
             <label for="PintoBeans">Pinto Beans</label><br>
             <input type="checkbox" id="fagitamix" name="fagitamix" value="fagitamix">
             <label for="fagitamix">Fagita Mix</label><br>
-            <input type="checkbox" id="lettuce" name="lettuce" value="lettuce">
+            <input type="checkbox" id="lettuce" name="Lettuce" value="lettuce">
             <label for="lettuce">Lettuce</label><br>
             <input type="checkbox" id="Jalapeños" name="Jalapeños" value="Jalapeños">
             <label for="">Jalapeños</label><br>
@@ -61,17 +62,17 @@
 
         <div class="addons">
             <h3>Add ons</h3>
-            <input type="checkbox" id="sourcream" name="sourcream" value="sourcream">
+            <input type="checkbox" id="sourcream" name="SourCream" value="sourcream">
             <label for="sourcream"> SourCream</label><br>
-            <input type="checkbox" id="guac" name="guac" value="guac">
-            <label for="guac"> Guac</label><br>
-            <input type="checkbox" id="queso" name="queso" value="queso">
+            <input type="checkbox" id="guacamole" name="Guacamole" value="guacamole">
+            <label for="guacamole">Guacamole</label><br>
+            <input type="checkbox" id="queso" name="Queso" value="queso">
             <label for="queso"> Queso</label><br>
-            <input type="checkbox" id="extracheese" name="extracheese" value="extracheese">
+            <input type="checkbox" id="extracheese" name="Extra Cheese" value="extracheese">
             <label for="extracheese">Extra Cheese</label><br>
-            <input type="checkbox" id="doubleprotien" name="doubleprotien" value="doubleprotien">
+            <input type="checkbox" id="doubleprotien" name="Doubleprotien" value="doubleprotien">
             <label for="doubleprotien">Double Protien</label><br>
-            <input type="checkbox" id="utensils" name="utensils" value="utensils">
+            <input type="checkbox" id="utensils" name="Utensils" value="utensils">
             <label for="utensils">Utensils</label><br>
         </div>
 
@@ -84,7 +85,7 @@
 
         <div class="instructions">
             <h3>Delivery Instructions</h3>
-            <input type="textarea" placeholder="Leave at door, extra untensils...etc.."><br>
+            <input type="textarea" id="text" name="DelievryInstructions" placeholder="Leave at door, extra untensils...etc.."><br>
         </div>
         
         <div class="submit">
