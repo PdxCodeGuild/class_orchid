@@ -1,5 +1,7 @@
 body {
     background-color: #323642;
+    margin: 0px;
+    padding: 0px;
   }
   
   a {
@@ -11,9 +13,6 @@ body {
     display: flex;
     flex-direction: row;
     background-color: #272a33;
-    margin-top: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
     align-items: center;
     height: 100%;
   }
@@ -42,7 +41,7 @@ body {
   .sidebar {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: flex-start;
     background: #272a33;
     margin-left: -10px;
     width: 147px;
@@ -80,34 +79,46 @@ body {
   }
   
   .wrapper{
-    position: absolute;
     display: flex;
-    top: 100px;
-    left: 200px;
+    flex-direction: row;
+    /* width: 100vw; */
+    /* padding-right: 30px; */
   }
   
   .sub-wrapper{
     display: flex;
-    position: relative;
+    justify-content: flex-start;
+    align-items: stretch;
     flex-direction: column;
-    left: 5%;
+    flex-grow: 1;
+    /* left: 5%; */
+    /* margin-right: 5%; */
+    /* width: 90vw; */
   }
   
   .floating-box{
+    display: flex;
+    flex-direction: column;
     background-color: rgb(175, 201, 204);
-    width: 120%;
+    justify-content: center;
+    align-items: center;
     border: 15px solid rgb(100, 22, 32);
     border-radius: 10px;
-    padding: 50px;
+    padding-bottom: 40px;
     margin: 20px;
   }
   
   #top-blog-header{
     position: relative;
     text-align: center;
+    font-size: 30px;
   }
-  
-  .img{
-    position: relative;
-    flex-direction: center;
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272a33;
+    height: 60px;
+    color: #ee5f95;
   }
