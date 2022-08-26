@@ -1,15 +1,64 @@
 body {
-    background-color: #ffb703;
+    background-color: #e9af96;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #654931;
 }
 
 header {
     font-style: oblique;
-    
+
+}
+
+.image-banner {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+
 }
 
 .information {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    padding: 10px;
 }
+
+div {
+    margin: 20px;
+}
+
+/* .tortilla-options {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+}
+
+.rice-options {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+}
+
+.bean-options {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+}
+
+.protein-options {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+}
+
+.additional {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+} */
