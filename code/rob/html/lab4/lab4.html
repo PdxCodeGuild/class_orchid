@@ -15,95 +15,81 @@
             <img src="https://www.pngmart.com/files/5/Burrito-PNG-Image.png" alt="burrito">
         </header>
         <div id="main">
-                <form action="submit">
+                <form action="https://webhook.site/68411196-409a-4ec8-ac8e-6a8999e898a7" method="post">
                     <div id="title">
                         <h3>Place Order</h3>
                     </div>
                     <div id="order-form">
-                        <label for="name" class="form-label lab4-label">Name</label>
-                        <input type="text"  class="form-control  form-control-sm" placeholder="Name">
+                        <label for="fname" class="form-label lab4-label">Name</label>
+                        <input type="text" id="name" name="first" class="form-control  form-control-sm" placeholder="Name">
                         <label for="password" class="form-label lab4-label">Password</label>
-                        <input type="text"  class="form-control  form-control-sm" placeholder="Password">
+                        <input type="text" id="password" name="password"  class="form-control  form-control-sm" placeholder="Password">
                     </div>
                     <div id="items">
                         <div id="tortilla">
                             <h4>Tortilla</h4>
-                            <label class="container lab4-label">White Flour
-                                <input type="radio">
-                                <span class="checkmark"></span>
+                            <label class="container lab4-label" for="whiteflour">White Flour
+                                <input type="radio" id="whiteflour" name="tortilla" value="whiteflour">
                             </label>
-                            <label class="container lab4-label">Wheat Flour
-                                <input type="radio">
-                                <span class="checkmark"></span>
+                            <label class="container lab4-label"for="wheatflour">Wheat Flour
+                                <input type="radio" id="wheatflour" name="tortilla" value="wheatflour">
                             </label>
-                            <label class="container lab4-label">Spinach
-                                <input type="radio" checked="checked">
-                                <span class="checkmark"></span>
+                            <label class="container lab4-label" for="spinachflour">Spinach
+                                <input type="radio" id="spinachflour" name="tortilla" value="spinachflour">
                             </label>
-                            <label class="container lab4-label">Corn
-                                <input type="radio">
-                                <span class="checkmark"></span>
+                            <label class="container lab4-label"for="cornflour">Corn
+                                <input type="radio" id="cornflour" name="tortilla" value="cornflour">
                             </label>
                         </div>
                         <div id="rice">
                             <h4>Rice</h4>
-                            <label class="container lab4-label">White Rice
-                                <input type="radio">
-                                <span class="checkmark"></span>
+                            <label class="container lab4-label" for="whiterice">White Rice
+                                <input type="radio" id="whiterice" name="rice" value="whiterice">
                             </label>
-                            <label class="container lab4-label">Brown Rice
-                                <input type="radio">
-                                <span class="checkmark"></span>
+                            <label class="container lab4-label" for="brownrice">Brown Rice
+                                <input type="radio" id="brownrice" name="rice" value="brownrice">
                             </label>
                         </div>
                         <div id="protein">
                             <h4>Protein</h4>
-                                <label class="container lab4-label">Steak
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="steak">Steak
+                                    <input type="radio" id="steak" name="protein" value="steak">
                                 </label>
-                                <label class="container lab4-label">Chicken
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="chicken">Chicken
+                                    <input type="radio" id="chicken" name="protein" value="chicken">
                                 </label>
                         </div>
                         <div id="beans">
                             <h4>Beans</h4>
-                                <label class="container lab4-label">Kidney Beans
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="kidneay beans">Kidney Beans
+                                    <input type="radio" id="kidneybeans" name="beans" value="kidneybeans">
                                 </label>
-                                <label class="container lab4-label">Black Beans
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="black beans">Black Beans
+                                    <input type="radio" id="blackbeans" name="beans" value="blackbeans">
                                 </label>
                         </div>
                         <div id="cheese">
                             <h4>Cheese</h4>
-                                <label class="container lab4-label">Colby
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="colby">Colby
+                                    <input type="radio" id="colby" name="cheese" value="colby">
                                 </label>
-                                <label class="container lab4-label">Feista
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="feista">Feista
+                                    <input type="radio" id="feista" name="cheese" value="feista">
                                 </label>
                         </div>
                         <div id="salsa">
                             <h4>salsa</h4>
-                                <label class="container lab4-label">Red
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="red">Red
+                                    <input type="radio" id="red" name="tortilla" value="red">
                                 </label>
-                                <label class="container lab4-label">Green
-                                    <input type="radio">
-                                    <span class="checkmark"></span>
+                                <label class="container lab4-label" for="green">Green
+                                    <input type="radio" id="green" name="tortilla" value="green">
                                 </label>
                         </div>
                     </div>
                     <div id="instructions">
-                        <label for="exampleFormControlTextarea1" class="form-label">Delivery Instructions</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="instructions" class="form-label">Delivery Instructions</label>
+                        <textarea class="form-control" id="instructions" name="instructions" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
