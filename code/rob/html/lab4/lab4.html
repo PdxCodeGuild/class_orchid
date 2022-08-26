@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="lab4.css">
+    <title>Lab 4</title>
+</head>
+<body>
+    <div id="grid">
+        <header>
+            <h1>Burritos</h1>
+            <img src="https://www.pngmart.com/files/5/Burrito-PNG-Image.png" alt="burrito">
+        </header>
+        <div id="main">
+                <form action="submit">
+                    <div id="title">
+                        <h3>Place Order</h3>
+                    </div>
+                    <div id="order-form">
+                        <label for="name" class="form-label lab4-label">Name</label>
+                        <input type="text"  class="form-control  form-control-sm" placeholder="Name">
+                        <label for="password" class="form-label lab4-label">Password</label>
+                        <input type="text"  class="form-control  form-control-sm" placeholder="Password">
+                    </div>
+                    <div id="items">
+                        <div id="tortilla">
+                            <h4>Tortilla</h4>
+                            <label class="container lab4-label">White Flour
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container lab4-label">Wheat Flour
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container lab4-label">Spinach
+                                <input type="radio" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container lab4-label">Corn
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div id="rice">
+                            <h4>Rice</h4>
+                            <label class="container lab4-label">White Rice
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container lab4-label">Brown Rice
+                                <input type="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div id="protein">
+                            <h4>Protein</h4>
+                                <label class="container lab4-label">Steak
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container lab4-label">Chicken
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                        <div id="beans">
+                            <h4>Beans</h4>
+                                <label class="container lab4-label">Kidney Beans
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container lab4-label">Black Beans
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                        <div id="cheese">
+                            <h4>Cheese</h4>
+                                <label class="container lab4-label">Colby
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container lab4-label">Feista
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                        <div id="salsa">
+                            <h4>salsa</h4>
+                                <label class="container lab4-label">Red
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container lab4-label">Green
+                                    <input type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                    </div>
+                    <div id="instructions">
+                        <label for="exampleFormControlTextarea1" class="form-label">Delivery Instructions</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        </div>
+        <footer>
+            <p>&copy;Burrito</p>
+            <div id="img-container">
+                <img src="instagram.png" alt="instagram">
+                <img src="twitter.png" alt="twitter">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
