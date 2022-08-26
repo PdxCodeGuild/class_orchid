@@ -1,9 +1,6 @@
 body {
     display: flex;
     flex-direction: column;
-    /* grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 'header' 'navbar' 'content' 'footer';
-    grid-template-columns: auto 1fr; */
     padding: 0;
     height: 100vh;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1)), url('evan-wise-3UqkMqpzGZs-unsplash.jpg');
@@ -23,8 +20,6 @@ body {
     grid-column: 1 / 3;
     font-size: 40px;
     margin-top: 0;
-    
-
 }
 
 .navbar{
@@ -34,21 +29,17 @@ body {
     padding-bottom: 8px;
     text-align: center;
     text-decoration: none;
-
-
 }
 
 #content {
     overflow: scroll;
     overflow-x: hidden;
     font-size: 14px;
-    width: 70%;
-    
+    width: 70%;  
 }
 
 .navbar li{
     list-style: none;
-
 }
 
 #sidebar {
@@ -58,24 +49,15 @@ body {
     width: 10%;
     margin: 0;
     height: 14rem;
-    
-
 }
 
 main{
     display: flex;
     width: 100%;
     overflow-x: hidden;
-    overflow: scroll;
-
+    overflow-y: hidden;
 }
 
-/* #sidebar{
-    width: 10%;
-    margin: 0;
-    height: 14rem;
-    
-} */
 
 .footer{
     display: inline-flex;
@@ -87,8 +69,6 @@ main{
     list-style: none;
     font-size: 16px;
     text-decoration: underline;
-
-
 }
 
 
@@ -112,7 +92,6 @@ main{
     .navbar{
         font-size: 22px;
     }
-
     #content{
         margin-top: 0;
         font-size: 18px;
@@ -129,11 +108,7 @@ main{
     .footer{
         width: 90vw;
         font-size: 15px;
-
     }
-
-
-
 }
 
 @media (min-width: 975px){
@@ -143,13 +118,11 @@ main{
         overflow-x: hidden;
         margin-right: 0px;
         height: 70vh;
-
     }
     footer{
         margin-top: 15px;
         width: 90vw;
         font-size: 15px;
-
     }
     .header{
         margin-top: 60px;
