@@ -47,6 +47,7 @@ header h1{
         hsl(0, 0%, 30%) 20%
         );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 4s infinite linear;
     padding-left: 140px;
@@ -220,11 +221,11 @@ footer img{
 
 @media screen and (min-width: 951px) {
     form{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
     }
     #title{
-        grid-column: 1/3;
+        grid-column: 1/4;
         grid-row: 1/2;
     }
     #order-form{
@@ -232,16 +233,16 @@ footer img{
         grid-row: 2/3;
     }
     #instructions{
-        grid-column: 2/3;
+        grid-column: 3/4;
         grid-row: 2/3;
     }
     form button{
-        grid-column: 2/3;
+        grid-column: 3/4;
         grid-row: 2/3;
         margin-top: 200px;
     }
     #items{
-        grid-column: 1/3;
-        grid-row: 3/4;
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
 }
