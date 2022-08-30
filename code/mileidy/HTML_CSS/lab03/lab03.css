@@ -7,6 +7,7 @@ body{
     margin-bottom: 35px;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 p {
@@ -54,13 +55,7 @@ ul{
 }
 
 #footer{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    width:95%;
-    height: 3rem;
-    margin-top: auto;
-    padding: 2rem;
+    text-align: center;
 }
 
 
@@ -76,9 +71,7 @@ ul{
         font-size: 10px;
     }
         #footer{
-        width: 65%; 
-        padding: 6rem;
-        font-weight: bold;
+        text-align: center;
     } 
 }
 
