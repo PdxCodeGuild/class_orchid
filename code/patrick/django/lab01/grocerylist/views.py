@@ -1,9 +1,9 @@
 from re import template
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from django.http import HttpResponse
 
-from .models import groceryitem
+from .models import GroceryItem
 
 from django.template import loader
 """
@@ -15,6 +15,24 @@ def index(request):
 """
 
 def index(request):
-    full_grocery_list = groceryitem.objects.order_by('-pub_date')[:5]
-    context = {'full_grocery_list': full_grocery_list, }
+    if request.method == "POST":
+        item_text = request.POST.get("item_text")
+        GroceryItem.objects.create(
+            item_text = item_text
+
+        )
+        return redirect("/")
+
+
+
+
+
+
+
+
+
+    full_grocery_list = GroceryItem.objects.all()
+    context = {
+        'full_grocery_list': full_grocery_list,
+    }
     return render(request, 'grocerylist/index.html', context)

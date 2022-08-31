@@ -1,7 +1,7 @@
 from django.db import models
 import datetime
 from django.utils import timezone
-class groceryitem(models.Model):
+class GroceryItem(models.Model):
     item_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField(default=timezone.now)
     complete_date = models.DateTimeField(blank=True, null=True)

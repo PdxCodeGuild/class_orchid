@@ -2,6 +2,6 @@ from django.contrib import admin
 
 from django.contrib import admin
 
-from .models import groceryitem
+from .models import GroceryItem
 
-admin.site.register(groceryitem)
+admin.site.register(GroceryItem)
