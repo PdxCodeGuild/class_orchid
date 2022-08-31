@@ -1,0 +1,9 @@
+{% if full_gorcery_list %}
+    <ul>
+    {% for item in full_gorcery_list %}
+        <li><a href="/grocerylist">{{ groceryitem.item_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
