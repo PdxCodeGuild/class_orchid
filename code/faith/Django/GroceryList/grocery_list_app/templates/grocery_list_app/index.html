@@ -1,0 +1,9 @@
+{% if grocery_items %}
+    <ul>
+    {% for item in grocery_items %}
+        <li><a href="/grocery_list_app/{{ item.id }}/">{{ text_description }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
