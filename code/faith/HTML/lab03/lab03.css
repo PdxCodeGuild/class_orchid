@@ -18,6 +18,11 @@ header{
     margin-top: -5%;
     font-size: 80%;
 }
+
+.nav a{
+    padding: 1%;
+}
+
 a{
     color: black;
 }
@@ -65,7 +70,7 @@ footer{
         width: 100; */
         margin-left: -3%;
         margin-top: -35%;
-        margin-right: 100%;
+        margin-right: 95%;
         margin-bottom: 0%;
         /* background-color:rgba(246, 194, 125, 0.526); */
        
@@ -76,7 +81,7 @@ footer{
 
     .side-nav a{
         background-color: #f6c27d;
-        font-size: 10%;
+        font-size: 75%;
         font-family: 'Courier New', Courier, monospace;
         
     }
