@@ -1,0 +1,151 @@
+li {
+    display: flex;
+    justify-content: space-evenly;
+    display: inline-flex;
+    color: oldlace;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-size: 15px;
+    
+
+}
+
+li a:hover{
+    color: gold; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;    
+    margin: auto;
+    /* background-color: rgb(243, 236, 236, 1); */
+    background-image: url("bas-van-der-horst-IuVCERDQy5w-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+img {
+    /* display:block; */
+    width: 120px;
+    height: 120px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.font-style {
+    /* font-style: italic; */
+    font-size: 40px;
+    
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    padding: 20px;
+    font-size: 18px;
+    justify-content: space-between;
+    width: 100%;
+    
+    
+}
+
+/* 
+.info-row p::first-letter {
+    color: red;
+    font-size: 3em;
+    
+    
+} */
+
+/* .text-center {
+    text-align: center;
+
+} */
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    max-width: 730px;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    
+}
+
+#nav-bar {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(243, 236, 236, 0.1);
+    width: 100%;
+    justify-content: space-evenly;
+
+    
+}
+#header {
+    color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    height: 5rem;
+    text-align: center;
+
+}
+
+#center {
+    margin-top: 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 730px){
+    .gallery li{
+        font-size: 1.5rem;
+    }
+    .text-center{
+        width: 33.33%
+    }
+    #header h1{
+        font-size: 60px;
+    }
+    #header {
+        height: 10rem;
+    }
+    /* #center{
+
+    } */
+    #nav-bar{
+        height: 3rem;
+    }
+    #center a {
+        font-size: 2rem;
+
+    }
+    .info-row ul {
+        height: 100%;
+        width: 20rem;
+        padding: 0;
+    }
+}
+
+
+
+
+@media (min-width: 1000px){
+    img {
+        width: 210px;
+        height: 210px;
+    }
+
+}

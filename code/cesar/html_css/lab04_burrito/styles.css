@@ -1,0 +1,27 @@
+body {
+    background-color: #e9af96;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #654931;
+}
+
+header {
+    font-style: oblique;
+}
+
+.image-banner {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    width: 100%;
+}
+
+.information,
+.tortilla-options,
+.rice-options,
+.bean-options,
+.protein-options,
+.additional {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+}

@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  html {
+    font-family: Garamond, serif;
+  }
+  
+  .header {
+    background-color: rgb(108, 14, 14);
+    color: #ffffff;
+    padding: 15px;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #498577;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  
+  .menu li:hover {
+    background-color: #537b5acb;
+  }
+  
+  figure {
+    display: table;
+    text-align: center;
+    font-style: italic;
+    text-indent: 0;
+  
+  }
+  
+  img.scaled {
+    width: 100%;
+  }
+  
+  figcaption {
+    display: table-caption;
+    caption-side: top;
+    color:  rgb(108, 14, 14);
+
+
+  }
+  
+  body {
+    display: table;
+    margin-top:auto;
+    margin: center;
+    margin-left:10%;
+    margin-right:10%;
+    background: rgb(114, 193, 149) url(02_Depositphotos_57307583_XL.jpg) no-repeat fixed center; 
+    background-size: cover;
+    font-family: Garamond, serif; font-size: 20px; color: whitesmoke;
+    text-align: center
+  }
+  
+  .aside {
+    background-color: #498577;
+    padding: 15px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    vertical-align: right
+  }
+  
+  .footer {
+    background-color: rgb(139, 79, 36);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+  
+  }
+  
+  h1 {
+    position:"float-right"
+  }
+  
+
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }

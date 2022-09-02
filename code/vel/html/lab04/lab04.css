@@ -1,0 +1,89 @@
+.header{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-top: 25px;
+    font-weight: bolder;
+}
+
+.subheaders{
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-check{
+    display: flex;
+    
+}
+
+.form-check-label{
+    margin-left: 10px;
+    
+}
+
+.form-check{
+    margin-left: 10px;
+}
+
+.form{
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 80vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+
+
+
+body{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),url("gonzalo-mendiola-O5D41JB-wH4-unsplash.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
+
+input{
+    width: 45vw;
+}
+
+button{
+    margin-bottom: 18px;
+}
+
+.form-control{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+.custom-button{
+    color: black;
+    background-color: oldlace;
+}
+
+
+@media (min-width: 730px){
+    .header{
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+    form{
+        font-size: 18px;
+    }
+    .subheaders{
+        font-size: 25px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .form-control{
+        width: 60vw;
+    }
+
+}
+
+@media (min-width: 930){
+    body{
+        margin-left: 20px;
+        
+    }
+}

@@ -1,0 +1,37 @@
+#grid {
+  display: grid;
+  /* grid-template-columns: 1fr 3fr 1fr; */
+  grid-template-columns: 150px auto 150px; /* fixed-width on the sides and whatever space is left on the middle */
+  /* row-gap: 1em; */
+  /* column-gap: 2em; */
+  gap: 1em; /* both row and column gaps */
+}
+
+header, footer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /* grid-column: 1 / 4;  */ /*this is shorthand for the above*/
+}
+
+/* styling for the elements on the page */
+#grid > * {
+  background-color: #eaeaea;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* media query, applies only when the screen is < 700px wide */
+@media all and (max-width: 700px) {
+  aside, article {
+    grid-column: 1 / 4;
+  }
+}
+
+/* applies only when the screen is >1000px wide */
+@media all and (min-width: 1000px) {
+  #grid > * {
+    background-color: aqua;
+  }
+}
