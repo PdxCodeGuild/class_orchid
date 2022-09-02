@@ -43,18 +43,13 @@ Presentation Day: October 21st, 2022
 [Random Redirector](5%20JavaScript/labs/Random%20Redirector.md) -->
  
 
-<!-- ## Django Labs Assigned:
+## Django Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
-| 00    | [Polls](4%20Django/labs/00%20Polls.md)                                       | Apr 25th      | Apr 29th    | May  9th      |
-| 01    | [Grocery List](4%20Django/labs/01%20Grocery%20List.md)                       | Apr 27th      | May  4th    | May 11th      |
-| 02    | [Library](4%20Django/labs/02%20Library.md)                                   | Apr 29th      | May  4th    | May 13th      |
-| 02    | [Chirp](4%20Django/labs/03%20Chirp.md)                                       | May  4th      | May 11th    | May 18th      | -->
+| 01    | [Grocery List](4%20Django/labs/lab01-grocery-list.md)                        | Aug 30th      | Sep  2nd    | Sep 13th      |
+| 02    | [URL Shortener](4%20Django/labs/lab02-url-shortener.md)                      | Sep  1st      | Sep  7th    | Sep 15th      |
+<!-- | 02    | [Chirp](4%20Django/labs/lab03-chirp.md)                                      | Sep  4th      | Sep 11th    | Sep 18th      | -->
 
-
-<!-- #### Optional Django Labs  
-
-[URL Shortener](4%20Django/labs/Optional%20URL%20Shortener.md) -->
 
 ## HTML/CSS Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
