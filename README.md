@@ -329,4 +329,4 @@ https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
     
 - Django:
     - https://tutorial.djangogirls.org/
-    - https://docs.djangoproject.com/en/3.2/intro/tutorial01/ (Official tutorial)
+    - https://docs.djangoproject.com/en/4.1/intro/tutorial01/ (Official tutorial)
