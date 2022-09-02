@@ -1,0 +1,32 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'grocery_list/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+</head>
+<body>
+
+    <form action="add/" method="post">
+        {% csrf_token %}
+        <h4><label for="add_item">Add Item</label></h4>
+        <textarea name="add_item" id="add_item" cols="24" rows="1"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for item in items %}
+        <!-- {{item.name}} -->
+        <!-- {{item.id}} -->
+        <section>
+            <a href="delete/{{item.id}}"><ul></ul></a>
+            <a href="complete/{{item.id}}">{{item.name}}</a>
+        </section>
+    {% endfor %}
+</body>
+</html>
