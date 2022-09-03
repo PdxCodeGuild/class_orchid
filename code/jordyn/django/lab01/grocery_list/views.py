@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.shortcuts import render
 
 from django.http import HttpResponse
@@ -31,20 +32,32 @@ def complete(request, item_id):
     i.comp_date = timezone.now()
     i.save()
 
-    return redirect('index')
+    return redirect('/grocery_list/')
 
     # i = GroceryList.objects.get(id=item_id) #needs error conditional
 
 def delete(request, item_id):
-    i = get_object_or_404(GroceryList,id=item_id)
+    i = get_object_or_404(GroceryList, id=item_id)
     i.delete()
 
-    return redirect('index')
+    return redirect('/grocery_list/')
 
 def add(request):
 
     if request.method == 'POST':
         item_name = request.POST['add_item']
-        GroceryList.objects.create(name=item_name)
+        if item_name != '':
+            GroceryList.objects.create(name=item_name)
+        else:
+            print('empty space')
 
-    return redirect('index')
+    return redirect('/grocery_list/')
+
+def description(request, item_id):
+    i = get_object_or_404(GroceryList, id=item_id)
+    
+    if request.method == 'POST':
+        i.description = request.POST['add_desc']
+        i.save()
+
+    return redirect('/grocery_list/')

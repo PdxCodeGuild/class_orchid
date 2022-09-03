@@ -1,13 +1,100 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0px;
     padding: 0px;
+    background-color: rgb(204, 204, 204);
+    margin-top: 50px;
 }
 
 form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+section {
+    display: flex;
+    padding-top: 10px;
+    width: 60vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#header {
+    padding-bottom: 10px;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.item-headers {
+    padding-top: 50px;
+}
+
+.delete-button {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+
+}
+
+.display-item {
+    display: flex;
+    flex: 6;
+    justify-content: flex-start;
+
+    border: 1px solid;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.description-add {
+    display: flex;
+    flex: 6;
+    justify-content: center;
+}
+
+.description-box {
+    height: 18px;
+    width: 20vw;
+}
+
+.date {
+    display: flex;
+    flex: 4;
+    justify-content: flex-end;
+
+    border: 1px solid;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }

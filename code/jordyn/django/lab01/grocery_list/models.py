@@ -8,6 +8,7 @@ from django.utils import timezone
 
 class GroceryList(models.Model):
     name = models.CharField(max_length=200)
+    description = models.CharField(max_length=200, default='Add Description')
     pub_date = models.DateTimeField(auto_now_add=True)
     comp_date = models.DateTimeField(null=True, blank=True)
     is_complete = models.BooleanField(default=False)
