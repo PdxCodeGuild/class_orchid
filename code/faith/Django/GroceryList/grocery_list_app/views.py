@@ -29,3 +29,9 @@ def delete(request, grocery_items_id):
     delete = GroceryItem.objects.get(id=grocery_items_id)
     delete.delete()
     return redirect('/')
+
+def undo(request, grocery_items_id):
+    grocery_item = GroceryItem.objects.get(id = grocery_items_id)
+    grocery_item.completed = False
+    grocery_item.save()
+    return redirect('/')

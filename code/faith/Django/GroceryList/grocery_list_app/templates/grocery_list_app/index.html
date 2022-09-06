@@ -9,9 +9,10 @@
                 {%  csrf_token %}
                 <input type="submit" id="grocery" name="grocery" value="Delete">
             </form>
-            <form action="{%  url 'grocery_list_app:completed' item.id %}" method="post">
+           
+            <form action="{%  url 'grocery_list_app:undo' item.id %}" method="post">
                 {%  csrf_token %}
-                <input type="submit" id="grocery" name="grocery" value="completed">
+                <input type="submit" id="grocery" name="grocery" value="undo">
             </form>
         </li>
         {%  endif %}
@@ -36,6 +37,8 @@
         {%  endif %}
     {% endfor %}
     </ul>
+    
+    
 {% else %}
     <p>No items are available.</p>
 {% endif %}
