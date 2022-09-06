@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    
     'grocerylist.apps.grocerylistconfig',
     'django.contrib.admin',
     'django.contrib.auth',

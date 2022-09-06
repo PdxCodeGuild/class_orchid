@@ -1,19 +1,31 @@
-{% if full_grocery_list %}
-    <ul>
-    {% for item in full_grocery_list %}
-        <li> {{ item.item_text }} </li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No items are available.</p>
-{% endif %}
 
+{% load static %}
+<div id="myDIV" class="header">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'grocerylist/style.css' %}"/>
+  <h1> Grocery List: </h1>
+  <h3> Enter items below to add to your shopping list. Click on the item to mark it as complete. Delete an item by clicking 'X'.  Clear the full list by selecting 'Clear List'. </h3>
+ 
+  <form action = "{% url 'add' %}" method = "POST" role = "form">
+  {% csrf_token %}
+  {{ form.text }}
+  </form>
+</div>
 
+<ul id="myUL">
+  {% for item in list %}
+  	  {% if item.completed %}
+	      <li class="checked"> <a href = "{% url 'undoitem' item.id %}"> {{ item.text }} </a>  <a href = "{% url 'deleteitem' item.id %}"><span class="close"> X </span></a> </li>
+        
+	  {% else %}
+	  
+    <li> <a href = "{% url 'complete' item.id %}"> {{ item.text }} </a>   <a href = "{% url 'deleteitem' item.id %}"><span class="close"> X </span></a></li>
+	  {% endif %}  
+  {% endfor %}
+</ul>
+{% if item.undo %}
 
-<form action = "" method = "POST">
-    {% csrf_token %}
-    
-    <input type="text" name="item_text" value="groceryitem">
-    
-    <input type="submit" value="add grocery item">
-</form>
+<li class="unchecked"> {{item.text}} <a href="{% url 'undoitem' item.id %}">  <span class="close"> X </span> </a>  </li>
+  {% endif %}
+
+<a href = "{% url 'deleteall' %}""><span class="clearlist"> Clear List </span></a>
