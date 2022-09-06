@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List App</title>
+</head>
+
+<body>
+    <div>
+        <h2>Grocery List App</h2>
+    </div>
+    <div>
+        <h2>Completed Items</h2>
+        <ul>
+            {% for item in complete %}
+            <li>{{ item }}</li>
+            <form action="{% url 'grocery_list:complete' item.id %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="incomplete">
+            </form>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Incomplete Items</h2>
+        <ul>
+            {% for item in incomplete %}
+            <li>{{ item }}</li>
+            <form action="{% url 'grocery_list:complete' item.id %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="completed">
+            </form>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <form action="{% url 'grocery_list:create' %}" method="post">
+            {% csrf_token %}
+            <label for="add-item">Add Item</label>
+            <textarea name="add-item" id="add-item" cols="20" rows="1"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
+
