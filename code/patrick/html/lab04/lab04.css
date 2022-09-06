@@ -1,0 +1,63 @@
+
+
+body{
+    /*background-image: url("images/burrito-small.jpg");*/
+    background:linear-gradient(0deg, rgba(131, 129, 97, 0.3), rgba(127, 151, 91, 0.3)),url("images/burrito-small.jpg");
+    background-size: fill;
+    text-align: center;
+
+    color:black;
+    
+}
+
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+@media all and (min-width: 768px){
+    body{
+    background-image: url();
+    background:linear-gradient(0deg, rgba(7, 7, 6, 0.254), rgba(7, 7, 6, 0.254)),url("images/opensmall.jpg");
+    background-size: cover;
+    font-size: larger;
+    
+    
+    
+   
+    color: rgb(225, 227, 238);
+    
+    }  
+    .build{
+        flex-direction: column;
+        margin-top: 50%;
+    }
+}
+
+
+
+@media all and (min-width: 1000px){
+    body{
+        background:linear-gradient(0deg, rgba(7, 7, 6, 0.254), rgba(7, 7, 6, 0.254)),url("images/table.jpg");
+        background-size: cover
+    }
+
+    
+    .build{
+        flex-direction: row;
+        margin-top: 0%;
+        text-align: center;
+        font-size: 2em;
+        color: black;
+    }
+    .person{
+        text-align: center;
+        font-size: xx-large;
+        color: black;
+    }
+
+
+}
+
+

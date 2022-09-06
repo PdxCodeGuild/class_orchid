@@ -1,0 +1,285 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5em;
+}
+
+li {
+    list-style: none;
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90vw;
+}
+
+footer {
+    font-size: 0.7em;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul {
+    padding: 0;
+}
+
+h2 {
+
+    justify-content: center;
+}
+
+p {
+    justify-content: center;
+    text-align: start;
+    
+}
+
+h4 {
+    justify-content: center;
+}
+
+#blogcontainer {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2em;
+    color: red;
+}
+
+#sidenavbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
+    margin-right: .5em;
+    color: grey;
+}
+
+h3 {
+    color: black;
+}
+
+h4 {
+    color: black;
+}
+
+h2 {
+    color: grey;
+}
+
+#homeinfo {
+    color: grey;
+}
+
+pre {
+    font-size: small;
+}
+@media screen and (min-width: 700px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 5em;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    
+    #navbar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 90vw;
+    }
+    
+    footer {
+        font-size: 0.7em;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    ul {
+        padding: 0;
+    }
+    
+    h2 {
+    
+        justify-content: center;
+    }
+    
+    p {
+        justify-content: center;
+        text-align: start;
+        
+    }
+    
+    h4 {
+        justify-content: center;
+    }
+    
+    #blogcontainer {
+        display: flex;
+        flex-direction: row;
+        margin-right: 2em;
+        color: purple;
+    }
+    
+    #sidenavbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 50vh;
+        margin-right: .5em;
+        color: grey;
+    }
+    
+    h3 {
+        color: black;
+        font-size: large;
+    }
+    
+    h4 {
+        color: black;
+    }
+    
+    h2 {
+        color: grey;
+        text-align: center;
+    }
+    
+    #homeinfo {
+        color: black;
+        margin-left: 6em;
+
+
+        
+    }
+    
+    pre {
+        font-size: large;
+        text-align: center;
+    }
+
+    #aboutus {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+    
+
+@media screen and (min-width: 1000px) { 
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 5em;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    
+    #navbar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 90vw;
+    }
+    
+    footer {
+        font-size: 0.7em;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    ul {
+        padding: 0;
+    }
+    
+    h2 {
+    
+        justify-content: center;
+    }
+    
+    p {
+        justify-content: center;
+        text-align: start;
+        color: cadetblue;
+        
+    }
+    
+    h4 {
+        justify-content: center;
+    }
+    
+    #blogcontainer {
+        display: flex;
+        flex-direction: row;
+        margin-right: 2em;
+        color: red;
+    }
+    
+    #sidenavbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 50vh;
+        margin-right: .5em;
+        color: grey;
+    }
+    
+    h3 {
+        color: black;
+        margin-right: 9em;
+        font-size: large;
+    }
+    
+    h4 {
+        color: black;
+    }
+    
+    h2 {
+        color: black;
+    }
+    
+    #homeinfo {
+        color: grey;
+    }
+    
+    pre {
+        font-size: large;
+        text-align: end;
+        margin-right: 3em;
+    }
+    #aboutus {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+    

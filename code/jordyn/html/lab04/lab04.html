@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab04.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>Jordyn's Cafe</p>
+    </header>
+
+    <div class="main-display">
+        <div class="sidebar">
+            <ul>
+                <li>Drinks</li>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Soda</li>
+                    <li>Milk</li>
+                    <li>Prune Juice</li>
+                    <li>Water</li>
+                </ul>
+                <li>Food</li>
+                <ul>
+                    <li>Burrito</li>
+                    <li>Breakfast Burrito</li>
+                    <li>Breakfast Sandwhich</li>
+                    <li>Muffin</li>
+                    <li>Bagel</li>
+                    <li>Bagel w/ Cream Cheese</li>
+                </ul>
+                <li>Fun Stuff</li>
+                <ul>
+                    <li>Coffee Mug</li>
+                    <li>Travel Mug</li>
+                    <li>T-Shirt</li>
+                    <li>Drink Plate</li>
+                </ul>
+            </ul>
+
+        </div>
+        <div class="menu">
+            <p id="burrito_form">Burrito</p>
+            <form action="https://webhook.site/f4287175-2b20-4cb1-bc68-b746030687f1" method="post">
+                <h4>Tortilla</h4>
+                <input type="radio" value="White Flour" class="indent" name="tortilla">
+                <label for="White Flour" class="indent">White Flour</label><br>
+                <input type="radio" value="Wheat Flour" class="indent" name="tortilla">
+                <label for="Wheat Flour" class="indent">Wheat Flour</label><br>
+                <input type="radio" value="Spinach" class="indent" name="tortilla">
+                <label for="Spinach" class="indent">Spinach</label><br>
+                <input type="radio" value="Corn" class="indent" name="tortilla">
+                <label for="Corn" class="indent">Corn</label><br>
+
+                <h4>Rice</h4>
+                <input type="radio" value="White Rice" class="indent" name="rice">
+                <label for="White Rice" class="indent">White Rice</label><br>
+                <input type="radio" value="Brown Rice" class="indent" name="rice">
+                <label for="Brown Rice" class="indent">Brown Rice</label><br>
+
+                <h4>Beans</h4>
+                <input type="radio" value="Black Beans" class="indent" name="beans">
+                <label for="Black Beans" class="indent">Black Beans</label><br>
+                <input type="radio" value="Pinto Beans" class="indent" name="beans">
+                <label for="Pinto Beans" class="indent">Pinto Beans</label><br>
+
+                <h4>Protein</h4>
+                <input type="radio" value="Carnitas" class="indent" name="protein">
+                <label for="Carnitas" class="indent">Carnitas</label><br>
+                <input type="radio" value="Chicken" class="indent" name="protein">
+                <label for="Chicken" class="indent">Chicken</label><br>
+                <input type="radio" value="Sofritas" class="indent" name="protein">
+                <label for="Sofritas" class="indent">Sofritas</label><br>
+                <input type="radio" value="None" class="indent" name="protein">
+                <label for="None" class="indent">None</label><br>
+
+                <h4>Additional Ingredients</h4>
+                <input type="checkbox" value="Cheese" class="indent" name="added">
+                <label for="Cheese" class="indent">Cheese</label><br>
+                <input type="checkbox" value="Sour Cream" class="indent" name="added">
+                <label for="Sour Cream" class="indent">Sour Cream</label><br>
+
+                <h4><label for="instructions">Delivery Instructions</label></h4>
+                <textarea name="instructions" id="instructions" cols="25" rows="3">Additional Information</textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+    
+        </div>
+    </div>
+
+    
+</body>
+</html>

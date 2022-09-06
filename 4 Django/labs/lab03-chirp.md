@@ -2,10 +2,7 @@
 
 **Write a simple MVP (minimum viable product) clone of Twitter!**
 
-
 *This lab is not race for the finish, take your time and ask lots of questions!*
-
-*Now is a great time to practice your google-fu as well*
 
 ---
 Your project is going to need 2 apps, `posts` and `users`.
