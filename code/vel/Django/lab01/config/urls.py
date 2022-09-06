@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+
+# when creating the 'home page', 'root page', or 'default page' an empty string before the comma
+# acts as a way of telling django this is my home page. each path after will be treated different.
 
 urlpatterns = [
+    path('', include('grocery_list.urls')),
     path('admin/', admin.site.urls),
 ]
