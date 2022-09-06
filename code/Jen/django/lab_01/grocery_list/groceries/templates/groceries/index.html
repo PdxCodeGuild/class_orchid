@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="XZ-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title> Grocery List </title>
+    <link rel="stylesheet" href="{% static 'groceries/style.css' %}">
+</head>
+
+<body>
+    <div class=center>
+        <h1> Welcome, please enter your grocery items. </h1>
+
+        <div class=form>
+
+
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="grocery_item" autofocus>
+                <input type="submit" value="Submit" autofocus>
+            </form>
+        </div>
+
+        <h2> Items </h2>
+        <p>
+        <ul>
+            <form method="GET">
+                {% for item in incompleted_list %}
+                <li><a href="/shopped/{{ item.id}}">Complete</a>
+                    {{ item }}
+                    <a href="/delete/{{ item.id }}">Delete</a>
+                </li>
+
+                {% endfor %}
+                <h2> Shopped Items </h2>
+                {% for item in completed_list %}
+                <li> <a href="/shopped/{{ item.id }}">Undo</a>
+                    <s> {{ item }} </s>
+                    <a href="/delete/{{ item.id }}">Delete</a>
+                </li>
+
+                {% endfor %}
+            </form>
+        </ul>
+        <p>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
