@@ -1,6 +1,7 @@
 
-from django.shortcuts import render
-from django.http import HttpResponse, HttpRequest, Http404
+
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect, HttpRequest, Http404
 from .models import GroceryItem
 from django.template import loader
 
@@ -12,13 +13,19 @@ def index(request):
     }
     return render(request, 'grocery_list_app/index.html', context)
 
-def grocery_list(request, grocery_items_id):
-    try:
-        grocery_items = GroceryItem.objects.get(pk = grocery_items_id)
-    except GroceryItem.DoesNotExist:
-        raise Http404("Not an item")
-    return render(request, 'grocery_list_app/detail.html', {grocery_items:"grocery_items"})
+def add(request):
+    if request.method == 'POST':
+        new_item = request.POST.get('grocery')
+        GroceryItem.objects.create(text_description=new_item)
+    return redirect('/')
 
 def completed(request, grocery_items_id):
-    response = "You're looking at the completed item %s."
-    return HttpResponse(response % grocery_items_id)
+    grocery_item = GroceryItem.objects.get(id = grocery_items_id)
+    grocery_item.completed = True
+    grocery_item.save()
+    return redirect('/')
+
+def delete(request, grocery_items_id):
+    delete = GroceryItem.objects.get(id=grocery_items_id)
+    delete.delete()
+    return redirect('/')
