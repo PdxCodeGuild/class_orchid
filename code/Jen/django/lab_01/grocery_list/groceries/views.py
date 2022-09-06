@@ -27,10 +27,12 @@ def delete(request, id):
     item=Item.objects.get(id=id)
     item.delete()
     return redirect("/")    
-
 def shopped(request, id):
     item=Item.objects.get(id=id)
-    item.checked_item=True
+    if item.checked_item==True:
+            item.checked_item=False
+    else: 
+            item.checked_item=True
     item.save()
     return redirect("/")
   

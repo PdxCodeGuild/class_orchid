@@ -12,17 +12,31 @@ form {
     box-sizing: border-box;
 
 
+
 }
 
+
 a:link {
-    color: gray;
+    color: rgb(41, 82, 98);
+}
+
+a:visited {
+    color: rgb(133, 254, 254)
+}
+
+a:active {
+    color: rgb(125, 125, 155)
+}
+
+a:hover {
+    color: rgb(25, 175, 175)
 }
 
 li {
     background: navy;
     color: rgb(25, 175, 175);
     box-sizing: border-box;
-    width: 200px;
+    width: auto;
     height: auto;
     justify-content: center;
     align-items: center;
