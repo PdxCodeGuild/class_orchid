@@ -7,9 +7,17 @@ from .models import Urls
 
 # Create your views here.
 def index(request):
-    latest_urls = Urls.objects.latest('pub_date')
-    print(latest_urls, type(latest_urls))
-    context = {'latest_urls': latest_urls}
+    try:
+        latest_urls = Urls.objects.latest('pub_date')
+        if latest_urls is not None:
+            print(latest_urls, type(latest_urls))
+            context = {'latest_urls': latest_urls}
+        else:
+            print('latest urls was empty')
+    except Urls.DoesNotExist:
+        print('doesnt work')
+        context = {}
+
     return render(request, "urlShortener/index.html", context)
 
 
