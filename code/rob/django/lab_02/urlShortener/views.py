@@ -9,11 +9,8 @@ from .models import Urls
 def index(request):
     try:
         latest_urls = Urls.objects.latest('pub_date')
-        if latest_urls is not None:
-            print(latest_urls, type(latest_urls))
-            context = {'latest_urls': latest_urls}
-        else:
-            print('latest urls was empty')
+        print(latest_urls, type(latest_urls))
+        context = {'latest_urls': latest_urls}
     except Urls.DoesNotExist:
         print('doesnt work')
         context = {}
