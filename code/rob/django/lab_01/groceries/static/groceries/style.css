@@ -1,0 +1,18 @@
+*{
+    background: slategray;
+    text-align: center;
+    color: white;
+}
+
+input{
+    background: white;
+}
+
+button{
+    color: aqua;
+}
+
+.completed a{
+    color: yellow;
+    text-decoration: line-through;
+}

@@ -1,0 +1,195 @@
+
+body{
+    background-image: url("pictures/burgerlite.jpg");
+    background-size:90%;
+    background-position: center;
+    
+}
+
+.title{
+    justify-content: center;
+    text-align: center;
+    
+    
+    display: flex;
+    
+}
+.topnav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+    
+    word-spacing: 3px;
+    
+}
+
+.sidenav{
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 10;
+    padding-left: 10px;
+    padding-top: 40px;
+    
+    text-size-adjust: auto;
+}
+    
+.sidenav div{
+    padding: 8px;
+font-size: 44px;
+display: block;
+
+
+}  
+    
+   
+    
+
+
+
+
+.posts{
+    margin-left: 150px;
+    font-size: 21px;
+    
+   
+   
+}
+
+.flex{
+    display: flexbox;
+}
+
+
+@media all and (min-width: 768px){
+    .title{
+        justify-content: center;
+        text-align: center;
+        color: red;
+        background-color: black;
+        display: flex;
+        
+    }
+    .topnav{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        color: white;
+        background-color: black;
+        word-spacing: 3px;
+        
+    }
+    
+    .sidenav{
+        height: 80%;
+        width: 20%;
+        position: absolute;
+        left: 0;
+        top: 10;
+        padding-top: 40px;
+        
+        text-size-adjust: auto;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+    }
+        
+    .sidenav div{
+        padding: 8px;
+    font-size: 44px;
+    display: block;
+    
+    }  
+        
+       
+        
+    
+    
+    
+    
+    .posts{
+        margin-left: 250px;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        align-content: space-between;
+        
+        
+       
+       
+    }
+    
+    .flex{
+        display: flexbox;
+    }
+}
+
+@media all and (min-width: 1000px){
+    .title{
+        justify-content: center;
+        text-align: center;
+        color: red;
+        
+        display: flex;
+        font-size: 50px;
+        
+    }
+    .topnav{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        color: white;
+        word-spacing: 3px;
+        font-size: 50px;
+        
+        
+    }
+    
+    .sidenav{
+        height: 80%;
+        width: 200px;
+        position: absolute;
+        left: 0;
+        top: 10;
+        padding-top: 40px;
+        
+        text-size-adjust: auto;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+    }
+        
+    .sidenav div{
+        padding: 8px;
+    font-size: 44px;
+    display: block;
+    
+    }  
+        
+       
+        
+    
+    
+    
+    
+    .posts{
+        margin-left: 250px;
+        font-size: 80px;
+        text-align: center;
+        justify-content: center;
+        align-content: space-between;
+        color:
+        
+        
+       
+       
+    }
+    
+    .flex{
+        display: flexbox;
+    }
+}
