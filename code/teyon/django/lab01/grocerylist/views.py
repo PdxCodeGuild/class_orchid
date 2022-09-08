@@ -37,13 +37,13 @@ def incomplete(request, grocery_item_id):
     else:
         grocery_item_id.completed = True
     
-    grocery_item.save
+    grocery_item.save()
 
     return HttpResponseRedirect(reverse('grocery_list:index'))
 
 
 def delete(request, grocery_item_id):
-    grocery_item = get_object_or_404('grocery_list', pk= grocery_item_id)
-    grocery_item.delete
+    grocery_item = get_object_or_404(GroceryItem, pk= grocery_item_id)
+    grocery_item.delete()
 
-    return HttpResponseRedirect(reverse('grocery_list', pk= grocery_item_id))
+    return HttpResponseRedirect(reverse('grocery_list:index'))
