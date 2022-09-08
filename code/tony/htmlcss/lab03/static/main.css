@@ -1,0 +1,58 @@
+header h1, section h2, .nav ul {
+    font-family: 'Aboreto', cursive;
+    color: #900;
+}
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    background: #900;
+    padding: 10px;
+    margin: 1px;
+    display: block;
+}
+.nav a:hover {
+    background: #999;
+}
+.grid {
+    display: grid;
+    margin: 0;
+}
+.nav ul {
+    padding: 0;
+}
+.nav ul li {
+    list-style-type: None;
+}
+.footer {
+    padding: 2em 0;
+}
+@media screen and (min-width: 700px) {
+    .nav ul {
+        padding-right: 2em;
+    }
+    .nav {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .main {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .header {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .nav {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav ul li {
+        align-content: space-between;
+    }
+}
