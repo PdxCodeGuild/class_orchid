@@ -8,10 +8,6 @@ from django.http import HttpResponseRedirect
 from .models import UrlShort
 
 def index(request):
-    if request.method =="POST":
-        long_url = request.POST('long_url')
-        # short_url = submit_url()
-        UrlShort.objects.create(long_url=long_url)
         return render(request, 'urlshort_app/index.html')
 
 
@@ -21,12 +17,12 @@ def index(request):
 #         UrlShort.objects.create(long_url=long_url)
 #     return redirect('/')
 
-def submit_url():
-    return ''.join([choice(ascii_letters)for x in range (8)])
+# def submit_url():
+#     return render()
 
-def redirect():
-    new_url = get_object_or_404(UrlShort)
-    return HttpResponseRedirect(new_url.long_url)
+# def redirect():
+#     new_url = get_object_or_404(UrlShort)
+#     return HttpResponseRedirect(new_url.long_url)
 
 
 
