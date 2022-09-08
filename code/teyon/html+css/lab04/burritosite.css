@@ -1,0 +1,33 @@
+h1 {
+    text-align: start;
+}
+
+#tortillaoptions {
+    display: flex;
+    justify-content: center;
+    margin-right: 2em;
+}
+
+#rice {
+    display: flex;
+    justify-content: center;
+}
+
+#bean {
+    display: flex;
+    justify-content: center;
+    margin-left: 1em;
+}
+
+#proteins {
+    display: flex;
+    justify-content: center;
+    margin-right: 2em;
+
+}
+
+#dairies {
+    display: flex;
+    justify-content: center;
+    margin-right: 5em;
+}

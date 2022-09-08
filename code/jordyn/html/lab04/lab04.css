@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    display: flex;
+    background-color: rgb(45, 175, 132);
+    justify-content: center;
+    font-weight: bold;
+
+}
+
+ul {
+    margin-bottom: 50px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.main-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    background-color: rgb(108, 139, 129);
+    padding-top: 3vh;
+    padding-right: 16px;
+}
+
+.menu {
+    background-color: rgb(182, 135, 65);
+    flex-grow: 1;
+    padding-left: 50px;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+#burrito_form {
+    padding-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}

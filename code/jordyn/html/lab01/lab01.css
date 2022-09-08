@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #80b6b6;
+}
+
+img {
+  border-radius: 25%;
+}
+
+p {
+  font-size: 24px;
+  color: #340934;
+}
+
+ul {
+  list-style-type: circle;
+  font-size: 20px;
+}
+
+a {
+  color: #5c0e5c;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header-left {
+  margin-right: 20%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#musk-profile {
+  height: 40vw;
+  width: 40vw;
+  object-fit: cover;
+}
+
+#elon-name {
+  font-size: 40px;
+}
+
+#wiki-blip {
+  font-size: 34px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#quote {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-left {
+  display: flex;
+  flex-direction: column;
+  font-family: fantasy;
+  font-size: 32px;
+}
+
+#cat-girl {
+  height: 20vw;
+  width: 20vw;
+  object-fit: cover;
+  padding-left: 50px;
+}
