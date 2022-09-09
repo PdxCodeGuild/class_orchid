@@ -24,10 +24,10 @@ Your app should contain the following:
   - And one to redirect the user
 - Use django's `HTTPResponseRedirect` to handle redirecting users
 
-## Version 2 (Optional):
+## Optional Enhancement 1:
 Style your page using any CSS framework of your choice, try and make it look fancy and modern.
 
-## Version 3 (Optional):
+## Optional Enhancement 2:
 When the user is redirected, store some metadata on the user in the database. You can find the header metadata of the request in the dictionary-like object `request.META`.
 
 Some examples of user meta data are:
@@ -38,5 +38,5 @@ Some examples of user meta data are:
 
 For more examples, check out the [Django documentation](https://docs.djangoproject.com/en/3.1/ref/request-response/#django.http.HttpRequest.META).
 
-## Version 4 (Optional):
+## Optional Enhancement 3:
 So far you can only save one instance of each metadata for a given link. Fix this by creating a Click model that stores the metadata for a particular redirection request and has a many-to-one relationship back to the link. Reference the polls code and the [Django docs](https://docs.djangoproject.com/en/3.1/topics/db/examples/many_to_one/).
