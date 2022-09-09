@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+</head>
+
+<body>
+    <header>Grocery List</header>
+    <h1>Grocery List</h1>
+    {% for item in latest_grocery_list %}
+    <li style="display: flex;">{{item.item_name}}
+        <form action="{{item.id}}/remove_item/" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Remove" id="{{item.id}}" name="Remove">
+        </form>
+        <form action="{{item.id}}/complete/" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="complete" id="complete_{{item.id}}" name="Complete">
+        </form>
+    </li>
+    {% endfor %}
+    <form action="add_item/" method="POST">
+        {% csrf_token %}
+        <input type="text" id="item_name" name="item_name">
+        <input type="submit" value="Add to list">
+    </form>
+
+    <h2>Completed</h2>
+
+    {% for item in completed_grocery_list %}
+    <li style="display:flex;">{{item.item_name}}
+        <form action="{{item.id}}/remove_item/" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Remove" id="{{item.id}}" name="Remove">
+        </form>
+        <form action="{{item.id}}/incomplete/" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Add back to list" id="incomplete_{{item.id}}" name="Incomplete">
+        </form>
+    </li>
+    {% endfor %}
+</body>
+
+</html>
