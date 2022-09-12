@@ -1,4 +1,10 @@
-<form action="" method="post">
-    <label for="long_url">Enter URL</label>
-    <input type="long_url" id="long_url" name="long_url">
+
+<form action="{% url 'urlshort_app:index'%}" method="post">
+    {%  csrf_token %}
+    <h1>Url Shortener</h1>
+    <input type="url" id="long_url" name="long_url" placeholder="Url"><br>
+    <input type="submit" id="short_url" name="short_url" value="Submit">
 </form>
+{% for url in all_urls%}
+<a href="{{url.short_url}}">{{ url.short_url }}</a>
+{% endfor %}

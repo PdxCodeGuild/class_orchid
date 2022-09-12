@@ -4,5 +4,5 @@ from . import views
 app_name = 'urlshort_app' # for namespacing
 urlpatterns = [
     path('', views.index, name='index'),
-    # path('submit_url', views.submit_url, name='submit_url')
+    path('<str:short_url>', views.url_redirect, name='url_redirect')
 ]
