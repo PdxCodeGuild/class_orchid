@@ -32,7 +32,7 @@
                 <div id="center-urls">
                     <div id="urls">
                             <p>actual: {{ latest_urls.actual_url }}</p>
-                            <p>short: <a href="{{ latest_urls.actual_url }}">{{ latest_urls.short_url }}</a></p>
+                            <p>short: <a href="{% url 'urlShortener:goTo' latest_urls.short_url%}">{{ latest_urls.short_url }}</a></p>
                     </div>
                 </div>
             </div>

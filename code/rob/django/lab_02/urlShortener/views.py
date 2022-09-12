@@ -1,7 +1,8 @@
 import string
 import random
+from turtle import goto
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.utils import timezone
 from .models import Urls
 
@@ -26,6 +27,13 @@ def create(request):
     return redirect("/")
 
 
+def goTo(request, short_url):
+    get_actual_url = Urls.objects.filter(short_url=short_url)
+    go_to = get_actual_url[0].actual_url
+    print(type(go_to))
+    return redirect(go_to)
+
+
 def get_short_url(long_url):
     url = long_url
     checks = ['.com', '.org', '.net', '.gov']
@@ -36,11 +44,11 @@ def get_short_url(long_url):
             ext = check
     url_split = url.split(ext)
 
-    short_url = url_split[0] + ext + '/' + fake_ext
+    short_url = fake_ext
 
     if '.' in url_split[0]:
         cut_start = url_split[0].split('.')
-        short_url = cut_start[1] + ext + '/' + fake_ext
+        short_url =  fake_ext
         return short_url
 
     return short_url
