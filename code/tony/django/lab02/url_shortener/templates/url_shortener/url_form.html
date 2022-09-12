@@ -1,0 +1,13 @@
+<form method="post">{% csrf_token %}
+    {% if link %}
+    <p>
+    Here is your link:<br>
+    <a href="{{ link }}">{{ link }}</a>
+    </p>
+    <p>
+        Submit another:
+    </p>
+    {% endif %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+</form>
