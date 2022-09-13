@@ -20,7 +20,7 @@
 
         <form method="POST">
             {% csrf_token %}
-            <input type="text" name="the_url" autofocus>
+            https://<input type="text" name="the_url" autofocus>
             <input type="submit" value="Submit" autofocus>
         </form>
 
@@ -28,15 +28,6 @@
         <h4> {{ shorty }}</h4>
         </p>
 
-        <p>
-        <h2 class=heading> Or, enter your shortened URL to go to the associated page. <h2>
-
-                <form method="POST">
-                    {% csrf_token %}
-                    <input type="text" name="short_version">
-                    <input type="submit" value="Submit" autofocus>
-                </form>
-                </p>
 
 
     </div>

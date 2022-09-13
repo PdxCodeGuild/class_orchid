@@ -7,8 +7,6 @@ app_name = 'shortening'
 urlpatterns = [
     path('', views.index, name='index'),
     path('get_url', views.get_url, name='get_url'),
-    path('get_it_back', views.get_it_back, name ='get_it_back'),
-   
-    
+    path('<str:short_version>', views.url_redirect, name='url_redirect'),
 ]
 
