@@ -17,7 +17,7 @@ M-F 9:30 am – 4:30 pm
   
     - danny@pdxcodeguild.com
  
-- Mitch Chapman, TA
+- Michael B, TA
  
 - Matt Walsh, TA
 
@@ -48,7 +48,7 @@ Presentation Day: October 21st, 2022
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
 | 01    | [Grocery List](4%20Django/labs/lab01-grocery-list.md)                        | Aug 30th      | Sep  2nd    | Sep 13th      |
 | 02    | [URL Shortener](4%20Django/labs/lab02-url-shortener.md)                      | Sep  1st      | Sep  7th    | Sep 15th      |
-<!-- | 02    | [Chirp](4%20Django/labs/lab03-chirp.md)                                      | Sep  4th      | Sep 11th    | Sep 18th      | -->
+| 03    | [Chirp](4%20Django/labs/lab03-chirp.md)                                      | Sep  7th      | Sep 13th    | Sep 18th      |
 
 
 ## HTML/CSS Labs Assigned:
@@ -86,7 +86,7 @@ Presentation Day: October 21st, 2022
 | 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Aug 2nd       | Aug  5th    | Aug 16th      |
 | 16    | [Dad Joke API](1%20Python/labs/16%20Dad%20Joke%20API.md)                     | Aug  4th      | Aug  9th    | Aug 18th      |
 | 17    | [Quotes API](1%20Python/labs/17%20Quotes%20API.md)                           | Aug  4th      | Aug  9th    | Aug 18th      |
-<!-- | 18    | [Mini-Capstone](1%20Python/labs/18%20Mini-Capstone.md)                       | Apr  6th      | Apr  8th    | Apr 19th      | -->
+| 18    | [Mini-Capstone](1%20Python/labs/18%20Mini-Capstone.md)                       | Aug  8th      | Aug 11th    | Aug 25th      |
 <!-- | 14    | [Mob Tic Tac Toe](1%20Python/labs/14%20Mob%20Tic%20Tac%20Toe.md)             | Mar 30th      | NA          | NA            |
 | 15    | [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md)     | NA            | NA          | NA            | -->
 
