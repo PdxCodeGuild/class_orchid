@@ -6,6 +6,9 @@
 {% block title %}Chirp{% endblock %}
 
 {% block content %}
+{% if not lastes_chirps%}
+<div id="no-chirp"><p>no chirps yet</p></div>
+{% endif %}
 {% for chirp in latest_chirps %}
     <div class="chirp">
         <div>

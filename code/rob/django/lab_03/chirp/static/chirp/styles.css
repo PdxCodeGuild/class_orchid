@@ -118,6 +118,14 @@ nav h1{
     margin: 1em auto auto auto;
 }
 
+#no-chirp{
+    width: 15%;
+    margin: 2em auto;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
 footer{
     height: 5em;
     width: 100%;
