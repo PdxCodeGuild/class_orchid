@@ -13,6 +13,6 @@
 {% if user.email %}
   <p>user has a email: {{ user.email }}</p>
 {% else %}
-  <a href="{% url 'accounts:register_email' %}">first register</a>
+  <a href="{% url 'accounts:register_email' %}">register email</a>
 {% endif %}
 {% endblock %}

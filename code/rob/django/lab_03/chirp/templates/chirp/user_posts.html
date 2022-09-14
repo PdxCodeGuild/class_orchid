@@ -6,7 +6,7 @@
 {% block title %}Chirp{% endblock %}
 
 {% block content %}
-{% for chirp in latest_chirps %}
+{% for chirp in posts %}
     <div class="chirp">
         <div>
             <div id="user-img"></div>
@@ -21,11 +21,5 @@
         </ul>
     </div>
 {% endfor %}
-    <div id="center-form">
-        <form action="{% url 'chirp:new_chirp' %}" id="new_chirp_text" method="POST">
-            {% csrf_token %}
-            <input type="text" id="new_chirp" name="new_chirp" placeholder="new chirp" autocomplete="off">
-            <button type="submit">Chirp</button>
-        </form>
-    </div>
+    
 {% endblock %}
