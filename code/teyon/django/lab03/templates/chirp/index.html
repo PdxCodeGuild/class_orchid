@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirp</title>
+</head>
+<body>
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="text" autofocus maxlength="300" name="chirp_field">
+    <input type="submit" value="chirp!">
+
+</form>
+{% for chirp in all_chirps %}
+<div>
+    <p>
+        {{chirp.user.username}}
+    </p>
+    <p>
+        {{chirp.content}}
+    </p>
+    <p>
+        {{chirp.posted_date}}
+    </p>
+</div><br><br>
+{% endfor %}
+
+</body>
+</html>
