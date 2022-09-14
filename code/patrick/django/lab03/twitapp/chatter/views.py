@@ -64,10 +64,10 @@ class UserPostView(ListView):
        # self.extra_context = {'posts': posts}
         return  user
 
-def user(request,post_username ):
-    user = User.objects.get(username=post_username)
+def C_user(request,post_username ):
+    C_user = User.objects.get(username=post_username)
     context = {
-        'posts' : Post.objects.filter(author= user )
+        'posts' : Post.objects.filter(author= C_user )
     }
     return render(request, 'chatter/home.html', context)
     
