@@ -1,7 +1,10 @@
 from django.urls import path
-
+# from .views import HomeView
 from . import views
 
-urlpatterns = [
 
+app_name = "post"
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('add/', views.add_chirp, name='add')
 ]

@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Chirp - Home{% endblock %}</title>
 </head>
 
 <body>
     <main>
+        <div class="m-4">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">Chirp</a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            {% comment %} <a href="" class="nav-item nav-link">Home</a> {% endcomment %}
+                        </div>
+                        <div class="navbar-nav ms-auto">
+                            <a href="{% url 'login' %}" class="nav-item nav-link">Login</a>
+                            <a href="{% url 'signup' %}" class="nav-item nav-link">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+            </nav>
         {% block content %}
         {% endblock %}
     </main>
