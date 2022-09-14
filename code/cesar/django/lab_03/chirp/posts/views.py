@@ -19,12 +19,6 @@ def index(request):
     return render(request, 'home.html', context)
 
 
-def diff_user(request, this_user):
-    if request.method == 'POST':
-        if request.user.is_authenticated:
-            chirp_text = request.POST.get('chirp')
-
-
 def add_chirp(request):
     if request.method == 'POST' and request.POST['chirp']:
         chirps = request.POST.get('chirp')
