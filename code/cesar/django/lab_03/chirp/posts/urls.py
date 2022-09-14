@@ -6,5 +6,6 @@ from . import views
 app_name = "post"
 urlpatterns = [
     path('', views.index, name='index'),
-    path('add/', views.add_chirp, name='add')
+    path('add/', views.add_chirp, name='add'),
+    path('<str:other_user>', views.authuser_chirps, name='other_user'),
 ]

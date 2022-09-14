@@ -20,6 +20,8 @@
 
 <hr>
 
+{{ message }}
+
 
 <div class="container">
     <h5>What is all the CHIRP about? </h5>
@@ -27,7 +29,7 @@
     <ul>
         
         <li><b>Chirp</b>: {{ chirp }} <br>
-            {{ chirp.auth_users }} - {{ chirp.created_date }}
+            <a href="{% url 'post:other_user' chirp.auth_users %}">{{ chirp.auth_users }}</a> - {{ chirp.created_date }}
         </li>
     </ul>
     {% endfor %}
