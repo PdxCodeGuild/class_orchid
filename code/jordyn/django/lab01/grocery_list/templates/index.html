@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grocery List</title>
+        <link rel="stylesheet" href="{% static 'grocery_list/style.css' %}">
+</head>
+<body>
+
+    <header style="font-size:28px" id="header">My Grocery List!</header>
+
+    <label for="add_item"><strong>Add Item</strong></label>
+    <form action="add/" method="post">
+        {% csrf_token %}
+        
+        <input type="text" name="add_item" autofocus maxlength="44" style="width: 250px;">
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <header class="item-headers">
+        <p class="header-left"></p>
+        <p class="header-center">Incomplete</p>
+        <p class="header-right">Date Added</p>
+    </header>
+
+    {% for item in items %}
+        {% if item.is_complete == False %}
+            <!-- display elements -->
+            <section> 
+
+                <a href="delete/{{item.id}}" title="delete button" class="delete-button">
+                    <input type="image" class="button" width="14px" name="delete" src="{% static 'grocery_list/delete_X.png' %}" alt="delete button">
+                </a>
+                <a href="complete/{{item.id}}" class="display-item">{{item.name}}</a>
+
+                <form action="{% url 'grocery_list:description' item.id %}" method="post">
+                    {% csrf_token %}
+
+                    <div class="description-add">
+                        <input type="text" name="add_desc" value="{{item.description}}" maxlength="50" class="description-box">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+                <section class="date">{{item.pub_date}}</section>
+
+            </section>
+        {% endif %}
+    {% endfor %}
+
+
+    <header class="item-headers">
+        <p class="header-left"></p>
+        <p class="header-center">Complete</p>
+        <p class="header-right">Date Completed</p>
+    </header>
+
+    {% for item in items %}
+        {% if item.is_complete %}
+            <section> 
+                <a href="delete/{{item.id}}" title="delete button" class="delete-button">
+                    <input type="image" class="button" width="14px" name="delete" src="{% static 'grocery_list/delete_X.png' %}" alt="delete button">
+                </a>
+                <a href="complete/{{item.id}}" class="display-item">{{item.name}}</a>
+
+                <form action="{% url 'grocery_list:description' item.id %}" method="post">
+                    {% csrf_token %}
+
+                    <div class="description-add">
+                        <input type="text" name="add_desc" value="{{item.description}}" maxlength="50" class="description-box">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+                <section class="date">{{item.comp_date}}</section>
+            </section>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
