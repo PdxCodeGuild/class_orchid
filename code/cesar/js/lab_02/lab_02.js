@@ -1,16 +1,16 @@
-// let data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+/* 
+Lab 8: Credit Card Validation 
+Cesar Rebolledo Class Orchid 
+*/
 
-// function peakFinder(data) {
-//     let peakList = []
-//     for (let i = 0; i )
-// }
+let cardNumberInput = prompt('Enter your card number: ').split(",")
+const arrayCardNumberInput = Array.from(String(cardNumberInput), Number)
 
-// program to display text 5 times
-const n = 10;
-
-for (let i = 0; i <= n; i++) {
-    console.log(`I love JavaScript.`);
+function creditCardValidation(cardNumber) {
+    checkDigit = cardNumber.pop()
+    console.log(checkDigit)
 }
 
+console.log(arrayCardNumberInput)
 
-
+creditCardValidation(arrayCardNumberInput)
