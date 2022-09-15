@@ -11,7 +11,7 @@ const paidOut = {
 function pick6(){
     let numbers = []
     while (numbers.length < 6){
-        let randomNum = Math.floor(Math.random() *9 )
+        let randomNum = Math.floor(Math.random() *99 )
         numbers.push(randomNum)
     }
     return numbers
