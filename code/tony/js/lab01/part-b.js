@@ -1,10 +1,12 @@
-ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',]
-teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen',]
-tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety',]
+"use strict"
 
-output = document.querySelector('#output')
-input = document.querySelector('#input')
-msg = 'Just start typing.<br>(Use 24-hour notation.)'
+let ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',]
+let teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen',]
+let tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety',]
+
+let output = document.querySelector('#output')
+let input = document.querySelector('#input')
+let msg = 'Just start typing.<br>(Use 24-hour notation.)'
 output.innerHTML = msg
 
 function log(msg) {
@@ -12,8 +14,8 @@ function log(msg) {
 }
 
 function trans(num) {
-    quotient = Math.floor(num / 10)
-    remainder = num % 10
+    let quotient = Math.floor(num / 10)
+    let remainder = num % 10
 
     // apply appropriate translations for respective ranges
     if (num < 10) {
@@ -27,14 +29,15 @@ function trans(num) {
     }
 }
 
-function prep(str) {
-    parts = str.split(':')
-    str = ''
-    suf = ''
-    hour = Number(parts[0])
-    mins = Number(parts[1])
+function prep(s) {
+    let parts = s.split(':')
+    let str = ''
+    let suf = ''
+    let hour = Number(parts[0])
+    let mins = Number(parts[1])
 
-    hourStr = hour > 12 ? hour % 12 : hour
+    let hourStr = hour > 12 ? hour % 12 : hour
+
     if (mins == 1) {
         str = `${trans(mins)} minute after ${trans(hourStr)}`
     } else if (mins > 0 && mins < 10) {
@@ -66,7 +69,7 @@ function prep(str) {
 
 function inputListener(e) {
     e.preventDefault()
-    patterns = [
+    let patterns = [
         '([0-1]?|2)',
         '([0-1]?[0-9]|2[0-3])',
         '([0-1]?[0-9]|2[0-3]):',
@@ -79,7 +82,7 @@ function inputListener(e) {
         input.value = ''
     }
     if (! RegExp(`^(${patterns.join('|')})$`).exec(input.value)) {
-        s = input.value.split('')
+        let s = input.value.split('')
         s.pop()
         s = s.join('')
         input.value = s
