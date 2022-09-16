@@ -12,11 +12,14 @@ let addedItem = document.getElementById("added")
 
 
 let addButton = document.getElementById("add-button")
-addButton.addEventlistener("click")
+addButton.addEventListener("click", add)
 
 
 function add() {
     added.push(addedItem.value)
+    // for (const item of added) {
+    //     console.log(item);
+    // }
 }
 
-
+const itemList = document.querySelector('ul')
