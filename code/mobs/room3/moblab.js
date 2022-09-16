@@ -12,6 +12,7 @@ const itemList = document.getElementById('addedList')
 const completedList = document.getElementById('completedList')
 
 
+
 let addButton = document.getElementById("add-button")
 addButton.addEventListener("click", add)
 
@@ -21,13 +22,31 @@ function add() {
     itemList.append(list_item)
     const completeButton = document.createElement('button')
     completeButton.innerText='Complete'
-    list_item.append(addedItem.value, completeButton)
     completeButton.addEventListener('click', complete)
+    const removeButton = document.createElement('button')
+    removeButton.innerText='Remove'
+    list_item.append(addedItem.value, completeButton, removeButton)
+    addedItem.value=''
+    removeButton.addEventListener('click', remove)
     // for (const item of added) {
     //     console.log(item);
     // }
 }
+
 function complete(e) {
     completedList.append(e.target.parentNode)
-    console.log(e.target.parentNode)
+    e.target.innerText='Undo'
+    e.target.addEventListener('click', addBack)
+    console.log('did it fire?')
+
+}
+
+function remove(e) {
+    e.target.parentNode.remove()
+}
+
+function addBack(e) {
+    itemList.append(e.target.parentNode)
+    e.target.innerText='Complete'
+    e.target.addEventListener('click', complete)
 }
