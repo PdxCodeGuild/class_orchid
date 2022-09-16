@@ -1,11 +1,13 @@
-let todo = JSON.parse(localStorage.getItem('todo')) || []
+let todo = []
+// let todo = JSON.parse(localStorage.getItem('todo')) || []
 let addBtn = document.getElementById('addbutton')
 let addItemText = document.getElementById('additem')
 let todoList = document.getElementById('todolist')
+let completeList = document.getElementById('completed')
 
 console.log(addBtn)
 addBtn.addEventListener('click', e => {
-    let item = { value: addItemText.value, isComplete: false }
+    let item = { value: addItemText.value, isComplete: false, isDeleted: false }
     todo.push(item)
 
     var li = document.createElement("li")
@@ -25,44 +27,24 @@ addBtn.addEventListener('click', e => {
 
     spanDelete.onclick = function () {
         this.parentElement.remove()
-        console.log(this)
+        // Array(todo).filter(e=>e.isComplete)
     }
 
     spanComplete.onclick = function() {
         if (! item.isComplete) {
             spanComplete.innerText = '✅'
             item.isComplete = true
+            completeList.appendChild(this.parentElement)
             spanText.setAttribute('style', 'text-decoration: line-through')
-            todo_sort()
         }
         else {
             spanComplete.innerText = '☑️'
             item.isComplete = false
+            todoList.appendChild(this.parentElement)
             spanText.setAttribute('style', 'text-decoration: normal')
-            todo_sort()
         }
     }
 
-    localStorage.setItem('todo', JSON.stringify(todo))
-
-    todo_sort = function() {
-            todo.sort(function(x,y) {
-            console.log('run')
-            x = x.isComplete
-            y = y.isComplete
-            return (x === y)? 0 : x? 1 : -1
-        })
-        todoList.childNodes.forEach(e => {
-            e.remove()
-        })
-        // rebuild
-        todo.forEach(e => {
-            e.appendChild(spanComplete)
-            e.appendChild(spanText)
-            e.appendChild(spanDelete)
-        })
-    }
-
+    // localStorage.setItem('todo', JSON.stringify(todo))
 
 })
-
