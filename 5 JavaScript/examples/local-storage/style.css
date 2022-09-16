@@ -1,0 +1,35 @@
+header,main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+p, input, button {
+    margin: 5px;
+    height: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:10px;
+}
+
+section {
+    width: 40vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 25px;
+}
