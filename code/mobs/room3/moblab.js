@@ -33,8 +33,8 @@ function complete(e) {
     completedList.append(e.target.parentNode)
     e.target.innerText = 'Undo'
     e.target.addEventListener('click', addBack)
-    console.log('did it fire?')
-
+    e.target.removeEventListener('click', complete)
+    e.target.parentNode.style.textDecoration='line-through'
 }
 
 function remove(e) {
@@ -45,4 +45,7 @@ function addBack(e) {
     itemList.append(e.target.parentNode)
     e.target.innerText = 'Complete'
     e.target.addEventListener('click', complete)
+    e.target.removeEventListener('click', addBack)
+    e.target.parentNode.style.textDecoration='none'
 }
+
