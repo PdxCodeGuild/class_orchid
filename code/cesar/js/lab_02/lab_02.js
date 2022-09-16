@@ -8,9 +8,13 @@ const arrayCardNumberInput = Array.from(String(cardNumberInput), Number)
 
 function creditCardValidation(cardNumber) {
     checkDigit = cardNumber.pop()
-    console.log(checkDigit)
-}
+    reverseCardNumberArray = cardNumber.reverse()
+    console.log(reverseCardNumberArray)
+    reverseCardNumberArray.forEach(function (num, i) {
+        console.log(num, i)
+    })
 
-console.log(arrayCardNumberInput)
+
+}
 
 creditCardValidation(arrayCardNumberInput)
