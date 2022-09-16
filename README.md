@@ -27,12 +27,12 @@ Capstone proposal due: TBD
 
 Presentation Day: October 21st, 2022  
 
-<!-- ## JavaScript Labs Assigned:
+## JavaScript Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
-| 01-03 | [Pick3](5%20JavaScript/labs/01-03%20Pick%203.md)                             | May 10th      | May 16th    | May 24th      |
-| 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | NA            | NA          | NA            |
-| 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | May ??th      | May ??th    | Jun  3rd      |
+| 01-03 | [Pick3](5%20JavaScript/labs/01-03%20Pick%203.md)                             | Sep 14th      | Sep 19th    | Sep 28th      |
+| 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | Sep 16th      | NA          | NA            |
+<!-- | 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | May ??th      | May ??th    | Jun  3rd      |
 | 05    | [JavaScript Mini-Capstone](5%20JavaScript/labs/07%20Mini-Capstone.md)        | May ??th      | May ??th    | Jun  3rd      | -->
 
 
