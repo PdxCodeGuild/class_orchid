@@ -12,8 +12,18 @@ addBtn.addEventListener('click', e => {
     todo.push(item)
 
     var li = document.createElement("li")
-    li.innerText = item.value
+    var spanText = document.createElement('span')
+    li.appendChild(spanText)
     todoList.appendChild(li)
+    var spanComplete = document.createElement('span')
+    li.setAttribute('style', 'list-style-type:none;')
+    spanComplete.innerText = '😵☑️✅'
+    // ❎❌😵☠️💀☠
+    spanText.innerText = item.value
+    // spanText.insertBefore(spanComplete)
+    // li.insertBefore(spanComplete)
+    li.appendChild(spanComplete)
+    li.appendChild(spanText)
 
     console.log(todo)
 })
