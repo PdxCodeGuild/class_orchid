@@ -4,4 +4,19 @@
 // adding a remove button (event listener with a click)
 // add a complete button (event listener with a click)
 
+let completed = []
+
+let added = []
+
+let addedItem = document.getElementById("added")
+
+
+let addButton = document.getElementById("add-button")
+addButton.addEventlistener("click")
+
+
+function add() {
+    added.push(addedItem.value)
+}
+
 
