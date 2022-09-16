@@ -17,13 +17,27 @@ addBtn.addEventListener('click', e => {
     todoList.appendChild(li)
     var spanComplete = document.createElement('span')
     li.setAttribute('style', 'list-style-type:none;')
-    spanComplete.innerText = '😵☑️✅'
-    // ❎❌😵☠️💀☠
+    var spanDelete = document.createElement('span')
+    spanDelete.innerText = '😵'
+    spanComplete.innerText = '☑️✅'
     spanText.innerText = item.value
-    // spanText.insertBefore(spanComplete)
-    // li.insertBefore(spanComplete)
+    li.appendChild(spanDelete)
+
     li.appendChild(spanComplete)
     li.appendChild(spanText)
 
-    console.log(todo)
+    spanDelete.onclick = function () {
+        this.parentElement.remove()
+        console.log(this)
+    }
+
+
+
+
+
+
+
+
+    // console.log(todo)
 })
+
