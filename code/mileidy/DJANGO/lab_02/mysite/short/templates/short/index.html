@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortener</title>
+</head>
+<body>
+    <h1>Url Shortener</h1>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="url">
+        <button type="submit">Make short code</button>
+    </form>
+    <ul>
+        <h1>Shortened Urls</h1>
+        {% for url in all_urls %}
+        <li>
+            {{ url.long_url }}
+            {{ url.short_code }}
+            <a href="/{{url.short_code}}">Short</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+
+</body>
+</html>
