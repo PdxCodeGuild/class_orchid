@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 400px auto 400px;
+  grid-template-columns: auto 400 400;
   grid-gap: 2em;
 }
 
@@ -19,7 +19,6 @@
         grid-column: 1 / 5;
         overflow: scroll;
         font-size: 10;
-        overflow: scroll;
         margin: 0;
       }
         
@@ -56,7 +55,7 @@
     footer    {
       grid-column: 1 / 4;
       margin-inline: 50px;
-padding: 1em 0;
+      padding: 1em 0;
     }
   }
 
@@ -80,7 +79,7 @@ body {
 margin-inline: 50px;
 padding: 1em 0;
 background: rgb(83, 126, 147) url("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?cs=srgb&dl=pexels-s-migaj-747964.jpg&fm=jpg") no-repeat fixed center; 
-color:rgb(98, 37, 37)
+
 
 }
   
@@ -93,7 +92,7 @@ color:rgb(98, 37, 37)
 
   article,
   aside {
-    background: #eaeaea6c;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,6 +166,7 @@ nav {
     font-size: 22px;
     text-shadow: 4px 4px 4px rgb(206, 204, 204);
     color:rgb(42, 65, 77);
+    overflow: scroll
 
   }
 

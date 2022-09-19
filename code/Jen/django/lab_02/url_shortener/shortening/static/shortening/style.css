@@ -1,0 +1,30 @@
+body {
+    color: whitesmoke;
+    background: rgb(125, 125, 155);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border box;
+
+}
+
+h1 {
+    color: whitesmoke;
+    text-shadow: 12px, 12px aquamarine;
+
+}
+
+h2 {
+    color: blue;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 20px solid rgb(25, 175, 175);
+    padding: 10px;
+}
+
+
+h4 {
+    color: aqua;
+}
