@@ -41,7 +41,9 @@ function numMatches(winningNumbers, userNumber){
     return matches
 }
 
-        
+function gamlbeGame(){
+    
+}        
 let games = 0
 let earnings = 0
 let expenses = 0
@@ -51,6 +53,8 @@ let winningNumbers = pick6()
 let nog = document.getElementById('nog')
 console.log(nog)
 let numberOfGames = nog.value
+parseInt(numberOfGames)
+console.log(numberOfGames)
 
 
 while (games < numberOfGames){
@@ -61,7 +65,7 @@ while (games < numberOfGames){
 
     let gameMatches = numMatches(winningNumbers, userNumber)
     expenses += 2
-    console.log(gameMatches)
+    
 
     
     earnings += paidOut[gameMatches]
