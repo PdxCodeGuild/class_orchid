@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class=center>
+    <h1> Hi {{ user.username }}, what's on your mind? </h1>
+
+    <div class=form>
+
+
+        <form action="{% url 'posts:index' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="new_chirp" autofocus>
+            <input type="submit" value="Submit" autofocus>
+
+        </form>
+    </div>
+
+
+
+</div>
+
+<h2>
+    <p>
+        To see only your chirps<br><a href="{% url 'posts:list_userchirps' %}">My Chirps</a></p>
+
+    <p> To see all chirps<br> <a href="{% url 'posts:index' %}">All Chirps</a>
+    <p>Otherwise <br><a href="{% url 'logout' %}">Log Out</a></p>
+</h2>
+
+<div class=center>
+    <h2> My Chirps </h2>
+    <p>
+    <ul>
+        <form action="{% url 'posts:list_userchirps' %}" method="GET">
+            {% for item in userchirps %}
+            <p>
+                <li>
+                    {{ item }}
+                </li>
+            </p>
+
+            {% endfor %}
+        </form>
+    </ul>
+    </p>
+</div>
+</h2>
+{% else %}
+<p>You are not logged in. To create your own chirps, please Log in or create an account.</p>
+<p> To see all posts, <a href="{% url 'posts:index' %}">View Chirps</a>
+
+
+    <a href="{% url 'login' %}">Log In</a>
+    or
+<p><a href="{% url 'signup' %}"> Sign Up</a>
+
+
+
+    {% endif %}
+
+    {% endblock %}
