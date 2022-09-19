@@ -58,7 +58,7 @@ Example: `index.html`
 
 ### How to start a simple Vue app:
 ```js
-new Vue({
+const App = new Vue({
     el: '#app',
     data: {
         message: 'Hello world!'
