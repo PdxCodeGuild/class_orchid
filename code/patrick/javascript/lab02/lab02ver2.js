@@ -40,43 +40,43 @@ function numMatches(winningNumbers, userNumber){
     } 
     return matches
 }
-
+document.getElementById('nog').addEventListener('change', gamlbeGame)
 function gamlbeGame(){
-    
-}        
-let games = 0
-let earnings = 0
-let expenses = 0
+
+      
+    let games = 0
+    let earnings = 0
+    let expenses = 0
 
 
-let winningNumbers = pick6()
-let nog = document.getElementById('nog')
-console.log(nog)
-let numberOfGames = nog.value
-parseInt(numberOfGames)
-console.log(numberOfGames)
+    let winningNumbers = pick6()
+    let nog = document.getElementById('nog')
+    console.log(nog)
+    let numberOfGames = nog.value
+    parseInt(numberOfGames)
+    console.log(numberOfGames)
 
 
-while (games < numberOfGames){
-    let userNumber = pick6()
+    while (games < numberOfGames){
+        let userNumber = pick6()
      
-    games += 1
+        games += 1
     
 
-    let gameMatches = numMatches(winningNumbers, userNumber)
-    expenses += 2
+        let gameMatches = numMatches(winningNumbers, userNumber)
+        expenses += 2
     
 
     
-    earnings += paidOut[gameMatches]
+        earnings += paidOut[gameMatches]
 
 
 
-}
+    }
 
+    let balance = earnings - expenses
+    
+    let roi = balance / expenses
+    alert(`balance: ${balance} \n expenses: ${expenses} \n earnings: ${earnings} \n roi: ${roi}`)
+}  
 
-
-let balance = earnings - expenses
-
-let roi = balance / expenses
-alert(`balance: ${balance} \n expenses: ${expenses} \n earnings: ${earnings} \n roi: ${roi}`)
