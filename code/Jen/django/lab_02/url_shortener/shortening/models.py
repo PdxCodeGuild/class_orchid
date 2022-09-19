@@ -6,10 +6,9 @@ from django.db import models
 
 class Shortening(models.Model):
     the_url = models.CharField(max_length=500)
-    shorty = models.CharField(max_length=20, default="oops")
-    
 
- 
+    shorty = models.CharField(max_length=20, default="oops")
+  
     def __str__(self):
         return self.the_url
 
