@@ -58,12 +58,12 @@ Example: `index.html`
 
 ### How to start a simple Vue app:
 ```js
-new Vue({
+const App = {
     el: '#app',
-    data: {
-        message: 'Hello world!'
-    }
-})
+    data: () => {
+        return { message: 'Hello, world!' }
+    },
+}
 
 const app = Vue.createApp(App)
 app.mount('#app')

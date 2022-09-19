@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Chirp{% endblock %}
+
+{% block content %}
+{% if not lastes_chirps%}
+<div id="no-chirp"><p>no chirps yet</p></div>
+{% endif %}
+{% for chirp in latest_chirps %}
+    <div class="chirp">
+        <div>
+            <div id="user-img"></div>
+            <a href="{% url 'chirp:user_chirps' chirp.user %}">{{ chirp.user }}</a>
+            <p>{{ chirp.created_at }}</p>
+        </div>
+        <p id="text">{{ chirp.text }}</p>
+        <ul>
+            <li><button><a href="{% url 'chirp:like_chirp' chirp.id%}">Likes</a></button>{{ chirp.like_set.all.count }}</li>
+            <li><button><a href="{% url 'chirp:comment_chirp' chirp.id%}">Comments</a></button>{{ chirp.comment_set.all.count }}</li>
+            <li><button><a href="{% url 'chirp:re_chirp' chirp.id%}">Rechirps</a></button>{{ chirp.rechirp_set.all.count }}</li>
+        </ul>
+    </div>
+{% endfor %}
+    <div id="center-form">
+        <form action="{% url 'chirp:new_chirp' %}" id="new_chirp_text" method="POST">
+            {% csrf_token %}
+            <input type="text" id="new_chirp" name="new_chirp" placeholder="new chirp" autocomplete="off">
+            <button type="submit">Chirp</button>
+        </form>
+    </div>
+{% endblock %}
