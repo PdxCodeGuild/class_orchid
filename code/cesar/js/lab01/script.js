@@ -57,8 +57,16 @@ const ones = {
 
 numberInput = prompt('Hello, please enter a number from 0-999 to convert into words: ')
 
-let hundredsDigit = Math.floor(numberInput, 100)
+let hundredsDigit = Math.floor(numberInput / 100)
+let tensDigit = Math.floor(numberInput / 10) % 10
+let onesDigit = numberInput % 10
 
 console.log(hundredsDigit)
+console.log(tensDigit)
+console.log(onesDigit)
+
+console.log('The number input was this: ' + numberInput)
+
+
 
 
