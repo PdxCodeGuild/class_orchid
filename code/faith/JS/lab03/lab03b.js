@@ -5,7 +5,7 @@ enter.addEventListener('click', function(){
     let firstcard = document.getElementById('fc').value
     let secondcard = document.getElementById('sc').value
     let thirdcard = document.getElementById('tc').value
-    let result = document.getElementById('result')
+    let results = document.getElementById('result')
 
 
     cards = {
@@ -43,5 +43,5 @@ enter.addEventListener('click', function(){
     else if (hand >= 17 && hand < 21) {
         result ='Stay'
     }
-    
+    results.innerHTML = result
 })
