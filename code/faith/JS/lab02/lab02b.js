@@ -1,10 +1,10 @@
 let enter = document.getElementById('enter')
 
 enter.addEventListener('click', function(){
-    let distance = document.getElementById('distance')
-    let unit = document.getElementById('unit')
-    let unit2 = document.getElementById('unit2')
-    let result = document.getElementById('result')
+    let distance = document.getElementById('distance').value
+    let unit = document.getElementById('unit').value
+    let unit2 = document.getElementById('unit2').value
+    let results = document.getElementById('result')
 
     
     if (unit == 'ft'){
@@ -27,25 +27,25 @@ enter.addEventListener('click', function(){
     }
     
     if (unit2 == 'ft'){
-        return result/0.3048
+        result/0.3048
     }
     else if (unit2 == 'mi'){
-        return result/1609.34
+        result/1609.34
     }
     else if (unit2 == 'm'){
-        return(result)
+        result 
     }
     else if (unit2 == 'km'){
-        return result/1000
+        result/1000
     }
     else if (unit2 == 'yard'){
-        return result/0.9144
+        result/0.9144
     }
     else if (unit2 == 'inch'){
-        return result/0.0254
+        result/0.0254
     }
     
-    result.innerHtml = result
+    results.innerHTML = result
     console.log(result)
 }
 )
