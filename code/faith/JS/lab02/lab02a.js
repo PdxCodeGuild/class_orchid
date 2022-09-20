@@ -2,6 +2,8 @@ let distance = prompt('What is the distance? ')
 let unit = prompt('What is the starting distance?')
 let unit2 = prompt('What unit do you want to convert to? ')
 
+
+
 if (unit == 'ft'){
     result = distance * 0.3048
 }

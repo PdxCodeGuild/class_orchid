@@ -24,20 +24,20 @@ else if (unit == 'inch') {
 }
 
 if (unit2 == 'ft'){
-    alert(result/0.3048)
+    console.log(result/0.3048)
 }
 else if (unit2 == 'mi'){
-    alert(result/1609.34)
+    console.log(result/1609.34)
 }
 else if (unit2 == 'm'){
-    alert(result)
+    console.log(result)
 }
 else if (unit2 == 'km'){
-    alert(result/1000)
+    console.log(result/1000)
 }
 else if (unit2 == 'yard'){
-    alert(result/0.9144)
+    console.log(result/0.9144)
 }
 else if (unit2 == 'inch'){
-    alert(result/0.0254)
+    console.log(result/0.0254)
 }
