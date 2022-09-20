@@ -41,7 +41,6 @@ const teens = {
 }
 
 const ones = {
-
     0: 'ten ',
     1: 'one',
     2: 'two',
@@ -56,6 +55,7 @@ const ones = {
 
 numberInput = prompt('Hello, please enter a number from 0-999 to convert into words: ')
 
+
 let hundredsDigit = Math.floor(numberInput / 100)
 let tensDigit = Math.floor(numberInput / 10) % 10
 let onesDigit = numberInput % 10
@@ -63,9 +63,7 @@ let onesDigit = numberInput % 10
 console.log(hundredsDigit)
 console.log(tensDigit)
 console.log(onesDigit)
-
 console.log('The number input was this: ' + numberInput)
-
 
 if (numberInput >= 100 && tensDigit === 1) {
     console.log(hundreds[hundredsDigit] + ' ' + teens[Math.floor(numberInput / 100)]);
@@ -90,6 +88,3 @@ if (numberInput >= 100 && tensDigit === 1) {
 } else {
     console.log('Please enter a valid number from 0-999')
 }
-
-
-
