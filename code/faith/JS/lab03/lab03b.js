@@ -5,6 +5,8 @@ enter.addEventListener('click', function(){
     let firstcard = document.getElementById('fc').value
     let secondcard = document.getElementById('sc').value
     let thirdcard = document.getElementById('tc').value
+    let result = document.getElementById('result')
+
 
     cards = {
         A:1,
@@ -30,16 +32,16 @@ enter.addEventListener('click', function(){
     let hand = fc+sc+tc
     
     if (hand == 21) {
-        alert('Blackjack')
+        result ='Blackjack'
     }
     else if (hand >= 21) {
-        alert('Already busted')
+        result ='Already busted'
     }
     else if (hand <17) {
-        alert('Hit')
+        result ='Hit'
     }
     else if (hand >= 17 && hand < 21) {
-        alert('Stay')
+        result ='Stay'
     }
     
 })
