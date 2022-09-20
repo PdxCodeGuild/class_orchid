@@ -1,0 +1,9 @@
+ul#tasks {
+    list-style-type: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #900;
+    font-weight: bold;
+}

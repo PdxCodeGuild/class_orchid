@@ -11,7 +11,16 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
+        <label for="addTask">Add task: </label>
+        <input id="addTask" type="text" v-on:keyup.enter="addTodo">
+        <ul id="tasks">
+            <li v-for="(todo,index) in todos">
+                <input type="checkbox" v-on:click="completeTodo(index)" v-if="todo.complete" checked>
+                <input type="checkbox" v-on:click="completeTodo(index)" v-else>
+                <a v-on:click="deleteTodo(index)" href="#">remove</a>
+                {{ todo.task }}
+            </li>
+        </ul>
     </div>
 </body>
 </html>
