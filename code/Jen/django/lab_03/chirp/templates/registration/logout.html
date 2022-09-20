@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="XZ-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title> Chirp </title>
+    <link rel="stylesheet" href="{% static 'chirp/posts/posts.css' %}">
+</head>
+
+<header class=header>
+    <p>
+    <h1>chirp...chirp...</h1>
+    <img src="{% static 'chirp/posts/swan.png' %}" alt=" Cartoon Swan">
+    <nav>
+        <ul>
+            <li><a href="accounts/login">Log In</a></li>
+
+        </ul>
+    </nav>
+    <p>
+</header>
+
+<body>
+    <h2> Chirps </h2>
+    <p>
+    <ul>
+        <form method="GET">
+            {% for item in chirp_list %}
+            <li>
+                {{ item }}
+            </li>
+
+            {% endfor %}
+        </form>
+    </ul>
+    <p>
+
+</body>
+
+
+
+</html>
