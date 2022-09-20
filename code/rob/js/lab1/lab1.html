@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lab1.css">
-    <script src="lab1a.js"></script>
-    <!-- <script src="lab1b.js"></script> -->
+    <!-- <script src="lab1a.js"></script> -->
+    <script src="lab1b.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Unit Converter</h1>
+    <hr>
+    <label for="input">Distance</label>
+    <input type="text" id="input" placeholder="Enter a number!">
+    <br>
+    <label for="unit">From unit</label>
+    <input type="text" id="unit" placeholder="ft, mi, m, km, yd, inch">
+    <br>
+    <label for="toUnit">To unit</label>
+    <input type="text" id="toUnit" placeholder="ft, mi, m, km, yd, inch">
+    <br>
+    <button id="convert">convert</button>
+    <ul id="output"></ul>
 </body>
 </html>
