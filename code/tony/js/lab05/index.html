@@ -15,8 +15,7 @@
         <input id="addTask" type="text" v-on:keyup.enter="addTodo">
         <ul id="tasks">
             <li v-for="(todo,index) in todos">
-                <input type="checkbox" v-on:click="completeTodo(index)" v-if="todo.complete" checked>
-                <input type="checkbox" v-on:click="completeTodo(index)" v-else>
+                <input type="checkbox" v-on:click="completeTodo(index)" :checked="todo.complete">
                 <a v-on:click="deleteTodo(index)" href="#">remove</a>
                 {{ todo.task }}
             </li>
