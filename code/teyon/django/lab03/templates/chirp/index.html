@@ -7,6 +7,7 @@
     <title>Chirp</title>
 </head>
 <body>
+{% include "home.html" %}
 <form method="POST" action="">
     {% csrf_token %}
     <input type="text" autofocus maxlength="300" name="chirp_field">
