@@ -28,13 +28,12 @@ function getContactsFromLocalStorage(){
         contacts = []
         localStorage.setItem('contacts', JSON.stringify(contacts))
         const contactLi = document.createElement('li')
-        contactLi.innerText = 'contacts is empty - refresh page'
+        contactLi.innerText = 'contacts is empty'
         contactList.appendChild(contactLi)
     }
 }
 
 function addContact(){
-    console.log(contacts)
     const game = newGame.value
     const mode = newMode.value
     const champ = newChamp.value
@@ -45,18 +44,20 @@ function addContact(){
     }else{
         blankField.remove(blankDiv)
         let contact = {}
+        const keys = JSON.parse(localStorage.getItem('keys'))
         contact[keys[0]] = game
         contact[keys[1]] = mode
-        contact[keys[2]] = mode
+        contact[keys[2]] = champ
         console.log(contact)
         contacts.push(contact)
         contact = {}
         localStorage.setItem('contacts', JSON.stringify(contacts))
+        newGame.value = ''
+        newMode.value = ''
+        newChamp.value = ''
+        location.reload()
     }
-    newGame.value = ''
-    newMode.value = ''
-    newChamp.value = ''
-    location.reload()
+    
 }
 
 getContactsFromLocalStorage()
