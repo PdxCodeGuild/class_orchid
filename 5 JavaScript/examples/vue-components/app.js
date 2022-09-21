@@ -65,8 +65,8 @@ new Vue({
                 author: "Toni Morrison"
             },
             {
-                title: "Isabel Allende",
-                author: "A Long Petal of the Sea"
+                title: "A Long Petal of the Sea",
+                author: "Isabel Allende",
             },
             {
                 title: "A Tale for the Time Being",

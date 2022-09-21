@@ -13,7 +13,7 @@
         <h1>{{ libraryName }}</h1>
 
         <template v-for="book in books">
-            <book :title="book.title" :author="book.author"></book>
+            <book v-bind:title="book.title" v-bind:author="book.author"></book>
         </template>
 
         <!-- <counter></counter>
