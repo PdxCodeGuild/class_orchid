@@ -1,6 +1,14 @@
 //  Lab3 - CC Validator Part A
+// The credit card number to check is: 4556737586899855 i
 
-// The credit card number to check is: 4556737586899855 
+let cardNum = document.getElementById('cardnum')
+let submit = document.getElementById('submit')
+let submitClick = submit.addEventListener('click', cardNum.value)
+
+alert(submitClick.value)
+
+
+
 
 
 function creditCardValidator(cardNum) {
@@ -26,13 +34,4 @@ function creditCardValidator(cardNum) {
     } else {
         return false
     }
-}
-
-const cardInputFromUser = prompt("Please enter a card number to validate")
-const isCreditCardValid = creditCardValidator(cardInputFromUser)
-
-if (isCreditCardValid) {
-    alert("This credit card is VALID")
-} else {
-    alert("This credit card is NOT valid")
 }
