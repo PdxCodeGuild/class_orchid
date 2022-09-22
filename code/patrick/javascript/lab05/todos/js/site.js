@@ -1,70 +1,45 @@
 
 Vue.component('todo', {
-    template: '<span> <button v-on:click="line= !line" v-bind:class="styling" > {{todoname}} </button> {{todoname}} </span>',
-   
+    template: '<span> <button v-on:click="line= !line" v-bind:class="styling" > complete </button> {{todoname}} </span>',
     data: () => {
-        
         return {
             line: false,
-             
-
-
-
         }
     },
-    props:['todoname'],
+    props: ['todoname'],
     methods: {
-        makeline: function(){
+        makeline: function () {
             this.line = true
         },
-        
-    
-
     },
-    
-    computed: {    
-        styling(){
+    computed: {
+        styling() {
             return {
                 line: this.line
             }
         }
     }
-    
-    
-}, 
-)
+})
 
 Vue.component('deleted', {
-    template: `<span> <button v-on:click="$emit('deletetodo', todelete )">{{todelete}}  </button>  </span>`,
+    template: `<span> <button v-on:click="$emit('deletetodo', todelete )"> delete </button>  </span>`,
     data: () => {
-        
         return {
             toDoList: [],
             toDoItem: [],
-            
+
         }
     },
-    props:['todelete'],
-    
-}
+    props: ['todelete'],
+})
 
 
-)
-
-
-
-
-new Vue ( {
-    
-    
+new Vue({
     el: '#app',
     data: () => {
-        
-        return { 
-            message: 'Hello, world!' ,
+        return {
             toDoItem: [],
             toDoList: [],
-            line: false,
         }
     },
     methods: {
@@ -72,27 +47,9 @@ new Vue ( {
             this.toDoItem = e.target.value
             this.toDoList.push(e.target.value)
         },
-        deletetodo: (toDoItem) => {
-            console.log("hello")
-            console.log(toDoItem)
-            console.log(this.toDoList)
-            //console.log(this.toDoList.indexOf(toDoItem))
-            this.toDoList.splice(this.toDoList.indexOf(toDoItem),1)
-            
-
+        deletetodo(toDoItem) {
+            this.toDoList.splice(this.toDoList.indexOf(toDoItem), 1)
         }
-        
-        
-        
-        
-        
     },
-    
-           
-    
-
-}
-)
-
-
+})
 

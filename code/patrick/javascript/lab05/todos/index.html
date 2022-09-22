@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/site.css">
-    
+
     <title>To Do List</title>
 </head>
+
 <body>
-    
-    
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/site.js" defer></script>
     <div id="app">
@@ -18,19 +19,14 @@
         <p>enter a to do item </p>
         <input type="text" v-bind:value="toDoItem" v-on:keyup.enter="logInput">
         <p>to do: {{ toDoList }}</p>
-        <div >
+        <div>
             <li v-for="thing in toDoList" v-bind:key="thing">
-                <todo v-bind:todoname="thing" > </todo>
-                <deleted v-on:deletetodo="deletetodo"  v-bind:todelete="thing" > </deleted> 
-                
-
-                
+                <todo v-bind:todoname="thing"> </todo>
+                <deleted v-on:deletetodo="deletetodo" v-bind:todelete="thing"> </deleted>
             </li>
-
         </div>
+
     </div>
-
-
-   
 </body>
+
 </html>
