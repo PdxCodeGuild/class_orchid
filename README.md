@@ -17,9 +17,7 @@ M-F 9:30 am – 4:30 pm
   
     - danny@pdxcodeguild.com
  
-- Michael B, TA
- 
-- Matt Walsh, TA
+- Gage Liebl, TA
 
 ## Capstone Dates:
 
@@ -31,9 +29,9 @@ Presentation Day: October 21st, 2022
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
 | 01-03 | [Pick3](5%20JavaScript/labs/01-03%20Pick%203.md)                             | Sep 14th      | Sep 19th    | Sep 28th      |
-| 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | Sep 16th      | NA          | NA            |
-<!-- | 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | May ??th      | May ??th    | Jun  3rd      |
-| 05    | [JavaScript Mini-Capstone](5%20JavaScript/labs/07%20Mini-Capstone.md)        | May ??th      | May ??th    | Jun  3rd      | -->
+| 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | Sep 16th      | N/A         | N/A           |
+| 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | Sep 19th      | Sep 22nd    | Oct  3rd      |
+<!-- | 05    | [JavaScript Mini-Capstone](5%20JavaScript/labs/07%20Mini-Capstone.md)        | May ??th      | May ??th    | Jun  3rd      | -->
 
 
 <!-- #### Optional JavaScript Labs
