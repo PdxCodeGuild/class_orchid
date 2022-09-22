@@ -24,7 +24,7 @@ function recs(runningTotal) {
         break
     }
 
-    while (runningTotal >= 17 && runningTotal < 22) {
+    while (runningTotal >= 17 && runningTotal < 21) {
         alert(`Your total equals ${runningTotal}. You are advised to Stay.`)
         exit
 
