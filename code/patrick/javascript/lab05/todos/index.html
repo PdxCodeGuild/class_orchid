@@ -18,9 +18,11 @@
         <p>enter a to do item </p>
         <input type="text" v-bind:value="toDoItem" v-on:keyup.enter="logInput">
         <p>to do: {{ toDoList }}</p>
-        <div v-bind:class="styling">
-            <li v-for="thing in toDoList">
-                <toDo v-bind:toDoName="thing"> </toDo>
+        <div >
+            <li v-for="thing in toDoList" v-bind:key="thing">
+                <todo v-bind:todoname="thing" > </todo>
+                <deleted v-on:deletetodo="deletetodo"  v-bind:todelete="thing" > </deleted> 
+                
 
                 
             </li>
