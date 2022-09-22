@@ -6,22 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Lab3 Part B</title>
-    <style>
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+
 </head>
 
 <body>
-    <h3 style="text-align:center">Credit Card Validator</h3>
-    <div class="content">
-        <lable>Enter a credit card number: </lable>
-        <input type="text" maxlength="40" id="cardnum" placeholder="4556737586899855">
-        <input type="submit" id="submit" value="validate">
-    </div>
+    <h1>Credit Card Validator</h1>
+
+    <h2>Number to validate:</h2>
+    <p>4556737586899855</p>
+    <lable>Enter a credit card number: </lable><br>
+    <input type="text" r maxlength="40" id="cardnum" placeholder="4556737586899855">
+    <button type="button" onclick="cardNumArray()">Validate</button>
+    <p id="result">Results</p>
+
 
     <script src="script_b.js"></script>
 </body>
