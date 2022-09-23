@@ -20,6 +20,7 @@ import shortening.urls
 urlpatterns = [
     path('', include(shortening.urls)),
     path('admin/', admin.site.urls),
+
 ]
 
 

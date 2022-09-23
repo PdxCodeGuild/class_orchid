@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'chirp/styles.css' %}">
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <div id="title">
+      <h1>
+        Chirp
+      </h1>
+    </div>
+    <div id="links">
+        <a href="{% url 'chirp:index' %}">home</a>
+        <a href="{% url 'login' %}">login</a>
+        <a href="{% url 'accounts:signup' %}">sign up</a>
+    </div>
+  </nav>
+  <main>
+    {% block content %}
+    
+    {% endblock %}
+  </main>
+  <footer>
+    footer
+  </footer>
+</body>
+</html>
