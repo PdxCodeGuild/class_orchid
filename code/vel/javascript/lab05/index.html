@@ -1,0 +1,27 @@
+<!-- my for loops should have a button attached for completed and a delete button  -->
+<!-- once a item is marked completed it should have an undo button to return back to incompleted -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Todo List</title>
+    <!-- Add your styles here! -->
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-bind:value="inputField" v-on:keyup.enter="userInput">
+        <h3>incomplete</h3>
+        <li v-for = "i in incomplete">{{i}} <button v-on:click="completed(i)">completed</button> <button v-on:click="deleted(i)">delete</button></li>
+        <h3>completed</h3>
+        <li v-for = "i in complete">{{i}} <button v-on:click="remove(i)">delete</button> <button v-on:click="undo(i)">undo</button></li>
+    </div>
+
+    <!-- Include Vue from a CDN of your choice, I chose unpkg -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Include your code here... -->
+    <script src="js/site.js"></script>
+</body>
+</html>
