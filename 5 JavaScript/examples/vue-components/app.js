@@ -7,9 +7,9 @@ Vue.component('counter', {
     }
 })
 
-Vue.component('book', {
+Vue.component('BookItem', {
     template: `
-         <p class="book" v-on="checkedOut ? {click: checkIn} : {click: checkOut}" :class="{out: checkedOut}">
+        <p class="book" v-on="checkedOut ? {click: checkIn} : {click: checkOut}" :class="{out: checkedOut}">
             <strong>{{ title }}</strong><br>
             {{ author }}<br>
             checked out {{ timesCheckedOut }} times
@@ -21,7 +21,17 @@ Vue.component('book', {
             timesCheckedOut: 0
         }
     },
-    props: ['title', 'author'],
+    props: {
+        title: {
+            type: String,
+            required: true,
+            validator: (t) => {
+                // return any boolean
+                return t.length > 6
+            }
+        },
+        author: String
+    },
     methods: {
         checkOut() {
             this.checkOutDate = Date.now()
