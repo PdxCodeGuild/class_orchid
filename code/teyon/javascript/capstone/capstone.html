@@ -11,9 +11,9 @@
 <body>
     <div id="app">
         <H1>Flight Finder</H1>
-        <input type="text" id="outgoing" placeholder="Outgoing Location">
-        <input type="text" id="incoming" placeholder="Incoming Destination">
-        <input type="text" id="date" placeholder="Date">
+        <input type="text" id="outgoing" placeholder="Outgoing Location" v-model="outgoing">
+        <input type="text" id="incoming" placeholder="Incoming Destination" v-model="incoming">
+        <input type="text" id= "date" placeholder="Date" v-model="date">
         <button id="submit">Submit</button>
     </div>
 </body>
