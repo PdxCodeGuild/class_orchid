@@ -3,20 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do Vue</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/site.css">
+    <title>Todo List</title>
+
 </head>
 
 <body>
-
+    <div class="header">
+        Hello, and welcome to my Todo List
+    </div>
     <div id="app">
-        {{ message }}
+        <input type="text" v-bind:value="inputField" v-on:keyup.enter="add">
+        <h2 id="incomplete">Incomplete</h2>
+        <li v-for="item in incompleteTodo">{{item}} <button v-on:click="remove(item)">Remove Item</button>
+            <button v-on:click="done(item)">Completed</button>
+        </li><br>
+        <h2>Completed</h2>
+        <li v-for="item in completeTodo">{{item}} <button v-on:click="removeForever(item)">Remove Item</button>
+            <button v-on:click="undo(item)">Undo</button>
+        </li>
     </div>
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Include your code here... -->
     <script src="./js/script.js"></script>
 </body>
 
