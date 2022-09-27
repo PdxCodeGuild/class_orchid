@@ -1,0 +1,14 @@
+#body {
+    background-image: url('two-dogs.jpg');
+    background-size: cover;
+    border-radius: 5px;
+    height: 100px;
+    /* width: 100px; */
+    box-shadow: 2px 5px 7px 7px white;
+    /* display:inline-block; */
+} 
+
+.card {
+    display: flex;
+    flex-direction: row-reverse;
+}
