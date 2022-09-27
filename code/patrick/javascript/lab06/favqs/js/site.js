@@ -8,27 +8,59 @@ new Vue({
     data: () => {
         return {
             info: null,
-            searchItem: ''
+            searchItem: '',
+            page: 1,
+            type: '',
+
+            
         }
     },
     methods: {
         userInput(e) {
-            console.log(e)
+            
             this.searchItem = e.target.value
             
-            console.log(this.searchItem)
+            
+            
+            
             axios
                 .get('https://favqs.com/api/quotes', {
                     headers: {'Authorization':'Token token="855df50978dc9afd6bf86579913c9f8b"'}, 
-                    params: {'filter': this.searchItem}
+                    params: {'filter': this.searchItem,
+                              'page': this.page,
+                              'type': this.type
+                }
                 })
                 .then(response => { 
-                    (this.info = (this.info = response.data.quotes))
-                    console.log(response.data)
+                    (this.info = response.data.quotes)
+                    
+                    
                 })
             
             console.log(this.info)
-
+            console.log(this.page)
+            console.log(this.type)
+            
+        },
+        nextPage(){
+            this.page += 1
+            axios
+            .get('https://favqs.com/api/quotes', {
+                headers: {'Authorization':'Token token="855df50978dc9afd6bf86579913c9f8b"'}, 
+                params: {'filter': this.searchItem,
+                        'page': this.page,
+            }
+        })
+            .then(response => { 
+                (this.info = response.data.quotes)
+            
+            
+        })
+    },
+        typeChoice(e){
+            this.type = e.target.value
+            console.log(this.type)
+            
         }
     },
     mounted (){
@@ -39,10 +71,10 @@ new Vue({
             })
             .then(response => { 
                 (this.info = (this.info = response.data.quotes))
-                console.log(response.data)
+                
             })
             
-            console.log(this.info)
+            
     },
     
 

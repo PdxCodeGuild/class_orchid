@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/site.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 </head>
 <body>
@@ -14,21 +15,31 @@
         <h1>Jokes</h1>
         <h2>Search for Keywords, Tags, or Authors:  </h2>
             <input type="text" v-bind:value="searchItem" v-on:keyup.enter="userInput" >
-        {{searchItem}}
-        <div 
+            <select id="type"  v-bind:value="type" v-on:keyup.enter="typeChoice >
+            <option value="author">author</option>
+            <option value="tag">tag</option>
+            <option value="keyword">keyword</option>
+            </select>
+            
+            <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next Page" >
+            
+            
+            <div 
             v-for="joke in info"
             class="joke" 
             >
             {{joke.quotes}}:
             <span class="lighten">
-                <span v-html="joke.body"></span>{{joke.body}}  {{joke.author}}
-
-
+                <span v-html="joke.body"></span>{{joke.body}} <br> {{joke.author}}<br><br>
+                
+                
             </span>
-
+            
         </div>
         
-
+        
+        <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next Page" >
+        {{page}}
     </div>
     
 </body>
