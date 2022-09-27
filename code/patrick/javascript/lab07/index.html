@@ -25,10 +25,10 @@
             {{newrecipe.recipe.label}}<br>
             {{newrecipe.recipe.ingredientLines}}<br>
             <a :href="newrecipe.recipe.url"> click here for the recipe</a><br><br>
- 
+            <img v-bind:src="newrecipe.recipe.image"  >
         </div>
 
+        
     </div>
-    
 </body>
 </html>
