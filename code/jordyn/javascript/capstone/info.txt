@@ -1,0 +1,25 @@
+API Key - EbbNCf7kd6iCbFY3SDe8NwzQeETRhfaEvUdfk44t
+
+The Plan:
+
+Basic NASA images search and favorite website. Users be able to login and browse randomly provided/keyword indexed space images from NASA
+and save them to their profile. The main page will display a loop of 10 random favorited images from users prior and the profile pages
+will use another carousel to display previously favorited images. Bootstrap is something I have not been able to successfully utlize in any project
+and I really like the design of the Carousel model. I want to make primary use of this bootstrap wherever possible.
+
+Actually I don't know anymore.
+
+Header:
+Search Bar
+
+
+
+Sidebar:
+Search History
+
+
+Content:
+Carousel of results
+(Random without search input)
+Fill with image
+display information underneith
