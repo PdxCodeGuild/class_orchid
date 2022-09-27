@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="capstone.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="capstone.js" defer type="module"></script>
 </head>
 <body>
     <div id="app">
-        <H1>Flight Finder</H1>
+        <H1>Cheap Flight Finder</H1>
         <input type="text" id="outgoing" placeholder="Outgoing Location" v-model="outgoing">
         <input type="text" id="incoming" placeholder="Incoming Destination" v-model="incoming">
         <input type="text" id= "date" placeholder="Date" v-model="date">
-        <button id="submit">Submit</button>
+        <button id="submit" v-on:click="getIata">Submit</button>
+        <p>
+            {{ info }}
+        </p>
     </div>
+    
 </body>
 </html>
