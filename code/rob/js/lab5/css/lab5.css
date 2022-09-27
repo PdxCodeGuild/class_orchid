@@ -1,0 +1,27 @@
+body{
+    background: black;
+    color: white;
+}
+
+.quote{
+    background: rgba(255, 255, 255, 0.212);
+    color: white;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.q_author{
+    text-decoration: underline;
+}
+
+.pgButtons{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#decreaseButton{
+    margin-right: 1em;
+}
