@@ -12,10 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/site.js" defer></script>
     <div id="app" >
-        <h1>Jokes</h1>
+        <h1>Quotes</h1>
         <h2>Search for Keywords, Tags, or Authors:  </h2>
             <input type="text" v-bind:value="searchItem" v-on:keyup.enter="userInput" >
-            <select id="type"  v-bind:value="type" v-on:keyup.enter="typeChoice >
+            <select id="type"  v-model="type"  >
             <option value="author">author</option>
             <option value="tag">tag</option>
             <option value="keyword">keyword</option>

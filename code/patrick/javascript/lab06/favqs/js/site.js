@@ -57,11 +57,7 @@ new Vue({
             
         })
     },
-        typeChoice(e){
-            this.type = e.target.value
-            console.log(this.type)
-            
-        }
+        
     },
     mounted (){
         axios
