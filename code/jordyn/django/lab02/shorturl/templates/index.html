@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'shorturl/style.css' %}">
+    <title>URL Shortener</title>
+</head>
+<body>
+
+    <header>URL Shortener</header>
+
+    <!-- <label for="add_url">URL Shortener</label> -->
+    <form action="{% url 'shorturl:index' %}" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="add_url" autofocus maxlength="2048" style="width: 30vw">
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="short-list">
+        {% for url in urls %}
+        <a href="/shorturl/{{url.short_url}}" class="anchor-link">{{url.short_url}}</a>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
