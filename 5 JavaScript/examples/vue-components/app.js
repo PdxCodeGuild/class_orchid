@@ -1,5 +1,7 @@
 Vue.component('counter', {
-    template: '<button @click="count++">{{ count }}</button>',
+    // bubble information up into a parent comonent using emitted events
+    // define the event name here with $emit(), and then listen for that event in the component instantiation
+    template: `<button @dblclick="$emit('emitted-event')" @click="count++">{{ count }}</button>`,
     data: () => {
         return {
             count: 0
@@ -10,9 +12,10 @@ Vue.component('counter', {
 Vue.component('BookItem', {
     template: `
         <p class="book" v-on="checkedOut ? {click: checkIn} : {click: checkOut}" :class="{out: checkedOut}">
-            <strong>{{ title }}</strong><br>
-            {{ author }}<br>
+            <strong>{{ book.title }}</strong><br>
+            {{ book.author }}<br>
             checked out {{ timesCheckedOut }} times
+            <button @click="$emit('delete-book', book)">❌</button>
         </p>`,
     data: () => {
         return {
@@ -22,15 +25,13 @@ Vue.component('BookItem', {
         }
     },
     props: {
-        title: {
-            type: String,
+        book: {
+            type: Object,
             required: true,
-            validator: (t) => {
-                // return any boolean
-                return t.length > 6
+            validator: (b) => {
+                return b.title && b.author
             }
         },
-        author: String
     },
     methods: {
         checkOut() {
@@ -51,92 +52,123 @@ Vue.component('BookItem', {
 
 new Vue({
     el: '#app',
+    methods: {
+        removeBook(book) {
+            console.log(book);
+            const index = this.books.indexOf(book)
+            if (index !== -1) {
+                this.books.splice(index, 1)
+            }
+        }
+    },
     data: {
         libraryName: 'Class Orchid Library',
+        pCount: 0,
         books: [
             {
-                title: "The Farming of Bones",
-                author: "Edwidge Danticat"
-            },
-            {
+                id: 1,
                 title: "Future Home of the Living God",
                 author: "Louise Erdritch"
             },
             {
+                id: 2,
                 title: "Last Night at the Telegraph Club",
                 author: "Malinda Lo"
             },
             {
+                id: 3,
                 title: "Braiding Sweetgrass",
                 author: "Robin Wall Kimmerer"
             },
             {
+                id: 4,
                 title: "The Bluest Eye",
                 author: "Toni Morrison"
             },
             {
+                id: 5,
                 title: "A Long Petal of the Sea",
                 author: "Isabel Allende",
             },
             {
+                id: 6,
                 title: "A Tale for the Time Being",
                 author: "Ruth Ozeki"
             },
             {
+                id: 7,
                 title: "Disorientation",
                 author: "Elaine Hsieh Chou"
             },
             {
+                id: 8,
                 title: "The Fifth Season",
                 author: "N. K. Jemisin"
             },
             {
+                id: 9,
                 title: "Americanah",
                 author: "Chimamanda Ngozi Adichie"
             },
             {
+                id: 10,
                 title: "Woman at Point Zero",
                 author: "Nawal El-Saadawi"
             },
             {
+                id: 11,
                 title: "Persepolis",
                 author: "Marjane Satrapi"
             },
             {
+                id: 12,
                 title: "In the Dream House",
                 author: "Carmen Maria Machado"
             },
             {
+                id: 13,
                 title: "Gold Diggers",
                 author: "Sanjeetha Sathian"
             },
             {
+                id: 14,
                 title: "Kindred",
                 author: "Octavia Butler"
             },
             {
+                id: 15,
                 title: "Akata Witch",
                 author: "Nnedi Okorafor"
             },
             {
+                id: 16,
                 title: "Passing",
                 author: "Nella Larsen"
             },
             {
+                id: 17,
                 title: "Black Water Sister",
                 author: "Zen Cho"
             },
             {
+                id: 18,
                 title: "Their Eyes Were Watching God",
                 author: "Zora Neal Hurston"
             },
             {
+                id: 19,
                 title: "Iron Widow",
                 author: "Xiran Jay Zhao"
             },
             {
+                id: 20,
                 title: "Jasmine",
                 author: "Bharati Mukherjee"
+            },
+            {
+                id: 21,
+                title: "The Farming of Bones",
+                author: "Edwidge Danticat"
             },
         ]
     }
