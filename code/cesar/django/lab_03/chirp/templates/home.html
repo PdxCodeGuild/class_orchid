@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+<h6>Hi {{ user.username }}!</h6><br>
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+</div>
+<div class="container">
+    <h5>Post a chirp!!</h5>
+    <form action=" {% url 'post:add' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="chirp">
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
+
+<hr>
+
+{{ message }}
+
+
+<div class="container">
+    <h5>What is all the CHIRP about? </h5>
+    {% for chirp in chirps_list %}
+    <ul>
+        
+        <li><b>Chirp</b>: {{ chirp }} <br>
+            <a href="{% url 'post:other_user' chirp.auth_users %}">{{ chirp.auth_users }}</a> - {{ chirp.created_date }}
+        </li>
+    </ul>
+    {% endfor %}
+</div>
+
+{% else %}
+
+<div class="container">
+
+<h5>You are not logged into Chirp</h5>
+<a href=" {% url 'login' %}">Log In</a><br>
+<a href="{% url 'signup' %}">Sign Up</a>
+
+</div>
+{% endif %}
+
+{% endblock %}
