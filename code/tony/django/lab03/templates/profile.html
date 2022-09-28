@@ -1,0 +1,14 @@
+<!-- templates/user.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ user }}'s chirps zomg{% endblock %}
+
+{% block content %}
+
+<div class="mt-3">
+{% for chirp in chirps %}
+<blockquote>{{ chirp.chirp }}<br>– <a href="{% url 'profile' chirp.authuser %}">{{ chirp.authuser }}</a> at {{ chirp.timestamp }}</blockquote>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Chirp{% endblock %}
+
+{% block content %}
+{% for chirp in posts %}
+    <div class="chirp">
+        <div>
+            <div id="user-img"></div>
+            <a href="{% url 'chirp:user_chirps' chirp.user %}">{{ chirp.user }}</a>
+            <p>{{ chirp.created_at }}</p>
+        </div>
+        <p id="text">{{ chirp.text }}</p>
+        <ul>
+            <li><button><a href="{% url 'chirp:like_chirp' chirp.id%}">Likes</a></button>{{ chirp.like_set.all.count }}</li>
+            <li><button><a href="{% url 'chirp:comment_chirp' chirp.id%}">Comments</a></button>{{ chirp.comment_set.all.count }}</li>
+            <li><button><a href="{% url 'chirp:re_chirp' chirp.id%}">Rechirps</a></button>{{ chirp.rechirp_set.all.count }}</li>
+        </ul>
+    </div>
+{% endfor %}
+    
+{% endblock %}

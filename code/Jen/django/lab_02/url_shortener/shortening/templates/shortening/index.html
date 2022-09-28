@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="{% static 'shortening/style.css' %}">
+</head>
+
+<body>
+    <div class=center>
+
+        <h1>Welcome to the URL Shortener</h1>
+        <p>
+
+        <h2> Enter your url below. </h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="the_url" autofocus>
+
+            <input type="submit" value="Submit" autofocus>
+        </form>
+
+        <h3> Your shortened url is: </h3>
+        <h4> {{ shorty }}</h4>
+        </p>
+
+
+        <p>
+        <h2 class=heading> Or, enter your shortened URL to go to the associated page. <h2>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="short_version">
+                    <input type="submit" value="Submit" autofocus>
+                </form>
+                </p>
+
+
+
+    </div>
+</body>
+
+</html>
