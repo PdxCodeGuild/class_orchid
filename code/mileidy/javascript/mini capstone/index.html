@@ -12,52 +12,114 @@
 <link rel="stylesheet" href="css/site.css" />
 </head>
 <body id="body">
-<!-- nav bar start -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <!-- nav bar start -->
+    <nav id="nav"class="navbar navbar-expand-lg bg-light
+    opacity-75">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Dog Finder</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link active" aria-current="page" href="quiz">Quiz</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#favorites">Your Favorites</a>
+                    <a class="nav-link active" aria-current="page" href="#quiz">Quiz</a>
                 </div>
             </div>
         </div>
     </nav>
-<!-- navbar end -->
-<section>
-<div id="app">
-    <input type="text" v-on:keyup.enter="addDogbreeds">
-    <li v-for = "dog in dogBreeds"><div></div>{{dog['breedName']}}-{{dog['breedDescription']}}</li>
-</div>
-</section>
-<!-- card start -->
-<section id="quiz">
-<div id="cards">
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Perfect Dog Quiz</h5>
-        <p class="card-text">If you want a little extra help with your searching take the quiz linked below!</p>
-        <a href="https://freequizgames.com/which-dog-breed-is-best-for-me/"class="btn btn-primary">Find Out Which Dog Is Right For You!</a>
-    </div >
-</div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Why should I Adopt?</h5>
-                <p class="card-text">Animal shelters and rescue groups are brimming with happy, healthy pets just waiting for someone to take them home. Most shelter pets wound up there because of a human problem like a move or a divorce, not because the animals did anything wrong. Many are already house-trained and used to living with families.
-                    content.</p>
-                    <a href="https://www.hillspet.com/new-pet-parent/pet-adoption-resources?cq_src=google_ads&cq_cmp=9764181101&cq_con=103370612561&cq_term=pet%20shelter%20near%20me&cq_med=&cq_plac=&cq_net=g&cq_plt=gp&gclid=CjwKCAjwm8WZBhBUEiwA178UnIK1unmHRDc6V0veosS-r5NsHh52GA6cYeDg_nWCL_MmEjPF68oexBoCKZ8QAvD_BwE&gclsrc=aw.ds" class="btn btn-primary">Find A Pet Shelter Near You!</a>
+    <!-- navbar end -->
+    <!-- beginning of intro page -->
+    <div class="everything">
+        <div id="home" class="fullpage">
+            <h1 class="text">Welcome To Dog Finder</h1>
+            <article class="text">
+                Hello and Welcome to Dog Finder! Dog finder is an online, searchable database of animals who need homes. It
+                is also a directory of nearly 11,000 animal shelters and adoption organizations across the U.S., Canada and
+                Mexico. Organizations maintain their own home pages and available-pet databases.
+            </article>
+        </div>
+        <!-- end of page -->
+        <!-- search and favorites -->
+        <section>
+            <div id="app">
+                <div id="search">
+                    <div class="fullpage">
+                        <br><br>
+                        <h2 class="text">Start Your Search today!</h2>
+                        <input type="text" v-on:keyup.enter="addDogbreeds" placeholder="Enter Dog Breed Name"><br><br>
+                        <li id="list" v-for="dog in dogBreeds">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{dog['breedName']}}</h5>
+                                    <p class="card-text">{{dog['breedName']}} {{dog['breedDescription']}}</p>
+                                </div><button v-on:click="favoriteDog(dog)">Add To
+                                    favorites</button>
+                        </li><br></li>
+                        <div id="favorites" class="fullpage">
+                            <h2 class="text"> Your Favorites</h2>
+                            <li id="list" v-for="dog in favoritesList">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{dog['breedName']}}</h5>
+                                        <p class="card-text">{{dog['breedName']}} {{dog['breedDescription']}}</p><button
+                                            v-on:click="deleteDog(dog)">Remove Dog From Favorites</button>
+                            </li>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+        <!-- search and favorites -->
+        <!-- card start -->
+        <section id="quiz">
+            <div id="cards">
+                <div class="card" style="width: 18rem;">
+                    <img src="puppy1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Perfect Dog Quiz</h5>
+                        <p class="card-text">If you want a little extra help with your searching take the quiz linked below!
+                        </p>
+                        <a href="https://freequizgames.com/which-dog-breed-is-best-for-me/"
+                            class="btn btn-primary bg-dark">Find Out
+                            Which Dog Is Right For You!</a>
+                    </div>
+                </div>
+    
+                <div id="cards" class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Why should I Adopt?</h5>
+                        <p class="card-text">Animal shelters and rescue groups are brimming with happy, healthy pets just
+                            waiting for someone to take them home. Most shelter pets wound up there because of a human
+                            problem
+                            like a move or a divorce, not because the animals did anything wrong. Many are already
+                            house-trained
+                            and used to living with families.
+                            content.</p>
+                        <a href="https://www.hillspet.com/new-pet-parent/pet-adoption-resources?cq_src=google_ads&cq_cmp=9764181101&cq_con=103370612561&cq_term=pet%20shelter%20near%20me&cq_med=&cq_plac=&cq_net=g&cq_plt=gp&gclid=CjwKCAjwm8WZBhBUEiwA178UnIK1unmHRDc6V0veosS-r5NsHh52GA6cYeDg_nWCL_MmEjPF68oexBoCKZ8QAvD_BwE&gclsrc=aw.ds"
+                            class="btn btn-primary bg-dark">Find A Pet Shelter Near You!</a>
+                    </div>
+                </div>
+                <div id="cards">
+                    <div class="card" style="width: 18rem;">
+                        <img src="puppy3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Find Your Perfect</h5>
+                            <p class="card-text">If you decided not to adopt that is perfectly fine! Here is a link to where
+                                you can find the puppy of your dreams!
+                            </p>
+                            <a href="https://www.puppyspot.com/puppies-for-sale?cq_src=google_ads&cq_cmp=13851428123&cq_term=dogs%20online%20near%20me&cq_med=&cq_plac=&cq_net=g&cq_plt=gp&prm=1-77&utm_content=1-77&opt=dogs%20online%20near%20me&gclid=CjwKCAjw4c-ZBhAEEiwAZ105RStnOlf8T1L-_I-PtZnZRR43SszpwecjOkLoRvxLYqT2LdVMWwX8vBoCVw8QAvD_BwEclass="
+                                class="btn btn-primary bg-dark">puppyspot.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--card section ends -->
     <script src="https://unpkg.com/vue@3"></script>
     <script src="js/site.js"></script>
 </body>
+
 </html>

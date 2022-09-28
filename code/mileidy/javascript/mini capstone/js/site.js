@@ -1,9 +1,7 @@
 const App = {
     el: '#app',
     data: () => {
-        return {dogBreeds : [] }
-    },
-    mounted () {
+        return {dogBreeds : [], favoritesList : []}
     },
     methods :{
         addDogbreeds(e) {
@@ -24,8 +22,15 @@ const App = {
                 console.error(error);
             });
             console.log(e.target.value)
+            },
+            favoriteDog(i) {
+                this.favoritesList.push(i)
+            }, 
+            deleteDog(m){
+                this.favoritesList.splice(this.favoritesList.indexOf(m), 1)
+            },
         }
-    },
-}
+}      
+
 const app = Vue.createApp(App)
 app.mount('#app')
