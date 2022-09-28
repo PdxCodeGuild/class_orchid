@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #243447;
+}
+
+nav{
+    height: 5rem;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div{
+    height: 4rem;
+    width: 40%;
+    background: #1DA1F2;
+}
+
+nav #title{
+    display: grid;
+    place-items: center;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+nav #links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+#links a{
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+nav h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+.chirp{
+    width: 50%;
+    margin: 1em auto auto auto;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background: #243447;
+    color: white;
+}
+
+.chirp div{
+    display: flex;
+}
+
+.chirp #user-img{
+    height: 2em;
+    width: 2em;
+    background: #00acee;
+    border-radius: 1em;
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.chirp h2{
+    margin-right: 1em;
+}
+
+.chirp #text{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.chirp ul{
+    list-style: none;
+}
+
+.chirp li{
+    display: inline;
+}
+
+.chirp button{
+    background: #243447;
+    border: none;
+    color: white;
+    margin-right: 0.25em;
+    padding: 0.25em;
+}
+
+.chirp button:hover{
+    background: white;
+    color: #243447;
+    border-radius: 1em;
+}
+
+.chirp a{
+    text-decoration: none;
+    color: white;
+    margin-right: 0.25em;
+}
+
+.chirp a:hover{
+    text-decoration: none;
+    color: #243447;
+}
+
+#center-form{
+    width: 50%;
+    margin: 1em auto auto auto;
+}
+
+#no-chirp{
+    width: 15%;
+    margin: 2em auto;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+footer{
+    height: 5em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: black;
+    color: white;
+}

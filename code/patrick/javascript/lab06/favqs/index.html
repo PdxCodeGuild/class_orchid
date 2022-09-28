@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/site.js" defer></script>
+    <div id="app" >
+        <h1>Quotes</h1>
+        <h2>Search for Keywords, Tags, or Authors:  </h2>
+            <input type="text" v-bind:value="searchItem" v-on:keyup.enter="userInput" >
+            <select id="type"  v-model="type"  >
+            <option value="author">author</option>
+            <option value="tag">tag</option>
+            <option value="keyword">keyword</option>
+            </select>
+            
+            <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next Page" >
+            
+            
+            <div 
+            v-for="joke in info"
+            class="joke" 
+            >
+            {{joke.quotes}}:
+            <span class="lighten">
+                <span v-html="joke.body"></span>{{joke.body}} <br> {{joke.author}}<br><br>
+                
+                
+            </span>
+            
+        </div>
+        
+        
+        <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next Page" >
+        {{page}}
+    </div>
+    
+</body>
+</html>
