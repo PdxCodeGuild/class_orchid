@@ -11,6 +11,7 @@ new Vue({
             airports: airportData,
             outgoingIata: null,
             incomingIata: null,
+            favFlight: [],
         }
     },
     methods: {
@@ -48,13 +49,29 @@ new Vue({
             )
             .then(response => (this.info = response))
 
-            }
+            },
+
+        savedFlights(item){
+
+            this.favFlight.push(item)
+            
+
+
+        }
+
     },
+
+
 
     computed: {
         filteredInfo(){
+            if(this.info){
 
 
+                return this.info.data.totalTripSummary.airport
+
+            }
+        return null
 
 
         }
