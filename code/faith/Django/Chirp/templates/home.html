@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+Welcome Back {{ user.username }}!
+
+<form action="{% url 'posts:add_post' %}" method="post">
+    {% csrf_token %}
+    <label for="post">Post a Chirp</label><br>
+    <input type="text" id="post" name="post">
+    <input type="submit" value="Chirp!">
+</form>
+
+{% for post in create_post %}
+{{user.username}}<br>
+{{post.datetime_created}}<br>
+<li>{{ post }}</li><br>
+{% endfor %}
+<p><a href="{% url 'logout' %}">Log Out </a></p>
+{% else %}
+    <p>You need to login or sign up</p>
+    <a href="{% url 'login' %}">Login</a><br>
+    <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock %}
