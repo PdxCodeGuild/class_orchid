@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="XZ-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title> Chirp </title>
+    <link rel="stylesheet" href="{% static 'posts/posts.css' %}">
+</head>
+
+<header class=header>
+    <p>
+    <h1>chirp...chirp... Welcome! Please enjoy the chirps. To create your own chirp, please Log In. </h1>
+    <img src="{% static 'posts/swan.png' %}" alt=" Cartoon Swan">
+    <nav>
+        <ul>
+            <li><a href='accounts/login'>Log In</a></li>
+            <li><a href='accounts/logout'>Log Out</a></li>
+            <li><a href='accounts/signup'>Create Account</a></li>
+        </ul>
+    </nav>
+    <p>
+</header>
+
+<body>
+    <div class=center>
+
+
+        <h2> Chirps </h2>
+        <p>
+        <ul>
+            <form method="GET">
+                {% for item in all_the_chirps %}
+                <li><br>
+                    {{ item }}
+                </li>
+
+                {% endfor %}
+            </form>
+        </ul>
+        <p>
+
+
+
+
+
+    </div>
+
+</body>
+
+<footer>
+    We appreciate your Chirps!
+</footer>
+
+</html>
