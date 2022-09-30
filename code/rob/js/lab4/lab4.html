@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="js/lab4.js" defer></script>
+    <link rel="stylesheet" href="css/lab4.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Todo List</h1>
+        <input type="text" v-model="newTodo" placeholder="todo">
+        <button v-on:click="addTodo">Add Todo</button>
+        <template v-for="todo in sortedTodos">
+            <ul>
+                <li ><div class="todo">{{todo.todo}} <button @click="deleteTodo(todo.id)"><img src="trash-solid.svg" alt="delete"></button><button @click="completedTodo(todo.id)"><img src="check-solid.svg" alt="complete"></button></div></li>
+            </ul>
+        </template>
+        <br>
+        <template v-for="todo in removedTodos.slice().reverse()">
+            <ul>
+                <li class="completed"><div class="todo"></div>{{todo.todo}} <button @click="deleteCompletedTodo(todo.id)"><img src="trash-solid.svg" alt="delete"><button @click="undoCompletedTodo(todo.id)"><img src="rotate-right-solid.svg" alt="delete"></button></div></li>
+            </ul>
+        </template>
+    </div>
+</body>
+</html>

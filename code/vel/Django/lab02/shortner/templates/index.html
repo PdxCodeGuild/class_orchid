@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortner</title>
+</head>
+
+<body>
+    <header>URL Shortner</header>
+    <form action="{% url 'shortner:index' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="long_url">
+        <input type="submit" value="Shorten">
+    </form>
+    {% for url in all_links %}
+    <li>{{url.short_code}}</li>
+    {% endfor %}
+</body>
+</html>
+
+<!-- i need an input with a button and token -->
+<!-- i will need a way to display the list of all shortened url's (something similair to the completed section in grocery list) -->
