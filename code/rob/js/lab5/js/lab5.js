@@ -1,5 +1,5 @@
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-import {AUTH_KEY} from '../hide.js'
+import AUTH_KEY  from '../hide.js'
 
 createApp({
     data() {
