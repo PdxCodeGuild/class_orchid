@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="lab05.js" defer type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Teyon's Todo Tracker</h1>
+        <input type="text" id="input" v-model="todoList.task" ref="input">
+        <button type="submit" v-on:click="addTask">Add Task</button>
+        <li v-for="task in todoList">{{ task }}
+            <button type="submit" v-on:click="deleteTask(task)">delete</button>
+            <button type="submit" v-on:click="completedTask(task)">completed</button>
+        </li>
+        <h1>Completed Tasks</h1>
+        <li v-for="task in completed">{{ task }}
+            <button type="submit" v-on:click="undoTask(task)">Undo Completed</button>
+            
+        </li>
+
+    </div>
+    
+</body>
+</html>
