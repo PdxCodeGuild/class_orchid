@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Intro</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Vue Intro</h1>
+
+        <!-- Declarative Rendering -->
+        <!-- Render data from the App's "data" object into the template -->
+        <h3>{{ className }}</h3>
+        <p>Started on: {{ startDate }}</p>
+        <p>Graduating date: {{ getGradDate() }}</p>
+
+        <!-- Data Binding -->
+        <!-- Bind DOM element attributes to app data -->
+
+        <!-- <a v-bind:href="repo">Github repository</a><br> -->
+        <a :href="repo">Github repository</a><br>
+        <!-- : is a shorthand for v-bind -->
+        <a v-html:href="repoTag"></a>
+
+        <!-- DOM Events -->
+        <!-- The v-on directive attaches a method to a specified event listener -->
+        <!-- https://vuejs.org/guide/essentials/event-handling.html#event-modifiers -->
+        <hr>
+        <h3>Events and event modifiers</h3>
+        <p>Kudos: {{ kudos }}</p>
+        <button v-on:click="kudos++">Give kudos</button>
+        <!-- @ is a shorthand for v-on -->
+        <button @click="giveKudos(10)" @dblclick.once="giveKudos(100)">Give 10 kudos</button>
+
+        <!-- Two-way Data Binding -->
+        <hr>
+        <h3>Two-way Data Binding</h3>
+
+        <p>V-bind + enter key event listener: </p>
+        <input type="text" v-bind:value="inputField" v-on:keyup.enter="logInput">
+        <p>V-model: </p>
+        <input type="text" v-model="inputField"><br>
+        {{ inputField }}
+
+        <!-- Conditionals -->
+        <hr>
+        <h3>Conditional rendering</h3>
+        <span>Type between 3 and 10 characters here</span>
+        <input type="text" v-model="inputField2">
+        <!-- v-if only renders to the page if condition is true -->
+        <span v-if="inputField2.length == 0">type something!</span>
+        <span v-else-if="inputField2.length < 3">Too short</span>
+        <span v-if="inputField2.length > 10">Too long</span>
+
+        <!-- v-show always renders to the page, sets display:none if false -->
+        <!-- <span v-show="inputField2.length < 3">Too short</span>
+        <span v-show="inputField2.length > 10">Too long</span> -->
+
+        <!-- Computed Properties -->
+        <hr>
+        <h3>Computed Properties</h3>
+        <button v-on:click="a++">Team A scores</button>
+        <button v-on:click="b++">Team B scores</button>
+        <p>Team A score: {{ a }}</p>
+        <p>Team B score: {{ b }}</p>
+        <p>Team A's season total: {{ scoreA }}</p>
+        <p>Team B's season total: {{ scoreB }}</p>
+
+        <!-- Dynamic CSS Classes -->
+        <hr>
+        <h3>Dynamic CSS classes</h3>
+        <button v-on:click="boxRed = !boxRed">Make it red</button>
+        <button v-on:click="transparent = !transparent">Make it transparent</button><br><br>
+
+        <!-- <div id="box" v-bind:class="{red: a > 3}">Look, a fancy box</div> -->
+        <div id="box" v-bind:class="boxClasses">Look, a fancy box</div>
+
+        <!-- Loops -->
+        <hr>
+        <h3>Loops</h3>
+        <h4>Class Orchid Students and staff:</h4>
+        <ul>
+            <li v-for="(thing, index) in students">{{ index+1 }}. {{ thing }}</li>
+            <!-- can't do this! use a computed property to filter instead-->
+            <!-- <li v-for="s in staff" v-if="s.active">{{ s.name }}: {{ s.title }}</li> -->
+            <li v-for="s in activeStaff">{{ s.name }}: {{ s.title }}</li>
+        </ul>
+
+        <h4>Seasons:</h4>
+        <!-- template tags won't render an html element -->
+        <template v-for="(months, season) in seasons">
+            <!-- loop over object with (val, key)-->
+            <h5>{{ season }}</h5>
+            <ul>
+                <li v-for="m in months">{{ m }}</li>
+            </ul>
+        </template>
+    </div>
+</body>
+
+</html>
