@@ -31,10 +31,11 @@ if (a > b) {
     valA = 'thing2'
 }
 
+// if your conditions get long or complex, break them out into a variable
 const condition = a > b && 1 > 0 || isFalse && 'whatever'
 
 const myObj = {
-    valA: condition ? 'thing3' : 'thing2'
+    valA: condition ? 'thing1' : 'thing2'
 }
 
 console.log(myObj);
