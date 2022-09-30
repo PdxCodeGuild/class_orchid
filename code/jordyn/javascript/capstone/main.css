@@ -25,7 +25,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 1;
-
 }
 
 .side-bar {
@@ -33,6 +32,9 @@ header {
     grid-area: side-bar;
     flex-direction: column;
     align-items: center;
+
+    position: fixed;
+    padding-top: 100px;
     
     color: rgb(255, 255, 255);
 }
@@ -82,6 +84,7 @@ a {
 li {
     list-style-type: none;
     padding-top: 20px;
+    padding-left: 20px;
 }
 
 .card:hover {
