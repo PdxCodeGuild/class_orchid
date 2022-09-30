@@ -14,7 +14,7 @@
 
 ## Intro
 
-JavaScript is a front-end language, written in `<script>` tags or in external `.js` files, and run by an interpreter in the browser. You can find more info in JavaScript [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) and [here](https://www.w3schools.com/js/default.asp). You can view a list of JavaScript frameworks [here]().
+JavaScript is a front-end language, written in `<script>` tags or in external `.js` files, and run by an interpreter in the browser. You can find more info in JavaScript [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) and [here](https://www.w3schools.com/js/default.asp).
 
 JavaScript has become the de-facto standard for front-end. There used to be Flash (which had a JavaScript-like language called ActionScript), Java Applets, and Microsoft's Silverlight. But with the development of stronger standards for JavaScript and the discovery of security holes in the other frameworks, browsers began dropping support.
 
