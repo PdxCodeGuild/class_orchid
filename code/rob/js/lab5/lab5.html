@@ -14,8 +14,11 @@
         <h1>Fav Quotes</h1>
         <hr>
         <br>
-        <input type="text" name="search" id="search" v-model="data.filter" placeholder="search" autocomplete="off">
-        <button @click="() => {data.filter = search}">Search</button>
+        <input type="text" name="search" id="search" v-model="search" placeholder="search" autocomplete="off">
+        <button @click=getSearchQuotes>Search</button>
+        <hr>
+        <h3>Quote of the day</h3>
+        <p>{{qotd}}</p>
         <hr>
         <template v-for="quote in quotesList" :key="quote.id">
             <quote
@@ -25,8 +28,8 @@
             </quote>
         </template>
         <div class="pgButtons">
-            <button id="decreaseButton" @click="getQuotes()">Prev Page</button>
-            <button id="increaseButton" @click="getQuotes()">Next Page</button>
+            <button id="decreaseButton" >Prev Page</button>
+            <button id="increaseButton" >Next Page</button>
         </div>
     </div>
     

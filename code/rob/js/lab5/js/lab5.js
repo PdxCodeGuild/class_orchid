@@ -4,9 +4,9 @@ import AUTH_KEY  from '../hide.js'
 createApp({
     data() {
         return {
-          message: 'Hello Vue!',
-          apiTest: this.testAPI(),
           quotesList: [],
+          qotd: '',
+          search: '',
           data: {page: 1}
         }
       },
@@ -24,15 +24,13 @@ createApp({
             const params = {headers:{'Authorization':`Token token=${AUTH_KEY}`}}
             const res = await axios.get('https://favqs.com/api/qotd', params).then((res) => {
                 console.log(res)
-                console.log
-                this.apiTest = res.data.quote.body
-                this.quotesList = res.data.quotes
+                this.qotd = res.data.quote.body
             }).catch(error => {
                 console.log(error)
                 return error
             })
         },
-        async getQuotes(){
+        async getRandomQuotes(){
             const params = {headers:{'Authorization':`Token token=${AUTH_KEY}`}}
             params.params = this.data
             const quotesFromApi = await axios.get('https://favqs.com/api/quotes/', params)
@@ -42,12 +40,26 @@ createApp({
             }).catch((error) => {
                 console.log(error)
             })
+        },
+        async getSearchQuotes(){
+            const params = {headers:{'Authorization':`Token token=${AUTH_KEY}`}}
+            params.params = this.data
+            const quotesFromApi = await axios.get(`https://favqs.com/api/quotes/?filter=${this.search}`, params)
+            .then((res) => {
+                console.log(res)
+                this.quotesList = res.data.quotes
+            }).catch((error) => {
+                console.log(error)
+            })
+
+            this.search = ''
         }
       },
       computed: {
-        
+
       },
       async mounted(){
-        await this.getQuotes(1)
+        await this.testAPI()
+        await this.getRandomQuotes()
       }
 }).mount('#app')
