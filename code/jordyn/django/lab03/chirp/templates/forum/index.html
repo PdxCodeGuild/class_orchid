@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'forum/styles.css' %}">
+    <title>Chirp</title>
+</head>
+<body>
+
+    <div class="header-bar">
+        <header id="chirp-name">Chirp!</header>
+        <div id="user-buttons">
+            <p>{{ user.username }}</p>
+            <a href="{% url 'logout' %}">logout</a>
+        </div>
+    </div>
+
+    <!-- <p>{{chirp.user.username}}</p> -->
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="chirp-field" autofocus maxlength="285">
+        <input type="submit" value="Chirp!">
+
+    </form>
+
+    {% for chirp in all_chirps %}
+    <div class="chirp-container">
+        <section id="username">
+            {{chirp.user.username}}
+        </section>
+        <section id="chirped">
+            {{chirp.content}}
+        </section>
+        <section id="chirp-date">
+            {{chirp.posted_date}}
+        </section>
+
+    </div>
+
+    {% endfor %}
+
+</body>
+</html>

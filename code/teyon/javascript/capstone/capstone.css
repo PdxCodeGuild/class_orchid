@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+    color: rgba(23, 4, 120, 0.945);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+#app {
+    color: rgba(23, 4, 120, 0.945);
+    font-family: 'Times New Roman', Times, serif;
+}
+#fonta {
+    color: red;
+}
+
+.userinput {
+    display:flex;
+    justify-content: center;
+    
+}
+
+.saved {
+    display: flex;
+    justify-content: center;
+}
+
+.savedinput {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-image: url("https://media.istockphoto.com/vectors/animated-plane-flying-across-the-world-vector-id457714887?k=20&m=457714887&s=170667a&w=0&h=x7veK1vpccvbI_7WJ08tAkopJ_08183-WuRbaUUnmvQ=");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 500px 400px;
+    background-repeat: no-repeat;
+    background-color: ghostwhite;
+}

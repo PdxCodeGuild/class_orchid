@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Axios Crash Course</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="data.js"></script>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <div id="app" class="container my-5">
+
+        <div class="row">
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input id="keyword" class="form-control" type="text" v-on:keyup.enter="doSearch" placeholder=" ">
+                    <label for="keyword">search keyword &lt;press enter&gt;</label>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input id="author" class="form-control" type="text" v-on:keyup.enter="doSearch" placeholder=" ">
+                    <label for="author">search author &lt;press enter&gt;</label>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <input id="tag" class="form-control" type="text" v-on:keyup.enter="doSearch" placeholder=" ">
+                    <label for="tag">search tag &lt;press enter&gt;</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button v-if="less" class="btn btn-info" @click="getQuotes(-1)">&lt;&lt;</button>
+            <button v-if="more" class="btn btn-info" @click="getQuotes(1)">&gt;&gt;</button>
+        </div>
+
+        <div class="quotes row">
+            <template v-for="quote in data.quotes">
+                <QuoteItem v-bind:body="quote.body" v-bind:author="quote.author"></QuoteItem>
+            </template>
+        </div>
+
+        <div class="text-center">
+            <button v-if="less" class="btn btn-info" @click="getQuotes(-1)">&lt;&lt;</button>
+            <button v-if="more" class="btn btn-info" @click="getQuotes(1)">&gt;&gt;</button>
+        </div>
+
+        <div v-if="search.query">Search type: <strong>{{ search.type }}</strong></div>
+        <div v-if="search.query">Search query: <strong>{{ search.query }}</strong></div>
+        <div v-if="url">Endpoint: <strong>{{ url }}</strong></div>
+
+    </div>
+</body>
+
+</html>
