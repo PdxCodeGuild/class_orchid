@@ -1,0 +1,16 @@
+{% extends "cookbook/base.html" %}
+{%block content  %}
+    {% for recipe in recipes %}
+        <article class="media content-section">
+            <img class="rounded-circle article-image" src="{{ recipe.ruser.profile.image.url }}" >
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="{% url 'user-posts' recipe.ruser %}" >{{ recipe.ruser }}</a>
+                <small class="text-muted">{{ recipe.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'recipe-detail' recipe.id %}">{{ recipe.recipetitle }}</a></h2>
+            <p class="article-content">{{ recipe.ingredients }} {{recipe.recipelines}}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
