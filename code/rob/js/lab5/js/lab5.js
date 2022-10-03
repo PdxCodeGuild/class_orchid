@@ -7,6 +7,7 @@ createApp({
           quotesList: [],
           qotd: '',
           search: '',
+          prevSearch: '',
           data: {page: 1}
         }
       },
@@ -51,9 +52,27 @@ createApp({
             }).catch((error) => {
                 console.log(error)
             })
-
+            this.prevSearch = this.search
             this.search = ''
-        }
+        },
+        async getNextPageSearch(page){
+            const params = {headers:{'Authorization':`Token token=${AUTH_KEY}`}}
+            if(this.data.page == 0){
+                this.data.page += 1
+            }
+            if((this.data.page) >= 1){
+                this.data.page += page
+            }
+            console.log(this.data.page, this.prevSearch)
+            params.params = this.data
+            const quotesFromApi = await axios.get(`https://favqs.com/api/quotes/?filter=${this.prevSearch}`, params)
+            .then((res) => {
+                console.log(res)
+                this.quotesList = res.data.quotes
+            }).catch((error) => {
+                console.log(error)
+            })
+        },
       },
       computed: {
 
