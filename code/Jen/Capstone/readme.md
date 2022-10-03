@@ -23,8 +23,15 @@ This website is intended to become the business website at the already purchased
 
 ## Data Model
 Stored data that the app will require
-- Images and information about the rabbits
-- Information about the rabbit's ancestors
+### Rabbit Model
+ Images and information about the rabbits
+- Parents
+- Age
+- Variety
+- Show wins
+ Information about the rabbit's ancestors
+- 
+### User Model
 - Username
 - Password
 - Email
@@ -45,17 +52,20 @@ Stored data that the app will require
 
 [ ] Use basic CSS styling from the beginning
 
+[ ] Extend html formatting across pages
+
 [ ] Allow users to see everything
 
-[ ] Create the user gallery page
+[ ] Email link on the page for users to contact me
 
-[ ] Users can only upload photos if they are logged in
+### Week 3/Would like to have:
+[ ] Create the Rex page
 
-[ ] Authenticated users can send messages directly through the page
+[ ] Create the user input page
 
-[ ] Unauthenticated users can email
+[ ] Users can only upload content if they are logged in
 
-### Week 3:
+[ ] Fine-tune CSS
 
 [ ] Add links to organizations
 
@@ -63,7 +73,10 @@ Stored data that the app will require
 
 [ ] Add upcoming shows
 
+[ ] SSL/TLS before launch
+
 ### Nice to have :
+[ ] Policies page, possibly combined with an about page
 
 [ ] Educational content
 
