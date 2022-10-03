@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
+body {
+    background: url('two-dogs.jpg')  no-repeat fixed center;
+    font-family: 'Abyssinica SIL', serif;
+    font-weight:600;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+    background-size: 100vw;
+} 
+
+input{
+    width: 100%;
+    margin: 0 auto;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+#home{
+    text-align:center;
+}
+
+#nav{
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+
+#cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+#search{
+    margin-bottom: 300px;
+}
+
+#list{
+    list-style: none;
+}
+
+#results{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.text{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.everything{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
+}
