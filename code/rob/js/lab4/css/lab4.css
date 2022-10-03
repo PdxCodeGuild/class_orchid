@@ -1,0 +1,20 @@
+body{
+    background: slategray;
+}
+
+.todo{
+    text-decoration: underline;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    height: 10px;
+    width: 10px;
+}
