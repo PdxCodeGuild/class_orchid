@@ -7,7 +7,27 @@ The will give the user to ability to search words and obtain definitions for tha
 
 # Data Model
 
-The data that will be stored are The Words and definitions of those words. I'll be using the DictionaryApi (https://dictionaryapi.dev/). I will have 2 different lists. One to store the words and definitions in the favorites list and one to to store random definitions to quiz the user. https://api.dictionaryapi.dev/api/v2/entries/en/<word>. Also a user login/registion will be used to hold the users username/Password. when logged in with their cridentials, they will have access to their lists, quizzes, and flashcards.
+User Model
+- Registration
+- Login
+- Logout
+
+Quiz Model
+- Randomize definitions and words
+- result page with how many are wrong and right
+
+Flashcard Model
+- Saves favorites words and makes a study system
+
+Word Model
+- user inputs word
+- definitions comes back
+- can save the favorites list
+
+
+
+<!-- 
+The data that will be stored are The Words and definitions of those words. I'll be using the DictionaryApi (https://dictionaryapi.dev/). I will have 2 different lists. One to store the words and definitions in the favorites list and one to to store random definitions to quiz the user. https://api.dictionaryapi.dev/api/v2/entries/en/<word>. Also a user login/registion will be used to hold the users username/Password. when logged in with their cridentials, they will have access to their lists, quizzes, and flashcards. -->
 
 
 # Schedule
