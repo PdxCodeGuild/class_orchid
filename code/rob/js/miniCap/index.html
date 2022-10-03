@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" type="module" defer></script>
+    <title>Mini-Cap</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <hr>
+        <button @click="startSession()">Start Session</button>
+        <button @click="testSession()">Test Session</button>
+        <button @click="getGods()">Get Gods</button>
+        <button @click="getSkins()">Get skins</button>
+        <hr>
+        <input type="text" v-model="name" @change="nameChange">
+        
+        {{name}}
+        <label for="gods">Roles: </label>
+        <select name="gods" id="godsSelect" @change="onChange($event)">
+            <option value="All">All</option>
+            <option value="Assassin">Assassin</option>
+            <option value="Mage">Mage</option>
+            <option value="Hunter">Hunter</option>
+            <option value="Warrior">Warrior</option>
+            <option value="Guardian">Guardian</option>
+        </select>
+        <div id="godStats">
+            <p id="name">{{godStats.Name}}</p>
+            <p>{{godStats.one}}</p>
+            <p>{{godStats.two}}</p>
+            <p>{{godStats.three}}</p>
+            <p>{{godStats.four}}</p>
+        </div>
+        <div id="godCardSection">
+            <div v-if="filtergods != []">
+            <template v-for="god in filtergods">
+
+                <godcard v-if="god.Roles == role"
+                v-bind:god="god"
+                v-on:selectgod="getStats">
+                </godcard>
+            
+                <godcard v-if="role == 'All'"
+                v-bind:god="god"
+                v-on:selectgod="getStats">
+                </godcard>
+            </template>
+            <br><hr>
+        </div>
+            <template v-for="god in gods">
+
+                <godcard v-if="god.Roles == role"
+                v-bind:god="god"
+                v-on:selectgod="getStats">
+                </godcard>
+            
+                <godcard v-if="role == 'All'"
+                v-bind:god="god"
+                v-on:selectgod="getStats">
+                </godcard>
+            </template>
+        </div>
+    </div>
+</body>
+</html>
