@@ -1,0 +1,22 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#app {
+    background-color: bisque;
+    width: 300px;
+    height: auto;
+    border-style: dotted;
+    border-spacing: 10px;
+    margin: 10px;
+}
+
+.header {
+    font-size: medium;
+    border-style: dotted;
+    width: 300px;
+    background-color: bisque;
+    padding: 10px;
+
+
+}

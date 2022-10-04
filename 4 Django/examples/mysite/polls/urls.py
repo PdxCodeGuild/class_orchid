@@ -10,4 +10,7 @@ urlpatterns = [
     path('<int:question_id>/vote', views.vote, name='vote'),
     path('add', views.add, name='add'),
     path('<int:question_id>/delete', views.delete, name='delete'),
+    path('all_results/', views.all_results_view),
+    path('api/all_questions', views.get_questions),
+    path('api/all_choices', views.get_choices)
 ]
