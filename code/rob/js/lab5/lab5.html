@@ -16,6 +16,11 @@
         <br>
         <input type="text" name="search" id="search" v-model="search" placeholder="search keywords" autocomplete="off">
         <button @click=getSearchQuotes>Search</button>
+        <select name="choice" id="choice"  v-model="key">
+            <option value="key">Key Word</option>
+            <option value="author">Author</option>
+            <option value="tag">Tag</option>
+        </select>
         <hr>
         <h3>Quote of the day</h3>
         <p>{{qotd}}</p>

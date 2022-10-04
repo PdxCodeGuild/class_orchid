@@ -8,6 +8,7 @@ createApp({
           qotd: '',
           search: '',
           prevSearch: '',
+          key: '',
           data: {page: 1}
         }
       },
@@ -45,15 +46,32 @@ createApp({
         async getSearchQuotes(){
             const params = {headers:{'Authorization':`Token token=${AUTH_KEY}`}}
             params.params = this.data
-            const quotesFromApi = await axios.get(`https://favqs.com/api/quotes/?filter=${this.search}`, params)
-            .then((res) => {
-                console.log(res)
-                this.quotesList = res.data.quotes
-            }).catch((error) => {
-                console.log(error)
-            })
+            console.log(this.key)
+            if(this.key == 'key'){
+                console.log('here key')
+                const quotesFromApi = await axios.get(`https://favqs.com/api/quotes/?filter=${this.search}`, params)
+                    .then((res) => {
+                        console.log(res)
+                        this.quotesList = res.data.quotes
+                    }).catch((error) => {
+                        console.log(error)
+                    })
+            }else{
+                console.log('here else')
+                const quotesFromApi = await axios.get(`https://favqs.com/api/quotes/?filter=${this.search}&type=${this.key}`, params)
+                    .then((res) => {
+                        console.log(res)
+                        this.quotesList = res.data.quotes
+                    }).catch((error) => {
+                        console.log(error)
+                    })
+            }
+            
             this.prevSearch = this.search
             this.search = ''
+        },
+        async getSearchAttrQuotes(){
+            console.log(this.key)
         },
         async getNextPageSearch(page){
             const params = {headers:{'Authorization':`Token token=${AUTH_KEY}`}}
