@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_06 Cesar Rebolledo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</head>
+<body>
+
+    <div id="app" >
+        <h1>Quotes API</h1>
+        <h2>Instructions:</h2>
+        <ol>
+            <li><b>Select a tag FIRST</b></li>
+            <li>Type in a keyword</li>
+            <li>Press enter while cursor is in the textbox</li>
+        </ol>
+        <h2>Search:</h2>
+            <lable>Tag</lable>
+            <select id="type"  v-model="type">
+            <option value="keyword">keyword</option>
+            <option value="author">author</option><br>
+            </select><br>
+            <lable>Keyword</lable>
+            <input type="text" v-bind:value="searchTerm" v-on:keyup.enter="search"><br>
+            <h2>Results:</h2>
+            <div v-for="q in output">
+                <ul>
+                    {{q.quotes}}
+                ********************************************************************<br>
+                </ul>
+                "{{q.body}}"<br> 
+                --- {{q.author}}<br><br>
+            </div>
+
+
+        <b>Page Number:</b>{{page}}
+        <input type="button" v-bind:value="page" v-on:click="next" value="Next">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./app.js" defer></script>
+</body>
+</html>
