@@ -27,12 +27,18 @@ for a safer run
 - User ability to share upcoming races.
 
 ## Data Model
-- Users 
-- Password
-- Comments 
-- Likes = True False?
-- Email address 
-- Shared Images
+- User Model:
+    * User registration
+    * Email addresses 
+    * Logging in (built in Django)
+    * Logging out
+    * Passwords
+    * Other users followed (foregin key)
+
+- Post Model:
+    * Run (charfield)
+    * created date (datetimefiled)
+    * users (foriegn key)
 
 ## Timeline
 ### Week 1 
