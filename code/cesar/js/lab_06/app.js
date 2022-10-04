@@ -6,7 +6,6 @@ new Vue({
             type: '',
             output: null,
             searchTerm: '',
-
         }
     },
     mounted (){
@@ -25,6 +24,7 @@ new Vue({
             axios
                 .get('https://favqs.com/api/quotes', {
                     headers: {'Authorization':'Token token="855df50978dc9afd6bf86579913c9f8b"'}, 
+                    // params for filtering 
                     params: {'filter': this.searchTerm,
                               'page': this.page,
                               'type': this.type
@@ -32,11 +32,9 @@ new Vue({
                 })
                 .then(response => { 
                     (this.output = response.data.quotes)
-
-
                 })
         },
-        nextPage(){
+        next(){
             this.page += 1
             axios
             .get('https://favqs.com/api/quotes', {
@@ -49,6 +47,5 @@ new Vue({
                 (this.output = response.data.quotes)
         })
     },
-
-    },
+}
 })
