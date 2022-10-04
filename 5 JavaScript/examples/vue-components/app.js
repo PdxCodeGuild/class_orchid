@@ -1,5 +1,7 @@
 Vue.component('counter', {
-    template: '<button @click="count++">{{ count }}</button>',
+    // bubble information up into a parent comonent using emitted events
+    // define the event name here with $emit(), and then listen for that event in the component instantiation
+    template: `<button @dblclick="$emit('emitted-event')" @click="count++">{{ count }}</button>`,
     data: () => {
         return {
             count: 0
@@ -10,9 +12,10 @@ Vue.component('counter', {
 Vue.component('BookItem', {
     template: `
         <p class="book" v-on="checkedOut ? {click: checkIn} : {click: checkOut}" :class="{out: checkedOut}">
-            <strong>{{ title }}</strong><br>
-            {{ author }}<br>
+            <strong>{{ book.title }}</strong><br>
+            {{ book.author }}<br>
             checked out {{ timesCheckedOut }} times
+            <button @click="$emit('delete-book', book)">❌</button>
         </p>`,
     data: () => {
         return {
@@ -22,15 +25,13 @@ Vue.component('BookItem', {
         }
     },
     props: {
-        title: {
-            type: String,
+        book: {
+            type: Object,
             required: true,
-            validator: (t) => {
-                // return any boolean
-                return t.length > 6
+            validator: (b) => {
+                return b.title && b.author
             }
         },
-        author: String
     },
     methods: {
         checkOut() {
@@ -51,14 +52,19 @@ Vue.component('BookItem', {
 
 new Vue({
     el: '#app',
+    methods: {
+        removeBook(book) {
+            console.log(book);
+            const index = this.books.indexOf(book)
+            if (index !== -1) {
+                this.books.splice(index, 1)
+            }
+        }
+    },
     data: {
         libraryName: 'Class Orchid Library',
+        pCount: 0,
         books: [
-            {
-                id: 0,
-                title: "The Farming of Bones",
-                author: "Edwidge Danticat"
-            },
             {
                 id: 1,
                 title: "Future Home of the Living God",
@@ -158,6 +164,11 @@ new Vue({
                 id: 20,
                 title: "Jasmine",
                 author: "Bharati Mukherjee"
+            },
+            {
+                id: 21,
+                title: "The Farming of Bones",
+                author: "Edwidge Danticat"
             },
         ]
     }
