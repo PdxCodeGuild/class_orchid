@@ -12,42 +12,37 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./app.js" defer></script>
     <div id="app" >
-        <h1>Quotes</h1>
+        <h1>Quotes API</h1>
         <h2>Instructions:</h2>
         <ol>
+            <li><b>Select a tag FIRST</b></li>
             <li>Type in a keyword</li>
-            <li>Select a tag</li>
             <li>Press enter while cursor is in the textbox</li>
         </ol>
         <h2>Search:</h2>
-            <lable>Keyword</lable>
-            <input type="text" v-bind:value="searchTerm" v-on:keyup.enter="search" ><br>
             <lable>Tag</lable>
-            <select id="type"  v-model="type"  >
-            <option value="author">author</option>
+            <select id="type"  v-model="type">
+            <option value="keyword">keyword</option>
             <option value="tag">tag</option>
-            <option value="keyword">keyword</option><br>
+            <option value="author">author</option><br>
             </select><br>
-            
-            <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next Page" >
+            <lable>Keyword</lable>
+            <input type="text" v-bind:value="searchTerm" v-on:keyup.enter="search"><br>
+            <h2>Results:</h2>
+            <div v-for="q in output" class="q">
+                {{q.quotes}}<br>
+            **********************************<br>
+            **********************************<br>
 
-
-            <div 
-            v-for="joke in info"
-            class="joke" 
-            >
-            {{joke.quotes}}:
-            <span class="lighten">
-                <span v-html="joke.body"></span>{{joke.body}} <br> {{joke.author}}<br><br>
-
-
+            <span>
+                {{q.body}} <br> {{q.author}}<br><br>
             </span>
 
         </div>
 
 
-        <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next Page" >
-        {{page}}
+        <b>Page Number:</b>{{page}}
+        <input type="button" v-bind:value="page" v-on:click="nextPage" value="Next" >
     </div>
 
 </body>
