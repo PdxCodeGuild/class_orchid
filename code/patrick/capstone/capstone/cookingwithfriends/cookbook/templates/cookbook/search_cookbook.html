@@ -1,0 +1,24 @@
+{% extends "cookbook/base.html" %}
+{%block content  %}
+    <center>
+        {% if searched %}
+            <h1>you searched for {{ searched }}</h1>
+            <br>
+            {% for recipe in srecipes %}
+                {{recipe.recipetitle}}
+                <br>
+                <br>
+                {{recipe.ingredients}}
+                <br>
+                <br>
+                {{recipe.recipelines}}
+
+            {% endfor %}
+            
+        
+        {% else %}
+            <h1>hey you for to search for a recipe</h1>    
+        {% endif %}
+        
+    </center>
+{% endblock content %}

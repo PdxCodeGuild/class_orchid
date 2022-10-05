@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import Recipe
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 from django.contrib.auth.models import User
 
@@ -30,16 +30,29 @@ class RecipeCreatelView(LoginRequiredMixin ,CreateView):
         form.instance.ruser = self.request.user
         return super().form_valid(form)
     
-class RecipeUpdateView(LoginRequiredMixin ,UpdateView):
+class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
     model = Recipe
     fields = ['recipetitle', 'ingredients', 'recipelines']
 
     def form_valid(self, form):
         form.instance.ruser = self.request.user
         return super().form_valid(form)    
-
+    def test_func(self):
+        recipe = self.get_object()
+        if self.request.user == recipe.ruser:
+            return True
+        return False    
 def about(request):
     return render(request, 'cookbook/about.html')
+
+class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Recipe
+    success_url = '/cookbook/'
+    def test_func(self):
+        recipe = self.get_object()
+        if self.request.user == recipe.ruser:
+            return True
+        return False    
 
 
 class UserPostView(ListView):
@@ -72,4 +85,10 @@ def C_user(request,recipe_username ):
     
 
 
-          
+def search_cookbook(request):
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        srecipes = Recipe.objects.filter(recipetitle__contains = searched)
+        singredients = Recipe.objects.filter(ingredients__contains = searched)
+        
+        return render(request, 'cookbook/search_cookbook.html', {'searched': searched, 'srecipes': srecipes, 'singredients': singredients})

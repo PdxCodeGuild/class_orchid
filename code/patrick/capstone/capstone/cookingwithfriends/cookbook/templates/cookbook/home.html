@@ -9,7 +9,8 @@
                 <small class="text-muted">{{ recipe.date_posted }}</small>
             </div>
             <h2><a class="article-title" href="{% url 'recipe-detail' recipe.id %}">{{ recipe.recipetitle }}</a></h2>
-            <p class="article-content">{{ recipe.ingredients }} {{recipe.recipelines}}</p>
+            <p class="article-content">{{ recipe.ingredients }} </p>
+            <p class="article-content"> {{recipe.recipelines}}</p>
             </div>
         </article>
     {% endfor %}

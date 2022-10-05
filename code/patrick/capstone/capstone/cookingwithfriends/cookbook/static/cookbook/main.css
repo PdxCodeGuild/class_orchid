@@ -1,5 +1,6 @@
 body {
-    background: #fafafa;
+  background: #817f75;  
+  
     color: #333333;
     margin-top: 5rem;
   }
@@ -13,9 +14,10 @@ body {
   }
   
   .bg-steel {
-    background-color: #5f788a;
+    background-color: #0E273C;
   }
   
+
   .site-header .navbar-nav .nav-link {
     color: #cbd5db;
   }
@@ -27,11 +29,15 @@ body {
   .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
   }
+  .nav-link{
+    color: #0E273C;
+  }
   
+
   .content-section {
-    background: #ffffff;
+    background: #EBE4AD;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    
     border-radius: 3px;
     margin-bottom: 20px;
   }
@@ -41,7 +47,7 @@ body {
   }
   
   a.article-title:hover {
-    color: #428bca;
+    color: black;
     text-decoration: none;
   }
   
@@ -81,4 +87,13 @@ body {
   
   .account-heading {
     font-size: 2.5rem;
+  }
+
+  .recipe-item{
+    color: red;
+  }
+
+  .searchdisplay {
+    display: inline;
+    
   }

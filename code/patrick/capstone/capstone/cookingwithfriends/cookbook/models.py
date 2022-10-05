@@ -6,7 +6,7 @@ from django.urls import reverse
 class Recipe(models.Model):
     recipetitle = models.CharField(max_length=30)
     ingredients = models.CharField(max_length=250)
-    recipelines = models.CharField(max_length=2500)
+    recipelines = models.TextField()
     #pricefilter = models.Choices[
      #   ('one','$'),
       #  ('two','$$'),
@@ -17,7 +17,7 @@ class Recipe(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return (self.recipetitle)
 
 
     def get_absolute_url(self):
