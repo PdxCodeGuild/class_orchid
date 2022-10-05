@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(218, 218, 218);
+
+    display: flex;
+    flex: 1;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0px;
+    padding: 0px;
+    padding-top: 30px;
+}
+
+.header-bar {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#chirp-name {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    margin: -21px;
+}
+
+#user-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+}
+
+#user-buttons p {
+    padding-right: 15px;
+}
+
+.chirp-container {
+    display: flex;
+    margin-top: 30px;
+    width: 60vw;
+    flex-direction: column;
+    border: 3px solid rgb(59, 76, 231);
+    background-color: rgb(179, 186, 255);
+    border-radius: 15px;
+}
+
+#username {
+    display: flex;
+    flex: 1;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+#chirped {
+    display: flex;
+    background-color: rgb(218, 218, 218);
+    justify-content: center;
+    padding: 20px;
+}
+
+#chirp-date {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+}

@@ -1,4 +1,4 @@
-# Lab 5: FavQs in Vue
+# Lab 6: FavQs in Vue
 
 
 Build a Vue application that allows a user to search for quotes on FavQs.
