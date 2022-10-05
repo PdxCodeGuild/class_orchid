@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quotes</title>
+    <!-- Add your styles here! -->
+    <link rel="stylesheet" href="lab06.css" />
+</head>
+<body>
+    <div id="app">
+        <input v-model="input" v-on:keyup.enter="keyWord"  type="text" placeholder="Enter keyword">
+        <!-- {{ input }} -->
+        <select v-model="tag" name="" id="">
+            <option value="author">Author</option>
+            <option value="tag">Tag</option>
+            <option value="keyword">Keyword</option>
+        </select>
+       <li class="keyword" v-for="quote in quotes">
+        {{ quote.body }} - {{ quote.author}}
+        </li>
+        <button v-on:click="prevPage">Prev</button>
+        <button v-on:click="nextPage">Next</button>
+
+        <!-- <button v-on:click="keyWord" id="submit">Submit</button> -->
+        <!-- <div v-for="quote in quotes">
+        {{ quote.body }} - {{ quote.author}}
+        </div> -->
+    </div>
+
+    <!-- Include Vue from a CDN of your choice, I chose unpkg -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Include your code here... -->
+    <script src="lab06.js"></script>
+</body>
+</html>
