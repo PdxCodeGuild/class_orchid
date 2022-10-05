@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="lab04.css">
+    <title>Document</title>
+    <body>
+        <div id="app">
+            <p id="header">To-Do List</p>
+            <div class="buttons">
+                <input v-model="todoName" id="input" type="text" placeholder="Add Item" @keyup.enter="addItem">
+                <button @click="addItem">Add To List</button>
+            </div>
+            <p>To Do:</p>
+            <div class="container">
+                <ul v-for="item in items" id="to_do">
+                    <div v-if="item.isComplete == false" class="itemContainer">
+                        <p @click="toggle($event,item)">{{ item.name }}</p>
+                        <button @click="remItem($event, item)" class="button">❌</button>
+                    </div>
+                </ul>
+            </div>
+            
+            <p>Completed:</p>
+            <div class="container">
+                <ul v-for="item in items" id="completed">
+                    <div v-if="item.isComplete == true" class="itemContainer">
+                        <p @click="toggle($event,item)">{{ item.name }}</p>
+                        <button @click="remItem($event, item)" class="button">❌</button>
+                    </div>
+                </ul>
+            </div>
+            
+        </div>
+        
+    </body>
+    <script src="lab04.js"></script>
+</html>
