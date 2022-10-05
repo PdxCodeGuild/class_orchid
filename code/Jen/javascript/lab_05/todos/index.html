@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Todo List</title>
+    <!-- Add your styles here! -->
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+
+
+    <div id="app">
+
+
+        <h1>What would you like to add to the list?</h1>
+        <div id="input"><input type="text" v-model="grocery_item" id="grocery_item" name="grocery_item">
+            <button class="astext" v-on:click="addListitems()" autofocus> Submit
+            </button></input>
+        </div>
+
+        <h2> Check items when complete. <br>Uncheck items to return them to the list.</h2>
+
+
+        <ul>
+            <h2> To Do</h2>
+
+            <p>
+            <div id="todo">
+
+                <li v-for="todo in todos"><button v-on:click="removenotcompleteListitems(todo)"> Delete
+                    </button>
+                    {{ todo }}
+
+                    <input type="checkbox" id="complete" name="complete" @change="completeItem(todo)">
+                    <label for="complete"> </label><br>
+                </li>
+            </div>
+            </p>
+
+
+
+        </ul>
+        <ul>
+            <h2> Done </h2>
+
+            <p>
+            <div id="item">
+
+                <li v-for="item in done"><button v-on:click="removecompleteListitems(item)"> Delete
+                    </button>
+                    {{ item }}
+
+                    <input type="checkbox" id=complete name="complete" @change="returnItem(item)">
+                    <label for=" complete"> </label><br>
+                </li>
+            </div>
+            </p>
+            <!--need shop and unshop buttons with this-->
+
+        </ul>
+
+
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Include your code here... -->
+    <script src="js/site.js"></script>
+
+</body>
+
+</html>
