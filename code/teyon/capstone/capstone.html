@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Finder</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/d0e792c470.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 70%;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+    
+</head>
+<body>
+
+    <H1>Fast Flights</H1><br><br><br>
+    <div id="map"></div>
+    <div id="app" >
+        <!-- {{map}} -->
+        <div class="userinput">
+            <input type="text" id="outgoing" placeholder="Outgoing Location" v-model="outgoing">
+            <input type="text" id="incoming" placeholder="Incoming Destination" v-model="incoming">
+            <input type="text" id= "date" placeholder="Year-Month-Day" v-model="date">
+            <button id="submit" v-on:click="getIata">Submit</button>
+        </div>           
+        
+        <li id="cards"><div 
+            class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Flights</h5>
+                <p class="card-text">Departing: {{price['origin']}}  <i class="fa-solid fa-plane"></i> 
+                    Arriving: {{price['destination']}}
+                </p>
+                <a href="https://www.priceline.com/?vrid=a02e0d033f17b677eecdacb6a711c10c" class="btn btn-primary" id="priceline">priceline.com</a>
+                <button v-on:click="savedFlights(update)"><i class="fa-solid fa-heart-circle-plus" id="fonta"></i></button>
+            </div>
+        </div>
+    </li><br>
+    <h2 class="saved">Saved Flights</h2>
+    <li v-for="update in favFlight" class="savedinput"><div 
+        class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Flights</h5>
+            <p class="card-text">Departing: {{update['origin']}} ->
+                Arriving: {{update['destination']}}
+            </p>
+            <a href="https://www.priceline.com/?vrid=a02e0d033f17b677eecdacb6a711c10c" class="btn btn-primary" id="priceline">priceline.com</a>
+        </div>
+    </div>           
+</li><br><br><br>
+
+
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd2qGimvCJwJS8YjNyG18rA8ZrsIJdHT8"
+async defer></script>
+<script src="adventure.js" defer type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
