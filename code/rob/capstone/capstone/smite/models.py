@@ -11,3 +11,10 @@ class Skin(models.Model):
     def __str__(self):
         return_str = self.god_name + self.god_skin_url
         return return_str
+
+class Session(models.Model):
+    getter_id = models.IntegerField()
+    session_id = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.session_id

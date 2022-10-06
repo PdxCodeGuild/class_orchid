@@ -9,12 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Smite index template</p>
-    <h1>{{dev}}</h1>
-    <h1>{{auth}}</h1>
-    <h2>{{hashed}}</h2>
-    <h3>{{time}}</h3>
-    <h4>{{res}}</h4>
-    <p>{{sess}}</p>
+    <h4>{{sess}}</h4>
+    {% for r in res %}
+    <img src={{r.godIcon_URL}} alt="">
+    <p>{{r.Name}}</p>
+    <p>{{r.Title}}</p><br>
+
+    {% endfor %}
 </body>
 </html>
