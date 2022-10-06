@@ -24,7 +24,7 @@ class RecipeDetailView(DetailView):
 
 class RecipeCreatelView(LoginRequiredMixin ,CreateView):
     model = Recipe
-    fields = ['recipetitle', 'pricefilter', 'ingredients', 'recipelines' ]
+    fields = ['recipetitle', 'pricefilter', 'ingredients', 'recipelines', 'picture' ]
     
     def form_valid(self, form):
         form.instance.ruser = self.request.user

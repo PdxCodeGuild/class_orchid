@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -15,6 +16,8 @@ class Recipe(models.Model):
         ('three','$$$'),
     ]
     pricefilter = models.CharField(choices = pricechoices, max_length=5, default='two')
+
+    picture = models.ImageField(height_field=100, width_field=100, max_length=100, null=True, blank=True, upload_to='media/upload/' )
 
     def __str__(self):
         return (self.recipetitle)
