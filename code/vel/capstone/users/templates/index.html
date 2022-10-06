@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts</title>
+</head>
+<body>
+    <p>This is the for the users / home page</p>
+    
+    <form action="{% url 'exercise:results'%}" method="POST">
+        {% csrf_token %}
+        <select name="user_exercise_search" id="dropdown">
+            <option value="10">Abs</option>
+            <option value="">Shoulders</option>
+            <option value="">Chest</option>
+            <option value="" disabled></option>
+            <option value="">Calves</option>
+            <option value="">Hamstring</option>
+            <option value="">Quads</option>
+        </select>
+        <input type="submit" value="search">
+    </form>
+
+    <a href="{% url 'exercise:results'%}">Exercise results</a>
+</body>
+</html>
