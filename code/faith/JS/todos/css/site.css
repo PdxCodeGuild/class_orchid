@@ -1,0 +1,23 @@
+
+body{
+    background-color: rgb(63, 49, 49);
+}
+div{
+    text-align: center;
+    border:solid black;
+    border-radius: 30%;
+    padding-bottom: 4%;
+    background-color:gray;
+}
+input{
+    background-color: rgb(63, 49, 49);
+    color: rgb(187, 187, 187);
+}
+button{
+    background-color: rgb(63, 49, 49);
+    color: rgb(178, 177, 177);
+}
+button:hover{
+    background-color: black;
+    color: grey;
+}
