@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+
+    background-color: darkgrey;
+}
+
+.header{
+    width: 100vw;
+    height: 21px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: pink;
+}
+
+#quoteList{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#quoteUL{
+    display: flex;
+
+    list-style: none;
+    padding-left: 0;
+    border: 0;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+#quoteList ul:nth-child(even){
+    background-color: rgb(161, 161, 161);
+}
+
+#page_arrows{
+    display: flex;
+    justify-content: center;
+}
+
+#left{
+    padding: 10px;
+}
+
+#right{
+    padding: 10px;
+}

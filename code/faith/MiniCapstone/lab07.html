@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Todo List</title>
+    <!-- Add your styles here! -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab07.css" />
+    
+</head>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MENU</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Vocab Quiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Flash Cards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Favs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body>
+    <img src="puzzle.png" alt="Description for image" width="250" height="250">
+    <div id="app">
+        <!-- <button id="inputButton" type="submit" v-on:click="addWord">Enter</button> -->
+        <h1>Word Finder !</h1>
+        <input v-on:keyup.enter="addWord" id="input" type="text" placeholder="Enter a word">
+        <li class="definition" v-for="item in word">
+            {{item["word"]}} - {{item["definitions"][0]['definition']}}
+            <button type="submit" v-on:click="favWord(item)">Fav</button>
+        </li>
+        <h3>Favs</h3> 
+        <ul v-for="item in favWordList" class="list-group list-group-horizontal">
+            <li class="list-group-item">{{item["word"]}}</li>
+            <li class="list-group-item">{{item["definitions"][0]['definition']}}</li>
+            <button type="submit" v-on:click="deleteWord(item)">X</button>
+          </ul>
+
+
+          <!-- <p> -->
+            
+            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Favs
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div v-for="item in favWordList" class="card card-body">
+                {{item["word"]}} - {{item["definitions"][0]['definition']}}
+                <button type="submit" v-on:click="deleteWord(item)">X</button>
+            </div>
+          </div> --> 
+
+
+        <!-- <li v-for="item in favWordList">
+            {{item["word"]}} - {{item["definitions"][0]['definition']}}
+            <button type="submit" v-on:click="deleteWord(item)">X</button> -->
+            
+            <!-- <ul v-for="item in favWordList" class=list-group>
+                <li class="list-group-item">{{item["word"]}} - {{item["definitions"][0]['definition']}}
+                    <button type="submit" v-on:click="deleteWord(item)">X</button>
+                </li>  
+            </ul> -->
+        </li>
+        <!-- <li v-for="item in favWordList">
+            {{ item }} -->
+            <!-- <button type="submit" v-on:click="favWord">delete</button> -->
+        <!-- </li> -->
+        
+        </div>
+
+    <!-- Include Vue from a CDN of your choice, I chose unpkg -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- Include your code here... -->
+    <script src="lab07.js"></script>
+</body>
+</html>
