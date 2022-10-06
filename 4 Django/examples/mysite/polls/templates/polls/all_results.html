@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- COMBINING DJANGO TEMPLATES AND VUE.JS -->
+
+    <h3>Vue version</h3>
+    <div id="app">
+        [[ message ]]
+        <div v-for="q in questions">
+            <span>[[ q.fields.question_text ]]</span><a :href="getDeleteUrl(q.pk)"><button>delete</button></a>
+            <ul v-if="choices">
+                <li v-for="c in getChoices(q.pk)">[[ c.fields.choice_text ]]: [[ c.fields.votes ]]</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <hr>
+    <h3>Django version</h3>
+    {% for q in results_list %}
+    <p>{{ q }}</p>
+    <ul>
+        {% for c in q.choice_set.all %}
+        <li>{{ c }}: {{ c.votes }}</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+
+
+    <!-- The Django json_script function created a DOM element with the given name, from JSON in the content -->
+    <!-- {{ questions|json_script:'all-questions'}} -->
+    <!-- {{ choices|json_script:'all-choices'}} -->
+    <script>
+        // You can then extract the values from the hiddgen DOM element to use JS on them
+        // const questions = JSON.parse(JSON.parse(document.getElementById('all-questions').textContent))
+        // const choices = JSON.parse(JSON.parse(document.getElementById('all-choices').textContent))
+
+        new Vue({
+            el: "#app",
+            delimiters: ['[[', ']]'],
+            data: {
+                questions: null,
+                choices: null,
+                message: 'hello'
+            },
+            mounted() {
+                // We created these endpoints to serve our data as JSON
+                // calling them on mounted means we'll retrieve this data when the page loads
+                axios.get('/polls/api/all_questions').then(res => this.questions = JSON.parse(res.data))
+                axios.get('/polls/api/all_choices').then(res => this.choices = JSON.parse(res.data))
+            },
+            methods: {
+                getChoices(qId) {
+                    const result = this.choices.filter(c => c.fields.question == qId)
+                    result.sort((a, b) => a.fields.votes < b.fields.votes ? 1 : -1)
+                    return result
+                },
+                getDeleteUrl(qId) {
+                    // You can pass JS data back to Django using urls/views
+                    return `/polls/${qId}/delete`
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

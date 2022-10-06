@@ -22,6 +22,10 @@ at our own page, on top of our existing front-end knowledge.
 
 `<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>`
 
+or
+
+`<script src="https://unpkg.com/vue"></script>`
+
 Also highly recommended:
 * [Vuetur syntax highlighting and snippits for VS Code](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 * [Vue devtools for Chrome/Firefox/etc](https://github.com/vuejs/vue-devtools)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue@3" defer></script>
+        <script src="nasaAPI.js"></script>
+        <script src="capstone.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+    <title>NASA Images</title>
+    </head>
+<body>
+    <div id="app">
+        <header>
+            <input v-model.lazy="startSearch" type="date" placeholder="Start Date">
+            <input v-model.lazy="endSearch" type="date" placeholder="End Date">
+            <button v-on:click="getURL">Get Stuff!</button>
+        </header>
+        <div class="side-bar">
+            <p>History</p>
+            <li v-for="(link, dates) in history">
+                <a v-on:click="historyURL(link)">{{ dates }}</a>
+            </li>
+        </div>
+        
+        <div class="content">
+
+            <div v-for="item in output">
+                <div class="card">
+                    <div v-if="item.media_type === 'image'">
+                        <img v-bind:src="item.url" class="card-img-top" id="cImage" alt="...">
+                    </div>
+                    <div v-else-if="item.media_type === 'video'">
+                        <iframe v-bind:src="item.url" frameborder="0" class="card-img-top"></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.title }}</h5>
+                        <p class="card-text">{{ item.explanation }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
