@@ -1,12 +1,43 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.utils import timezone
 from django.views import generic
+from django.core import serializers
 
 from .models import Choice, Question
 
 # Create your views here.
+
+
+def all_results_view(request):
+    questions = serializers.serialize('json', Question.objects.all())
+    choices = serializers.serialize('json', Choice.objects.all())
+    context = {
+        'questions': questions,
+        'choices': choices,
+        'results_list': Question.objects.all()
+    }
+    return render(request, 'polls/all_results.html', context)
+
+
+# These are like API endpoints, they serve JSON data at the specified URL
+def get_questions(request):
+    questions = serializers.serialize('json', Question.objects.all())
+    return JsonResponse(questions, safe=False)
+
+
+def get_choices(request):
+    choices = serializers.serialize('json', Choice.objects.all())
+    return JsonResponse(choices, safe=False)
+
+
+# class AllResultsView(generic.ListView):
+#     template_name = 'polls/all_results.html'
+#     context_object_name = 'results_list'
+
+#     def get_queryset(self):
+#         return Question.objects.all
 
 
 class IndexView(generic.ListView):

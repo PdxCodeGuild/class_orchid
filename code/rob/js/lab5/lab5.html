@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/lab5.css">
+    <script src="js/lab5.js" type='module' defer></script>
+    <title>Lab 5</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Fav Quotes</h1>
+        <hr>
+        <br>
+        <input type="text" name="search" id="search" v-model="search" placeholder="search keywords" autocomplete="off">
+        <button @click=getSearchQuotes>Search</button>
+        <select name="choice" id="choice"  v-model="key">
+            <option value="key">Key Word</option>
+            <option value="author">Author</option>
+            <option value="tag">Tag</option>
+        </select>
+        <hr>
+        <h3>Quote of the day</h3>
+        <p>{{qotd}}</p>
+        <hr>
+        <h4>{{search}}</h4>
+        <h4>{{prevSearch}}</h4>
+        <template v-for="quote in quotesList" :key="quote.id">
+            <quote
+            v-bind:author="quote.author"
+            v-bind:body="quote.body"
+            >
+            </quote>
+        </template>
+        <div class="pgButtons">
+            <button id="decreaseButton" @click="getNextPageSearch(-1)">Prev Page</button>
+            <button id="increaseButton" @click="getNextPageSearch(1)">Next Page</button>
+        </div>
+    </div>
+    
+
+</body>
+</html>
