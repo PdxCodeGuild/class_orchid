@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: darkorange;
+    border: 2px;
+    padding: 20px;
+    
+}
+
+.app{
+    text-align: center;
+    align-items: center;
+    
+}
+
+.recipe{
+    border-style: double;
+}
