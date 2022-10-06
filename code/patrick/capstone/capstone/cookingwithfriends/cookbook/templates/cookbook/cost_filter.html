@@ -4,16 +4,15 @@
 <main role="main" class="container">
     <div class="row">
     <div class="col-md-8">
-        {% if searched %}
-        
+        {% if cost %}
+        <h1>You searched for: {{ searched }}</h1>
+        <br>
         {% for recipe in srecipes %}
       <div class="alert alert-{{recipe.tags}}">
         {{ message }}
         
           </div>
           <h2>{{recipe.recipetitle}}</h2>
-          <small>{{recipe.pricefilter}}</small>
-          <br>
                 
           <br>
           {{recipe.ingredients}}

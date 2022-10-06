@@ -24,7 +24,7 @@ class RecipeDetailView(DetailView):
 
 class RecipeCreatelView(LoginRequiredMixin ,CreateView):
     model = Recipe
-    fields = ['recipetitle', 'ingredients', 'recipelines' ]
+    fields = ['recipetitle', 'pricefilter', 'ingredients', 'recipelines' ]
     
     def form_valid(self, form):
         form.instance.ruser = self.request.user
@@ -89,6 +89,17 @@ def search_cookbook(request):
     if request.method == 'POST':
         searched = request.POST['searched']
         srecipes = Recipe.objects.filter(recipetitle__contains = searched)
-        singredients = Recipe.objects.filter(ingredients__contains = searched)
         
-        return render(request, 'cookbook/search_cookbook.html', {'searched': searched, 'srecipes': srecipes, 'singredients': singredients})
+        
+        return render(request, 'cookbook/search_cookbook.html', {'searched': searched, 'srecipes': srecipes, })
+
+
+def cost_filter(request):
+    if request.method == 'POST':
+        searched = request.POST['cost']
+        srecipes = Recipe.objects.filter(pricefilter__contains = searched)
+        
+        
+        return render(request, 'cookbook/search_cookbook.html', {'searched': searched, 'srecipes': srecipes})
+
+

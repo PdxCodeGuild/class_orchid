@@ -12,4 +12,6 @@ urlpatterns = [
     path('about/', views.about, name='cookbook-about'),
     path('recipe/<int:pk>/delete/', RecipeDeleteView.as_view(), name='recipe-delete'),
     path('search_cookbook', views.search_cookbook, name='search-cookbook'),
+    path('cost_filter', views.cost_filter, name='cost'),
+
 ]

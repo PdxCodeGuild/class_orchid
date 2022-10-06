@@ -67,12 +67,30 @@
                   <a class="nav-item nav-link" href="{% url 'profile' %}">My Profile</a>
                   <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                   <a class="nav-item nav-link" href="{% url 'recipe-create' %}">CreateRecipe</a>
-                  <form method="POST" action="{% url 'search-cookbook' %}" class="searchdisplay" >
-                    {% csrf_token %}
-                    <input  type="text" name="searched" placeholder="enter a search term"  > 
-                    
-                  </form>
-                  
+                  <div>
+                    <form method="POST" action="{% url 'search-cookbook' %}" class="searchdisplay" >
+                      {% csrf_token %}
+                      <input  type="text" name="searched" placeholder="enter a search term"  > 
+                      <button type="submit" value="submit"> submit</button>
+                    </form>
+                  </div>
+                  <br>
+
+                  <div>
+
+                    <form method="POST" action="{% url 'cost' %}"  >
+                      {% csrf_token %}
+                      <label for="cost">Add a Price filter</label>
+                      <select  type="" name="cost" id="cost"  >
+                        <option value="one">$</option>  
+                        <option value="two">$$</option>  
+                        <option value="three">$$$</option>
+                        
+                      </select>
+                      <button type="submit" value="submit"> submit</button>  
+                      
+                    </form>
+                  </div>
                 </ul>
               </p>
             </div>
