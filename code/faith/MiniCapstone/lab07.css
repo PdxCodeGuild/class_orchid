@@ -1,0 +1,80 @@
+body{
+    
+    background-color:#FFCDB2 ;
+    color: #6D6875;
+    font-family: 'Indie Flower', cursive;
+    padding: 2%;
+}
+
+.list-group-item{
+    background-color: #E5989B;
+    color: black;
+    padding-left: 3%;
+    
+    
+}
+.list-group-item:hover{
+    color: #6D6875;
+    
+}
+.list-group-horizontal{
+    border-radius: 20%;
+    
+}
+input{
+    background-color: #6D6875;
+    color:#FFCDB2 ;
+    border-radius: 30%;
+    border-color: black;
+    border-top: 60px;
+    padding: 2%;
+    margin-left: 8%;
+}
+button{
+    background-color: #6D6875;
+    color: #FFCDB2;
+    border-radius: 50%;
+}
+button:hover{
+    background-color: black;
+    color: #E5989B;
+}
+::placeholder{
+    color: #FFCDB2;
+}
+img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+h1{
+    font-size: 800%;
+    text-shadow:4px 4px 10px black ;
+    text-align: center;
+    padding: 2%;
+}
+h3{
+    color: black;
+    text-shadow:4px 4px 10px #6D6875 ;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+    
+.btn{
+    border-radius: 50%;
+    color: #E5989B;
+    background-color: #6D6875;
+
+}
+.container-fluid{
+    background-color: #FFCDB2;
+    
+}
+.navbar-toggler:hover{
+    background-color: #6D6875;
+    
+}
+.definition{
+    padding-left: 8%;
+    padding-top: 4%;
+}
