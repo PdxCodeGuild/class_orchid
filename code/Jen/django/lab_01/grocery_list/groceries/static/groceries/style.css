@@ -1,0 +1,54 @@
+body {
+    color: whitesmoke;
+    background: rgb(125, 125, 155);
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    background: navy;
+    color: whitesmoke;
+    box-sizing: border-box;
+
+
+
+}
+
+
+a:link {
+    color: rgb(41, 82, 98);
+}
+
+a:visited {
+    color: rgb(133, 254, 254)
+}
+
+a:active {
+    color: rgb(125, 125, 155)
+}
+
+a:hover {
+    color: rgb(25, 175, 175)
+}
+
+li {
+    background: navy;
+    color: rgb(25, 175, 175);
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 20%;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 20px solid rgb(25, 175, 175);
+    padding: 10px;
+}

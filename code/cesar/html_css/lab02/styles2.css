@@ -1,0 +1,92 @@
+main, header, section, aside, footer {
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+    color: black;
+}
+
+
+
+body {
+    background-image: url("casey.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.name {
+    opacity: 0.6;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+
+}
+.menulinks {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+.menulinks a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+
+
+.content {
+    background: wheat;
+    opacity: .5;
+}
+
+.sidebar {
+    border: 1px solid #000000;
+    background: #673ab7;
+}
+
+footer {
+    border: 1px solid #000000;
+    background: wheat;
+    opacity: .5;
+}
+
+.menulinks {
+
+    
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 10px;
+}
+
+@media all and (max-width: 640px) {
+
+    .flex-container {
+        display: flex;
+    }
+    .menulinks {
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+    }
+    .menulinks a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: white;
+    }
+    
+
+
+}

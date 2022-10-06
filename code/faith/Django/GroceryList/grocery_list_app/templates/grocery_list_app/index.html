@@ -1,0 +1,51 @@
+{% if grocery_items %}
+    <ul>
+        <h1>Complete</h1>
+    {% for item in grocery_items %}
+    {%  if item.completed == True %}
+        <li>
+            {{item.text_description}}
+            <form action="{%  url 'grocery_list_app:delete' item.id %}" method="post">
+                {%  csrf_token %}
+                <input type="submit" id="grocery" name="grocery" value="Delete">
+            </form>
+           
+            <form action="{%  url 'grocery_list_app:undo' item.id %}" method="post">
+                {%  csrf_token %}
+                <input type="submit" id="grocery" name="grocery" value="undo">
+            </form>
+        </li>
+        {%  endif %}
+    {% endfor %}
+    </ul>
+    <ul>
+        <h1>Incomplete</h1>
+    {% for item in grocery_items %}
+    {%  if item.completed == False %}
+        <li>
+            {{item.text_description}}
+            <form action="{%  url 'grocery_list_app:delete' item.id %}" method="post">
+                {%  csrf_token %}
+                <input type="submit" id="grocery" name="grocery" value="Delete">
+            </form>
+            
+            <form action="{%  url 'grocery_list_app:completed' item.id %}" method="post">
+                {%  csrf_token %}
+                <input type="submit" id="grocery" name="grocery" value="completed">
+            </form>
+        </li>
+        {%  endif %}
+    {% endfor %}
+    </ul>
+    
+    
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+<form action="{% url 'grocery_list_app:add'  %}" method="post">
+    {% csrf_token %}
+    <label for="grocery">Enter</label><br>
+    <input type="text" id="grocery" name="grocery">
+    <input type="submit" value="Add">
+</form>
+

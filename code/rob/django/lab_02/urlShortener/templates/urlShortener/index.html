@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static 'urlShortener/styles.css' %}">
+    <title>Url Shortener</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <div id="container">
+                <h1>Url Shortener</h1>
+            </div>
+        </div>
+    </nav>
+    <div id="grid">
+            <div id="url">
+                <div id="body-title">
+                    <h2>Enter a URL</h2>
+                </div>
+                <div id="div-form">
+                    <form action="{% url 'urlShortener:create' %}" id="url-text" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="url" id="url"  placeholder="url" autocomplete="off">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="center-urls">
+                    <div id="urls">
+                            {% if latest_urls %}
+                            <p>actual: {{ latest_urls.actual_url }}</p>
+                            <p>short: <a href="{% url 'urlShortener:goTo' latest_urls.short_url%}">{{ latest_urls.short_url }}</a></p>
+                            {% endif %}
+                        </div>
+                </div>
+            </div>
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>

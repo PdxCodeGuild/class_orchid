@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&family=Noto+Serif+HK&display=swap');
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body{
+    font-family: 'Noto Serif HK', serif;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('chris-lee-70l1tDAI6rM-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+
+p{
+    color: rgb(199, 144, 72);
+    font-weight: 700;
+}
+
+h2{
+    color:white
+}
+
+header{
+    text-align: center;
+    width: 100vw;
+}
+
+img{
+    display: flex;
+    flex-direction: column;
+
+} 
+
+.top{
+    text-align: center;
+}
+
+.gallery{
+    text-align: center;
+
+}
+.gallery-item img{
+    width: 375px;    
+
+}
+
+#photo{
+    width: 95vw;
+    height: 42vw;
+}
+#booking{
+    text-align: center;
+
+}
+#link{
+    color: rgb(199, 144, 72);
+}
+
+
+@media (min-width: 750px){
+    .gallery{
+        display: flex;
+        justify-content: center;
+    }
+    .gallery-item{
+        width: 50%;
+        padding: 0 1em;
+    }
+    .gallery-item img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+@media (min-width: 980px){
+    .gallery{
+        display: flex;
+        justify-content: center ;
+    }
+    .gallery-item{
+        width: 33%;
+        padding: 0 1em;
+    }
+    .gallery-item img{
+        width: 100%;
+        height:auto;
+        object-fit: cover;
+    }
+}

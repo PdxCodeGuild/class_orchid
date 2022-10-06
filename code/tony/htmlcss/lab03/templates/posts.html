@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuna Boys</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid">
+        <div class="header">
+            <header>
+                <h1>Tuna Boys</h1>
+            </header>    
+        </div>
+        <div class="nav">
+            <nav>
+                <ul><li><a href="#">home</a></li><li><a href="#">blog</a></li><li><a href="#">about</a></li><li><a href="#">faq</a></li><li><a href="#">contact</a></li></ul>
+            </nav>    
+        </div>
+        <div class="main">
+            {% for post in posts %}
+            <article>
+                <section class="heading">
+                    <h2>{{ post.title }}</h2>
+                    <p>by {{ post.author }} – {{ post.date }}</p>  
+                </section>
+                <section class="post">
+                    {{ post.excerpt|safe }}...
+                </section>
+            </article>
+            {% endfor %}
+            <section class="pagination">
+                {% if page_next %}
+                <a href="/{{ page_next }}">Next</a>
+                {% endif %}
+                {% if page_previous %}
+                <a href="/{{ page_previous }}">Previous</a>
+                {% endif %}
+            </section>
+        </div>
+        <div class="footer">
+            <footer>
+                &copy; 2022 – Tuna Boy Posse – Tuna 4 Lyfe
+            </footer>    
+        </div>    
+    </div>
+</body>
+</html>

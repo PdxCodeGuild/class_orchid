@@ -17,9 +17,7 @@ M-F 9:30 am – 4:30 pm
   
     - danny@pdxcodeguild.com
  
-- Mitch Chapman, TA
- 
-- Matt Walsh, TA
+- Gage Liebl, TA
 
 ## Capstone Dates:
 
@@ -27,13 +25,13 @@ Capstone proposal due: TBD
 
 Presentation Day: October 21st, 2022  
 
-<!-- ## JavaScript Labs Assigned:
+## JavaScript Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
-| 01-03 | [Pick3](5%20JavaScript/labs/01-03%20Pick%203.md)                             | May 10th      | May 16th    | May 24th      |
-| 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | NA            | NA          | NA            |
-| 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | May ??th      | May ??th    | Jun  3rd      |
-| 05    | [JavaScript Mini-Capstone](5%20JavaScript/labs/07%20Mini-Capstone.md)        | May ??th      | May ??th    | Jun  3rd      | -->
+| 01-03 | [Pick3](5%20JavaScript/labs/01-03%20Pick%203.md)                             | Sep 14th      | Sep 19th    | Sep 28th      |
+| 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | Sep 16th      | N/A         | N/A           |
+| 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | Sep 19th      | Sep 22nd    | Oct  3rd      |
+<!-- | 05    | [JavaScript Mini-Capstone](5%20JavaScript/labs/07%20Mini-Capstone.md)        | May ??th      | May ??th    | Jun  3rd      | -->
 
 
 <!-- #### Optional JavaScript Labs
@@ -43,18 +41,13 @@ Presentation Day: October 21st, 2022
 [Random Redirector](5%20JavaScript/labs/Random%20Redirector.md) -->
  
 
-<!-- ## Django Labs Assigned:
+## Django Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
 | ----- | ---------------------------------------------------------------------------- | ------------- | ------------| ------------- |
-| 00    | [Polls](4%20Django/labs/00%20Polls.md)                                       | Apr 25th      | Apr 29th    | May  9th      |
-| 01    | [Grocery List](4%20Django/labs/01%20Grocery%20List.md)                       | Apr 27th      | May  4th    | May 11th      |
-| 02    | [Library](4%20Django/labs/02%20Library.md)                                   | Apr 29th      | May  4th    | May 13th      |
-| 02    | [Chirp](4%20Django/labs/03%20Chirp.md)                                       | May  4th      | May 11th    | May 18th      | -->
+| 01    | [Grocery List](4%20Django/labs/lab01-grocery-list.md)                        | Aug 30th      | Sep  2nd    | Sep 13th      |
+| 02    | [URL Shortener](4%20Django/labs/lab02-url-shortener.md)                      | Sep  1st      | Sep  7th    | Sep 15th      |
+| 03    | [Chirp](4%20Django/labs/lab03-chirp.md)                                      | Sep  7th      | Sep 13th    | Sep 18th      |
 
-
-<!-- #### Optional Django Labs  
-
-[URL Shortener](4%20Django/labs/Optional%20URL%20Shortener.md) -->
 
 ## HTML/CSS Labs Assigned:
 | Lab   | Name                                                                         | Date Assigned | Due By      | Hard Due Date |
@@ -91,7 +84,7 @@ Presentation Day: October 21st, 2022
 | 13    | [ATM](1%20Python/labs/13%20ATM.md)                                           | Aug 2nd       | Aug  5th    | Aug 16th      |
 | 16    | [Dad Joke API](1%20Python/labs/16%20Dad%20Joke%20API.md)                     | Aug  4th      | Aug  9th    | Aug 18th      |
 | 17    | [Quotes API](1%20Python/labs/17%20Quotes%20API.md)                           | Aug  4th      | Aug  9th    | Aug 18th      |
-<!-- | 18    | [Mini-Capstone](1%20Python/labs/18%20Mini-Capstone.md)                       | Apr  6th      | Apr  8th    | Apr 19th      | -->
+| 18    | [Mini-Capstone](1%20Python/labs/18%20Mini-Capstone.md)                       | Aug  8th      | Aug 11th    | Aug 25th      |
 <!-- | 14    | [Mob Tic Tac Toe](1%20Python/labs/14%20Mob%20Tic%20Tac%20Toe.md)             | Mar 30th      | NA          | NA            |
 | 15    | [Searching & Sorting](1%20Python/labs/15%20Searching%20And%20Sorting.md)     | NA            | NA          | NA            | -->
 
