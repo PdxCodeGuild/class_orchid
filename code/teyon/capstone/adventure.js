@@ -162,13 +162,12 @@ new Vue({
                     map,
                     title: "Hello World!",
             });   
-
                 new google.maps.Marker({
-                position: incLatLon,
-                map,
-                title: "Hello World!",
-            });   
-            
+                    position: incLatLon,
+                    map,
+                    title: "Hello World!",
+            })  
+
             },
 
         },
