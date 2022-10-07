@@ -1,6 +1,6 @@
 # Professional Development Practices
 
-When you are working in your own repositories, you are writing your code portfolio. Employers will read your code and look at your history to make syre 
+When you are working in your own repositories, you are writing your code portfolio. Employers will read your code and look at your history to get a sense of your development style and your adherence to best practices. Follow this advice to keep your code looking tidy and professional.
 
 ## Clean, readable history
 
@@ -9,7 +9,7 @@ Commit every time it works! Commit and push every day no matter what.
 
 ### Descriptive commit messages
 
-Don't use names like "done for now" or "it's working", describe what you accomplished with this commit. Be consistent with your style choices, choose a convention and stick with it.
+Don't use names like "done for now" or "it's working", describe what you accomplished with this commit. Be consistent with your comment style, choose a convention and stick with it.
 
 Common style patterns are:
 - no trailing punctuation
@@ -17,7 +17,7 @@ Common style patterns are:
 - start with an imperative verb rather than past tense
 - examples:
   - create models for authentication app
-  - add input fields for user file upload
+  - add input fields to file upload template
   - update results view to include timestamps
   - style results page
   - refactor user profile view
@@ -57,7 +57,7 @@ Also, always follow the casing conventions of the language for the type.
 
 some examples of good variable names: 
 - `quote`: a single quote
-- `quotes`: a list of quotes
+- `quotes`: a collection of quotes
 - `options`: a configuration object, such as the headers and params for an axios call
 - `quote_options`: a config object specific to the quotes (in python)
 - `quoteOptions`: same, but in JavaScript
@@ -66,6 +66,7 @@ some examples of good variable names:
 
 some examples of bad variable names: 
 - `quote`: for a list of quotes (use singular and plural carefully!)
+- `quoteDict`: just call this `quotes`, don't include the data type in the variable
 - `quote_Options`: stick to the common casing strategy for your context
 - `x`: single character variables are only appropriate in callbacks, list and dict comprehensions, lambdas, etc. Never give a single character name to a variable you will need to reuse in another code block
 
