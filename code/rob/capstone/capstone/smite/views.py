@@ -63,5 +63,14 @@ def player(request):
     return HttpResponse('player')
 
 
-def god(request):
-    return HttpResponse('god')
+def god(request, r_id):
+    session_id = Session.objects.get(getter_id=1)
+    sig = f'{dev_id}getgods{auth_key}{date}'
+    sig_hashed = hashlib.md5(sig.encode()).hexdigest()
+    response = requests.get(f'https://api.smitegame.com/smiteapi.svc/getgodsjson/{dev_id}/{sig_hashed}/{session_id}/{date}/1').json()
+    god = {}
+    for res in response:
+        if res['id'] == r_id:
+            god = res
+    context = {'res': response, 'sess': session_id, 'god': god}
+    return render(request, 'smite/god.html', context)

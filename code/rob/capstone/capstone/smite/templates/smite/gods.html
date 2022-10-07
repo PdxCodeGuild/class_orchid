@@ -11,10 +11,11 @@
 <body>
     <h4>{{sess}}</h4>
     {% for r in res %}
+    <a href="{% url 'smite:god' r.id %}">
     <img src={{r.godIcon_URL}} alt="">
     <p>{{r.Name}}</p>
     <p>{{r.Title}}</p><br>
-
+    </a>
     {% endfor %}
 </body>
 </html>

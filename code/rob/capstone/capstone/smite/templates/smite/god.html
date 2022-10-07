@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'smite/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {{god}}
+    <h1>{{god.Name}}</h1>
+    <h4>{{god.Title}}</h4>
+    <h5>{{god.Roles}}</h5>
+    <h5>{{god.Pantheon}}</h5>
+    <h5>{{god.Type}}</h5>
+    <h5>{{god.Type}}</h5>
+    <hr>
+    <h5>{{god.Ability1}}</h5>
+    <img src={{god.Ability_1.URL}} alt="">
+    <h5>{{god.Ability2}}</h5>
+    <img src={{god.Ability_2.URL}} alt="">
+    <h5>{{god.Ability3}}</h5>
+    <img src={{god.Ability_3.URL}} alt="">
+    <h5>{{god.Ability4}}</h5>
+    <img src={{god.Ability_4.URL}} alt="">
+    <h5>Passive: {{god.Ability5}}</h5>
+    <img src={{god.Ability_5.URL}} alt="">
+</body>
+</html>
