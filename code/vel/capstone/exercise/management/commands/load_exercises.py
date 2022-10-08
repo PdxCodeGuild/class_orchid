@@ -1,7 +1,33 @@
 import json
 from django.core.management.base import BaseCommand
-from ...models import Exercise
+from ...models import Exercise, Muscle
+import re
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        pass
+        Exercise.objects.all().delete()
+        Muscle.objects.all().delete()
+        category = {
+            10: "Abs",
+            8: "Arms",
+            12: "Back",
+            14: "Calves",
+            11: "Chest",
+            9: "Legs",
+            13: "Shoulders",
+        }
+        # sub_category = {
+        #     2: "Anteri"
+        # }
+        with open('exercises.json')as f:
+            exercise_list = json.loads(f.read())
+
+            for exercise in exercise_list['exercises']:
+                exer_obj = Exercise.objects.create(
+                    name = exercise['name'],
+                    description = exercise["description"].replace('<p>','').replace('</p>','')
+                )
+
+                muscle_obj,created = Muscle.objects.get_or_create(muscle=category[exercise['category']]) 
+                muscle_obj.muscle.add(exer_obj)
+                
