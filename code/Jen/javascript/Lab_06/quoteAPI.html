@@ -22,15 +22,29 @@
 
     <div id="app">
         <div class="grid-container">
+
             <div class="grid-item">
+
+
                 <h1>Would you like the quote of the day? </h1>
 
                 <button v-on:click="getQotd()" autofocus> Yes
                 </button></input>
 
-                <h1> {{output}} </h1>
-
-
+                <div id="getQuote">
+                    <ul v-for="item in objectItems">
+                        <li>
+                            <h2> {{item.body}} </h2>
+                        </li>
+                    </ul>
+                    <button :disabled="pageCount === 0" @click="prevPage">
+                        Previous
+                    </button>
+                    <button :disabled="page >= pageCount -1" @click="nextPage">
+                        Next
+                    </button>
+                </div>
+                <h2> {{output}} </h2>
 
                 <input type="text" placeholder='' v-model='search'> </input><button v-on:click="getQuote(search)"
                     autofocus>
@@ -47,31 +61,5 @@
 
 
 </body>
-<footer>
-</footer>
 
 </html>
-
-<!--Build a Vue application that allows a user to search for quotes on FavQs.
-
-Requirements:
-
-Your app must use Vue to fetch data and interact with the results.
-Let the user enter a search term and select whether to search by keyword, author, or tag.
-Implement pagination buttons when the search returns more than 25 quotes.
-When the page first loads, show the user a set of completely random quotes.
-You must have at least one Vue component in your app.
-
-Resources:
-
-FavQs API
-Vue documentation
-Using Axios to Consume APIs
-Axios documentation
-
-Hints:
-
-Read the API documentation!
-Remember to use your Vue app data as your single source of truth.
-You'll need to set the Authorization header for the FavQs API to work.
--->

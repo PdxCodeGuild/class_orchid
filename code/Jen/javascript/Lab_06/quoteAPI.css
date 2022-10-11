@@ -7,9 +7,10 @@ body {
 }
 
 form {
-    background: rgb(84, 84, 89);
+
     color: whitesmoke;
-    box-sizing: border-box;
+
+
 
 }
 
@@ -27,10 +28,14 @@ footer {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: whitesmoke;
+    background-color: rgb(125, 125, 155);
     padding: 10px;
-    color: black;
 
+
+}
+
+h1 {
+    color: rgb(232, 232, 134);
 }
 
 .grid-item {
@@ -77,6 +82,6 @@ a:hover {
 .center {
     margin: auto;
     width: 50%;
-    border: 20px solid rgb(25, 175, 175);
+    border: 20px solid rgb(216, 216, 146);
     padding: 10px;
 }
