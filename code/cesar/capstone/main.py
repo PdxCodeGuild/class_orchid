@@ -4,19 +4,6 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
-# activities_url = "https://www.strava.com/api/v3/athlete/activities"
-
-
-# header = {'Authorization': 'Bearer ' + 'e3d03388c3d23863868a5eca6bce8534b1eb3012'}
-# param = {'per_page':200, 'page':1}
-
-# response = requests.get(activities_url, headers=header, params=param).json()
-
-
-# pprint(response) 
-
-
 auth_url = "https://www.strava.com/oauth/token"
 
 payload = {
@@ -39,7 +26,7 @@ print("Access Token: {}".format(access_token))
 activities_url = "https://www.strava.com/api/v3/athlete/activities"
 
 
-header = {'Authorization': 'Bearer ' + 'e3d03388c3d23863868a5eca6bce8534b1eb3012'}
+header = {'Authorization': 'Bearer ' + access_token}
 param = {'per_page':200, 'page':1}
 
 response = requests.get(activities_url, headers=header, params=param).json()
