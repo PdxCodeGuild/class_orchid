@@ -1,0 +1,215 @@
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+.card {
+  border-radius: 4px;
+  background: #498577;
+  color: rgb(108, 14, 14);
+  box-shadow: 0 6px 10px rgba(0, 0, 1, 1), 0 0 6px rgba(0, 0, 0, .05);
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+
+.header {
+  background-color: rgb(108, 14, 14);
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.menu li {
+  display: inline;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #498577;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+  background-color: #537b5acb;
+}
+
+figure {
+  display: table;
+  text-align: center;
+  font-style: italic;
+  text-indent: 0;
+
+}
+
+img.scaled {
+  width: 100%;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: top;
+  color: rgb(108, 14, 14);
+
+
+}
+
+
+
+body {
+
+  background: #7aa8b2 url(Depositphotos_57307583_XL.jpg) no-repeat fixed center;
+  display: table;
+  margin-top: auto;
+  margin: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-size: cover;
+  font-family: Garamond, serif;
+  font-size: 22px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.aside {
+  background-color: #498577;
+  padding: 15px;
+  color: whitesmoke;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  vertical-align: right;
+  overflow: auto
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+  /* Footer height */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(108, 14, 14);
+  color: whitesmoke;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+}
+
+/* unvisited link */
+a:link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(114, 193, 149);
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: chocolate;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: brown;
+  text-decoration: none;
+}
+
+h4 {
+  color: whitesmoke;
+}
+
+h2 {
+  color: whitesmoke;
+  text-shadow: 2px 2px grey;
+
+}
+
+h1 {
+  color: whitesmoke;
+  text-shadow: 2px 2px grey;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1200) {
+
+  col {
+    width: 100%;
+  }
+
+
+
+  aside,
+  article {
+    width: 100%;
+
+  }
+
+  header,
+  footer {
+    width: 100%;
+  }
+
+
+
+}

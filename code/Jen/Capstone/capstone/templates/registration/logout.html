@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/stylesheet.css' %}">
+    <script src="https://kit.fontawesome.com/4bbb8391e0.js" crossorigin="anonymous"></script>
+    <title>Logout</title>
+</head>
+
+
+
+<body>
+    <div id="content-wrap">
+
+        <div class="header">
+            <img src="{% static 'main/logowtext.jpg' %}" width=200px height="auto" position="left">
+
+            <h1>Green Herb Rabbitry</h1>
+        </div>
+
+        <h2>Log Out</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Log Out</button>
+        </form>
+    </div>
+    <footer class="footer">
+
+        <a href="mailto:greenherbrabbitry@gmail.com subject = Website">To contact us, click here: <i
+                class="fa-solid fa-envelope"></i></i></a>
+        <p> Background courtesy of Deposit Photots</p>
+
+    </footer>
+    </div>
+</body>

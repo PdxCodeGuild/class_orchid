@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'main/stylesheet.css' %}">
+    <script src="https://kit.fontawesome.com/4bbb8391e0.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header class="header">
+                <img src="{% static 'main/logowtext.jpg' %}" width=200px height="auto" position="left">
+                <nav>
+                    <ul>
+                        <li><a href='/'>About</a></li>
+                        <li><a href='/main/hotots/'>Blanc d'Hotot</a></li>
+                        <li><a href='/main/rex/'>Rex</a></li>
+                        <li><a href='/main/gallery/'>Gallery</a></li>
+                        <li><a href='/accounts/signup'>Create Account</a></li>
+                        <li><a href='/accounts/login/'>Log In</a></li>
+                        <li><a href='/accounts/logout'>Log Out</a></li>
+
+                    </ul>
+                </nav>
+            </header>
+            <div class="row">
+
+                <div class="col-3 left">
+                    <div class="aside">
+
+                        <h1>What</h1>
+                        <p>We raise the rare Blanc de Hotot rabbit. It is recognized as a rare breed by both the
+                            American Rabbit
+                            Breeders Association and the Livestock Conservancy. We raise Ancona ducks, a US
+                            based
+                            breed
+                            recognized as
+                            threatened by the Livestock Conservancy. We also raise Rex rabbits and a variety of
+                            chickens. We recently
+                            introduced Ayam Cemani chicks to the farm. We're hoping to be able to hatch them out
+                            next
+                            year.</p>
+                        <h1>Why</h1>
+                        <p>Recently our food supply has undergone some challenges not seen in many decades.
+                            Additionally, the
+                            quality of life of commercial livestock is often compromised for the sake of increased
+                            productivity. At
+                            Green Herb we strive to give all animals in our care the most humane life experince
+                            possible.</p><br>
+                    </div>
+                </div>
+
+                <div class="col-6">
+
+
+                    <p>
+                    <h2>Green Herb Rabbitry is a small homestead dedicated to the preservation of rare breeds of
+                        small
+                        livestock.
+                        Located in central North Carolina, the animals are bred for their tolerance to heat and
+                        humidity
+                        as well
+                        as
+                        exemplifying their breed standard.</h2>
+                    </p>
+
+                    <figure>
+                        <p><img src="{% static 'main/november.jpg' %}" class="responsive" width=300px height="auto">
+                        <figcaption>
+                            Green Herb's November Reign. 2014 ARBA Convention Breed Fur Winner.
+                        </figcaption>
+                    </figure>
+
+
+                </div>
+                <div class="col-3 right">
+                    <div class="aside">
+
+                        <h1>How</h1>
+                        <p>All animals are given the best possible care in accordance with their species.
+                            Not all
+                            species appreciate
+                            attention but those that do are handled from day one. Feed and enrichment
+                            opportunities
+                            are
+                            also chosen
+                            with care. The on-site garden is mostly for the benefit of the animals growing
+                            seasonal
+                            tomatoes, kale and
+                            wheat grass, among other things. </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <footer class="footer">
+
+            <a href="mailto:greenherbrabbitry@gmail.com?subject=Website Inquiry">To contact us, click here:
+                <i class="fa-solid fa-envelope"></i></i></a>
+            <p> Background courtesy of Deposit Photots</p>
+        </footer>
+    </div>
+</body>
+
+
+</html>

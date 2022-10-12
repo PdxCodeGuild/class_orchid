@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}The Gallery{% endblock %}
+{% block content %}
+{% load static %}
+<h1>The Gallery</h1>
+</div>
+
+{% if user.is_authenticated %}
+
+<div>
+    <h1> Hi {{ user.username }} You can now upload photos. </h1>
+
+    <h2 class="my-4">Add a photo</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <input type="file" name="photo" id="photo" accept=".jpg, .bmp, .png">
+        <input type="textbox" name="caption" id="caption">
+        <button class="btn btn-dark my-4" type="submit">Submit</button>
+    </form>
+
+
+
+    <div class="row">
+        {% for item in photos %}
+
+        <div class="col-lg-4 col-md-6 col-sm-12 pb-8">
+            <div class="card" style="width: 100%;">
+                <img src=" {{MEDIA_URL}}{{item.photo}}" class="card-img-top" height=auto% width=100%>
+                <h2 class="card-title"> {{item.caption}} </a>
+            </div>
+        </div>
+
+
+        {% endfor %}
+    </div>
+
+
+
+</div>
+{% else %}
+<p>You are not logged in. To upload your own photos, please Log in or create an account.</p>
+
+<div class="row">
+    {% for item in photos %}
+    <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+        <div class="card h-100 p-4">
+            <img src="{{MEDIA_URL}}{{item.photo}}" class="card-img-top">
+            <a href="{{item.caption}}"> {{item.caption}} </a>
+        </div>
+    </div>
+
+
+    {% endfor %}
+</div>
+
+{% endif %}
+
+
+
+
+
+{% endblock %}
