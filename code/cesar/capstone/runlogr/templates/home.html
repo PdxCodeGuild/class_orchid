@@ -1,15 +1,18 @@
-<!-- templates/home.html -->
+<!-- templates/home.html-->
 {% extends 'base.html' %}
 
-{% block title %}Authentication{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-
-  <p>Please authorize your Strava here: <a href="http://www.strava.com/oauth/authorize?client_id=95093&response_type=code&redirect_uri=http://localhost:8000/&approval_prompt=force&scope=read_all,profile:read_all,activity:read_all">click</a>
+  Hi {{ user.username }}!<br><br>
+  <p>Please authorize your Strava here: <a href="http://www.strava.com/oauth/authorize?client_id=95093&response_type=code&redirect_uri=http://localhost:8000/&approval_prompt=force&scope=read_all,profile:read_all,activity:read_all">here</a></p>
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
 {% endif %}
 {% endblock %}
+
+
+
