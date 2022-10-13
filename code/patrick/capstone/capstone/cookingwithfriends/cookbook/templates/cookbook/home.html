@@ -11,10 +11,14 @@
             <h2><a class="article-title" href="{% url 'recipe-detail' recipe.id %}">{{ recipe.recipetitle }}</a></h2>
             <p class="article-content">{{ recipe.ingredients }} </p>
             <p class="article-content"> {{recipe.recipelines}}</p>
-            <img src="media/upload" alt="picture" width="100" height="100"> {{recipe.picture}}
+            <img src=" {{recipe.picture.url}} " > 
             {% if recipe.picture == True %}
-            {% endif %}    
+            <img src="{{ recipe.picture.url }}" alt="picture" > 
+            {% endif %}
+               
         </div>
         </article>
     {% endfor %}
 {% endblock content %}
+
+

@@ -1,11 +1,13 @@
 from django.urls import path
 from . import views
-from .views import RecipeListView, RecipeDetailView, RecipeCreatelView, UpdateView, UserPostView, RecipeUpdateView, RecipeDeleteView
+from .views import RecipeListView, RecipeDetailView, RecipeCreateView, UpdateView, UserPostView, RecipeUpdateView, RecipeDeleteView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', RecipeListView.as_view(), name='cookbook-home'),
     
-    path('recipe/new/', RecipeCreatelView.as_view(), name='recipe-create'),
+    path('recipe/new/', RecipeCreateView.as_view(), name='recipe-create'),
     path('recipe/user/<str:recipe_username>/', views.C_user, name='user-posts'),
     path('recipe/<int:pk>/', RecipeDetailView.as_view(), name='recipe-detail'),
     path('recipe/<int:pk>/update/', RecipeUpdateView.as_view(), name='recipe-update'),
@@ -15,3 +17,4 @@ urlpatterns = [
     path('cost_filter', views.cost_filter, name='cost'),
 
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

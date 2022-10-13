@@ -1,8 +1,9 @@
+
 from django.shortcuts import render, redirect
 from . models import Recipe
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
+from .forms import RecipeUpdateForm
 from django.contrib.auth.models import User
 
 def home(request):
@@ -22,17 +23,18 @@ class RecipeDetailView(DetailView):
     fields = ['recipetitle', 'ingredients', 'recipelines']
     
 
-class RecipeCreatelView(LoginRequiredMixin ,CreateView):
+class RecipeCreateView(LoginRequiredMixin ,CreateView):
     model = Recipe
-    fields = ['recipetitle', 'pricefilter', 'ingredients', 'recipelines', 'picture' ]
+    fields = ['recipetitle', 'pricefilter', 'ingredients', 'recipelines', 'picture'  ]
     
     def form_valid(self, form):
         form.instance.ruser = self.request.user
         return super().form_valid(form)
     
-class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
+class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Recipe
-    fields = ['recipetitle', 'ingredients', 'recipelines']
+    
+    fields = ['recipetitle', 'ingredients', 'recipelines', 'picture']
 
     def form_valid(self, form):
         form.instance.ruser = self.request.user
@@ -42,6 +44,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin ,UpdateView):
         if self.request.user == recipe.ruser:
             return True
         return False    
+
 def about(request):
     return render(request, 'cookbook/about.html')
 

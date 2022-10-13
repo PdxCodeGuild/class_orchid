@@ -3,6 +3,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from PIL import Image
 
 class Recipe(models.Model):
     recipetitle = models.CharField(max_length=30)
@@ -17,7 +18,7 @@ class Recipe(models.Model):
     ]
     pricefilter = models.CharField(choices = pricechoices, max_length=5, default='two')
 
-    picture = models.ImageField(height_field=100, width_field=100, max_length=100, null=True, blank=True, upload_to='media/upload/' )
+    picture = models.ImageField( upload_to='images', blank=True, default='default2.jpg' )
 
     def __str__(self):
         return (self.recipetitle)
@@ -26,5 +27,13 @@ class Recipe(models.Model):
     def get_absolute_url(self):
         return reverse('recipe-detail', kwargs={'pk': self.pk})
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
+        img = Image.open(self.picture.path)
+
+        if img.height  > 300 or img.width > 300:
+            output_size = (300,300)
+            img.thumbnail(output_size)
+            img.save(self.picture.path)
 
