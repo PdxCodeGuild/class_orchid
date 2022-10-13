@@ -7,10 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    {{keyword}}
-    <a href="{% url 'users:index' %}">Home</a>
+    {% for exercise in results %}
+    <li class='listed_exercises'>
+        {{exercise.name}} <br> {{exercise.description}}
+    </li>
+        {% endfor %}
+    <a href="/">Home</a>
 </body>
 </html>
 
-
+{% comment %} need to add buttons to each li that allows users to add or remove from schedule {% endcomment %}
 

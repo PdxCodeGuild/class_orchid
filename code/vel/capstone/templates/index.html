@@ -13,12 +13,14 @@
         {% csrf_token %}
         <select name="user_exercise_search" id="dropdown">
             <option value="10">Abs</option>
-            <option value="">Shoulders</option>
-            <option value="">Chest</option>
+            <option value="8">Arms</option>
+            <option value="12">Back</option>
+            <option value="14">Calves</option>
             <option value="" disabled></option>
-            <option value="">Calves</option>
-            <option value="">Hamstring</option>
-            <option value="">Quads</option>
+            <option value="15">Cardio</option>
+            <option value="11">Chest</option>
+            <option value="9">Legs</option>
+            <option value="13">Shoulders</option>
         </select>
         <input type="submit" value="search">
     </form>
@@ -26,3 +28,5 @@
     <a href="{% url 'exercise:results'%}">Exercise results</a>
 </body>
 </html>
+
+

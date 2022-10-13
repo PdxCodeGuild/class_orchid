@@ -8,15 +8,22 @@ import json
 def results(request):
     if request.method == 'POST':
         results = []
+        keyword = request.POST['user_exercise_search']
         with open('exercises.json', 'r') as f:
             jsonfile = json.load(f)
+        for exercise in jsonfile['exercises']:
+            # print(exercise['category'])
+            print(keyword)
+            if exercise['category'] == int(keyword):
+                results.append(exercise)
+        print(results)
+
         
         
         
 
     
-    keyword = request.POST['user_exercise_search']
-    context = {'keyword': keyword}
+    context = {'results': results}
 
     return render(request, 'results.html', context)
 # Create your views here.

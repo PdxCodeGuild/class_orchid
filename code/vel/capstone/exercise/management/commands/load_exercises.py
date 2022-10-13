@@ -27,7 +27,11 @@ class Command(BaseCommand):
                     name = exercise['name'],
                     description = exercise["description"].replace('<p>','').replace('</p>','')
                 )
-
-                muscle_obj,created = Muscle.objects.get_or_create(muscle=category[exercise['category']]) 
+                print(category[exercise['category']])
+                
+                muscle_obj,created = Muscle.objects.get_or_create(name=category[exercise['category']]) 
                 muscle_obj.muscle.add(exer_obj)
+
+# im trying to translate the muscle keyword to the number assigned to the muscle group from the api
+# if i input the word it is in my exercise database with the name and description but i cant translate from string to int
                 
