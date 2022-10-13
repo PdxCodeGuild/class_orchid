@@ -31,9 +31,9 @@ class RecipeCreateView(LoginRequiredMixin ,CreateView):
         form.instance.ruser = self.request.user
         return super().form_valid(form)
     
-class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class RecipeUpdateView( LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Recipe
-    
+    form = RecipeUpdateForm()
     fields = ['recipetitle', 'ingredients', 'recipelines', 'picture']
 
     def form_valid(self, form):
