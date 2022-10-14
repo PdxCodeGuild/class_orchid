@@ -1,29 +1,28 @@
-from django.shortcuts import render
-import json
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.shortcuts import render, get_object_or_404, reverse
 
-# I can use keyword logic to then filter through my api by keyword, data returned will be stored in a variable, that variable is then passed to context to be displayed on html
+from .models import Exercise, Muscle
 
-# create a key for each value i want (muscle), for loop looking for keyword matches and store that in an empty list?
+# class ExerciseListView(ListView):
+#     model = Exercise
+#     template_name = 'index.html'
 
-def results(request):
-    if request.method == 'POST':
-        results = []
-        keyword = request.POST['user_exercise_search']
-        with open('exercises.json', 'r') as f:
-            jsonfile = json.load(f)
-        for exercise in jsonfile['exercises']:
-            # print(exercise['category'])
-            print(keyword)
-            if exercise['category'] == int(keyword):
-                results.append(exercise)
-        print(results)
+#     def get_queryset(self):
+#         return Exercise.objects.order_by('name')
 
-        
-        
-        
-
-    
-    context = {'results': results}
-
-    return render(request, 'results.html', context)
-# Create your views here.
+def index(request, muscle):
+    if request.method == 'GET':
+        exercises = Exercise.objects.all().order_by('name')
+        context = {
+            'exercises': exercises
+        }
+        return render(request, 'index.html', context) 
+    else:
+        exercises = Exercise.objects.all().filter(muscle=request.POST.get('value'))
+        context = {
+            'exercises': exercises
+        }
+        return render(request, 'index.html', context) 

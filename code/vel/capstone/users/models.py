@@ -4,7 +4,12 @@ from exercise.models import Exercise
 
 DAYS = (
     ('mon','Monday'),
-    ('tues', 'Tues')
+    ('tues', 'Tuesday'),
+    ('wed', 'Wednesday'),
+    ('thurs', 'Thursday'),
+    ('fri', 'Friday'),
+    ('sat','Saturday'),
+    ('sun','Sunday'),
 )
 
 class CustomUser(AbstractUser):
