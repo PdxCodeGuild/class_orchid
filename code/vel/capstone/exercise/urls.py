@@ -3,5 +3,5 @@ from . import views
 
 app_name = 'exercise'
 urlpatterns = [
-    # path('', views.ExerciseListView.as_view(), name="index"),
+    path('', views.index, name="index"),
 ]

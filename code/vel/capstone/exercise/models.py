@@ -11,6 +11,6 @@ class Exercise(models.Model):
 
 class Muscle(models.Model):
     name = models.CharField(max_length=500)
-    muscle = models.ManyToManyField(Exercise, related_name='muscles')
+    exercise = models.ManyToManyField(Exercise, related_name='muscle')
     def __str__(self):
         return self.name

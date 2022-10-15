@@ -14,7 +14,6 @@
             <option value="Back">Back</option>
             <option value="Calves">Calves</option>
             <option value="" disabled></option>
-            <option value="Cardio">Cardio</option>
             <option value="Chest">Chest</option>
             <option value="Legs">Legs</option>
             <option value="Shoulders">Shoulders</option>
@@ -22,11 +21,12 @@
         <input type="submit" value="search">
     </form>
 
+{% if exercises %}
+{% for exercise in exercises %}
+    <p>{{exercise.name}}:<br> {{exercise.description}}</p>
+{% endfor %}   
+{% endif %}
 
-
-{% for exercise in object_list %}
-    <p>{{exercise.name}}</p>
-{% endfor %}
 {% endblock content %}
 
 

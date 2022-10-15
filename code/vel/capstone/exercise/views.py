@@ -13,16 +13,16 @@ from .models import Exercise, Muscle
 #     def get_queryset(self):
 #         return Exercise.objects.order_by('name')
 
-def index(request, muscle):
-    if request.method == 'GET':
-        exercises = Exercise.objects.all().order_by('name')
+def index(request):
+    # if request.method == 'GET':
+    #     exercises = Exercise.objects.all().order_by('name')
+    #     context = {
+    #         'exercises': exercises
+    #     }
+    if request.method == 'POST':
+        muscle = Muscle.objects.get(name=request.POST['user_exercise_search'])
         context = {
-            'exercises': exercises
+            'exercises': muscle.exercise.all()
         }
         return render(request, 'index.html', context) 
-    else:
-        exercises = Exercise.objects.all().filter(muscle=request.POST.get('value'))
-        context = {
-            'exercises': exercises
-        }
-        return render(request, 'index.html', context) 
+    return render(request, 'index.html') 
