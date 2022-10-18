@@ -1,3 +1,4 @@
+console.log("string")
 const airportData = {
     "AAL": {
         "location": "Aalborg",
@@ -4993,4 +4994,6 @@ const airportData = {
     }
 }
 
-export default airportData
+
+
+// export default airportData

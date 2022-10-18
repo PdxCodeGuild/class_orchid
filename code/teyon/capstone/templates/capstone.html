@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Finder</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/d0e792c470.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 70%;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+    
+</head>
+<body>
+
+    <H1>Fast Flights</H1><br><br><br>
+    <div id="map"></div>
+    <div id="app" >
+        <!-- {{map}} -->
+        <div class="userinput">
+            <input type="text" id="outgoing" placeholder="Outgoing Location" v-model="outgoing">
+            <input type="text" id="incoming" placeholder="Incoming Destination" v-model="incoming">
+            <input type="text" id= "date" placeholder="Year-Month-Day" v-model="date">
+            <button id="submit" v-on:click="getIata">Submit</button>
+        </div>
+        
+        
+        <li v-if="price" id="cards"><div 
+            class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Flights</h5>
+                <p class="card-text">Departing: ##price['origin']##  <i class="fa-solid fa-plane"></i> 
+                    Arriving: ##price['destination']## ##price.lowestTotalFare['amount']##
+                </p>
+                <a href="https://www.priceline.com/?vrid=a02e0d033f17b677eecdacb6a711c10c" class="btn btn-primary" id="priceline">priceline.com</a>
+                <form v-bind:action="getSavedUrl(price)" method="POST">
+                    {% csrf_token %}
+                    <button type="submit"><i class="fa-solid fa-heart-circle-plus" id="fonta"></i></button>
+                </form> 
+            </div>
+        </div>
+    </li><br>
+    {% comment %} <h2 class="saved">Saved Flights</h2>
+    <li v-if="price" class="savedinput"><div 
+        class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Flights</h5>
+            <p class="card-text">Departing: ##price['origin']## ->
+                Arriving: ##price['destination']##
+            </p>
+            <a href="https://www.priceline.com/?vrid=a02e0d033f17b677eecdacb6a711c10c" class="btn btn-primary" id="priceline">priceline.com</a> {% endcomment %}
+        </div>
+    </div>           
+</li><br><br><br>
+
+
+</div>
+{% comment %} {% block content %}  
+        <form action="" method=post>
+            {% csrf_token %}   
+            <input type="text" autofocus maxlength="300" name="comment">
+            <input type="submit" value="Post">
+        </form>
+        {% for comments in all_comments %}
+        <div>
+            <a>
+                {{comments.user.username}}
+            </a>
+            <p>
+                {{comments.content}}
+            </p>
+            <p>
+                {{comments.posted_date}}
+            </p>
+        </div>
+        {% endfor %}
+        {% endblock %} {% endcomment %}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQR4tvBFNHhw9GgWy16Db2hh-GriSCTAw"
+></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="{% static 'airports.js' %}"></script>
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        delimiters: ['##','##'],
+        data () {
+            return {
+                info: null,
+                incoming: null, 
+                outgoing: null,
+                date: null,
+                airports: airportData,
+                outgoingIata: null,
+                incomingIata: null,
+                favFlight: [],
+                incLat: null,
+                incLon: null,
+                outLat: null,
+                outLon: null,
+                price: null,
+                map: null,
+                information: null
+            }
+        },
+    
+        methods: {
+    
+            getIata(){
+                let departure = this.outgoing
+    
+                for(let key in this.airports){
+                    if(this.airports[key]["location"] == departure){
+                        this.outgoingIata = this.airports[key]["airport"]
+                    }
+                    
+                }
+                let arrival = this.incoming
+    
+                for(let key in this.airports){
+                    if(this.airports[key]["location"] == arrival){
+                        this.incomingIata = this.airports[key]["airport"]
+    
+                    }
+                }
+    
+                this.flightData()
+                
+            },
+    
+            flightData(){
+                axios
+                .get('https://priceline-com-provider.p.rapidapi.com/v1/flights/search',{
+                params: {"itinerary_type":"ONE_WAY","class_type":"ECO","location_arrival":this.incomingIata,"date_departure":this.date,"location_departure":this.outgoingIata,"sort_order":"PRICE","number_of_stops":"1","price_max":"20000","number_of_passengers":"1","duration_max":"2051","price_min":"100"},
+                headers: {
+                    'X-RapidAPI-Key': '71c7cd9e87msh636c8b829338161p16fe2djsnac414d19ae23',
+                    'X-RapidAPI-Host': 'priceline-com-provider.p.rapidapi.com'
+                }
+            }
+                )
+                .then(response => { 
+                    for (let index = 0; index < response.data.totalTripSummary.airport.length; index++){
+                        if(response.data.totalTripSummary.airport[index].lowestTotalFare.amount == response.data.totalTripSummary.minTotalFareWithTaxesAndFees){
+                            this.price = response.data.totalTripSummary.airport[index]
+                            console.log(this.price)
+                            }
+                        }
+                    })
+            
+                        
+    
+                this.iataLatLong()
+                
+    
+                },
+    
+            savedFlights(item){
+    
+                this.favFlight.push(item)
+                
+    
+    
+            },
+    
+            iataLatLong(){
+                let arriving = this.incomingIata
+                
+                // axios
+                // .get ('https://priceline-com-provider.p.rapidapi.com/v1/flights/locations',{
+                // params: {name: arriving},
+                // headers: {
+                //     'X-RapidAPI-Key': '71c7cd9e87msh636c8b829338161p16fe2djsnac414d19ae23',
+                //     'X-RapidAPI-Host': 'priceline-com-provider.p.rapidapi.com'
+                // }
+                // }
+                // )
+                // .then(response => {
+                //     this.incLatLon = response.data[id]
+                //     console.log(this.incLatLon)})
+    
+                // let depart = this.outgoingIata
+                
+                // axios
+                // .get ('https://priceline-com-provider.p.rapidapi.com/v1/flights/locations',{
+                // params: {name: depart},
+                // headers: {
+                //     'X-RapidAPI-Key': '71c7cd9e87msh636c8b829338161p16fe2djsnac414d19ae23',
+                //     'X-RapidAPI-Host': 'priceline-com-provider.p.rapidapi.com'
+                // }
+                // }
+                // )
+                // .then(response => {
+                //     this.outLatLon = response.data
+                //     console.log(this.outLatLon)
+                // })
+                axios
+                .get(`https://travel-hacking-tool.p.rapidapi.com/api/airports/${arriving}/`,{headers: {
+                    'X-RapidAPI-Key': '71c7cd9e87msh636c8b829338161p16fe2djsnac414d19ae23',
+                    'X-RapidAPI-Host': 'travel-hacking-tool.p.rapidapi.com'
+                }
+                })
+                .then(response => {
+                    this.incLat = response.data.latitude
+                    this.incLon = response.data.longitude
+                    console.log(this.information)
+                    console.log(this.incLat, "incLat")
+                    console.log(this.incLon, "incLon")})
+                    
+                    let depart = this.outgoingIata
+    
+                    axios
+                    .get(`https://travel-hacking-tool.p.rapidapi.com/api/airports/${depart}/`,{headers: {
+                        'X-RapidAPI-Key': '71c7cd9e87msh636c8b829338161p16fe2djsnac414d19ae23',
+                        'X-RapidAPI-Host': 'travel-hacking-tool.p.rapidapi.com'
+                    }
+                    })
+                    .then(response => {
+                        this.outLat = response.data.latitude
+                        this.outLon = response.data.longitude
+                        this.information = response.data
+                        console.log(this.information)
+                        console.log(this.outLat, "outlat")
+                        console.log(this.outLon, "outlon")
+                        this.googleMap()    
+                        })
+                        
+                    
+                    },
+    
+                googleMap(){
+    
+                    const outLatLon = { lat: this.outLat, lng: this.outLon };
+                    const incLatLon = { lat:this.incLat, lng: this.incLon }
+                    console.log(outLatLon)
+                    console.log(this.outLat)
+                    
+                    
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        center: { lat: 0, lng: 0 },
+                        zoom: 2,
+                    });
+                    new google.maps.Marker({
+                        position: outLatLon,
+                        map,
+                        title: "Hello World!",
+                });   
+                    new google.maps.Marker({
+                        position: incLatLon,
+                        map,
+                        title: "Hello World!",
+                })  
+    
+                },
+
+            getSavedUrl(price) {
+
+                return `adventure/flights/${price.origin}/${price.destination}/${price.lowestTotalFare.amount}`
+                
+            }
+    
+            },
+
+
+    
+    
+    
+        computed: {
+            filteredInfo(){
+                if(this.price){
+                    console.log(this.price)
+    
+    
+                    return this.price
+                    
+                    
+    
+                }
+            return null
+    
+    
+            }
+    
+        },
+    
+        mounted() {
+    
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 0, lng: 0 },
+                zoom: 2,
+            });
+    
+        
+        }
+    })
+    
+</script>
+
+
+</html>
