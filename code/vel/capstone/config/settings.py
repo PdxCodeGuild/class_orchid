@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'exercise',
     'users',
+    'planner',
 ]
 
 MIDDLEWARE = [
