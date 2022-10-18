@@ -1,6 +1,9 @@
 from django.contrib import admin
 
-from .models import Planner
+from .models import WorkingSet, Workout
 
-admin.site.register(Planner)
+
+admin.site.register(Workout)
+admin.site.register(WorkingSet)
+
 # Register your models here.

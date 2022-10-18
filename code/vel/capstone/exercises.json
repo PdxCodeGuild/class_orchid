@@ -22,51 +22,52 @@
         {
             "name": "Plank",
             "category": 10,
-            "description": "Lying face down, with your lower half and torso off the floor (so that the only contact points with the floor are the toes and the arms from the elbow down), you need to hold yourself steady.",
+            "description": "Lying face down, with your lower half and torso off the floor (so that the only contact points with the floor are the toes and the arms from the elbow down), you need to hold yourself steady."
         },
         {
             "name": "Russian Twist",
             "category": 10,
-            "description": "You need to face upwards with your legs slightly bent and slightly parted and the arms held outwards. Then, as the name suggests, you twist. Turn until you're around 45-90 degrees and hold the contraction.",
+            "description": "You need to face upwards with your legs slightly bent and slightly parted and the arms held outwards. Then, as the name suggests, you twist. Turn until you're around 45-90 degrees and hold the contraction."
         },
         {
             "name": "Bicycle Crunch",
             "category": 10,
-            "description": "Bicycle crunches begin in a similar position to normal crunches, but with the legs elevated and knees bent. Place your hands on your head with your elbows pointed directly outwards. Then, crunch. Bring your shoulders and head toward your legs. With a slight twisting motion to get the elbows as close to the knees as possible, you'll be feeling the burn in no time.",
+            "description": "Bicycle crunches begin in a similar position to normal crunches, but with the legs elevated and knees bent. Place your hands on your head with your elbows pointed directly outwards. Then, crunch. Bring your shoulders and head toward your legs. With a slight twisting motion to get the elbows as close to the knees as possible, you'll be feeling the burn in no time."
         },
         {
             "name": "Bridge",
             "category": 10,
-            "description": "The idea is to lay flat on your back with your knees bent, and push your hips forward. Stop when you're parallel, hold for a second or two, and release.",
+            "description": "The idea is to lay flat on your back with your knees bent, and push your hips forward. Stop when you're parallel, hold for a second or two, and release."
         },
         {
             "name": "Jack Knife",
             "category": 10,
-            "description": "The jackknife involves lying flat on the floor with your arms extended above your head. Then, raise your lower and upper body at the same time, so the two come as close to touching as possible above the core of the body, and then return to the starting position.",
+            "description": "The jackknife involves lying flat on the floor with your arms extended above your head. Then, raise your lower and upper body at the same time, so the two come as close to touching as possible above the core of the body, and then return to the starting position."
         },
         {
             "name": "Side Plank",
             "category": 10,
-            "description": "Side planks are another great ab exercise for definition. They take the same position as the plank, however, involve the motion of turning the torso 90 degrees so that one arm is pointing directly upwards. The other remains on the floor from the elbow down. Remember to do both sides!",
+            "description": "Side planks are another great ab exercise for definition. They take the same position as the plank, however, involve the motion of turning the torso 90 degrees so that one arm is pointing directly upwards. The other remains on the floor from the elbow down. Remember to do both sides!"
         },
         {
             "name": "Mountain Climbers",
             "category": 10,
-            "description": "Start in a push-up position when the arms are still extended. Once you're there, you bring your knees to your chest in an alternating motion.",
+            "description": "Start in a push-up position when the arms are still extended. Once you're there, you bring your knees to your chest in an alternating motion."
         },
         {
-            "name": ,
+            "name": "",
             "category": 10,
-            "description": ,
-        },{
-            "name": ,
-            "category": 10,
-            "description": ,
+            "description": ""
         },
         {
-            "name": ,
+            "name": "",
             "category": 10,
-            "description": ,
+            "description": ""
+        },
+        {
+            "name": "",
+            "category": 10,
+            "description": ""
         },
         {
             "id": 227,
