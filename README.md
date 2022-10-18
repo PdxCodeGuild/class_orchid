@@ -8,8 +8,11 @@ M-F 9:30 am – 4:30 pm
 
 ### Holidays / Days Off
 
-- July 29th (Day Off)
+- July 29th
+- August 12th
 - September 5th (Labor Day)
+- October 10th (Indigenous People's Day)
+- October 17th
 
 ### Staff
 
@@ -21,7 +24,7 @@ M-F 9:30 am – 4:30 pm
 
 ## Capstone Dates:
 
-Capstone proposal due: TBD  
+Capstone proposal due: October 3, 2022
 
 Presentation Day: October 21st, 2022  
 
@@ -31,7 +34,8 @@ Presentation Day: October 21st, 2022
 | 01-03 | [Pick3](5%20JavaScript/labs/01-03%20Pick%203.md)                             | Sep 14th      | Sep 19th    | Sep 28th      |
 | 04    | [Mob Todo List](5%20JavaScript/labs/04%20Todo%20List.md)                     | Sep 16th      | N/A         | N/A           |
 | 05    | [Vue Todos](5%20JavaScript/labs/05%20Vue%20Todos.md)                         | Sep 19th      | Sep 22nd    | Oct  3rd      |
-<!-- | 05    | [JavaScript Mini-Capstone](5%20JavaScript/labs/07%20Mini-Capstone.md)        | May ??th      | May ??th    | Jun  3rd      | -->
+| 06    | [Quotes in Vue](5%20JavaScript/labs/Lab%2006%20Quotes%20in%20Vue.md)         | Sep 21st      | Sep 26th    | Oct  5rd      |
+| 07    | [JavaScript Mini-Capstone](5%20JavaScript/labs/Lab%2007%20Mini-Capstone.md)  | May ??th      | May ??th    | Jun  3rd      |
 
 
 <!-- #### Optional JavaScript Labs
