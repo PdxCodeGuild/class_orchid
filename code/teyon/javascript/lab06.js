@@ -16,12 +16,12 @@ new Vue({
             this.find = input.target.value
 
         axios
-        .get('http://favqs.com/api/quotes', {
-            headers: {'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"'},
-            params: {'filter': this.find, 'pages': this.pages, 'type': this.type}
-        })
-        .then(response => {
-            (this.info = response.data.quotes)
+            .get('https://favqs.com/api/quotes', {
+                headers: {'Authorization':'Token token="b739c98330b6c5c4d8d49a60dd6543e4"'},
+                params: {'filter': this.find, 'pages': this.pages, 'type': this.type}
+            })
+            .then(response => {
+                (this.info = response.data.quotes)
         })
         console.log(this.info)
         console.log(this.page)
@@ -31,8 +31,8 @@ new Vue({
         this.pages += 1
         axios
         .get('https://favqs.com/api/quotes', {
-            headers: {'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"'},
-            params: {'filter': this.find, 'pages': this.pages}
+            headers: {'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"', 'Access-Control-Allow-Origin': '*'},
+            params: {'filter': this.find, 'page': this.pages}
         })
         .then(response => {
             (this.info = response.data.quotes)
@@ -44,8 +44,8 @@ new Vue({
     mounted (){
 
         axios
-            .get('http//favqs.com/api/quotes', {
-                headers:{'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"'}
+            .get('https://favqs.com/api/quotes', {
+                headers:{'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"', 'Access-Control-Allow-Origin': '*'}
             })
             .then(response => {
                 (this.info = (this.info = response.data.quotes))
