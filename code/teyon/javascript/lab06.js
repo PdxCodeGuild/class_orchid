@@ -23,6 +23,9 @@ new Vue({
         .then(response => {
             (this.info = response.data.quotes)
         })
+        console.log(this.info)
+        console.log(this.page)
+        console.log(this.type)
     },
     next(){
         this.pages += 1
@@ -39,12 +42,13 @@ new Vue({
     },
 
     mounted (){
+
         axios
-        .get('http//favqs.com/api/quotes', {
-            headers:{'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"'}
-        })
-        .then(response => {
-            (this.info = (this.info = response.data.quotes))
+            .get('http//favqs.com/api/quotes', {
+                headers:{'Authorization': 'Token token="b739c98330b6c5c4d8d49a60dd6543e4"'}
+            })
+            .then(response => {
+                (this.info = (this.info = response.data.quotes))
         })
     }
 })
