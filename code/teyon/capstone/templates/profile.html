@@ -9,7 +9,7 @@
 <body>
     {{ request.user }}
     {% for flights in flightInfo %} 
-    {{ flights.arriving }}
+    {{ flights.arriving }}{{ flights.departing }}{{ flights.price }}
     {% endfor %} 
 </body>
 </html>

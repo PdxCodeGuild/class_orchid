@@ -28,7 +28,8 @@ def profile(request):
     return render(request, 'profile.html', context)
 
 def flights(request,arv,des,pri):
-    savedFlightData = Profile(user=request.user, price=pri, departing=des, arriving=arv)
+    user = User.objects.get(username=request.user.username)
+    savedFlightData = Profile(user=user, price=pri, departing=des, arriving=arv)
     savedFlightData.save()
     return HttpResponseRedirect(reverse('adventure:profile'))
 
