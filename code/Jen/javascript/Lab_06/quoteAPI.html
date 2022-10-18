@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quote API</title>
+    <!-- Add your styles here! -->
+    <link rel="stylesheet" href="quoteAPI.css" />
+    <script src="https://unpkg.com/vue"></script>
+    <script src="quoteAPI.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+
+</head>
+
+<header>
+
+</header>
+
+<body>
+
+    <div id="app">
+        <div class="grid-container">
+
+            <div class="grid-item">
+
+
+                <h1>Would you like the quote of the day? </h1>
+
+                <button v-on:click="getQotd()" autofocus> Yes
+                </button></input>
+
+                <div id="getQuote">
+                    <ul v-for="item in objectItems">
+                        <li>
+                            <h2> {{item.body}} </h2>
+                        </li>
+                    </ul>
+                    <button :disabled="pageCount === 0" @click="prevPage">
+                        Previous
+                    </button>
+                    <button :disabled="page >= pageCount -1" @click="nextPage">
+                        Next
+                    </button>
+                </div>
+                <h2> {{output}} </h2>
+
+                <input type="text" placeholder='' v-model='search'> </input><button v-on:click="getQuote(search)"
+                    autofocus>
+                    Submit
+                </button>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

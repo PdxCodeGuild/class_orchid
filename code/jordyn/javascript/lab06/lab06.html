@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link rel="stylesheet" href="lab06.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="inputs header">
+            <select v-model="filterInput">
+                <option value="keyword">Keyword</option>
+                <option value="author">Author</option>
+                <option value="tag">Tag</option>
+            </select>
+            <input v-model.lazy="keywordInput" type="text" placeholder="Filter" @keyup.enter="getKeywords">
+        </div>
+        <div id="quoteList">
+            <ul id="quoteUL" v-for="output in outputs">
+                <p>{{ output.body }}</p>
+                <p>-{{ output.author }}</p>
+            </ul>
+        </div>
+        <div id="page_arrows">
+            <div id="left" @click="pageDownBuilder">Page Down</div>
+            <div id="right" @click="pageUpBuilder">Page Up</div>
+        </div>
+        
+    </div>
+    
+    <script src="lab06API.js"></script>
+    <script src="lab06.js"></script>
+</body>
+</html>
