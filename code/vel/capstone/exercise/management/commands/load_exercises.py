@@ -16,9 +16,6 @@ class Command(BaseCommand):
             9: "Legs",
             13: "Shoulders",
         }
-        # sub_category = {
-        #     2: "Anteri"
-        # }
         with open('exercises.json')as f:
             exercise_list = json.loads(f.read())
 

@@ -55,19 +55,289 @@
             "description": "Start in a push-up position when the arms are still extended. Once you're there, you bring your knees to your chest in an alternating motion."
         },
         {
-            "name": "",
+            "name": "Leg Raise",
             "category": 10,
-            "description": ""
+            "description": "Another one of our amazing ab exercises for definition is the leg raise. Leg raises involve lying face up completely flat, with the arms at the sides of the torso, before the legs are elevated and held for around a second.The legs should rise to around a 40-degree angle to really target the lower abs, and this should continue for 30 seconds."
         },
         {
-            "name": "",
+            "name": "Reverse Church",
             "category": 10,
-            "description": ""
+            "description": "It involves the top section of the back and shoulders to remain on the floor, whilst the rest of the body is elevated. Keep your knees bent and brought close to your body for each repetition before returning upwards."
         },
         {
-            "name": "",
+            "name": "Hollow Body Hold",
             "category": 10,
-            "description": ""
+            "description": "It is much like the jackknife in terms of positioning. With your arms raised straight above your head and legs straight on the floor, lift both to around a 45-degree angle. When you're there, hold the position for 1-2 seconds before relaxing and going back to the resting position."
+        },
+        {
+            "name": "Dummbell Squeeze Press",
+            "category": 11,
+            "description": "Lie on a flat bench and hold a dumbbell in each hand. Maintain a neutral grip and begin with your arms straight, directly above you. Bend your arms and lower them to the side of your body so the dumbbells lie just above your chest. Pause and then lift your arms to repeat."
+        },
+        {
+            "name": "Incline Barbell Bench Press",
+            "category": 11,
+            "description": "Lie back on a bench set to an incline angle and lift a barbell to shoulder height, palms facing away from you. Breathe out as you press up with both arms. Lock out your arms and squeeze your chest before returning slowly to the start position."
+        },
+        {
+            "name": "Incline Barbell Bench Press",
+            "category": 11,
+            "description": "Lie back on a bench set to a 45-degree angle and lift the weights over your chest, palms facing away from you. Slowly lower one weight, then drive it back up and squeeze your chest at the top.Repeat with the other side."
+        },
+        {
+            "name": "Close-grip barbell bench press",
+            "category": 11,
+            "description": "Lie back on a flat bench holding a barbell with a narrow, overhand grip. From the starting position, breathe in and lower the bar slowly until it skims the middle of your chest. Push the bar back to the starting position explosively as you breathe out. Focus on pushing the bar using your chest muscles."
+        },
+        {
+            "name": "Decline Press Up",
+            "category": 11,
+            "description": "Place your feet on a bench with your hands planted on the floor in front of you. Lower your body down until your chest almost reaches the floor. Press your body back up to the starting position while squeezing your chest. Pause briefly at the top before repeating."
+        },
+        {
+            "name": "Cable Fly",
+            "category": 11,
+            "description": "Attach stirrup handles to the high pulleys of a cable crossover machine. Take one in each hand – your arms should be outstretched with a slight bend. Place one foot slightly forward, brace your core, and pull the handles downward and across your body. Return to the start position under control"
+        },
+        {
+            "name": "Decline Barbell Bench Press",
+            "category": 11,
+            "description": "Holding a barbell with your hands shoulder-width apart and palms facing your feet, lie back on a bench fixed to a decline setting. Start with your arms fully extended and hands over your chest, then lower the bar slowly until it skims the middle of your chest. Push the barbell back to the starting position explosively as you breathe out."
+        },
+        {
+            "name": "Staggered Press Up",
+            "category": 11,
+            "description": "Get into a press-up position with your hands staggered, so your right is further forward then the left. Lower your body until your chest is an inch from the ground then drive up explosively. Pull your hands off the floor and switch positions so your left leads, then repeat."
+        },
+        {
+            "name": "Chest Dips",
+            "category": 11,
+            "description": "Grab the bars of a dip station with your palms facing inward and your arms straight. Slowly lower until your elbows are at right angles, ensuring they stay tucked against your body and don't flare out. Drive yourself back up to the top and repeat."
+        },
+        {
+            "name": "Clap Press Up",
+            "category": 11,
+            "description": "Get into a push-up position, your hands just outside your chest, your feet shoulder-width apart, and your body forming a straight line from head to heels. Brace your core. Lower your chest to the floor and then press up explosively so your hands come off the floor, clapping once at the top of the movement."
+        },
+        {
+            "name": "Yates Row",
+            "category": 12,
+            "description": "Hold the bar with an underhand grip at shoulder-width. Keeping your lower back in its natural arch, bend your hips back and lower your torso to about 60 degrees. Row the weight to your belly button using a slight cheat (use momentum to begin each rep), but don’t let your lower back round. If you have wrist straps, you may use them to help your grip."
+        },
+        {
+            "name": "Bentover Reverse Fly",
+            "category": 12,
+            "description": "Set up as you did for the neutral-grip row, but with lighter dumbbells. Set a timer for three minutes. Raise your arms out to your sides 90 degrees, squeezing your shoulder blades together at the top for a second. Complete your set and then rest until the end of three minutes, when your timer goes off."
+        },
+        {
+            "name": "Seated Cable Row",
+            "category": 12,
+            "description": "Attach a straight or lat-pulldown bar to the pulley of a seated row station. Sit on the bench (or floor) with your feet against the foot plate and knees slightly bent. Keeping your lower back flat, bend forward at the hips to grasp the bar and row it to your sternum, squeezing your shoulder blades together in the end position. Extend your arms and feel the stretch in your backbefore beginning the next rep"
+        },
+        {
+            "name": "Lying Lateral Raise",
+            "category": 12,
+            "description": "Set an adjustable bench to a 30-degree incline and lie on it chest-down with a dumbbell in each hand. Squeeze your shoulder blades together and raise your arms out 90 degrees to your sides so your palms face down in the top position."
+        },
+        {
+            "name": "Wide Grip Pull Up",
+            "category": 12,
+            "description": "Grab a pullup bar with an overhand grip, wider than outside shoulder width. Hang from the bar and then pull yourself up until your chin is over it."
+        },
+        {
+            "name": "Snatch-Grip Rack Deadlift",
+            "category": 12,
+            "description": "Set up as you would to deadlift, only do so in a power rack, resting the bar on the safety rods at about two inches below your knees. Grasp the bar wide, hands about double shoulder width. Extend your hips and stand up, pulling the bar to in front of your thighs."
+        },
+        {
+            "name": "Incline Dumbbell Row",
+            "category": 12,
+            "description": "Set an adjustable bench to a 30- to 45-degree incline and lie on it chest-down. Grasp a dumbbell in each hand and draw your shoulder blades back and together as you row the weights to your sides."
+        },
+        {
+            "name": "Pallof Press Iso Hold",
+            "category": 12,
+            "description": "Attach a single-grip handle to a cable pulley and set it at about shoulder height. (You can also use a band.) Grasp the handle with one hand over the other and step away from the machine to put tension on the cable; turn to your left 90 degrees so your right side faces the machine. Stand with feet shoulder-width apart and extend your arms in front of you. The cable will try to twist your body toward it—resist."
+        },
+        {
+            "name": "Deadlift",
+            "category": 12,
+            "description": "Stand with feet hip-width apart and bend your hips back. Your grip should be just outside of your knees. Keeping a flat black, extend your hips to stand up, and pull the bar up along your body until lock-out, as your hips drive through and your shoulders move back. While pulling, keep your eyes on the ground a few feet in front of you. Carefully lower the bar back to the starting position."
+        },
+        {
+            "name": "Weighted Pullup",
+            "category": 12,
+            "description": "Attach a weighted belt to your waist, hold a dumbbell between your feet, or—if you can’t complete your reps with weight—use body weight alone. Hang from a pullup bar with your hands just outside shoulder width. Pull yourself up until your chin is over the bar."
+        },        
+        {
+            "name": "Incline Bicep Curl",
+            "category": 8,
+            "description": "Sit on an incline bench and hold a dumbbell in each hand at arm's length. Use your biceps to curl the dumbbell until it reaches your shoulder, then lower them back down to your side and repeat."
+        },
+        {
+            "name": "Underhand Seated Row",
+            "category": 8,
+            "description": "Bend your knees and hold the bar with an underhand grip, shoulder-width apart. Lean back slightly, keeping your back straight, then use your back muscle to drive the bar towards your belly button. Return the bar to starting position and repeat."
+        },
+        {
+            "name": "Reverse-grip EZ Bar Curl",
+            "category": 8,
+            "description": "Hold the EZ bar in front of your thighs with an overhand, shoulder-width grip. As you breathe in, curl the bar until your hands are at your shoulders. Squeeze your biceps, then lower under control."
+        },
+        {
+            "name": "Cable Triceps Press Down",
+            "category": 8,
+            "description": "Stand tall in front of a cable machine, holding a straight-bar handle attached to the high pulley with palms facing down. Keeping your chest up and elbows tight to your sides, press your hands down to straighten your arms, then slowly return to the start."
+        },
+        {
+            "name": "Dummbell Triceps Extension",
+            "category": 8,
+            "description": "Stand tall, holding a dumbbell over your head with your arm straight. Keeping your elbow pointing to the ceiling, lower the weight behind your head, then straighten your arm to return to the start. Repeat for all the reps, then switch arms."
+        },
+        {
+            "name": "Dumbbell Hammer Curl",
+            "category": 8,
+            "description": "Stand tall, holding a dumbbell in each hand with your palms facing each other. Keeping your elbows tight to your sides, curl the weights up to shoulder height. Squeeze your biceps at the top, then lower the weights back to the start."
+        },
+        {
+            "name": "Prone Dumbbell Spider Curl",
+            "category": 8,
+            "description": "Lie on an incline bench and hold a dumbbell in each hand, letting them hang underneath your shoulders. Use your biceps to curl the dumbbells towards your shoulders. Slowly return to starting position and repeat."
+        },
+        {
+            "name": "Tate Press",
+            "category": 8,
+            "description": "Lie on a bench and hold two dumbbells directly above your shoulders. Slowly bend your elbows to bring the dumbbells to your chest, so your palms face outwards and the dumbbells point towards the ceiling. Raise the dumbbells back to starting position and repeat."
+        },
+        {
+            "name": "One Arm Tricep Extension (Seated)",
+            "category": 8,
+            "description": "Hold a dumbbell in one hand directly behind your head, with your elbow bent and pointed towards the ceiling. Extend through your elbow until your arm is straight and the dumbbell is directly above you. Lower your arm back to starting position and repeat."
+        },
+        {
+            "name": "Triceps Dips",
+            "category": 8,
+            "description": "Hoist yourself up on parallel bars with your torso perpendicular to the floor. Bend your knees and slowly lower your body until your shoulder joints are below your elbows. Push back up until your elbows are nearly straight but not locked. If you have shoulder issues, skip this move"
+        },
+        {
+            "name": "Donkey Calf Raise",
+            "category": 14,
+            "description": "Using your set up of choice (refer to the video above), secure your hands and hinge back at the hips and place the balls of your feet at the far edge of the step. Slowly lower your heels as far as possible to the floor, pausing for three to four seconds. Lift your heels as far as possible, squeezing your calves at the top of the movement. Slowly lower down and repeat. "
+        },
+        {
+            "name": "Seated Calf Raise",
+            "category": 14,
+            "description": "Sit up straight with your legs bent at 90 degrees with the balls of your feet on the step and the load above the knee on the thigh. Unrack the machine and slowly lower your heels as far as possible to the floor, pausing for three seconds. Then lift your heels as far as possible, squeezing your calves at the top of the movement. Slowly lower down and repeat. You can also try and of the techniques outlined in the video above."
+        },
+        {
+            "name": "Single-Leg Calf Raise",
+            "category": 14,
+            "description": "Hold a dumbbell in one hand, secure the other hand, and put the ball of your foot on the raised surface.  Cross your other foot behind the working leg and slowly lower it towards the floor. Then lift your heel as high as you can and pause and squeeze at the top of the movement. Slowly lower down and repeat."
+        },
+        {
+            "name": "Farmer's Walk On Toes",
+            "category": 14,
+            "description": "Pick up 25-50% of your body weight in each hand, rise on your toes and take small steps forward, staying as high on your toes as possible. Squeeze both calf muscles as you walk, keeping as high on your toes throughout the entire movement."
+        },
+        {
+            "name": "Sled Drag",
+            "category": 14,
+            "description": "With the sled behind you, take the straps underneath each arm and grip tight. Take a big step forward, taking three to four seconds to go from pushing through your toes to stepping through and rolling down to your heel while really focusing on the calf muscles to create a mind-body connection with them.  Take 20-40 steps with each foot."
+        },
+        {
+            "name": "Captain Morgan Calf Raise",
+            "category": 14,
+            "description": "Hold two dumbbells at arm's length. Put your front foot on a box or step at around knee height. Move your back foot behind your hips. Keep the front knee bent at 90 degrees and point both toes forward. Then, lean forward into the front foot and maintain that position. Perform a calf raise on the back foot, lifting your heel as high as you can. Slowly lower down, reset, and repeat."
+        },
+        {
+            "name": "Clean Pull",
+            "category": 14,
+            "description": "Start with your feet hip-width apart and the barbell over the laces of your shoes. Hinge down and grip the bar with an overhand grip slightly wider than shoulder-width apart. Then lower your hips until your shins touch the bar. Your hips should be slightly above your knees. Pull your chest up and shoulders down. Explosively pull the bar from the floor, keeping the bar close to your body. When the bar passes your knees, extend your knees and ankles to perform a calf raise. Reset and repeat."
+        },
+        {
+            "name": "Barbell Front Squat",
+            "category": 9,
+            "description": "Start with the barbell at around mid-chest height on the squat rack. Approach the bar as you would with a back squat: stand with your feet shoulder width-apart and hands placed just wider than that. Twist your arms under the bar so that it is resting in your fingertips, with your elbows pointing forwards. The bar should rest on your shoulders, and your fingertips are there to just keep it in place. Ensure your knees push out as you squat down. You want to get as deep as possible to put as much tension on your quads and flutes as you can. Power back up and exhale at the top of the movement."
+        },
+        {
+            "name": "Bulgarian Split Squat",
+            "category": 9,
+            "description": "The key to performing the Bulgarian split squat is to have the rear foot elevated. The easiest piece of equipment you can use is a weights bench, but as long as whatever platform or step your rest your rear foot on is around knee height, you're good to go. Now get into a similar position as a forward lunge: your leading single leg a few steps out in front of you. Keeping your torso upright, pelvis ticked and core braced, squat down until the thigh of your leading leg is parallel to the ground. Drive back up through the heel of the leading leg back to your starting position to complete one rep. Start using just your bodyweight before adding a dumbbell in each hand or a barbell for extra weight."
+        },
+        {
+            "name": "Leg Press",
+            "category": 9,
+            "description": "Place your feet higher up the plate and you will target your glutes. Position them further down and you'll place more emphasis on your quads. If you're new to the leg press, it's best to start somewhere in the middle. Position your feet shoulder-width apart and facing outwards slightly and ensure your lower back remains pressed against the seat throughout the duration of the movement. Push the footplate to straighten your legs and remove the handles to the side of the seat. Bring your knees close to your chest, but be sure to not have them touch. Just over 90-degrees is a good target. Straighten your legs back out, but don't fully lock them. Not only will this ensure you place the greatest amount of tension on your leg muscles, but it also helps prevent injuries to your knees."
+        },
+        {
+            "name": "Walking Lunges",
+            "category": 9,
+            "description": "You're going to want enough space to perform at least 10 full strides. Stand with your feet hip-width apart, pelvis tucked and core engaged. Take a big stride forward using with your right leg and bend your knees to lower your body down until both knees are at a 90 degree angle and the front thigh is parallel to the ground. Now, push up from the left foot at the rear and immediately step into another lunge, performing the same sequence as before. If you're new to walking lunges, you can bring yourself to a standing position first, before stepping into the next lunge. However, walking directly into each lunge will place extra effort on your leg and core muscles, as they won't get adequate time to recover before being used again"
+        },
+        {
+            "name": "Goblet Squat",
+            "category": 9,
+            "description": "The easiest way to perform a goblet squat is to have either a kettlebell or a dumbbell. Whichever you use, hold it to your chest using both hands and stand with your feet wider than hip width apart. Squat down, keeping your torso upright and your elbows inside your knee line. This is where goblet squats show their effectiveness, because having the weight in front of you will naturally cause you to want to fall forwards. But keeping your torso upright, your thighs at 90 degree right angles and your knees pushed outwards as you squat down, you'll find your form will improve dramatically. You should feel the burn predominantly in your quads, but your hamstrings and glutes will also get a serious workout too. You can add in a slight heel elevation by way of a weight plate or step to place extra emphasis on the the quads."
+        },
+        {
+            "name": "Romanian Deadlift",
+            "category": 9,
+            "description": "Equip yourself with a barbell you can elect to start with it on the floor, or hold it first and then adjust your positioning and set yourself up as you would a conventional deadlift: feet shoulder width apart and underneath the bar, with hands grasping it slightly wider than shoulder width with an overhand grip. With the bar hanging down in front of you, slowly lower it down, keeping it close to your body. Slightly bend your knees at the same time and hinge at the waist, keeping the back straight and allowing the barbell to drop lower. Keep going until the barbell has gone just beyond your knees, hold for a second to feel the tension in your hamstrings, and drive back up to return to the starting position."
+        },
+        {
+            "name": "Seated Hamstring Curl",
+            "category": 9,
+            "description": "Position yourself correctly with your legs straight and the padded bar against your lower leg. Squeeze your hamstrings to bring your heels towards you, then return to the start."
+        },
+        {
+            "name": "Seated Leg Extension",
+            "category": 9,
+            "description": "Position yourself correctly with your knees bent and the padded bar against your shins. Raise your feet to straighten your legs, then squeeze your quads at the top. Lower back to the start position slowly to increase the tension on the target muscles."
+        },
+        {
+            "name": "Barbell Overhead Press",
+            "category": 13,
+            "description": "With the bar right in front of you, place your hands just outside your shoulders. Your elbows and forearms should be in a vertical position, stacked upon each other. If your elbows are pointing out or in, your grip is either too narrow or too wide. Please adjust accordingly. Put the bar on the heel of your palm because this is where you'll generate the most force from.  Press overhead until lockout and slowly lower down to the starting position and repeat."
+        },
+        {
+            "name": "Half-Kneeling Landmine Press",
+            "category": 13,
+            "description": "Get into a half-kneeling position in front of the barbell, knee underneath hip and ankle underneath the knee. Hold the barbell at shoulder height in hand nearest your back leg and actively grip the barbell. Press up at about 45 degrees and reach towards the ceiling at the end of the lockout. Slowly lower down under control and repeat."
+        },        
+        {
+            "name": "Push Press",
+            "category": 13,
+            "description": "Set up the same as you would for the barbell overhead press. Assume an upright torso and dip downward four to six inches, knees over toes. Then push your torso and chest upwards through the barbell, and using the legs, forcefully drive yourself and the barbell up. Continue to push through the barbell until lockout. Slowly return to the starting position and repeat. "
+        },        
+        {
+            "name": "Bottoms-Up Kettlebell Press",
+            "category": 13,
+            "description": "Grab a lighter kettlebell bottoms up, have the horn directly above your wrist, grip tight and engage your lat.  Press up keeping the KB facing directly upwards and your elbow underneath the center of mass of the kettlebell. Lockout with the bell in this position and the biceps close to the ear. Lower slowly to ensure you’re balancing the kettlebell with the bottom directly facing up. "
+        },        
+        {
+            "name": "Incline Y Raise",
+            "category": 13,
+            "description": "Set up the bench at a 45-degree incline. Lie face down with your knees slightly bent. Hold the weights with an overhand grip. Extend your arms to hang straight under your shoulders. Keep your shoulders down and chest up. Activate your posterior delts to raise the weights up and out. Keep your arms straight until they are fully extended. A soft bend in your elbows is okay. Slowly lower back to the starting position. Reset and repeat."
+        },        
+        {
+            "name": "Seated Dummbell Shoulder Press",
+            "category": 13,
+            "description": "Clean the dumbbells so they are sitting on your shoulders. Sit upright on an incline bench. Keep your shoulders away from your ears. Sit tall. Brace your core. Find your preferred pressing angle. Press both dumbbells overhead until your elbows lock out. Carefully lower the dumbbells. Reset and repeat."
+        },       
+        {
+            "name": "Dummbell Lateral Raise Pause Set",
+            "category": 13,
+            "description": "Hold a pair of dumbbells by your side. Keep your shoulders down and chest up. Perform six lateral raises with your elbows slightly bent. Don’t raise the dumbbells above shoulder height. On the sixth rep, hold the weights in the contracted position for six seconds. Continue this rep/pause sequence down to one rep and one second."
+        },        
+        {
+            "name": "Single-Arm Push Press",
+            "category": 13,
+            "description": "Clean one dumbbell to the top of your shoulder. Pack your shoulders down and away from your ears. Brace your core. Bend your knees to dip down about four to six inches. Track your knees over your toes. Use this momentum to press the dumbbell overhead in a seamless movement. Lock out the dumbbell overhead. Lower with control. Reset and repeat."
+        },        
+        {
+            "name": "Leaning Lateral Raise",
+            "category": 13,
+            "description": "Hold a power rack or a pole and bring your feet close to or under your hands. With the dumbbell resting on your outer thigh, raise the dumbbell away from you until you feel a strong contraction in your shoulders and slowly lower down and repeat"
         },
         {
             "id": 227,
