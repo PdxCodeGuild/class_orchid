@@ -22,5 +22,6 @@ urlpatterns = [
     path('users/', include('django.contrib.auth.urls')),
     path('users/', include('users.urls')),
     path('', include('exercise.urls')),
+    path('planner/', include('planner.urls')),
     # path('', TemplateView.as_view(template_name='base.html'), name='base'),
 ]

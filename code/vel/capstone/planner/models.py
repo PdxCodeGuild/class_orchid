@@ -11,11 +11,15 @@ class Workout(models.Model):
     day = models.DateField()
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     note = models.TextField(null=True, blank=True)
-
+    def __str__(self):
+        return f"{self.day},{self.user},{self.note}"
 
 class WorkingSet(models.Model):
-    workout_day = models.ForeignKey(Workout, on_delete=models.CASCADE)
+    # workout_day = models.ForeignKey(Workout, on_delete=models.CASCADE)
     exercise = models.ForeignKey(Exercise, on_delete=models.CASCADE)
     reps = models.IntegerField()
     num_sets = models.IntegerField()
     weight_used = models.IntegerField(null=True, blank=True)
+    day = models.DateField()
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    note = models.TextField(null=True, blank=True)

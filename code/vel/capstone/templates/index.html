@@ -23,10 +23,19 @@
 
 {% if exercises %}
 {% for exercise in exercises %}
-    <p>{{exercise.name}}:<br> {{exercise.description}}</p>
+    <form action="{% url 'planner:add_to_workout' name=exercise.name desc=exercise.description %}">
+        {% csrf_token %}
+        <p>{{exercise.name}}:<br> {{exercise.description}}</p>
+        <button type="submit">Click me</button>
+    </form>
 {% endfor %}   
 {% endif %}
 
+{% for workout in this_workout %}
+    <p>{{workout}}</p>
+{% endfor %}
+
 {% endblock content %}
+
 
 
