@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Runs{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!<br><br>
+  
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+
+  {% for run in run_list %}
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{ run.type }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ run.name }}</h5>
+      <p class="card-text">Distance: {{ run.distance }}</p>
+      <p class="card-text">Date & Time: {{ run.start_date }}</p>
+      <p class="card-text">Kudos: {{ run.kudos_count }}
+    </div>
+  </div>
+{% endfor %}  
+    
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+{% endblock %}
+

@@ -6,13 +6,35 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!<br><br>
-  <p>Please authorize your Strava here: <a href="http://www.strava.com/oauth/authorize?client_id=95093&response_type=code&redirect_uri=http://localhost:8000/&approval_prompt=force&scope=read_all,profile:read_all,activity:read_all">here</a></p>
+  <p>Please authorize your Strava here: 
+    <a href="http://www.strava.com/oauth/authorize?client_id=95093&response_type=code&redirect_uri=http://localhost:8000/accounts/access/&approval_prompt=force&scope=read_all,profile:read_all,activity:read_all">here</a>
   <p><a href="{% url 'logout' %}">Log Out</a></p>
+
+  <div class="container">
+   
+    <form action=" {% url 'post:add' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="add">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  
+</div>
+
+{% for run in run_list %}
+<ul>
+
+  <li>
+    {{ run }} - <a href="{% url 'post:other_users' run.auth_users %}">{{ run.auth_users }}</a>
+  </li>
+</ul>
+{% endfor %}
+
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'signup' %}">Sign Up</a>
 {% endif %}
+
 {% endblock %}
-
-
-

@@ -7,6 +7,6 @@ from .views import SignUpView
 
 urlpatterns = [
     path("signup/", SignUpView.as_view(), name="signup"),
-    # path("autheticate/", views.authenticate),
     path("token_response/", views.token_response),
+    path("access/", views.get_access_token),
 ]

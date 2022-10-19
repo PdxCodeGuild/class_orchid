@@ -2,11 +2,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 import requests
-from pprint import pprint
-import urllib3
 from django.http import HttpResponse
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+from .models import Token
+from django.contrib.auth.models import User
+from django.shortcuts import redirect, render 
 
 
 class SignUpView(generic.CreateView):
@@ -14,13 +13,15 @@ class SignUpView(generic.CreateView):
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
 
-def token_response(request):
-    auth_url = "https://www.strava.com/oauth/token"
 
+def token_response(request):
+
+    auth_url = "https://www.strava.com/oauth/token"
+ 
     payload = {
         'client_id': '95093',
         'client_secret': 'cd5c86fe0a0a72e91064e06b6cc83c048a90bf3f',
-        'refresh_token': 'b31d26a77c81b482620171e7aec26cd08c121b83',
+        'refresh_token': '52643195ddf9524b853914d4ff8ac00335ab222c',
         'grant_type': 'refresh_token',
     }
 
@@ -33,7 +34,7 @@ def token_response(request):
 
     print("Access Token: {}".format(access_token))
 
-    activities_url = "https://www.strava.com/api/v3/athlete/activities"
+    activities_url = "https://www.strava.com/api/v3/athlete/activities" 
 
     header = {'Authorization': 'Bearer ' + access_token}
     param = {'per_page': 200, 'page': 1}
@@ -43,15 +44,38 @@ def token_response(request):
 
     print(type(response))
 
-    for i, runs in enumerate(response):
-        # print(i, runs)
-        name_of_run = response[i]['name']
-        distance_of_run = response[i]['distance']
-        distance_of_run_in_miles = distance_of_run/1609.344
-        date_of_run = response[i]['start_date']
-        polyline_map_of_run = response[i]['map']['summary_polyline']
-        print(name_of_run, distance_of_run_in_miles, date_of_run, polyline_map_of_run)
-
+    # for i, runs in enumerate(response):
+    #     # print(i, runs)
+    #     name_of_run = New_Post.objects.create(name=response[i]['name'])
+    #     distance_of_run = New_Post.objects.create(distance=response[i]['distance'])
+    #     date_of_run = New_Post.objects.create(time=response[i]['start_date'])
+    #     type_of_run = New_Post.objects.create(name=response[i]['type'])# polyline_map_of_run = response[i]['map']['summary_polyline']
+        
+    #     post_info = New_Post.objects.all()
+    #     print(post_info)
     return HttpResponse(response)
 
-    
+
+def get_access_token(request):
+
+    user_auth_code = request.GET.get('code')
+    # print(request.GET.get('code'))
+
+    url_for_refresh_token = 'https://www.strava.com/oauth/token'
+
+    payload = {
+        'client_id': '95093',
+        'client_secret': 'cd5c86fe0a0a72e91064e06b6cc83c048a90bf3f',
+        'code': user_auth_code,
+        'grant_type': 'authorization_code',
+    }
+    print(user_auth_code)
+    post_refresh_token = requests.post(
+        url_for_refresh_token, data=payload, verify=False)
+
+    user_refresh_token = post_refresh_token.json().get('refresh_token')
+
+    print(user_refresh_token)
+    Token.objects.update_or_create(refresh_token=user_refresh_token, user=request.user)
+
+    return redirect('/posts/run')
