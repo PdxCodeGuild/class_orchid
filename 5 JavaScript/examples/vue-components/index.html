@@ -13,10 +13,12 @@
         <h1>{{ libraryName }}</h1>
 
         <!-- catch emitted events on the component -->
-        <!-- <counter v-on:emitted-event="pCount++"></counter> {{ pCount }} -->
+        <counter v-on:emitted-event="pCount++"></counter> {{ pCount }}
 
         <template v-for="book in books">
-            <book-item v-on:delete-book="removeBook" v-bind:book="book" v-bind:key="book.id"></book-item>
+            <!-- the .native modifier can attach a non-emitted event listener to a component -->
+            <book-item @click.native="pCount++" v-on:delete-book="removeBook" v-bind:book="book" v-bind:key="book.id">
+            </book-item>
         </template>
 
     </div>
