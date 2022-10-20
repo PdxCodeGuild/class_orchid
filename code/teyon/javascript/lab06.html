@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="lab06.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <H1>Quotes Finder</H1>
+        <input type="text" v-bind:value="find" v-on:keyup.enter="typedInput">
+        <select id="type" v-model="type">
+            <option value="author">author</option>
+            <option value="keyword">keyword</option>
+            <option value="tag">tag</option>
+        </select>
+        <input type="button" v-bind:value="pages" v-on:click="next" value="Next Page">
+        
+        <div v-for="quote in info" class="quote">
+            <li>
+            {{quote.body}} -{{ quote.author }}
+            </li>
+        </div>
+    </div>
+</body>
+</html>
