@@ -9,6 +9,7 @@
 
         {% csrf_token %}
         <select name="user_exercise_search" id="dropdown">
+            <option value="">---</option>
             <option value="Abs">Abs</option>
             <option value="Arms">Arms</option>
             <option value="Back">Back</option>
@@ -26,7 +27,10 @@
     <form action="{% url 'planner:add_to_workout' name=exercise.name desc=exercise.description %}">
         {% csrf_token %}
         <p>{{exercise.name}}:<br> {{exercise.description}}</p>
-        <button type="submit">Click me</button>
+        {% if user.is_authenticated %}
+            
+        <button type="submit">+</button>
+        {% endif %}
     </form>
 {% endfor %}   
 {% endif %}

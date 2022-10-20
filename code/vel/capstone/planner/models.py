@@ -7,12 +7,12 @@ from exercise.models import Exercise
 #     end_time = models.DateTimeField()
 #     user = models.OneToOneField(get_user_model(),on_delete=models.CASCADE, related_name='user_planner')
 
-class Workout(models.Model):
-    day = models.DateField()
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    note = models.TextField(null=True, blank=True)
-    def __str__(self):
-        return f"{self.day},{self.user},{self.note}"
+# class Workout(models.Model):
+#     day = models.DateField()
+#     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+#     note = models.TextField(null=True, blank=True)
+#     def __str__(self):
+#         return f"{self.day},{self.user},{self.note}"
 
 class WorkingSet(models.Model):
     # workout_day = models.ForeignKey(Workout, on_delete=models.CASCADE)

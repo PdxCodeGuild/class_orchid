@@ -6,6 +6,6 @@ class WorkoutInfo(forms.ModelForm):
     class Meta:
         model = WorkingSet
         fields = '__all__'
-        exclude = ['user']
+        exclude = ['user', 'exercise']
 
 
