@@ -1,0 +1,134 @@
+body {
+    padding: 0px;
+    margin: 0px;
+
+    height: 100%;
+    width: 100vw;
+
+    overflow-x: hidden;
+
+    background-color: #eeafc0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeafc0;
+
+
+    height: 100px;
+    width: 100vw;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    right: 0;
+    bottom: 0;
+
+    width: 400px;
+    height: 70px;
+
+    background-color: #eb4c76;
+    border-radius: 45px 0px 0px 0px;
+    border-width: 2px;
+    border-color: #1f1f1f;
+    border-style: solid;
+    border-right: none;
+    border-bottom: none;
+
+}
+  
+footer li {
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ffffff6e;
+
+    height: 30px;
+    width: 30px;
+
+    border-width: 1px;
+    border-color: #1f1f1fb7;
+    border-style: solid;
+}
+
+footer img {
+    width: 30px;
+    height: auto;
+}
+
+#artist-pf {
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 500px;
+}
+
+.links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    height: 25px;
+    padding: 3px 50px 3px 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid 1px;
+    border-radius: 15px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    position: relative;
+    top: -17px;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    min-height: calc(100vh - 100px);
+    height: 100%;
+    width: 100%;
+    background-color: #e6819c;
+
+    color: #1f1f1f
+}
+
+.artist-name {
+    margin-top: 50px;
+}
+
+.contacts li {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+#email {
+    padding-bottom: 30px;
+}
+
+.divider {
+    width: 80%;
+    border-top: solid 1px #5C5C5C;
+    height: 1px;
+    margin-top: -0.5px;
+}
+
+.artist-title {
+    padding-bottom: 50px;
+}

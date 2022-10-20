@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'Gallery/style.css' %}">
+    <title>Gallery</title>
+</head>
+<body>
+    <header>
+        <div class="artist-pf">
+            <h2 >SlothyPoo's Gallery</h2>
+        </div>
+
+        <div class="links">
+            <a href="/MainPage">
+                <h3 class="header-text"> Information </h3>
+            </a>
+            <a href="/Commissions">
+                <h3 class="header-text"> Commission </h3>
+            </a>
+            <a href="/TOS">
+                <h3 class="header-text"> TOS </h3>
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="sidebar">
+
+            <h4 id="filter-select">Gallery Filter</h4>
+            <form action="{% url 'Gallery' %}" method="POST">
+                {% csrf_token %}
+                <select name="tags" id="id_tags">
+                    {% for tag in tag_obj %}
+                        <option value="{{ tag.0 }}">{{ tag.1 }}</option>
+                    {% endfor %}
+                        
+                </select>
+                <br>
+                <input type="submit" style="width: 85px;" value="Filter">
+
+            </form>
+    
+        </div>
+        
+        <div class="image-wrapper">
+            <div class="content-images">
+                {% for object in admin_obj reversed %}
+                <div class="images" >
+                    <!-- Trigger the Modal -->
+                    <img class="myImg" id="{{ object.id }}" src="{{ object.image.url }}" alt="{{ object.name }}" onclick="bigger('{{ object.id }}')" style="width: calc(27vw - 20px); min-width: 300px; max-width: 500px;">
+                    
+                    <!-- The Modal -->
+                    <div id="myModal{{ object.id }}" class="modal">
+                
+                        <!-- The Close Button -->
+                        <span class="close" id="close{{ object.id }}">&times;</span>
+                
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content resize" id="modal{{ object.id }}">
+                
+                        <!-- Modal Caption (Image Text) -->
+                        <div class="caption" id="caption{{ object.id }}"></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <li>
+            <a href="https://twitter.com/SlothyPooo">
+                <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://discord.com/invite/CQJ4hna6gF">
+                <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-icon-flat-style-available-svg-png-eps-10.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/slothypyu/?hl=en">
+                <img src="https://www.freepnglogos.com/uploads/instagram-icon-png/instagram-icon-color-logo-social-media-new-design-22.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.patreon.com/SlothyPoo">
+                <img src="https://www.freepnglogos.com/uploads/patreon-logo-png/patreon-logo-red-simple-picture-10.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.twitch.tv/slothypoo">
+                <img src="https://www.freepnglogos.com/uploads/twitch-logo-symbol-25.png" alt="">
+            </a>
+        </li>
+    </footer>
+
+    
+    <script src="{% static 'Gallery/javascript.js' %}"></script>
+</body>
+</html>

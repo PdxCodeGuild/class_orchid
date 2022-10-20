@@ -1,0 +1,83 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'MainPage/style.css' %}">
+    <title>Slothypoo</title>
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href="/Gallery">
+                <h3 class="header-text"> Gallery </h3>
+            </a>
+            <a href="/Commissions">
+                <h3 class="header-text"> Commission </h3>
+            </a>
+            <a href="/TOS">
+                <h3 class="header-text"> TOS </h3>
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="artist-name">
+            <h1>SlothyPoo</h1>
+        </div>
+        <div class="artist-title">
+            <h2>Freelance Digital Artist</h2>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <img src="{% static 'media/SlothyPooPF.jpg' %}" alt="" id="artist-pf">
+        </div>
+        <div class="contacts">
+            <h3>Contact Me Through</h3>
+            <li>
+                <b><u>Discord:</u></b> SlothyPoo#2818
+            </li>
+            <li>
+                <b><u>Twitter DMs:</u></b> @SlothyPooo
+            </li>
+            <li id="email">
+                <b><u>Gmail:</u></b> Slothbuis@gmail.com
+            </li>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+    <footer>
+        <a href="https://twitter.com/SlothyPooo">
+            <li>
+                <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="">
+            </li>
+            </a>
+        <a href="https://discord.com/invite/CQJ4hna6gF">
+            <li>
+                <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-icon-flat-style-available-svg-png-eps-10.png" alt="">
+            </li>
+        </a>
+        <a href="https://www.instagram.com/slothypyu/?hl=en">
+            <li>
+                <img src="https://www.freepnglogos.com/uploads/instagram-icon-png/instagram-icon-color-logo-social-media-new-design-22.png" alt="">
+            </li>
+        </a>
+        <a href="https://www.patreon.com/SlothyPoo">
+            <li>
+                <img src="https://www.freepnglogos.com/uploads/patreon-logo-png/patreon-logo-red-simple-picture-10.png" alt="">
+            </li>
+        </a>
+        <a href="https://www.twitch.tv/slothypoo">
+            <li>
+                <img src="https://www.freepnglogos.com/uploads/twitch-logo-symbol-25.png" alt="">
+            </li>
+        </a>
+    </footer>
+    
+</body>
+</html>
