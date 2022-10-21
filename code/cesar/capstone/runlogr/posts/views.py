@@ -89,15 +89,13 @@ def get_runs(request):
     response = requests.get(
         activities_url, headers=header, params=param).json()
 
-    print(type(response))
-
     for i, runs in enumerate(response):
-        # print(i, runs)
         name_of_run = response[i]['name']
         distance_of_run = response[i]['distance']
         distance_of_run_in_miles = distance_of_run/1609.344
         date_of_run = response[i]['start_date']
         # polyline_map_of_run = response[i]['map']['summary_polyline']
+        print('*' * 100)
         print(name_of_run, distance_of_run_in_miles,
               date_of_run)
 
@@ -105,18 +103,11 @@ def get_runs(request):
         'run_list': response
 
     }
-    print(context)
 
     return render(request, 'runs.html', context)
 
 
-def delete_post(request):
-    if request.method == 'POST' and request.POST['delete']:
-        delete_post = request.POST.get('delete')
 
-    Log.objects.delete
-
-    return redirect('/posts/')
 
 
 
