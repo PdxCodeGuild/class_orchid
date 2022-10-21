@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(66, 123, 66);
+}
+.navbar{
+    background-color:rgb(224, 161, 66);
+    font-family: 'Anton', sans-serif;
+    color: rgb(38, 71, 38);
+}
+.navbar-toggler{
+    background-color: bisque;
+    margin:2% ;
+}
+.title{
+    font-size: 600%;
+    font-family: 'Anton', sans-serif;
+    color: rgb(38, 71, 38);
+    text-align: center;
+    position: relative;
+    animation: title 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes title{
+    to {color:rgb(38, 71, 38) ;}
+    from {color: bisque}
+
+}
+.input{
+    text-align: center;
+    background-color: bisque;
+    color: rgb(38, 71, 38);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 30%;
+}
+#submit{
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+    margin-top: 2%;
+    padding: 1%;
+    border-radius: 20%;
+    background-color: rgb(224, 161, 66);
+    color:rgb(38, 71, 38) ;
+}
+#output{
+    text-align: center;
+    font-size: x-large;
+    color:rgb(38, 71, 38);
+    margin-top: 10%;
+}
+#output:hover{
+    color: bisque;
+    font-size: 300%;
+    font-family: 'Anton', sans-serif;
+}
+
+.study-tips{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+   
+}
+#tip{
+    margin: 10%;
+    border: 10px solid rgb(224, 161, 66) ;
+    border-radius: 20%;
+    padding: 1%;
+    
+}
+p{
+    font-family: 'Anton', sans-serif;
+    color:rgb(38, 71, 38);
+    padding: 2%;
+    text-align: center;
+    font-size: larger;
+    margin: 5%;
+}
+p:hover{
+    color: bisque;
+}
+h1{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 350%;
+    margin-top: 3%;
+    color: rgb(38, 71, 38);
+}
+h1:hover{
+    color: bisque;
+}
+a{
+    color: rgb(38, 71, 38);
+}
+a:hover{
+    color: rgb(224, 161, 66);
+}
+#footer{
+    font-family: 'Anton', sans-serif;
+}

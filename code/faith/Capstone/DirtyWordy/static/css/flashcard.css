@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(66, 123, 66);
+}
+
+.f_word{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    font-size: xx-large;
+    font-family: 'Anton', sans-serif;
+    color: rgb(224, 161, 66);
+
+
+}
+.f_definition{
+    display: flex; 
+    justify-content: center;
+    align-items: baseline;
+    font-size: x-large;
+    color: bisque;
+}
+
+
+
+.f_word:hover{
+    color: bisque;
+    font-size: 400%;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 300%;
+    color: rgb(38, 71, 38);
+    animation: mymove 5s infinite;
+}
+.navbar{
+    background-color: rgb(224, 161, 66);
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+.navbar-toggler{
+    background-color: bisque;
+}
+.navbar-toggler:hover{
+    background-color:rgb(38, 71, 38) ;
+}
+h1{
+    font-family: 'Anton', sans-serif;
+    color: rgb(38, 71, 38);
+    text-align: center;
+    font-size: smaller;
+}
+#flashcard-container{
+    width: 100%;
+    display:flex;
+  
+    justify-content: space-around;
+}
+h2:hover span{
+    display:none
+}
+h2:hover:before{
+    content: "Should'nt you be studying?😑";
+    font-size: 150%;
+}
+.navbar-brand{
+    color: rgb(38, 71, 38);
+    text-align: center;
+    font-size: 300%;
+}

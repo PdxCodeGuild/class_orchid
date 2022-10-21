@@ -1,38 +1,79 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <title>Dirty Wordy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
-    {% extends 'registration/base.html' %}
-{% block title %} Home {% endblock %}
-{% block content %}
-{% comment %} {% if user.is_authenticated %}
-Welcome Back {{ user.username }}! {% endcomment %}
-{% comment %} 
-<form action="{% url 'posts:add_post' %}" method="post">
+   
+    <nav class="navbar">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Dirty Wordy Menu</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+              
+            </ul>
+          </nav>
+          
+            <h1 class="title">
+              Dirty Wordy
+            </h1>
+          
+<form action="{% url 'dirtywordy_app:index' %}" method="POST">
     {% csrf_token %}
-    <label for="post">Post a Chirp</label><br>
-    <input type="text" id="post" name="post">
-    <input type="submit" value="Chirp!">
-</form> {% endcomment %}
+    <input class="input" name="input" type="text" required placeholder="Enter a word">
+    <button id="submit" type="submit" >Submit</button>
+</form>
+<div id="output">
+  {{ userinput }} * 
+{{ definition }}
+</div>
+</form>
+ 
+<a href="https://legacybox.com/blogs/analog/10-wacky-brain-facts-about-learning"><h1>Fun Studying Facts</h1></a>
+<div class="study-tips">
+  <p style="width: 18rem; height: 18rem;" id="tip">Once you’re familiar with a particular subject, your brain actually reduces blood flow to those areas. That leads to daydreaming, attention loss, and general apathy. So that’s why I didn’t do well in Honors American History. I already knew it all!</p>
+  
+  
+  <p style="width: 18rem; height: 18rem;" id="tip">Learning new things actually helps your brain cells do things more efficiently by reinforcing the myelin sheath. Some scientists think this is what causes muscle memory.</p>
+  
+  
+  <p style="width: 18rem; height: 18rem;" id="tip">Losing sleep can actually lead to worse memory recall. That’s because your brain stores new info while you’re catching ZZZs.</p>
+  
+  
+  <p style="width: 18rem; height: 18rem;" id="tip">Glia, Greek for glue, keep your nerve cells together. They also make your neuron cells more efficient. For a while scientists thought they didn’t really do anything, but it turns out that they help reinforce axons. Shows what they know!</p>
+  
+  
+  <p style="width: 18rem; height: 18rem;" id="tip">Glia, Greek for glue, keep your nerve cells together. They also make your neuron cells more efficient. For a while scientists thought they didn’t really do anything, but it turns out that they help reinforce axons. Shows what they know!</p>
+  
+  
+  <p style="width: 18rem; height: 18rem;" id="tip">According to Sharpbrains, when you damage portions of your brain, it can re-learn the same tasks in different parts of the brain. It proves that you can teach old dogs new tricks.</p>
+</div>
 
-{% comment %} {% for post in create_post %}
-{{user.username}}<br>
-{{post.datetime_created}}<br>
-<li>{{ post }}</li><br> {% endcomment %}
-{% endfor %}
-<p><a href="{% url 'logout' %}">Log Out </a></p>
-{% else %}
-    <p>You need to login or sign up</p>
-    <a href="{% url 'login' %}">Login</a><br>
-    <a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
-{% endblock %}
+<footer id="footer">
+  @Copyright DirtyWordy Author: Faith Cicero
+</footer>
 </body>
 </html>

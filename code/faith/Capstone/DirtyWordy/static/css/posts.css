@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(66, 123, 66);;
+}
+.navbar{
+    background-color:rgb(224, 161, 66);
+    font-family: 'Anton', sans-serif;
+    color: rgb(38, 71, 38);
+}
+.navbar-toggler{
+    background-color: bisque;
+    margin:1% ;
+}
+h1{
+    font-size: 600%;
+    font-family: 'Anton', sans-serif;
+    color: rgb(38, 71, 38);
+    text-align: center;
+    position: relative;
+    animation: title 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes title{
+    to {color:rgb(38, 71, 38) ;}
+    from {color: bisque}
+
+}
+form{
+    font-family: 'Anton', sans-serif;
+    color: rgb(38, 71, 38);
+    text-align: center;
+}
+#user{
+    font-size: 150%;
+    color: bisque;
+    
+    
+}
+#user:hover{
+    color: rgb(224, 161, 66);
+    font-size: 250%;
+}
+#upost{
+   background-color:bisque;
+   margin: 5%;
+   padding: 5%;
+   border-radius: 10%;
+  
+}
+button{
+    background-color:rgb(224, 161, 66);
+    border-radius: 50%;
+    color: rgb(38, 71, 38);
+}
+#date{
+    font-size: smaller;
+    
+    
+}

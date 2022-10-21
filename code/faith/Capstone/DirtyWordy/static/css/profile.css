@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(66, 123, 66);;
+}
+.navbar{
+    background-color: rgb(224, 161, 66);
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    color: rgb(38, 71, 38);
+    
+}
+.navbar-brand{
+    color: rgb(38, 71, 38);
+    text-align: center;
+    font-size: 300%;
+}
+.navbar-toggler{
+    background-color: bisque;
+}
+.navbar-toggler:hover{
+    background-color:rgb(38, 71, 38);
+}
+.wordlist{
+    color: rgb(38, 71, 38);
+    font-size: 150%;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+.wordlist:hover{
+    color: bisque;
+    font-family: 'Anton', sans-serif;
+    font-size: 200%;
+}
+#title{
+    color: rgb(38, 71, 38);
+    font-size: 600%;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    animation: title 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes title{
+    to {color:rgb(38, 71, 38) ;}
+    from {color: bisque}
+}
+button{
+    background-color: rgb(224, 161, 66);
+    color: rgb(38, 71, 38);
+    border-radius: 50%;
+}
+input{
+    text-align: center;
+}

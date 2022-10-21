@@ -28,6 +28,7 @@ urlpatterns = [
     path('',include('django.contrib.auth.urls')),
     path('', include('dirtywordy_app.urls')),
     path("accounts/", include("accounts.urls")),
-    path('', TemplateView.as_view(template_name='index.html'),name='index')
+    path('', TemplateView.as_view(template_name='index.html'),name='index'),
+    path('posts/', include('posts.urls')),
 ]
 

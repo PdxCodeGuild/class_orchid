@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(66, 123, 66);
+}
+h2{
+    color: rgb(38, 71, 38);
+    font-size: 400%;
+    animation: title 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes title{
+    to {color:rgb(38, 71, 38) ;}
+    from {color: bisque}
+}
+
+form{
+    font-family: 'Anton', sans-serif;
+    color: rgb(22, 42, 22);
+}
+button{
+    background-color: rgb(224, 161, 66);
+    color: rgb(22, 42, 22);
+    font-family: 'Anton', sans-serif;
+    border-radius: 20%;
+}
