@@ -3,11 +3,11 @@
 {% load static %}
 {% block content %}
 
-<form action="{% url 'planner:save_workout' %}" method="POST">
+<form action="{% url 'planner:save_workout' name=workout %}" method="POST">
     {% csrf_token %}
     {{workout}} <br> {{description}}
     {{form}}
-    <button type="submit">Click me</button>
+    <button type="submit">Add</button>
 </form>
 
 

@@ -1,6 +1,8 @@
+from datetime import datetime
 from django.db import models
 from users.models import CustomUser
 from exercise.models import Exercise
+
 # class Planner(models.Model):
 #     title = models.CharField(max_length = 200)
 #     start_time = models.DateTimeField()
@@ -20,6 +22,8 @@ class WorkingSet(models.Model):
     reps = models.IntegerField()
     num_sets = models.IntegerField()
     weight_used = models.IntegerField(null=True, blank=True)
-    day = models.DateField()
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    day = models.DateField(default=datetime.now())
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True)
     note = models.TextField(null=True, blank=True)
+    def __str__(self):
+        return f"{self.user} {self.note} {self.day}"

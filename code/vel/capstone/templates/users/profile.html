@@ -1,14 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% csrf_token %}
-    <h1>This is the profile</h1>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% for exer in users_workout %}
+
+
+<div class="card mx-auto m-3 text-center shadow" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title text-decoration-underline">{{exer.exercise}}</h5>
+        <p class="card-text text-muted">{{exer.day}}</p>
+        <p class="card-text">Reps: {{exer.reps}}</p>
+        <p class="card-text">Number of sets: {{exer.num_sets}}</p>
+        <p class="card-text">Weight used: {{exer.weight_used}}</p>
+        <p class="card-text">Notes: {{exer.note}}</p>
+    </div>
+</div>
+{% endfor %}
+
+<!--  -->
+
+
+
+
+{% endblock content %}

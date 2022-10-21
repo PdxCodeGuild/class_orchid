@@ -4,7 +4,7 @@ from .forms import UserForm
 from django.views.generic import DetailView
 from django.contrib.auth.forms import *
 from .models import CustomUser
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render, redirect
 
 
 class SignUpView(CreateView):
@@ -19,3 +19,5 @@ class UserProfileView(DetailView):
     context_object_name = 'user_profile'
     def get_object(self):
         return get_object_or_404(CustomUser, username = self.kwargs['username'])
+
+
